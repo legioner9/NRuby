@@ -1,5 +1,2 @@
-x = 10
-y = 3
-z = x/y
-
-puts z
+str =  "hello"
+puts str.reverse
