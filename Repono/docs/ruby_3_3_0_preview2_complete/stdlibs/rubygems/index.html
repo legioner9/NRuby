@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>rubygems: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="file">
+  <!-- index.html -->
+ <div id='actionbar' >
+   
+<div class='wrapper mdiv'>
+ <ul class='grids g0'></ul>
+</div> 
+<!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+</div> <!-- end action bar -->
+
+ <div class='wrapper hdiv'>
+
+ 
+
+<nav id='vapp' role="navigation">
+  <div id="project-navigation"    >
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="./index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+  
+  <button id='toggleThing' @click="isOpen = !isOpen" _click="toggleNav()" >Show/hide navigation</button>
+
+    <div id="project-metadata" >
+      <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+    
+
+    <div id="classindex-section" class="nav-section">
+  <h3>Class and Module Index</h3>
+
+  <ul class="link-list">
+    <li><a href="./CoreExtensions.html">CoreExtensions</a>
+    <li><a href="./CoreExtensions/TCPSocketExt.html">CoreExtensions::TCPSocketExt</a>
+    <li><a href="./CoreExtensions/TCPSocketExt/Initializer.html">CoreExtensions::TCPSocketExt::Initializer</a>
+    <li><a href="./Gem.html">Gem</a>
+    <li><a href="./Gem/AvailableSet.html">Gem::AvailableSet</a>
+    <li><a href="./Gem/BasicSpecification.html">Gem::BasicSpecification</a>
+    <li><a href="./Gem/BundlerVersionFinder.html">Gem::BundlerVersionFinder</a>
+    <li><a href="./Gem/Command.html">Gem::Command</a>
+    <li><a href="./Gem/CommandLineError.html">Gem::CommandLineError</a>
+    <li><a href="./Gem/CommandManager.html">Gem::CommandManager</a>
+    <li><a href="./Gem/Commands.html">Gem::Commands</a>
+    <li><a href="./Gem/Commands/BuildCommand.html">Gem::Commands::BuildCommand</a>
+    <li><a href="./Gem/Commands/CertCommand.html">Gem::Commands::CertCommand</a>
+    <li><a href="./Gem/Commands/CheckCommand.html">Gem::Commands::CheckCommand</a>
+    <li><a href="./Gem/Commands/CleanupCommand.html">Gem::Commands::CleanupCommand</a>
+    <li><a href="./Gem/Commands/ContentsCommand.html">Gem::Commands::ContentsCommand</a>
+    <li><a href="./Gem/Commands/DependencyCommand.html">Gem::Commands::DependencyCommand</a>
+    <li><a href="./Gem/Commands/EnvironmentCommand.html">Gem::Commands::EnvironmentCommand</a>
+    <li><a href="./Gem/Commands/ExecCommand.html">Gem::Commands::ExecCommand</a>
+    <li><a href="./Gem/Commands/FetchCommand.html">Gem::Commands::FetchCommand</a>
+    <li><a href="./Gem/Commands/GenerateIndexCommand.html">Gem::Commands::GenerateIndexCommand</a>
+    <li><a href="./Gem/Commands/HelpCommand.html">Gem::Commands::HelpCommand</a>
+    <li><a href="./Gem/Commands/InfoCommand.html">Gem::Commands::InfoCommand</a>
+    <li><a href="./Gem/Commands/InstallCommand.html">Gem::Commands::InstallCommand</a>
+    <li><a href="./Gem/Commands/ListCommand.html">Gem::Commands::ListCommand</a>
+    <li><a href="./Gem/Commands/LockCommand.html">Gem::Commands::LockCommand</a>
+    <li><a href="./Gem/Commands/MirrorCommand.html">Gem::Commands::MirrorCommand</a>
+    <li><a href="./Gem/Commands/OpenCommand.html">Gem::Commands::OpenCommand</a>
+    <li><a href="./Gem/Commands/OutdatedCommand.html">Gem::Commands::OutdatedCommand</a>
+    <li><a href="./Gem/Commands/OwnerCommand.html">Gem::Commands::OwnerCommand</a>
+    <li><a href="./Gem/Commands/PristineCommand.html">Gem::Commands::PristineCommand</a>
+    <li><a href="./Gem/Commands/PushCommand.html">Gem::Commands::PushCommand</a>
+    <li><a href="./Gem/Commands/QueryCommand.html">Gem::Commands::QueryCommand</a>
+    <li><a href="./Gem/Commands/RdocCommand.html">Gem::Commands::RdocCommand</a>
+    <li><a href="./Gem/Commands/SearchCommand.html">Gem::Commands::SearchCommand</a>
+    <li><a href="./Gem/Commands/ServerCommand.html">Gem::Commands::ServerCommand</a>
+    <li><a href="./Gem/Commands/SetupCommand.html">Gem::Commands::SetupCommand</a>
+    <li><a href="./Gem/Commands/SetupCommand/MakeDirs.html">Gem::Commands::SetupCommand::MakeDirs</a>
+    <li><a href="./Gem/Commands/SigninCommand.html">Gem::Commands::SigninCommand</a>
+    <li><a href="./Gem/Commands/SignoutCommand.html">Gem::Commands::SignoutCommand</a>
+    <li><a href="./Gem/Commands/SourcesCommand.html">Gem::Commands::SourcesCommand</a>
+    <li><a href="./Gem/Commands/SpecificationCommand.html">Gem::Commands::SpecificationCommand</a>
+    <li><a href="./Gem/Commands/StaleCommand.html">Gem::Commands::StaleCommand</a>
+    <li><a href="./Gem/Commands/UninstallCommand.html">Gem::Commands::UninstallCommand</a>
+    <li><a href="./Gem/Commands/UnpackCommand.html">Gem::Commands::UnpackCommand</a>
+    <li><a href="./Gem/Commands/UpdateCommand.html">Gem::Commands::UpdateCommand</a>
+    <li><a href="./Gem/Commands/WhichCommand.html">Gem::Commands::WhichCommand</a>
+    <li><a href="./Gem/Commands/YankCommand.html">Gem::Commands::YankCommand</a>
+    <li><a href="./Gem/ConfigFile.html">Gem::ConfigFile</a>
+    <li><a href="./Gem/ConflictError.html">Gem::ConflictError</a>
+    <li><a href="./Gem/ConsoleUI.html">Gem::ConsoleUI</a>
+    <li><a href="./Gem/DefaultUserInteraction.html">Gem::DefaultUserInteraction</a>
+    <li><a href="./Gem/Dependency.html">Gem::Dependency</a>
+    <li><a href="./Gem/DependencyError.html">Gem::DependencyError</a>
+    <li><a href="./Gem/DependencyInstaller.html">Gem::DependencyInstaller</a>
+    <li><a href="./Gem/DependencyList.html">Gem::DependencyList</a>
+    <li><a href="./Gem/DependencyRemovalException.html">Gem::DependencyRemovalException</a>
+    <li><a href="./Gem/DependencyResolutionError.html">Gem::DependencyResolutionError</a>
+    <li><a href="./Gem/Deprecate.html">Gem::Deprecate</a>
+    <li><a href="./Gem/Doctor.html">Gem::Doctor</a>
+    <li><a href="./Gem/DocumentError.html">Gem::DocumentError</a>
+    <li><a href="./Gem/EndOfYAMLException.html">Gem::EndOfYAMLException</a>
+    <li><a href="./Gem/ErrorReason.html">Gem::ErrorReason</a>
+    <li><a href="./Gem/Exception.html">Gem::Exception</a>
+    <li><a href="./Gem/Ext.html">Gem::Ext</a>
+    <li><a href="./Gem/Ext/BuildError.html">Gem::Ext::BuildError</a>
+    <li><a href="./Gem/Ext/Builder.html">Gem::Ext::Builder</a>
+    <li><a href="./Gem/Ext/CargoBuilder.html">Gem::Ext::CargoBuilder</a>
+    <li><a href="./Gem/Ext/CargoBuilder/DylibNotFoundError.html">Gem::Ext::CargoBuilder::DylibNotFoundError</a>
+    <li><a href="./Gem/Ext/CargoBuilder/LinkFlagConverter.html">Gem::Ext::CargoBuilder::LinkFlagConverter</a>
+    <li><a href="./Gem/Ext/CmakeBuilder.html">Gem::Ext::CmakeBuilder</a>
+    <li><a href="./Gem/Ext/ConfigureBuilder.html">Gem::Ext::ConfigureBuilder</a>
+    <li><a href="./Gem/Ext/ExtConfBuilder.html">Gem::Ext::ExtConfBuilder</a>
+    <li><a href="./Gem/Ext/RakeBuilder.html">Gem::Ext::RakeBuilder</a>
+    <li><a href="./Gem/FilePermissionError.html">Gem::FilePermissionError</a>
+    <li><a href="./Gem/FormatException.html">Gem::FormatException</a>
+    <li><a href="./Gem/GemNotFoundException.html">Gem::GemNotFoundException</a>
+    <li><a href="./Gem/GemNotInHomeException.html">Gem::GemNotInHomeException</a>
+    <li><a href="./Gem/GemRunner.html">Gem::GemRunner</a>
+    <li><a href="./Gem/GemcutterUtilities.html">Gem::GemcutterUtilities</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnListener.html">Gem::GemcutterUtilities::WebauthnListener</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnListener/BadRequestResponse.html">Gem::GemcutterUtilities::WebauthnListener::BadRequestResponse</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnListener/MethodNotAllowedResponse.html">Gem::GemcutterUtilities::WebauthnListener::MethodNotAllowedResponse</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnListener/NoContentResponse.html">Gem::GemcutterUtilities::WebauthnListener::NoContentResponse</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnListener/NotFoundResponse.html">Gem::GemcutterUtilities::WebauthnListener::NotFoundResponse</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnListener/OkResponse.html">Gem::GemcutterUtilities::WebauthnListener::OkResponse</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnListener/Response.html">Gem::GemcutterUtilities::WebauthnListener::Response</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnListener/SocketResponder.html">Gem::GemcutterUtilities::WebauthnListener::SocketResponder</a>
+    <li><a href="./Gem/GemcutterUtilities/WebauthnPoller.html">Gem::GemcutterUtilities::WebauthnPoller</a>
+    <li><a href="./Gem/ImpossibleDependenciesError.html">Gem::ImpossibleDependenciesError</a>
+    <li><a href="./Gem/Indexer.html">Gem::Indexer</a>
+    <li><a href="./Gem/InstallError.html">Gem::InstallError</a>
+    <li><a href="./Gem/InstallUpdateOptions.html">Gem::InstallUpdateOptions</a>
+    <li><a href="./Gem/Installer.html">Gem::Installer</a>
+    <li><a href="./Gem/Installer/FakePackage.html">Gem::Installer::FakePackage</a>
+    <li><a href="./Gem/InstallerUninstallerUtils.html">Gem::InstallerUninstallerUtils</a>
+    <li><a href="./Gem/InvalidSpecificationException.html">Gem::InvalidSpecificationException</a>
+    <li><a href="./Gem/Licenses.html">Gem::Licenses</a>
+    <li><a href="./Gem/LoadError.html">Gem::LoadError</a>
+    <li><a href="./Gem/LocalRemoteOptions.html">Gem::LocalRemoteOptions</a>
+    <li><a href="./Gem/MissingSpecError.html">Gem::MissingSpecError</a>
+    <li><a href="./Gem/MissingSpecVersionError.html">Gem::MissingSpecVersionError</a>
+    <li><a href="./Gem/NameTuple.html">Gem::NameTuple</a>
+    <li><a href="./Gem/NoAliasYAMLTree.html">Gem::NoAliasYAMLTree</a>
+    <li><a href="./Gem/OperationNotSupportedError.html">Gem::OperationNotSupportedError</a>
+    <li><a href="./Gem/OptionParser.html">Gem::OptionParser</a>
+    <li><a href="./Gem/OptionParser/AC.html">Gem::OptionParser::AC</a>
+    <li><a href="./Gem/OptionParser/Acceptables.html">Gem::OptionParser::Acceptables</a>
+    <li><a href="./Gem/OptionParser/AmbiguousArgument.html">Gem::OptionParser::AmbiguousArgument</a>
+    <li><a href="./Gem/OptionParser/AmbiguousOption.html">Gem::OptionParser::AmbiguousOption</a>
+    <li><a href="./Gem/OptionParser/Arguable.html">Gem::OptionParser::Arguable</a>
+    <li><a href="./Gem/OptionParser/CompletingHash.html">Gem::OptionParser::CompletingHash</a>
+    <li><a href="./Gem/OptionParser/Completion.html">Gem::OptionParser::Completion</a>
+    <li><a href="./Gem/OptionParser/InvalidArgument.html">Gem::OptionParser::InvalidArgument</a>
+    <li><a href="./Gem/OptionParser/InvalidOption.html">Gem::OptionParser::InvalidOption</a>
+    <li><a href="./Gem/OptionParser/List.html">Gem::OptionParser::List</a>
+    <li><a href="./Gem/OptionParser/MissingArgument.html">Gem::OptionParser::MissingArgument</a>
+    <li><a href="./Gem/OptionParser/NeedlessArgument.html">Gem::OptionParser::NeedlessArgument</a>
+    <li><a href="./Gem/OptionParser/OptionMap.html">Gem::OptionParser::OptionMap</a>
+    <li><a href="./Gem/OptionParser/ParseError.html">Gem::OptionParser::ParseError</a>
+    <li><a href="./Gem/OptionParser/Switch.html">Gem::OptionParser::Switch</a>
+    <li><a href="./Gem/OptionParser/Switch/NoArgument.html">Gem::OptionParser::Switch::NoArgument</a>
+    <li><a href="./Gem/OptionParser/Switch/OptionalArgument.html">Gem::OptionParser::Switch::OptionalArgument</a>
+    <li><a href="./Gem/OptionParser/Switch/PlacedArgument.html">Gem::OptionParser::Switch::PlacedArgument</a>
+    <li><a href="./Gem/OptionParser/Switch/RequiredArgument.html">Gem::OptionParser::Switch::RequiredArgument</a>
+    <li><a href="./Gem/Package.html">Gem::Package</a>
+    <li><a href="./Gem/Package/DigestIO.html">Gem::Package::DigestIO</a>
+    <li><a href="./Gem/Package/Error.html">Gem::Package::Error</a>
+    <li><a href="./Gem/Package/FormatError.html">Gem::Package::FormatError</a>
+    <li><a href="./Gem/Package/NonSeekableIO.html">Gem::Package::NonSeekableIO</a>
+    <li><a href="./Gem/Package/Old.html">Gem::Package::Old</a>
+    <li><a href="./Gem/Package/PathError.html">Gem::Package::PathError</a>
+    <li><a href="./Gem/Package/SymlinkError.html">Gem::Package::SymlinkError</a>
+    <li><a href="./Gem/Package/TarHeader.html">Gem::Package::TarHeader</a>
+    <li><a href="./Gem/Package/TarInvalidError.html">Gem::Package::TarInvalidError</a>
+    <li><a href="./Gem/Package/TarReader.html">Gem::Package::TarReader</a>
+    <li><a href="./Gem/Package/TarReader/Entry.html">Gem::Package::TarReader::Entry</a>
+    <li><a href="./Gem/Package/TarWriter.html">Gem::Package::TarWriter</a>
+    <li><a href="./Gem/Package/TarWriter/BoundedStream.html">Gem::Package::TarWriter::BoundedStream</a>
+    <li><a href="./Gem/Package/TarWriter/FileOverflow.html">Gem::Package::TarWriter::FileOverflow</a>
+    <li><a href="./Gem/Package/TarWriter/RestrictedStream.html">Gem::Package::TarWriter::RestrictedStream</a>
+    <li><a href="./Gem/Package/TooLongFileName.html">Gem::Package::TooLongFileName</a>
+    <li><a href="./Gem/PackageTask.html">Gem::PackageTask</a>
+    <li><a href="./Gem/PathSupport.html">Gem::PathSupport</a>
+    <li><a href="./Gem/Platform.html">Gem::Platform</a>
+    <li><a href="./Gem/PlatformMismatch.html">Gem::PlatformMismatch</a>
+    <li><a href="./Gem/QueryUtils.html">Gem::QueryUtils</a>
+    <li><a href="./Gem/RemoteError.html">Gem::RemoteError</a>
+    <li><a href="./Gem/RemoteFetcher.html">Gem::RemoteFetcher</a>
+    <li><a href="./Gem/RemoteFetcher/FetchError.html">Gem::RemoteFetcher::FetchError</a>
+    <li><a href="./Gem/RemoteFetcher/UnknownHostError.html">Gem::RemoteFetcher::UnknownHostError</a>
+    <li><a href="./Gem/RemoteInstallationCancelled.html">Gem::RemoteInstallationCancelled</a>
+    <li><a href="./Gem/RemoteInstallationSkipped.html">Gem::RemoteInstallationSkipped</a>
+    <li><a href="./Gem/RemoteSourceException.html">Gem::RemoteSourceException</a>
+    <li><a href="./Gem/RequestSet.html">Gem::RequestSet</a>
+    <li><a href="./Gem/RequestSet/GemDependencyAPI.html">Gem::RequestSet::GemDependencyAPI</a>
+    <li><a href="./Gem/RequestSet/Lockfile.html">Gem::RequestSet::Lockfile</a>
+    <li><a href="./Gem/RequestSet/Lockfile/ParseError.html">Gem::RequestSet::Lockfile::ParseError</a>
+    <li><a href="./Gem/RequestSet/Lockfile/Parser.html">Gem::RequestSet::Lockfile::Parser</a>
+    <li><a href="./Gem/RequestSet/Lockfile/Tokenizer.html">Gem::RequestSet::Lockfile::Tokenizer</a>
+    <li><a href="./Gem/Requirement.html">Gem::Requirement</a>
+    <li><a href="./Gem/Requirement/BadRequirementError.html">Gem::Requirement::BadRequirementError</a>
+    <li><a href="./Gem/Resolver.html">Gem::Resolver</a>
+    <li><a href="./Gem/Resolver/APISet.html">Gem::Resolver::APISet</a>
+    <li><a href="./Gem/Resolver/APISet/GemParser.html">Gem::Resolver::APISet::GemParser</a>
+    <li><a href="./Gem/Resolver/APISpecification.html">Gem::Resolver::APISpecification</a>
+    <li><a href="./Gem/Resolver/ActivationRequest.html">Gem::Resolver::ActivationRequest</a>
+    <li><a href="./Gem/Resolver/BestSet.html">Gem::Resolver::BestSet</a>
+    <li><a href="./Gem/Resolver/ComposedSet.html">Gem::Resolver::ComposedSet</a>
+    <li><a href="./Gem/Resolver/Conflict.html">Gem::Resolver::Conflict</a>
+    <li><a href="./Gem/Resolver/CurrentSet.html">Gem::Resolver::CurrentSet</a>
+    <li><a href="./Gem/Resolver/DependencyRequest.html">Gem::Resolver::DependencyRequest</a>
+    <li><a href="./Gem/Resolver/GitSet.html">Gem::Resolver::GitSet</a>
+    <li><a href="./Gem/Resolver/GitSpecification.html">Gem::Resolver::GitSpecification</a>
+    <li><a href="./Gem/Resolver/IndexSet.html">Gem::Resolver::IndexSet</a>
+    <li><a href="./Gem/Resolver/IndexSpecification.html">Gem::Resolver::IndexSpecification</a>
+    <li><a href="./Gem/Resolver/InstalledSpecification.html">Gem::Resolver::InstalledSpecification</a>
+    <li><a href="./Gem/Resolver/InstallerSet.html">Gem::Resolver::InstallerSet</a>
+    <li><a href="./Gem/Resolver/LocalSpecification.html">Gem::Resolver::LocalSpecification</a>
+    <li><a href="./Gem/Resolver/LockSet.html">Gem::Resolver::LockSet</a>
+    <li><a href="./Gem/Resolver/LockSpecification.html">Gem::Resolver::LockSpecification</a>
+    <li><a href="./Gem/Resolver/Molinillo.html">Gem::Resolver::Molinillo</a>
+    <li><a href="./Gem/Resolver/Molinillo/CircularDependencyError.html">Gem::Resolver::Molinillo::CircularDependencyError</a>
+    <li><a href="./Gem/Resolver/Molinillo/Delegates.html">Gem::Resolver::Molinillo::Delegates</a>
+    <li><a href="./Gem/Resolver/Molinillo/Delegates/ResolutionState.html">Gem::Resolver::Molinillo::Delegates::ResolutionState</a>
+    <li><a href="./Gem/Resolver/Molinillo/Delegates/SpecificationProvider.html">Gem::Resolver::Molinillo::Delegates::SpecificationProvider</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyGraph.html">Gem::Resolver::Molinillo::DependencyGraph</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyGraph/Action.html">Gem::Resolver::Molinillo::DependencyGraph::Action</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyGraph/AddEdgeNoCircular.html">Gem::Resolver::Molinillo::DependencyGraph::AddEdgeNoCircular</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyGraph/DeleteEdge.html">Gem::Resolver::Molinillo::DependencyGraph::DeleteEdge</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyGraph/DetachVertexNamed.html">Gem::Resolver::Molinillo::DependencyGraph::DetachVertexNamed</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyGraph/Log.html">Gem::Resolver::Molinillo::DependencyGraph::Log</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyGraph/Tag.html">Gem::Resolver::Molinillo::DependencyGraph::Tag</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyGraph/Vertex.html">Gem::Resolver::Molinillo::DependencyGraph::Vertex</a>
+    <li><a href="./Gem/Resolver/Molinillo/DependencyState.html">Gem::Resolver::Molinillo::DependencyState</a>
+    <li><a href="./Gem/Resolver/Molinillo/NoSuchDependencyError.html">Gem::Resolver::Molinillo::NoSuchDependencyError</a>
+    <li><a href="./Gem/Resolver/Molinillo/PossibilityState.html">Gem::Resolver::Molinillo::PossibilityState</a>
+    <li><a href="./Gem/Resolver/Molinillo/ResolutionState.html">Gem::Resolver::Molinillo::ResolutionState</a>
+    <li><a href="./Gem/Resolver/Molinillo/Resolver.html">Gem::Resolver::Molinillo::Resolver</a>
+    <li><a href="./Gem/Resolver/Molinillo/Resolver/Resolution.html">Gem::Resolver::Molinillo::Resolver::Resolution</a>
+    <li><a href="./Gem/Resolver/Molinillo/Resolver/Resolution/Conflict.html">Gem::Resolver::Molinillo::Resolver::Resolution::Conflict</a>
+    <li><a href="./Gem/Resolver/Molinillo/Resolver/Resolution/PossibilitySet.html">Gem::Resolver::Molinillo::Resolver::Resolution::PossibilitySet</a>
+    <li><a href="./Gem/Resolver/Molinillo/Resolver/Resolution/UnwindDetails.html">Gem::Resolver::Molinillo::Resolver::Resolution::UnwindDetails</a>
+    <li><a href="./Gem/Resolver/Molinillo/ResolverError.html">Gem::Resolver::Molinillo::ResolverError</a>
+    <li><a href="./Gem/Resolver/Molinillo/SpecificationProvider.html">Gem::Resolver::Molinillo::SpecificationProvider</a>
+    <li><a href="./Gem/Resolver/Molinillo/UI.html">Gem::Resolver::Molinillo::UI</a>
+    <li><a href="./Gem/Resolver/Molinillo/VersionConflict.html">Gem::Resolver::Molinillo::VersionConflict</a>
+    <li><a href="./Gem/Resolver/RequirementList.html">Gem::Resolver::RequirementList</a>
+    <li><a href="./Gem/Resolver/Set.html">Gem::Resolver::Set</a>
+    <li><a href="./Gem/Resolver/SourceSet.html">Gem::Resolver::SourceSet</a>
+    <li><a href="./Gem/Resolver/SpecSpecification.html">Gem::Resolver::SpecSpecification</a>
+    <li><a href="./Gem/Resolver/Specification.html">Gem::Resolver::Specification</a>
+    <li><a href="./Gem/Resolver/Stats.html">Gem::Resolver::Stats</a>
+    <li><a href="./Gem/Resolver/VendorSet.html">Gem::Resolver::VendorSet</a>
+    <li><a href="./Gem/Resolver/VendorSpecification.html">Gem::Resolver::VendorSpecification</a>
+    <li><a href="./Gem/RubyVersionMismatch.html">Gem::RubyVersionMismatch</a>
+    <li><a href="./Gem/RuntimeRequirementNotMetError.html">Gem::RuntimeRequirementNotMetError</a>
+    <li><a href="./Gem/S3URISigner.html">Gem::S3URISigner</a>
+    <li><a href="./Gem/S3URISigner/ConfigurationError.html">Gem::S3URISigner::ConfigurationError</a>
+    <li><a href="./Gem/S3URISigner/InstanceProfileError.html">Gem::S3URISigner::InstanceProfileError</a>
+    <li><a href="./Gem/SafeYAML.html">Gem::SafeYAML</a>
+    <li><a href="./Gem/Security.html">Gem::Security</a>
+    <li><a href="./Gem/Security/Exception.html">Gem::Security::Exception</a>
+    <li><a href="./Gem/Security/Policy.html">Gem::Security::Policy</a>
+    <li><a href="./Gem/Security/Signer.html">Gem::Security::Signer</a>
+    <li><a href="./Gem/Security/TrustDir.html">Gem::Security::TrustDir</a>
+    <li><a href="./Gem/SecurityOption.html">Gem::SecurityOption</a>
+    <li><a href="./Gem/SilentUI.html">Gem::SilentUI</a>
+    <li><a href="./Gem/SilentUI/NullIO.html">Gem::SilentUI::NullIO</a>
+    <li><a href="./Gem/Source.html">Gem::Source</a>
+    <li><a href="./Gem/Source/Git.html">Gem::Source::Git</a>
+    <li><a href="./Gem/Source/Installed.html">Gem::Source::Installed</a>
+    <li><a href="./Gem/Source/Local.html">Gem::Source::Local</a>
+    <li><a href="./Gem/Source/Lock.html">Gem::Source::Lock</a>
+    <li><a href="./Gem/Source/SpecificFile.html">Gem::Source::SpecificFile</a>
+    <li><a href="./Gem/Source/Vendor.html">Gem::Source::Vendor</a>
+    <li><a href="./Gem/SourceFetchProblem.html">Gem::SourceFetchProblem</a>
+    <li><a href="./Gem/SourceList.html">Gem::SourceList</a>
+    <li><a href="./Gem/SpecFetcher.html">Gem::SpecFetcher</a>
+    <li><a href="./Gem/SpecificGemNotFoundException.html">Gem::SpecificGemNotFoundException</a>
+    <li><a href="./Gem/Specification.html">Gem::Specification</a>
+    <li><a href="./Gem/SpecificationPolicy.html">Gem::SpecificationPolicy</a>
+    <li><a href="./Gem/StreamUI.html">Gem::StreamUI</a>
+    <li><a href="./Gem/StreamUI/SilentDownloadReporter.html">Gem::StreamUI::SilentDownloadReporter</a>
+    <li><a href="./Gem/StreamUI/SilentProgressReporter.html">Gem::StreamUI::SilentProgressReporter</a>
+    <li><a href="./Gem/StreamUI/SimpleProgressReporter.html">Gem::StreamUI::SimpleProgressReporter</a>
+    <li><a href="./Gem/StreamUI/ThreadedDownloadReporter.html">Gem::StreamUI::ThreadedDownloadReporter</a>
+    <li><a href="./Gem/StreamUI/VerboseProgressReporter.html">Gem::StreamUI::VerboseProgressReporter</a>
+    <li><a href="./Gem/StubSpecification.html">Gem::StubSpecification</a>
+    <li><a href="./Gem/SystemExitException.html">Gem::SystemExitException</a>
+    <li><a href="./Gem/TSort.html">Gem::TSort</a>
+    <li><a href="./Gem/TSort/Cyclic.html">Gem::TSort::Cyclic</a>
+    <li><a href="./Gem/Text.html">Gem::Text</a>
+    <li><a href="./Gem/UninstallError.html">Gem::UninstallError</a>
+    <li><a href="./Gem/Uninstaller.html">Gem::Uninstaller</a>
+    <li><a href="./Gem/UnknownCommandError.html">Gem::UnknownCommandError</a>
+    <li><a href="./Gem/UnknownCommandSpellChecker.html">Gem::UnknownCommandSpellChecker</a>
+    <li><a href="./Gem/UnsatisfiableDependencyError.html">Gem::UnsatisfiableDependencyError</a>
+    <li><a href="./Gem/UpdateSuggestion.html">Gem::UpdateSuggestion</a>
+    <li><a href="./Gem/Uri.html">Gem::Uri</a>
+    <li><a href="./Gem/UriFormatter.html">Gem::UriFormatter</a>
+    <li><a href="./Gem/UserInteraction.html">Gem::UserInteraction</a>
+    <li><a href="./Gem/Util.html">Gem::Util</a>
+    <li><a href="./Gem/Validator.html">Gem::Validator</a>
+    <li><a href="./Gem/VerificationError.html">Gem::VerificationError</a>
+    <li><a href="./Gem/Version.html">Gem::Version</a>
+    <li><a href="./Gem/VersionOption.html">Gem::VersionOption</a>
+    <li><a href="./Gem/WebauthnVerificationError.html">Gem::WebauthnVerificationError</a>
+    <li><a href="./Gem/YAMLSerializer.html">Gem::YAMLSerializer</a>
+    <li><a href="./Kernel.html">Kernel</a>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</nav>
+
+
+<!--  carbon ads here -->
+
+<div id='extraz'>
+  <div class='adzbox-index'  >
+   
+  </div>
+ </div>         
+
+
+<main role="main">
+<p>This is the API documentation for rubygems: Ruby Standard Library Documentation.</p>
+<p>This is the API documentation for .</p>
+</main>
+
+
+
+</div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>. </p><p><a href="https://jamesbritt.bandcamp.com/">Hack your world.  Feed your head.  Live curious</a>.</p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Bundler::SelfManager - bundler: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-i-autoswitching_applies-3F">#autoswitching_applies?</a>
+    <li ><a href="#method-i-current_version">#current_version</a>
+    <li ><a href="#method-i-find_latest_matching_spec">#find_latest_matching_spec</a>
+    <li ><a href="#method-i-find_latest_matching_spec_from_collection">#find_latest_matching_spec_from_collection</a>
+    <li ><a href="#method-i-install">#install</a>
+    <li ><a href="#method-i-install_and_restart_with">#install_and_restart_with</a>
+    <li ><a href="#method-i-install_locked_bundler_and_restart_with_it_if_needed">#install_locked_bundler_and_restart_with_it_if_needed</a>
+    <li ><a href="#method-i-installed-3F">#installed?</a>
+    <li ><a href="#method-i-local_specs">#local_specs</a>
+    <li ><a href="#method-i-lockfile_version">#lockfile_version</a>
+    <li ><a href="#method-i-needs_switching-3F">#needs_switching?</a>
+    <li ><a href="#method-i-released-3F">#released?</a>
+    <li ><a href="#method-i-remote_specs">#remote_specs</a>
+    <li ><a href="#method-i-resolve_update_version_from">#resolve_update_version_from</a>
+    <li ><a href="#method-i-restart_version">#restart_version</a>
+    <li ><a href="#method-i-restart_with">#restart_with</a>
+    <li ><a href="#method-i-restart_with_locked_bundler_if_needed">#restart_with_locked_bundler_if_needed</a>
+    <li ><a href="#method-i-running-3F">#running?</a>
+    <li ><a href="#method-i-running_older_than-3F">#running_older_than?</a>
+    <li ><a href="#method-i-update_bundler_and_restart_with_it_if_needed">#update_bundler_and_restart_with_it_if_needed</a>
+    <li ><a href="#method-i-updating-3F">#updating?</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-Bundler::SelfManager">
+    <h1 id="class-Bundler::SelfManager" class="class">
+      class Bundler::SelfManager
+    </h1>
+
+    <section class="description">
+    
+<p>This class handles installing and switching to the version of bundler needed by an application.</p>
+
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-install_locked_bundler_and_restart_with_it_if_needed" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">install_locked_bundler_and_restart_with_it_if_needed</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="install_locked_bundler_and_restart_with_it_if_needed-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">install_locked_bundler_and_restart_with_it_if_needed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">needs_switching?</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">restart_version</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">lockfile_version</span>
+    <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">info</span> \
+      <span class="ruby-node">&quot;Bundler #{current_version} is running, but your lockfile was generated with #{lockfile_version}. &quot;</span> \
+      <span class="ruby-node">&quot;Installing Bundler #{lockfile_version} and restarting using that version.&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">info</span> \
+      <span class="ruby-node">&quot;Bundler #{current_version} is running, but your configuration was #{restart_version}. &quot;</span> \
+      <span class="ruby-node">&quot;Installing Bundler #{restart_version} and restarting using that version.&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">install_and_restart_with</span>(<span class="ruby-identifier">restart_version</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-restart_with_locked_bundler_if_needed" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">restart_with_locked_bundler_if_needed</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="restart_with_locked_bundler_if_needed-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">restart_with_locked_bundler_if_needed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">needs_switching?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">installed?</span>
+
+  <span class="ruby-identifier">restart_with</span>(<span class="ruby-identifier">restart_version</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-update_bundler_and_restart_with_it_if_needed" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">update_bundler_and_restart_with_it_if_needed</span><span
+                                class="method-args">(target)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="update_bundler_and_restart_with_it_if_needed-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update_bundler_and_restart_with_it_if_needed</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">autoswitching_applies?</span>
+
+  <span class="ruby-identifier">spec</span> = <span class="ruby-identifier">resolve_update_version_from</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">spec</span>
+
+  <span class="ruby-identifier">version</span> = <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span>
+
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Updating bundler to #{version}.&quot;</span>
+
+  <span class="ruby-identifier">install</span>(<span class="ruby-identifier">spec</span>)
+
+  <span class="ruby-identifier">restart_with</span>(<span class="ruby-identifier">version</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-autoswitching_applies-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">autoswitching_applies?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="autoswitching_applies-3F-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">autoswitching_applies?</span>
+  <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;BUNDLER_VERSION&quot;</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">rubygems</span>.<span class="ruby-identifier">supports_bundler_trampolining?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-constant">SharedHelpers</span>.<span class="ruby-identifier">in_bundle?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-identifier">lockfile_version</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-current_version" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">current_version</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="current_version-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">current_version</span>
+  <span class="ruby-ivar">@current_version</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Bundler</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-find_latest_matching_spec" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">find_latest_matching_spec</span><span
+                                class="method-args">(requirement)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="find_latest_matching_spec-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 128</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_latest_matching_spec</span>(<span class="ruby-identifier">requirement</span>)
+  <span class="ruby-identifier">local_result</span> = <span class="ruby-identifier">find_latest_matching_spec_from_collection</span>(<span class="ruby-identifier">local_specs</span>, <span class="ruby-identifier">requirement</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">local_result</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">local_result</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">specific?</span>
+
+  <span class="ruby-identifier">remote_result</span> = <span class="ruby-identifier">find_latest_matching_spec_from_collection</span>(<span class="ruby-identifier">remote_specs</span>, <span class="ruby-identifier">requirement</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">remote_result</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">local_result</span>.<span class="ruby-identifier">nil?</span>
+
+  [<span class="ruby-identifier">local_result</span>, <span class="ruby-identifier">remote_result</span>].<span class="ruby-identifier">max</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-find_latest_matching_spec_from_collection" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">find_latest_matching_spec_from_collection</span><span
+                                class="method-args">(specs, requirement)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="find_latest_matching_spec_from_collection-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_latest_matching_spec_from_collection</span>(<span class="ruby-identifier">specs</span>, <span class="ruby-identifier">requirement</span>)
+  <span class="ruby-identifier">specs</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">reverse_each</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span> <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">satisfied_by?</span>(<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span>) }
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-install" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">install</span><span
+                                class="method-args">(spec)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="install-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">install</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">source</span>.<span class="ruby-identifier">install</span>(<span class="ruby-identifier">spec</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-install_and_restart_with" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">install_and_restart_with</span><span
+                                class="method-args">(version)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="install_and_restart_with-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">install_and_restart_with</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">requirement</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Requirement</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">spec</span> = <span class="ruby-identifier">find_latest_matching_spec</span>(<span class="ruby-identifier">requirement</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Your lockfile is locked to a version of bundler (#{lockfile_version}) that doesn&#39;t exist at https://rubygems.org/. Going on using #{current_version}&quot;</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">install</span>(<span class="ruby-identifier">spec</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">trace</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;There was an error installing the locked bundler version (#{lockfile_version}), rerun with the `--verbose` flag for more details. Going on using bundler #{current_version}.&quot;</span>
+<span class="ruby-keyword">else</span>
+  <span class="ruby-identifier">restart_with</span>(<span class="ruby-identifier">version</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-installed-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">installed?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="installed-3F-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">installed?</span>
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">configure</span>
+
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">rubygems</span>.<span class="ruby-identifier">find_bundler</span>(<span class="ruby-identifier">restart_version</span>.<span class="ruby-identifier">to_s</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-local_specs" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">local_specs</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="local_specs-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">local_specs</span>
+  <span class="ruby-ivar">@local_specs</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Bundler</span><span class="ruby-operator">::</span><span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Rubygems</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;allow_local&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">specs</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;bundler&quot;</span> }
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-lockfile_version" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">lockfile_version</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="lockfile_version-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lockfile_version</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@lockfile_version</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@lockfile_version</span>)
+
+  <span class="ruby-identifier">parsed_version</span> = <span class="ruby-constant">Bundler</span><span class="ruby-operator">::</span><span class="ruby-constant">LockfileParser</span>.<span class="ruby-identifier">bundled_with</span>
+  <span class="ruby-ivar">@lockfile_version</span> = <span class="ruby-identifier">parsed_version</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parsed_version</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">ArgumentError</span>
+  <span class="ruby-ivar">@lockfile_version</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-needs_switching-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">needs_switching?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="needs_switching-3F-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">needs_switching?</span>
+  <span class="ruby-identifier">autoswitching_applies?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-identifier">released?</span>(<span class="ruby-identifier">lockfile_version</span>) <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-operator">!</span><span class="ruby-identifier">running?</span>(<span class="ruby-identifier">lockfile_version</span>) <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-operator">!</span><span class="ruby-identifier">updating?</span> <span class="ruby-operator">&amp;&amp;</span>
+    <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">settings</span>[<span class="ruby-value">:version</span>] <span class="ruby-operator">!=</span> <span class="ruby-string">&quot;system&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-released-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">released?</span><span
+                                class="method-args">(version)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="released-3F-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">released?</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-operator">!</span><span class="ruby-identifier">version</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">end_with?</span>(<span class="ruby-string">&quot;.dev&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-remote_specs" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">remote_specs</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="remote_specs-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">remote_specs</span>
+  <span class="ruby-ivar">@remote_specs</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">source</span> = <span class="ruby-constant">Bundler</span><span class="ruby-operator">::</span><span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Rubygems</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;remotes&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;https://rubygems.org&quot;</span>)
+    <span class="ruby-identifier">source</span>.<span class="ruby-identifier">remote!</span>
+    <span class="ruby-identifier">source</span>.<span class="ruby-identifier">add_dependency_names</span>(<span class="ruby-string">&quot;bundler&quot;</span>)
+    <span class="ruby-identifier">source</span>.<span class="ruby-identifier">specs</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-resolve_update_version_from" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">resolve_update_version_from</span><span
+                                class="method-args">(target)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="resolve_update_version_from-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">resolve_update_version_from</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-identifier">requirement</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Requirement</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-identifier">update_candidate</span> = <span class="ruby-identifier">find_latest_matching_spec</span>(<span class="ruby-identifier">requirement</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">update_candidate</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidOption</span>, <span class="ruby-node">&quot;The `bundle update --bundler` target version (#{target}) does not exist&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">resolved_version</span> = <span class="ruby-identifier">update_candidate</span>.<span class="ruby-identifier">version</span>
+  <span class="ruby-identifier">needs_update</span> = <span class="ruby-identifier">requirement</span>.<span class="ruby-identifier">specific?</span> <span class="ruby-operator">?</span> <span class="ruby-operator">!</span><span class="ruby-identifier">running?</span>(<span class="ruby-identifier">resolved_version</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">running_older_than?</span>(<span class="ruby-identifier">resolved_version</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">needs_update</span>
+
+  <span class="ruby-identifier">update_candidate</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-restart_version" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">restart_version</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="restart_version-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">restart_version</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@restart_version</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-ivar">@restart_version</span>)
+  <span class="ruby-comment"># BUNDLE_VERSION=x.y.z</span>
+  <span class="ruby-ivar">@restart_version</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Version</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">settings</span>[<span class="ruby-value">:version</span>])
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">ArgumentError</span>
+  <span class="ruby-comment"># BUNDLE_VERSION=lockfile</span>
+  <span class="ruby-ivar">@restart_version</span> = <span class="ruby-identifier">lockfile_version</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-restart_with" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">restart_with</span><span
+                                class="method-args">(version)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="restart_with-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">restart_with</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">configured_gem_home</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;GEM_HOME&quot;</span>]
+  <span class="ruby-identifier">configured_gem_path</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;GEM_PATH&quot;</span>]
+
+  <span class="ruby-identifier">cmd</span> = [<span class="ruby-identifier">$PROGRAM_NAME</span>, <span class="ruby-operator">*</span><span class="ruby-constant">ARGV</span>]
+  <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-constant">Gem</span>.<span class="ruby-identifier">ruby</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">executable?</span>(<span class="ruby-identifier">$PROGRAM_NAME</span>)
+
+  <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">with_original_env</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">exec</span>(
+      { <span class="ruby-string">&quot;GEM_HOME&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">configured_gem_home</span>, <span class="ruby-string">&quot;GEM_PATH&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">configured_gem_path</span>, <span class="ruby-string">&quot;BUNDLER_VERSION&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">version</span>.<span class="ruby-identifier">to_s</span> },
+      <span class="ruby-operator">*</span><span class="ruby-identifier">cmd</span>
+    )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-running-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">running?</span><span
+                                class="method-args">(version)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="running-3F-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">running?</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">version</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">current_version</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-running_older_than-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">running_older_than?</span><span
+                                class="method-args">(version)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="running_older_than-3F-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">running_older_than?</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">current_version</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">version</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-updating-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">updating?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="updating-3F-source">
+            <pre><span class="ruby-comment"># File bundler/self_manager.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">updating?</span>
+  <span class="ruby-string">&quot;update&quot;</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-constant">ARGV</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-string">&quot; &quot;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">ARGV</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>].<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&quot;--bundler&quot;</span>) }
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

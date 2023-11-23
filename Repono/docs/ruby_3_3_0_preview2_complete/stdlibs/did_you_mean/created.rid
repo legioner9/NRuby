@@ -1,0 +1,21 @@
+Thu, 14 Sep 2023 20:11:59 -0700
+did_you_mean.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/core_ext/name_error.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/experimental.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/formatter.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/formatters/plain_formatter.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/formatters/verbose_formatter.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/jaro_winkler.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/levenshtein.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checkers/key_error_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checkers/method_name_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checkers/name_error_checkers/class_name_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checkers/name_error_checkers/variable_name_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checkers/name_error_checkers.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checkers/null_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checkers/pattern_key_name_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/spell_checkers/require_path_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/tree_spell_checker.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/verbose.rb	Wed, 13 Sep 2023 18:09:33 -0700
+did_you_mean/version.rb	Wed, 13 Sep 2023 18:09:33 -0700

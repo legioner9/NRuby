@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class RubyVM::RJIT::Context - ruby_vm: Ruby Standard Library Documentation</title>
+
+
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
+
+<script src="../../js/jquery-3.2.0.min.js"></script>
+
+<script src="../../js/vue.min.js"></script>
+<script src="../../js/js.cookie.min.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../../css/rdoc.css" rel="stylesheet">
+<link href="../../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+  var darkModeCsseHref = "../../css/rdoc-dm.css"
+  var defaultModeCssHref = "../../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">Struct.new(     :stack_size,
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-assert">#assert</a>
+    <li ><a href="#method-i-clear_local_types">#clear_local_types</a>
+    <li ><a href="#method-i-diff">#diff</a>
+    <li class="calls-super" ><a href="#method-i-dup">#dup</a>
+    <li ><a href="#method-i-get_local_type">#get_local_type</a>
+    <li ><a href="#method-i-get_opnd_mapping">#get_opnd_mapping</a>
+    <li ><a href="#method-i-get_opnd_type">#get_opnd_type</a>
+    <li ><a href="#method-i-set_local_type">#set_local_type</a>
+    <li ><a href="#method-i-set_opnd_mapping">#set_opnd_mapping</a>
+    <li ><a href="#method-i-shift_stack">#shift_stack</a>
+    <li ><a href="#method-i-sp_opnd">#sp_opnd</a>
+    <li ><a href="#method-i-stack_opnd">#stack_opnd</a>
+    <li ><a href="#method-i-stack_pop">#stack_pop</a>
+    <li ><a href="#method-i-stack_push">#stack_push</a>
+    <li ><a href="#method-i-stack_push_local">#stack_push_local</a>
+    <li ><a href="#method-i-stack_push_mapping">#stack_push_mapping</a>
+    <li ><a href="#method-i-stack_push_self">#stack_push_self</a>
+    <li ><a href="#method-i-upgrade_opnd_type">#upgrade_opnd_type</a>
+    <li ><a href="#method-i-with_stack_size">#with_stack_size</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-RubyVM::RJIT::Context">
+    <h1 id="class-RubyVM::RJIT::Context" class="class">
+      class RubyVM::RJIT::Context
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">( stack_size: 0, sp_offset: 0, chain_depth: 0, local_types: [Type::Unknown] * MAX_LOCAL_TYPES, temp_types: [Type::Unknown] * MAX_TEMP_TYPES, self_type: Type::Unknown, temp_mapping: [MapToStack] * MAX_TEMP_TYPES )</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+                                <div class="method-calls-super">
+                                  Calls superclass method
+                                  
+                              </div>
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 26</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(
+    <span class="ruby-value">stack_size:</span>   <span class="ruby-value">0</span>,
+    <span class="ruby-value">sp_offset:</span>    <span class="ruby-value">0</span>,
+    <span class="ruby-value">chain_depth:</span>  <span class="ruby-value">0</span>,
+    <span class="ruby-value">local_types:</span>  [<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>] <span class="ruby-operator">*</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>,
+    <span class="ruby-value">temp_types:</span>   [<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>] <span class="ruby-operator">*</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>,
+    <span class="ruby-value">self_type:</span>    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>,
+    <span class="ruby-value">temp_mapping:</span> [<span class="ruby-constant">MapToStack</span>] <span class="ruby-operator">*</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+  ) = <span class="ruby-keyword">super</span>
+
+  <span class="ruby-comment"># Deep dup by default for safety</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dup</span>
+    <span class="ruby-identifier">ctx</span> = <span class="ruby-keyword">super</span>
+    <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">local_types</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">local_types</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">temp_types</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">temp_types</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">temp_mapping</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">temp_mapping</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">ctx</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Create a new Context instance with a given stack_size and sp_offset adjusted</span>
+  <span class="ruby-comment"># accordingly. This is useful when you want to virtually rewind a stack_size for</span>
+  <span class="ruby-comment"># generating a side exit while considering past sp_offset changes on gen_save_sp.</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">with_stack_size</span>(<span class="ruby-identifier">stack_size</span>)
+    <span class="ruby-identifier">ctx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">stack_size</span>
+    <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">stack_size</span> = <span class="ruby-identifier">stack_size</span>
+    <span class="ruby-identifier">ctx</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_opnd</span>(<span class="ruby-identifier">depth_from_top</span>)
+    [<span class="ruby-constant">SP</span>, <span class="ruby-constant">C</span>.<span class="ruby-constant">VALUE</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">*</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">depth_from_top</span>)]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sp_opnd</span>(<span class="ruby-identifier">offset_bytes</span> = <span class="ruby-value">0</span>)
+    [<span class="ruby-constant">SP</span>, (<span class="ruby-constant">C</span>.<span class="ruby-constant">VALUE</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">*</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sp_offset</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">offset_bytes</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Push one new value on the temp stack with an explicit mapping</span>
+  <span class="ruby-comment"># Return a pointer to the new stack top</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_push_mapping</span>(<span class="ruby-identifier">mapping_temp_type</span>)
+    <span class="ruby-identifier">stack_size</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>
+
+    <span class="ruby-comment"># Keep track of the type and mapping of the value</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+      <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">temp_type</span> = <span class="ruby-identifier">mapping_temp_type</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_size</span>] = <span class="ruby-identifier">mapping</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_size</span>] = <span class="ruby-identifier">temp_type</span>
+
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">mapping</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">idx</span>]
+        <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>)
+      <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_opnd</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Push one new value on the temp stack</span>
+  <span class="ruby-comment"># Return a pointer to the new stack top</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_push</span>(<span class="ruby-identifier">val_type</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_push_mapping</span>([<span class="ruby-constant">MapToStack</span>, <span class="ruby-identifier">val_type</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Push the self value on the stack</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_push_self</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_push_mapping</span>([<span class="ruby-constant">MapToStack</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Push a local variable on the stack</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_push_local</span>(<span class="ruby-identifier">local_idx</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">local_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_push</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_push_mapping</span>([<span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">local_idx</span>], <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Pop N values off the stack</span>
+  <span class="ruby-comment"># Return a pointer to the stack top before the pop operation</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_pop</span>(<span class="ruby-identifier">n</span> = <span class="ruby-value">1</span>)
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+
+    <span class="ruby-identifier">top</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_opnd</span>(<span class="ruby-value">0</span>)
+
+    <span class="ruby-comment"># Clear the types of the popped values</span>
+    <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">idx</span>] = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">idx</span>] = <span class="ruby-constant">MapToStack</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">n</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">top</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">shift_stack</span>(<span class="ruby-identifier">argc</span>)
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">argc</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+
+    <span class="ruby-identifier">method_name_index</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">argc</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+
+    (<span class="ruby-identifier">method_name_index</span><span class="ruby-operator">...</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_pop</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Get the type of an instruction operand</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_opnd_type</span>(<span class="ruby-identifier">opnd</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">opnd</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">SelfOpnd</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">idx</span>]
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+      <span class="ruby-identifier">stack_idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>
+
+      <span class="ruby-comment"># If outside of tracked range, do nothing</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">mapping</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>]
+
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">mapping</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>]
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">idx</span>]
+        <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">idx</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Get the currently tracked type for a local variable</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_local_type</span>(<span class="ruby-identifier">idx</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">idx</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Upgrade (or &quot;learn&quot;) the type of an instruction operand</span>
+  <span class="ruby-comment"># This value must be compatible and at least as specific as the previously known type.</span>
+  <span class="ruby-comment"># If this value originated from self, or an lvar, the learned type will be</span>
+  <span class="ruby-comment"># propagated back to its source.</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upgrade_opnd_type</span>(<span class="ruby-identifier">opnd</span>, <span class="ruby-identifier">opnd_type</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">opnd</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">SelfOpnd</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span>.<span class="ruby-identifier">upgrade</span>(<span class="ruby-identifier">opnd_type</span>)
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">idx</span>]
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+      <span class="ruby-identifier">stack_idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>
+
+      <span class="ruby-comment"># If outside of tracked range, do nothing</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">mapping</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>]
+
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">mapping</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span>.<span class="ruby-identifier">upgrade</span>(<span class="ruby-identifier">opnd_type</span>)
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>].<span class="ruby-identifier">upgrade</span>(<span class="ruby-identifier">opnd_type</span>)
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">idx</span>]
+        <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">idx</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">idx</span>].<span class="ruby-identifier">upgrade</span>(<span class="ruby-identifier">opnd_type</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Get both the type and mapping (where the value originates) of an operand.</span>
+  <span class="ruby-comment"># This is can be used with stack_push_mapping or set_opnd_mapping to copy</span>
+  <span class="ruby-comment"># a stack value&#39;s type while maintaining the mapping.</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_opnd_mapping</span>(<span class="ruby-identifier">opnd</span>)
+    <span class="ruby-identifier">opnd_type</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_opnd_type</span>(<span class="ruby-identifier">opnd</span>)
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">opnd</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">SelfOpnd</span>
+      <span class="ruby-keyword">return</span> [<span class="ruby-constant">MapToSelf</span>, <span class="ruby-identifier">opnd_type</span>]
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">idx</span>]
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+      <span class="ruby-identifier">stack_idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+        <span class="ruby-keyword">return</span> [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>], <span class="ruby-identifier">opnd_type</span>]
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment"># We can&#39;t know the source of this stack operand, so we assume it is</span>
+        <span class="ruby-comment"># a stack-only temporary. type will be UNKNOWN</span>
+        <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">opnd_type</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>)
+        <span class="ruby-keyword">return</span> [<span class="ruby-constant">MapToStack</span>, <span class="ruby-identifier">opnd_type</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Overwrite both the type and mapping of a stack operand.</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_opnd_mapping</span>(<span class="ruby-identifier">opnd</span>, <span class="ruby-identifier">mapping_opnd_type</span>)
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">opnd</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">SelfOpnd</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-string">&#39;self always maps to self&#39;</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">idx</span>]
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+      <span class="ruby-identifier">stack_idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>
+
+      <span class="ruby-comment"># If outside of tracked range, do nothing</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+        <span class="ruby-keyword">return</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">opnd_type</span> = <span class="ruby-identifier">mapping_opnd_type</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-identifier">mapping</span>
+
+      <span class="ruby-comment"># Only used when mapping == MAP_STACK</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-identifier">opnd_type</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Set the type of a local variable</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_local_type</span>(<span class="ruby-identifier">local_idx</span>, <span class="ruby-identifier">local_type</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">local_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># If any values on the stack map to this local we must detach them</span>
+    <span class="ruby-constant">MAX_TEMP_TYPES</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stack_idx</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>]
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+        <span class="ruby-comment"># noop</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+        <span class="ruby-comment"># noop</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">local_idx</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">local_idx</span>
+          <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">local_idx</span>];
+          <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-constant">MapToStack</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># noop</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">local_idx</span>] = <span class="ruby-identifier">local_type</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Erase local variable type information</span>
+  <span class="ruby-comment"># eg: because of a call we can&#39;t track</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">clear_local_types</span>
+    <span class="ruby-comment"># When clearing local types we must detach any stack mappings to those</span>
+    <span class="ruby-comment"># locals. Even if local values may have changed, stack values will not.</span>
+    <span class="ruby-constant">MAX_TEMP_TYPES</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stack_idx</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>]
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+        <span class="ruby-comment"># noop</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+        <span class="ruby-comment"># noop</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">local_idx</span>]
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">local_idx</span>]
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-constant">MapToStack</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Clear the local types</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span> = [<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>] <span class="ruby-operator">*</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Compute a difference score for two context objects</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">diff</span>(<span class="ruby-identifier">dst</span>)
+    <span class="ruby-comment"># Self is the source context (at the end of the predecessor)</span>
+    <span class="ruby-identifier">src</span> = <span class="ruby-keyword">self</span>
+
+    <span class="ruby-comment"># Can only lookup the first version in the chain</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">chain_depth</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Blocks with depth &gt; 0 always produce new versions</span>
+    <span class="ruby-comment"># Sidechains cannot overlap</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">chain_depth</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">stack_size</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">sp_offset</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Difference sum</span>
+    <span class="ruby-identifier">diff</span> = <span class="ruby-value">0</span>
+
+    <span class="ruby-comment"># Check the type of self</span>
+    <span class="ruby-identifier">diff</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">case</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">self_type</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">dst</span>.<span class="ruby-identifier">self_type</span>)
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>] <span class="ruby-keyword">then</span> <span class="ruby-identifier">diff</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># For each local type we track</span>
+    <span class="ruby-identifier">src</span>.<span class="ruby-identifier">local_types</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">t_src</span> = <span class="ruby-identifier">src</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">i</span>]
+      <span class="ruby-identifier">t_dst</span> = <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">i</span>]
+      <span class="ruby-identifier">diff</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">case</span> <span class="ruby-identifier">t_src</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">t_dst</span>)
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>] <span class="ruby-keyword">then</span> <span class="ruby-identifier">diff</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># For each value on the temp stack</span>
+    <span class="ruby-identifier">src</span>.<span class="ruby-identifier">stack_size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">src_mapping</span>, <span class="ruby-identifier">src_type</span> = <span class="ruby-identifier">src</span>.<span class="ruby-identifier">get_opnd_mapping</span>(<span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">i</span>])
+      <span class="ruby-identifier">dst_mapping</span>, <span class="ruby-identifier">dst_type</span> = <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">get_opnd_mapping</span>(<span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">i</span>])
+
+      <span class="ruby-comment"># If the two mappings aren&#39;t the same</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">src_mapping</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">dst_mapping</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">dst_mapping</span> <span class="ruby-operator">==</span> <span class="ruby-constant">MapToStack</span>
+          <span class="ruby-comment"># We can safely drop information about the source of the temp</span>
+          <span class="ruby-comment"># stack operand.</span>
+          <span class="ruby-identifier">diff</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">diff</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">case</span> <span class="ruby-identifier">src_type</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">dst_type</span>)
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>] <span class="ruby-keyword">then</span> <span class="ruby-identifier">diff</span>
+      <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">private</span>
+
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">assert</span>(<span class="ruby-identifier">cond</span>)
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cond</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;&#39;#{cond.inspect}&#39; was not true&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-assert" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">assert</span><span
+                                class="method-args">(cond)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="assert-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 371</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">assert</span>(<span class="ruby-identifier">cond</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cond</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;&#39;#{cond.inspect}&#39; was not true&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-clear_local_types" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">clear_local_types</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Erase local variable type information eg: because of a call we can’t track</p>
+
+                              <div class="method-source-code" id="clear_local_types-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 282</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">clear_local_types</span>
+  <span class="ruby-comment"># When clearing local types we must detach any stack mappings to those</span>
+  <span class="ruby-comment"># locals. Even if local values may have changed, stack values will not.</span>
+  <span class="ruby-constant">MAX_TEMP_TYPES</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stack_idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>]
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+      <span class="ruby-comment"># noop</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+      <span class="ruby-comment"># noop</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">local_idx</span>]
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">local_idx</span>]
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-constant">MapToStack</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Clear the local types</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span> = [<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>] <span class="ruby-operator">*</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-diff" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">diff</span><span
+                                class="method-args">(dst)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Compute a difference score for two context objects</p>
+
+                              <div class="method-source-code" id="diff-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">diff</span>(<span class="ruby-identifier">dst</span>)
+  <span class="ruby-comment"># Self is the source context (at the end of the predecessor)</span>
+  <span class="ruby-identifier">src</span> = <span class="ruby-keyword">self</span>
+
+  <span class="ruby-comment"># Can only lookup the first version in the chain</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">chain_depth</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Blocks with depth &gt; 0 always produce new versions</span>
+  <span class="ruby-comment"># Sidechains cannot overlap</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">chain_depth</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">stack_size</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">sp_offset</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Difference sum</span>
+  <span class="ruby-identifier">diff</span> = <span class="ruby-value">0</span>
+
+  <span class="ruby-comment"># Check the type of self</span>
+  <span class="ruby-identifier">diff</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">case</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">self_type</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">dst</span>.<span class="ruby-identifier">self_type</span>)
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>] <span class="ruby-keyword">then</span> <span class="ruby-identifier">diff</span>
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># For each local type we track</span>
+  <span class="ruby-identifier">src</span>.<span class="ruby-identifier">local_types</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">t_src</span> = <span class="ruby-identifier">src</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">t_dst</span> = <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">diff</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">case</span> <span class="ruby-identifier">t_src</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">t_dst</span>)
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>] <span class="ruby-keyword">then</span> <span class="ruby-identifier">diff</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># For each value on the temp stack</span>
+  <span class="ruby-identifier">src</span>.<span class="ruby-identifier">stack_size</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">src_mapping</span>, <span class="ruby-identifier">src_type</span> = <span class="ruby-identifier">src</span>.<span class="ruby-identifier">get_opnd_mapping</span>(<span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">i</span>])
+    <span class="ruby-identifier">dst_mapping</span>, <span class="ruby-identifier">dst_type</span> = <span class="ruby-identifier">dst</span>.<span class="ruby-identifier">get_opnd_mapping</span>(<span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">i</span>])
+
+    <span class="ruby-comment"># If the two mappings aren&#39;t the same</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">src_mapping</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">dst_mapping</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">dst_mapping</span> <span class="ruby-operator">==</span> <span class="ruby-constant">MapToStack</span>
+        <span class="ruby-comment"># We can safely drop information about the source of the temp</span>
+        <span class="ruby-comment"># stack operand.</span>
+        <span class="ruby-identifier">diff</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">diff</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword">case</span> <span class="ruby-identifier">src_type</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">dst_type</span>)
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>] <span class="ruby-keyword">then</span> <span class="ruby-identifier">diff</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span> <span class="ruby-keyword">then</span> <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-dup" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">dup</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Deep dup by default for safety</p>
+                                <div class="method-calls-super">
+                                  Calls superclass method
+                                  
+                              </div>
+
+                              <div class="method-source-code" id="dup-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dup</span>
+  <span class="ruby-identifier">ctx</span> = <span class="ruby-keyword">super</span>
+  <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">local_types</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">local_types</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">temp_types</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">temp_types</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">temp_mapping</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">temp_mapping</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">ctx</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-get_local_type" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">get_local_type</span><span
+                                class="method-args">(idx)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Get the currently tracked type for a local variable</p>
+
+                              <div class="method-source-code" id="get_local_type-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_local_type</span>(<span class="ruby-identifier">idx</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">idx</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-get_opnd_mapping" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">get_opnd_mapping</span><span
+                                class="method-args">(opnd)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Get both the type and mapping (where the value originates) of an operand. This is can be used with <a href="Context.html#method-i-stack_push_mapping"><code>stack_push_mapping</code></a> or <a href="Context.html#method-i-set_opnd_mapping"><code>set_opnd_mapping</code></a> to copy a stack value’s type while maintaining the mapping.</p>
+
+                              <div class="method-source-code" id="get_opnd_mapping-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 211</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_opnd_mapping</span>(<span class="ruby-identifier">opnd</span>)
+  <span class="ruby-identifier">opnd_type</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_opnd_type</span>(<span class="ruby-identifier">opnd</span>)
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">opnd</span>
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">SelfOpnd</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-constant">MapToSelf</span>, <span class="ruby-identifier">opnd_type</span>]
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">idx</span>]
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+    <span class="ruby-identifier">stack_idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+      <span class="ruby-keyword">return</span> [<span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>], <span class="ruby-identifier">opnd_type</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># We can&#39;t know the source of this stack operand, so we assume it is</span>
+      <span class="ruby-comment"># a stack-only temporary. type will be UNKNOWN</span>
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">opnd_type</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>)
+      <span class="ruby-keyword">return</span> [<span class="ruby-constant">MapToStack</span>, <span class="ruby-identifier">opnd_type</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-get_opnd_type" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">get_opnd_type</span><span
+                                class="method-args">(opnd)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Get the type of an instruction operand</p>
+
+                              <div class="method-source-code" id="get_opnd_type-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_opnd_type</span>(<span class="ruby-identifier">opnd</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">opnd</span>
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">SelfOpnd</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span>
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">idx</span>]
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+    <span class="ruby-identifier">stack_idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>
+
+    <span class="ruby-comment"># If outside of tracked range, do nothing</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">mapping</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>]
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">mapping</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>]
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">idx</span>]
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>)
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">idx</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-set_local_type" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">set_local_type</span><span
+                                class="method-args">(local_idx, local_type)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Set the type of a local variable</p>
+
+                              <div class="method-source-code" id="set_local_type-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 255</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_local_type</span>(<span class="ruby-identifier">local_idx</span>, <span class="ruby-identifier">local_type</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">local_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># If any values on the stack map to this local we must detach them</span>
+  <span class="ruby-constant">MAX_TEMP_TYPES</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stack_idx</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>]
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+      <span class="ruby-comment"># noop</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+      <span class="ruby-comment"># noop</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">local_idx</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">local_idx</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">local_idx</span>];
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-constant">MapToStack</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment"># noop</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">local_idx</span>] = <span class="ruby-identifier">local_type</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-set_opnd_mapping" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">set_opnd_mapping</span><span
+                                class="method-args">(opnd, mapping_opnd_type)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Overwrite both the type and mapping of a stack operand.</p>
+
+                              <div class="method-source-code" id="set_opnd_mapping-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 233</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_opnd_mapping</span>(<span class="ruby-identifier">opnd</span>, <span class="ruby-identifier">mapping_opnd_type</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">opnd</span>
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">SelfOpnd</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&#39;self always maps to self&#39;</span>
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">idx</span>]
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+    <span class="ruby-identifier">stack_idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>
+
+    <span class="ruby-comment"># If outside of tracked range, do nothing</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">opnd_type</span> = <span class="ruby-identifier">mapping_opnd_type</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-identifier">mapping</span>
+
+    <span class="ruby-comment"># Only used when mapping == MAP_STACK</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-identifier">opnd_type</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-shift_stack" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">shift_stack</span><span
+                                class="method-args">(argc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="shift_stack-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">shift_stack</span>(<span class="ruby-identifier">argc</span>)
+  <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">argc</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+
+  <span class="ruby-identifier">method_name_index</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">argc</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+
+  (<span class="ruby-identifier">method_name_index</span><span class="ruby-operator">...</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_pop</span>(<span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-sp_opnd" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">sp_opnd</span><span
+                                class="method-args">(offset_bytes = 0)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="sp_opnd-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sp_opnd</span>(<span class="ruby-identifier">offset_bytes</span> = <span class="ruby-value">0</span>)
+  [<span class="ruby-constant">SP</span>, (<span class="ruby-constant">C</span>.<span class="ruby-constant">VALUE</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">*</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sp_offset</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">offset_bytes</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-stack_opnd" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">stack_opnd</span><span
+                                class="method-args">(depth_from_top)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="stack_opnd-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_opnd</span>(<span class="ruby-identifier">depth_from_top</span>)
+  [<span class="ruby-constant">SP</span>, <span class="ruby-constant">C</span>.<span class="ruby-constant">VALUE</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">*</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">depth_from_top</span>)]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-stack_pop" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">stack_pop</span><span
+                                class="method-args">(n = 1)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Pop N values off the stack Return a pointer to the stack top before the pop operation</p>
+
+                              <div class="method-source-code" id="stack_pop-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_pop</span>(<span class="ruby-identifier">n</span> = <span class="ruby-value">1</span>)
+  <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+
+  <span class="ruby-identifier">top</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_opnd</span>(<span class="ruby-value">0</span>)
+
+  <span class="ruby-comment"># Clear the types of the popped values</span>
+  <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">idx</span>] = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">idx</span>] = <span class="ruby-constant">MapToStack</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">n</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">top</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-stack_push" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">stack_push</span><span
+                                class="method-args">(val_type)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Push one new value on the temp stack Return a pointer to the new stack top</p>
+
+                              <div class="method-source-code" id="stack_push-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_push</span>(<span class="ruby-identifier">val_type</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_push_mapping</span>([<span class="ruby-constant">MapToStack</span>, <span class="ruby-identifier">val_type</span>])
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-stack_push_local" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">stack_push_local</span><span
+                                class="method-args">(local_idx)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Push a local variable on the stack</p>
+
+                              <div class="method-source-code" id="stack_push_local-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_push_local</span>(<span class="ruby-identifier">local_idx</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">local_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_push</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_push_mapping</span>([<span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">local_idx</span>], <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>])
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-stack_push_mapping" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">stack_push_mapping</span><span
+                                class="method-args">(mapping_temp_type)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Push one new value on the temp stack with an explicit mapping Return a pointer to the new stack top</p>
+
+                              <div class="method-source-code" id="stack_push_mapping-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 65</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_push_mapping</span>(<span class="ruby-identifier">mapping_temp_type</span>)
+  <span class="ruby-identifier">stack_size</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>
+
+  <span class="ruby-comment"># Keep track of the type and mapping of the value</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+    <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">temp_type</span> = <span class="ruby-identifier">mapping_temp_type</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_size</span>] = <span class="ruby-identifier">mapping</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_size</span>] = <span class="ruby-identifier">temp_type</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">mapping</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">idx</span>]
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>)
+    <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_opnd</span>(<span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-stack_push_self" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">stack_push_self</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Push the self value on the stack</p>
+
+                              <div class="method-source-code" id="stack_push_self-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stack_push_self</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_push_mapping</span>([<span class="ruby-constant">MapToStack</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Unknown</span>])
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-upgrade_opnd_type" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">upgrade_opnd_type</span><span
+                                class="method-args">(opnd, opnd_type)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Upgrade (or “learn”) the type of an instruction operand This value must be compatible and at least as specific as the previously known type. If this value originated from self, or an lvar, the learned type will be propagated back to its source.</p>
+
+                              <div class="method-source-code" id="upgrade_opnd_type-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upgrade_opnd_type</span>(<span class="ruby-identifier">opnd</span>, <span class="ruby-identifier">opnd_type</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">opnd</span>
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">SelfOpnd</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span>.<span class="ruby-identifier">upgrade</span>(<span class="ruby-identifier">opnd_type</span>)
+  <span class="ruby-keyword">in</span> <span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">idx</span>]
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span>)
+    <span class="ruby-identifier">stack_idx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">idx</span>
+
+    <span class="ruby-comment"># If outside of tracked range, do nothing</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">stack_idx</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_TEMP_TYPES</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">mapping</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_mapping</span>[<span class="ruby-identifier">stack_idx</span>]
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">mapping</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">self_type</span>.<span class="ruby-identifier">upgrade</span>(<span class="ruby-identifier">opnd_type</span>)
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">temp_types</span>[<span class="ruby-identifier">stack_idx</span>].<span class="ruby-identifier">upgrade</span>(<span class="ruby-identifier">opnd_type</span>)
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">idx</span>]
+      <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">idx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">MAX_LOCAL_TYPES</span>)
+      <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">idx</span>] = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">local_types</span>[<span class="ruby-identifier">idx</span>].<span class="ruby-identifier">upgrade</span>(<span class="ruby-identifier">opnd_type</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-with_stack_size" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">with_stack_size</span><span
+                                class="method-args">(stack_size)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Create a new <a href="Context.html"><code>Context</code></a> instance with a given stack_size and sp_offset adjusted accordingly. This is useful when you want to virtually rewind a stack_size for generating a side exit while considering past sp_offset changes on gen_save_sp.</p>
+
+                              <div class="method-source-code" id="with_stack_size-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/context.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">with_stack_size</span>(<span class="ruby-identifier">stack_size</span>)
+  <span class="ruby-identifier">ctx</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">sp_offset</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">stack_size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">stack_size</span>
+  <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">stack_size</span> = <span class="ruby-identifier">stack_size</span>
+  <span class="ruby-identifier">ctx</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

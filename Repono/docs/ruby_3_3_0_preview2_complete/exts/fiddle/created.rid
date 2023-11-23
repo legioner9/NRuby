@@ -1,0 +1,20 @@
+Thu, 14 Sep 2023 20:13:51 -0700
+fiddle/closure.c	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/conversions.c	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/fiddle.c	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/function.c	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/handle.c	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/closure.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/cparser.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/function.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/import.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/pack.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/struct.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/types.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/value.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle/version.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/lib/fiddle.rb	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/memory_view.c	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/pinned.c	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/pointer.c	Wed, 13 Sep 2023 18:09:33 -0700
+fiddle/win32/libffi-config.rb	Wed, 13 Sep 2023 18:09:33 -0700

@@ -1,0 +1,25 @@
+Thu, 14 Sep 2023 20:11:35 -0700
+debug-1.8.0/ext/debug/debug.c	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/ext/debug/iseq_collector.c	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/abbrev_command.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/breakpoint.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/client.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/color.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/config.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/console.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/dap_custom/traceInspector.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/frame_info.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/local.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/open.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/open_nonstop.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/prelude.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/server.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/server_cdp.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/server_dap.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/session.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/source_repository.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/start.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/thread_client.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/tracer.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug/version.rb	Wed, 13 Sep 2023 18:09:35 -0700
+debug-1.8.0/lib/debug.rb	Wed, 13 Sep 2023 18:09:35 -0700

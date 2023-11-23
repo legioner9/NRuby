@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Bundler::Index - bundler: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+<div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+    <li><span class="include">Enumerable</span>
+  </ul>
+</div>
+
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-build">::build</a>
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-3C-3C">#&lt;&lt;</a>
+    <li ><a href="#method-i-3D-3D">#==</a>
+    <li ><a href="#method-i-5B-5D">#[]</a>
+    <li ><a href="#method-i-add">#add</a>
+    <li ><a href="#method-i-add_duplicate">#add_duplicate</a>
+    <li ><a href="#method-i-add_source">#add_source</a>
+    <li ><a href="#method-i-dependencies_eql-3F">#dependencies_eql?</a>
+    <li ><a href="#method-i-dependency_names">#dependency_names</a>
+    <li ><a href="#method-i-each">#each</a>
+    <li ><a href="#method-i-empty-3F">#empty?</a>
+    <li ><a href="#method-i-exist-3F">#exist?</a>
+    <li ><a href="#method-i-find_by_spec">#find_by_spec</a>
+    <li ><a href="#method-i-initialize_copy">#initialize_copy</a>
+    <li ><a href="#method-i-inspect">#inspect</a>
+    <li ><a href="#method-i-local_search">#local_search</a>
+    <li ><a href="#method-i-merge-21">#merge!</a>
+    <li ><a href="#method-i-search">#search</a>
+    <li ><a href="#method-i-search_all">#search_all</a>
+    <li ><a href="#method-i-search_by_spec">#search_by_spec</a>
+    <li ><a href="#method-i-size">#size</a>
+    <li ><a href="#method-i-spec_names">#spec_names</a>
+    <li ><a href="#method-i-specs_by_name">#specs_by_name</a>
+    <li ><a href="#method-i-specs_by_name_and_version">#specs_by_name_and_version</a>
+    <li ><a href="#method-i-unmet_dependency_names">#unmet_dependency_names</a>
+    <li ><a href="#method-i-use">#use</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-Bundler::Index">
+    <h1 id="class-Bundler::Index" class="class">
+      class Bundler::Index
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+      <section class="constants-list">
+      <header>
+      <h3>Constants</h3>
+      </header>
+      <dl>
+          <dt id="EMPTY_SEARCH">EMPTY_SEARCH
+          <dd>
+          <dt id="NULL">NULL
+          <dd>
+          <dt id="RUBY">RUBY
+          <dd>
+        </dl>
+        </section>
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-duplicates" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">duplicates</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-sources" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">sources</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-specs" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">specs</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-build" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">build</span><span
+                                class="method-args">() { |i| ... }</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="build-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">build</span>
+  <span class="ruby-identifier">i</span> = <span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">i</span>
+  <span class="ruby-identifier">i</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>
+  <span class="ruby-ivar">@sources</span> = []
+  <span class="ruby-ivar">@cache</span> = {}
+  <span class="ruby-ivar">@specs</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = {} }
+  <span class="ruby-ivar">@duplicates</span> = {}
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-3C-3C" class="method-detail method-alias">
+                            <div class="method-heading">
+                              <span class="method-name">&lt;&lt;</span><span
+                                class="method-args">(spec)</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                            </div>
+
+
+                            <div class="aliases">
+                              Alias for: <a href="Index.html#method-i-add">add</a>
+                            </div>
+                          </div>
+
+                  <div id="method-i-3D-3D" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">==</span><span
+                                class="method-args">(other)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Whether all the specs in self are in other TODO: rename to include?</p>
+
+                              <div class="method-source-code" id="3D-3D-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">==</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">all?</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">other_spec</span> = <span class="ruby-identifier">other</span>[<span class="ruby-identifier">spec</span>].<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">other_spec</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dependencies_eql?</span>(<span class="ruby-identifier">spec</span>, <span class="ruby-identifier">other_spec</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">source</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other_spec</span>.<span class="ruby-identifier">source</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-5B-5D" class="method-detail method-alias">
+                            <div class="method-heading">
+                              <span class="method-name">[]</span><span
+                                class="method-args">(query)</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                            </div>
+
+
+                            <div class="aliases">
+                              Alias for: <a href="Index.html#method-i-search">search</a>
+                            </div>
+                          </div>
+
+                  <div id="method-i-add" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add</span><span
+                                class="method-args">(spec)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-ivar">@specs</span>[<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">name</span>][<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">full_name</span>] = <span class="ruby-identifier">spec</span>
+  <span class="ruby-identifier">spec</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+                            <div class="aliases">
+                              Also aliased as: <a href="Index.html#method-i-3C-3C">&lt;&lt;</a>
+                            </div>
+
+                          </div>
+
+                  <div id="method-i-add_source" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_source</span><span
+                                class="method-args">(index)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_source-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_source</span>(<span class="ruby-identifier">index</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Source must be an index, not #{index.class}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">index</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Index</span>)
+  <span class="ruby-ivar">@sources</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">uniq!</span> <span class="ruby-comment"># need to use uniq! here instead of checking for the item before adding</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-dependencies_eql-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">dependencies_eql?</span><span
+                                class="method-args">(spec, other_spec)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="dependencies_eql-3F-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dependencies_eql?</span>(<span class="ruby-identifier">spec</span>, <span class="ruby-identifier">other_spec</span>)
+  <span class="ruby-identifier">deps</span>       = <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">dependencies</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:development</span> }
+  <span class="ruby-identifier">other_deps</span> = <span class="ruby-identifier">other_spec</span>.<span class="ruby-identifier">dependencies</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:development</span> }
+  <span class="ruby-identifier">deps</span>.<span class="ruby-identifier">sort</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other_deps</span>.<span class="ruby-identifier">sort</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-dependency_names" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">dependency_names</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="dependency_names-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dependency_names</span>
+  <span class="ruby-identifier">names</span> = []
+  <span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">dependencies</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dep</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:development</span>
+      <span class="ruby-identifier">names</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">name</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">names</span>.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-each" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">each</span><span
+                                class="method-args">(&amp;blk)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="each-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">enum_for</span>(<span class="ruby-value">:each</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">blk</span>
+  <span class="ruby-identifier">specs</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">spec_sets</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">spec_sets</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">sources</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>) }
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-empty-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">empty?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="empty-3F-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">empty?</span>
+  <span class="ruby-identifier">each</span> { <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> }
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-initialize_copy" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">initialize_copy</span><span
+                                class="method-args">(o)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="initialize_copy-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize_copy</span>(<span class="ruby-identifier">o</span>)
+  <span class="ruby-ivar">@sources</span> = <span class="ruby-identifier">o</span>.<span class="ruby-identifier">sources</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-ivar">@cache</span> = {}
+  <span class="ruby-ivar">@specs</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = {} }
+  <span class="ruby-ivar">@duplicates</span> = {}
+
+  <span class="ruby-identifier">o</span>.<span class="ruby-identifier">specs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">hash</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@specs</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">o</span>.<span class="ruby-identifier">duplicates</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">array</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@duplicates</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">array</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-inspect" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">inspect</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="inspect-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">inspect</span>
+  <span class="ruby-node">&quot;#&lt;#{self.class}:0x#{object_id} sources=#{sources.map(&amp;:inspect)} specs.size=#{specs.size}&gt;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-local_search" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">local_search</span><span
+                                class="method-args">(query)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="local_search-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">local_search</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">query</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>, <span class="ruby-constant">RemoteSpecification</span>, <span class="ruby-constant">LazySpecification</span>, <span class="ruby-constant">EndpointSpecification</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">search_by_spec</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">String</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">specs_by_name</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">specs_by_name_and_version</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">query</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;You can&#39;t search for a #{query.inspect}.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-merge-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">merge!</span><span
+                                class="method-args">(other)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Combines indexes proritizing specs from ‘other`, like `Hash#merge!` Duplicate specs found in `self` are saved in `@duplicates`.</p>
+
+                              <div class="method-source-code" id="merge-21-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 133</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">merge!</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>
+  <span class="ruby-identifier">other</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">existing</span> = <span class="ruby-identifier">find_by_spec</span>(<span class="ruby-identifier">spec</span>)
+      <span class="ruby-identifier">add_duplicate</span>(<span class="ruby-identifier">existing</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">add</span> <span class="ruby-identifier">spec</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-search" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">search</span><span
+                                class="method-args">(query)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Search this index’s specs, and any source indexes that this index knows about, returning all of the results.</p>
+
+                              <div class="method-source-code" id="search-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">search</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-identifier">results</span> = <span class="ruby-identifier">local_search</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">any?</span>
+
+  <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">results</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">source</span>.<span class="ruby-identifier">search</span>(<span class="ruby-identifier">query</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">results</span>.<span class="ruby-identifier">uniq</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:full_name</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+                            <div class="aliases">
+                              Also aliased as: <a href="Index.html#method-i-5B-5D">[]</a>
+                            </div>
+
+                          </div>
+
+                  <div id="method-i-search_all" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">search_all</span><span
+                                class="method-args">(name)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="search_all-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">search_all</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">all_matches</span> = <span class="ruby-identifier">specs_by_name</span>(<span class="ruby-identifier">name</span>) <span class="ruby-comment"># always returns a new Array</span>
+  <span class="ruby-identifier">dupes</span> = <span class="ruby-ivar">@duplicates</span>[<span class="ruby-identifier">name</span>]
+  <span class="ruby-identifier">all_matches</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">dupes</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">dupes</span>
+  <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">all_matches</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">source</span>.<span class="ruby-identifier">search_all</span>(<span class="ruby-identifier">name</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">all_matches</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-size" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">size</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="size-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 144</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">size</span>
+  <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-ivar">@specs</span>.<span class="ruby-identifier">size</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">size</span>, <span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">size</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-spec_names" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">spec_names</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="spec_names-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">spec_names</span>
+  <span class="ruby-identifier">names</span> = <span class="ruby-identifier">specs</span>.<span class="ruby-identifier">keys</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sources</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:spec_names</span>)
+  <span class="ruby-identifier">names</span>.<span class="ruby-identifier">uniq!</span>
+  <span class="ruby-identifier">names</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-unmet_dependency_names" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">unmet_dependency_names</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="unmet_dependency_names-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">unmet_dependency_names</span>
+  <span class="ruby-identifier">dependency_names</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">search</span>(<span class="ruby-identifier">name</span>).<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-use" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">use</span><span
+                                class="method-args">(other)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Combines indexes proritizing existing specs, like ‘Hash#reverse_merge!` Duplicate specs found in `other` are stored in `@duplicates`.</p>
+
+                              <div class="method-source-code" id="use-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 123</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">use</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>
+  <span class="ruby-identifier">other</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">spec</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">add_duplicate</span>(<span class="ruby-identifier">spec</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-add_duplicate" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_duplicate</span><span
+                                class="method-args">(spec)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_duplicate-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_duplicate</span>(<span class="ruby-identifier">spec</span>)
+  (<span class="ruby-ivar">@duplicates</span>[<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">name</span>] <span class="ruby-operator">||=</span> []) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">spec</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-exist-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">exist?</span><span
+                                class="method-args">(spec)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="exist-3F-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 196</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">exist?</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-ivar">@specs</span>[<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">name</span>].<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">full_name</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-find_by_spec" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">find_by_spec</span><span
+                                class="method-args">(spec)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="find_by_spec-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_by_spec</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-ivar">@specs</span>[<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">name</span>][<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">full_name</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-search_by_spec" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">search_by_spec</span><span
+                                class="method-args">(spec)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="search_by_spec-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">search_by_spec</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-identifier">spec</span> = <span class="ruby-identifier">find_by_spec</span>(<span class="ruby-identifier">spec</span>)
+  <span class="ruby-identifier">spec</span> <span class="ruby-operator">?</span> [<span class="ruby-identifier">spec</span>] <span class="ruby-operator">:</span> <span class="ruby-constant">EMPTY_SEARCH</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-specs_by_name" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">specs_by_name</span><span
+                                class="method-args">(name)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="specs_by_name-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">specs_by_name</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-ivar">@specs</span>[<span class="ruby-identifier">name</span>].<span class="ruby-identifier">values</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-specs_by_name_and_version" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">specs_by_name_and_version</span><span
+                                class="method-args">(name, version)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="specs_by_name_and_version-source">
+            <pre><span class="ruby-comment"># File bundler/index.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">specs_by_name_and_version</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">specs_by_name</span>(<span class="ruby-identifier">name</span>).<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">version</span> }
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

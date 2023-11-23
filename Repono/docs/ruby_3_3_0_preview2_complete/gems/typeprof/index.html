@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>typeprof: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="file">
+  <!-- index.html -->
+ <div id='actionbar' >
+   
+<div class='wrapper mdiv'>
+ <ul class='grids g0'></ul>
+</div> 
+<!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+</div> <!-- end action bar -->
+
+ <div class='wrapper hdiv'>
+
+ 
+
+<nav id='vapp' role="navigation">
+  <div id="project-navigation"    >
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="./index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+  
+  <button id='toggleThing' @click="isOpen = !isOpen" _click="toggleNav()" >Show/hide navigation</button>
+
+    <div id="project-metadata" >
+      <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+    
+
+    <div id="classindex-section" class="nav-section">
+  <h3>Class and Module Index</h3>
+
+  <ul class="link-list">
+    <li><a href="./Object.html">Object</a>
+    <li><a href="./TypeProf.html">TypeProf</a>
+    <li><a href="./TypeProf/ActualArguments.html">TypeProf::ActualArguments</a>
+    <li><a href="./TypeProf/AliasMethodDef.html">TypeProf::AliasMethodDef</a>
+    <li><a href="./TypeProf/AllocationSite.html">TypeProf::AllocationSite</a>
+    <li><a href="./TypeProf/AttrMethodDef.html">TypeProf::AttrMethodDef</a>
+    <li><a href="./TypeProf/Block.html">TypeProf::Block</a>
+    <li><a href="./TypeProf/BlockSignature.html">TypeProf::BlockSignature</a>
+    <li><a href="./TypeProf/Builtin.html">TypeProf::Builtin</a>
+    <li><a href="./TypeProf/CLI.html">TypeProf::CLI</a>
+    <li><a href="./TypeProf/CRef.html">TypeProf::CRef</a>
+    <li><a href="./TypeProf/CodeLocation.html">TypeProf::CodeLocation</a>
+    <li><a href="./TypeProf/CodeRange.html">TypeProf::CodeRange</a>
+    <li><a href="./TypeProf/CodeRangeTable.html">TypeProf::CodeRangeTable</a>
+    <li><a href="./TypeProf/CodeRangeTable/Entry.html">TypeProf::CodeRangeTable::Entry</a>
+    <li><a href="./TypeProf/Config.html">TypeProf::Config</a>
+    <li><a href="./TypeProf/ConfigData.html">TypeProf::ConfigData</a>
+    <li><a href="./TypeProf/Context.html">TypeProf::Context</a>
+    <li><a href="./TypeProf/CustomBlock.html">TypeProf::CustomBlock</a>
+    <li><a href="./TypeProf/CustomMethodDef.html">TypeProf::CustomMethodDef</a>
+    <li><a href="./TypeProf/Env.html">TypeProf::Env</a>
+    <li><a href="./TypeProf/ExecutedAttrMethodDef.html">TypeProf::ExecutedAttrMethodDef</a>
+    <li><a href="./TypeProf/ExecutionPoint.html">TypeProf::ExecutionPoint</a>
+    <li><a href="./TypeProf/ISeq.html">TypeProf::ISeq</a>
+    <li><a href="./TypeProf/ISeq/Insn.html">TypeProf::ISeq::Insn</a>
+    <li><a href="./TypeProf/ISeqBlock.html">TypeProf::ISeqBlock</a>
+    <li><a href="./TypeProf/ISeqMethodDef.html">TypeProf::ISeqMethodDef</a>
+    <li><a href="./TypeProf/Import.html">TypeProf::Import</a>
+    <li><a href="./TypeProf/LSP.html">TypeProf::LSP</a>
+    <li><a href="./TypeProf/LSP/CompletionSession.html">TypeProf::LSP::CompletionSession</a>
+    <li><a href="./TypeProf/LSP/CompletionTriggerKind.html">TypeProf::LSP::CompletionTriggerKind</a>
+    <li><a href="./TypeProf/LSP/ErrorCodes.html">TypeProf::LSP::ErrorCodes</a>
+    <li><a href="./TypeProf/LSP/Helpers.html">TypeProf::LSP::Helpers</a>
+    <li><a href="./TypeProf/LSP/Message.html">TypeProf::LSP::Message</a>
+    <li><a href="./TypeProf/LSP/Message/CancelRequest.html">TypeProf::LSP::Message::CancelRequest</a>
+    <li><a href="./TypeProf/LSP/Message/Exit.html">TypeProf::LSP::Message::Exit</a>
+    <li><a href="./TypeProf/LSP/Message/Initialize.html">TypeProf::LSP::Message::Initialize</a>
+    <li><a href="./TypeProf/LSP/Message/Initialized.html">TypeProf::LSP::Message::Initialized</a>
+    <li><a href="./TypeProf/LSP/Message/Shutdown.html">TypeProf::LSP::Message::Shutdown</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument.html">TypeProf::LSP::Message::TextDocument</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/CodeLens.html">TypeProf::LSP::Message::TextDocument::CodeLens</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/Completion.html">TypeProf::LSP::Message::TextDocument::Completion</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/Definition.html">TypeProf::LSP::Message::TextDocument::Definition</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/DidChange.html">TypeProf::LSP::Message::TextDocument::DidChange</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/DidClose.html">TypeProf::LSP::Message::TextDocument::DidClose</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/DidOpen.html">TypeProf::LSP::Message::TextDocument::DidOpen</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/References.html">TypeProf::LSP::Message::TextDocument::References</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/SignatureHelp.html">TypeProf::LSP::Message::TextDocument::SignatureHelp</a>
+    <li><a href="./TypeProf/LSP/Message/TextDocument/TypeDefinition.html">TypeProf::LSP::Message::TextDocument::TypeDefinition</a>
+    <li><a href="./TypeProf/LSP/Message/Workspace.html">TypeProf::LSP::Message::Workspace</a>
+    <li><a href="./TypeProf/LSP/Message/Workspace/DidChangeWatchedFiles.html">TypeProf::LSP::Message::Workspace::DidChangeWatchedFiles</a>
+    <li><a href="./TypeProf/LSP/Message/Workspace/ExecuteCommand.html">TypeProf::LSP::Message::Workspace::ExecuteCommand</a>
+    <li><a href="./TypeProf/LSP/MessageType.html">TypeProf::LSP::MessageType</a>
+    <li><a href="./TypeProf/LSP/Reader.html">TypeProf::LSP::Reader</a>
+    <li><a href="./TypeProf/LSP/Reader/ProtocolError.html">TypeProf::LSP::Reader::ProtocolError</a>
+    <li><a href="./TypeProf/LSP/Server.html">TypeProf::LSP::Server</a>
+    <li><a href="./TypeProf/LSP/Server/Exit.html">TypeProf::LSP::Server::Exit</a>
+    <li><a href="./TypeProf/LSP/Text.html">TypeProf::LSP::Text</a>
+    <li><a href="./TypeProf/LSP/Text/AnalysisToken.html">TypeProf::LSP::Text::AnalysisToken</a>
+    <li><a href="./TypeProf/LSP/Writer.html">TypeProf::LSP::Writer</a>
+    <li><a href="./TypeProf/LSP/Writer/ErrorCodes.html">TypeProf::LSP::Writer::ErrorCodes</a>
+    <li><a href="./TypeProf/MethodDef.html">TypeProf::MethodDef</a>
+    <li><a href="./TypeProf/MethodSignature.html">TypeProf::MethodSignature</a>
+    <li><a href="./TypeProf/RBS2JSON.html">TypeProf::RBS2JSON</a>
+    <li><a href="./TypeProf/RBSReader.html">TypeProf::RBSReader</a>
+    <li><a href="./TypeProf/RBSReader/RBSCollectionDefined.html">TypeProf::RBSReader::RBSCollectionDefined</a>
+    <li><a href="./TypeProf/Reporters.html">TypeProf::Reporters</a>
+    <li><a href="./TypeProf/RubySignatureExporter.html">TypeProf::RubySignatureExporter</a>
+    <li><a href="./TypeProf/Scratch.html">TypeProf::Scratch</a>
+    <li><a href="./TypeProf/Scratch/ClassDef.html">TypeProf::Scratch::ClassDef</a>
+    <li><a href="./TypeProf/Scratch/VarTable.html">TypeProf::Scratch::VarTable</a>
+    <li><a href="./TypeProf/Signature.html">TypeProf::Signature</a>
+    <li><a href="./TypeProf/StaticEnv.html">TypeProf::StaticEnv</a>
+    <li><a href="./TypeProf/SymbolBlock.html">TypeProf::SymbolBlock</a>
+    <li><a href="./TypeProf/Type.html">TypeProf::Type</a>
+    <li><a href="./TypeProf/Type/Any.html">TypeProf::Type::Any</a>
+    <li><a href="./TypeProf/Type/Array.html">TypeProf::Type::Array</a>
+    <li><a href="./TypeProf/Type/Array/Elements.html">TypeProf::Type::Array::Elements</a>
+    <li><a href="./TypeProf/Type/Cell.html">TypeProf::Type::Cell</a>
+    <li><a href="./TypeProf/Type/Cell/Elements.html">TypeProf::Type::Cell::Elements</a>
+    <li><a href="./TypeProf/Type/Class.html">TypeProf::Type::Class</a>
+    <li><a href="./TypeProf/Type/ContainerType.html">TypeProf::Type::ContainerType</a>
+    <li><a href="./TypeProf/Type/Hash.html">TypeProf::Type::Hash</a>
+    <li><a href="./TypeProf/Type/Hash/Elements.html">TypeProf::Type::Hash::Elements</a>
+    <li><a href="./TypeProf/Type/HashGenerator.html">TypeProf::Type::HashGenerator</a>
+    <li><a href="./TypeProf/Type/ISeq.html">TypeProf::Type::ISeq</a>
+    <li><a href="./TypeProf/Type/Instance.html">TypeProf::Type::Instance</a>
+    <li><a href="./TypeProf/Type/Literal.html">TypeProf::Type::Literal</a>
+    <li><a href="./TypeProf/Type/Local.html">TypeProf::Type::Local</a>
+    <li><a href="./TypeProf/Type/Proc.html">TypeProf::Type::Proc</a>
+    <li><a href="./TypeProf/Type/Symbol.html">TypeProf::Type::Symbol</a>
+    <li><a href="./TypeProf/Type/Union.html">TypeProf::Type::Union</a>
+    <li><a href="./TypeProf/Type/Var.html">TypeProf::Type::Var</a>
+    <li><a href="./TypeProf/Type/Void.html">TypeProf::Type::Void</a>
+    <li><a href="./TypeProf/TypeProfError.html">TypeProf::TypeProfError</a>
+    <li><a href="./TypeProf/TypedAttrMethodDef.html">TypeProf::TypedAttrMethodDef</a>
+    <li><a href="./TypeProf/TypedBlock.html">TypeProf::TypedBlock</a>
+    <li><a href="./TypeProf/TypedContext.html">TypeProf::TypedContext</a>
+    <li><a href="./TypeProf/TypedMethodDef.html">TypeProf::TypedMethodDef</a>
+    <li><a href="./TypeProf/Utils.html">TypeProf::Utils</a>
+    <li><a href="./TypeProf/Utils/CancelToken.html">TypeProf::Utils::CancelToken</a>
+    <li><a href="./TypeProf/Utils/HashWrapper.html">TypeProf::Utils::HashWrapper</a>
+    <li><a href="./TypeProf/Utils/MutableSet.html">TypeProf::Utils::MutableSet</a>
+    <li><a href="./TypeProf/Utils/Set.html">TypeProf::Utils::Set</a>
+    <li><a href="./TypeProf/Utils/StructuralEquality.html">TypeProf::Utils::StructuralEquality</a>
+    <li><a href="./TypeProf/Utils/TimerCancelToken.html">TypeProf::Utils::TimerCancelToken</a>
+    <li><a href="./TypeProf/Utils/WorkList.html">TypeProf::Utils::WorkList</a>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</nav>
+
+
+<!--  carbon ads here -->
+
+<div id='extraz'>
+  <div class='adzbox-index'  >
+   
+  </div>
+ </div>         
+
+
+<main role="main">
+<p>This is the API documentation for typeprof: Ruby Standard Library Documentation.</p>
+<p>This is the API documentation for .</p>
+</main>
+
+
+
+</div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

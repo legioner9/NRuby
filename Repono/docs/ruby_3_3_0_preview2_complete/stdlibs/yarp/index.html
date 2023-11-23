@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>yarp: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="file">
+  <!-- index.html -->
+ <div id='actionbar' >
+   
+<div class='wrapper mdiv'>
+ <ul class='grids g0'></ul>
+</div> 
+<!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+</div> <!-- end action bar -->
+
+ <div class='wrapper hdiv'>
+
+ 
+
+<nav id='vapp' role="navigation">
+  <div id="project-navigation"    >
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="./index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+  
+  <button id='toggleThing' @click="isOpen = !isOpen" _click="toggleNav()" >Show/hide navigation</button>
+
+    <div id="project-metadata" >
+      <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+    
+
+    <div id="classindex-section" class="nav-section">
+  <h3>Class and Module Index</h3>
+
+  <ul class="link-list">
+    <li><a href="./Object.html">Object</a>
+    <li><a href="./YARP.html">YARP</a>
+    <li><a href="./YARP/AliasGlobalVariableNode.html">YARP::AliasGlobalVariableNode</a>
+    <li><a href="./YARP/AliasMethodNode.html">YARP::AliasMethodNode</a>
+    <li><a href="./YARP/AlternationPatternNode.html">YARP::AlternationPatternNode</a>
+    <li><a href="./YARP/AndNode.html">YARP::AndNode</a>
+    <li><a href="./YARP/ArgumentsNode.html">YARP::ArgumentsNode</a>
+    <li><a href="./YARP/ArrayNode.html">YARP::ArrayNode</a>
+    <li><a href="./YARP/ArrayPatternNode.html">YARP::ArrayPatternNode</a>
+    <li><a href="./YARP/AssocNode.html">YARP::AssocNode</a>
+    <li><a href="./YARP/AssocSplatNode.html">YARP::AssocSplatNode</a>
+    <li><a href="./YARP/BackReferenceReadNode.html">YARP::BackReferenceReadNode</a>
+    <li><a href="./YARP/BasicVisitor.html">YARP::BasicVisitor</a>
+    <li><a href="./YARP/BeginNode.html">YARP::BeginNode</a>
+    <li><a href="./YARP/BlockArgumentNode.html">YARP::BlockArgumentNode</a>
+    <li><a href="./YARP/BlockLocalVariableNode.html">YARP::BlockLocalVariableNode</a>
+    <li><a href="./YARP/BlockNode.html">YARP::BlockNode</a>
+    <li><a href="./YARP/BlockParameterNode.html">YARP::BlockParameterNode</a>
+    <li><a href="./YARP/BlockParametersNode.html">YARP::BlockParametersNode</a>
+    <li><a href="./YARP/BreakNode.html">YARP::BreakNode</a>
+    <li><a href="./YARP/CallAndWriteNode.html">YARP::CallAndWriteNode</a>
+    <li><a href="./YARP/CallNode.html">YARP::CallNode</a>
+    <li><a href="./YARP/CallNodeFlags.html">YARP::CallNodeFlags</a>
+    <li><a href="./YARP/CallOperatorWriteNode.html">YARP::CallOperatorWriteNode</a>
+    <li><a href="./YARP/CallOrWriteNode.html">YARP::CallOrWriteNode</a>
+    <li><a href="./YARP/CapturePatternNode.html">YARP::CapturePatternNode</a>
+    <li><a href="./YARP/CaseNode.html">YARP::CaseNode</a>
+    <li><a href="./YARP/ClassNode.html">YARP::ClassNode</a>
+    <li><a href="./YARP/ClassVariableAndWriteNode.html">YARP::ClassVariableAndWriteNode</a>
+    <li><a href="./YARP/ClassVariableOperatorWriteNode.html">YARP::ClassVariableOperatorWriteNode</a>
+    <li><a href="./YARP/ClassVariableOrWriteNode.html">YARP::ClassVariableOrWriteNode</a>
+    <li><a href="./YARP/ClassVariableReadNode.html">YARP::ClassVariableReadNode</a>
+    <li><a href="./YARP/ClassVariableTargetNode.html">YARP::ClassVariableTargetNode</a>
+    <li><a href="./YARP/ClassVariableWriteNode.html">YARP::ClassVariableWriteNode</a>
+    <li><a href="./YARP/Comment.html">YARP::Comment</a>
+    <li><a href="./YARP/ConstantAndWriteNode.html">YARP::ConstantAndWriteNode</a>
+    <li><a href="./YARP/ConstantOperatorWriteNode.html">YARP::ConstantOperatorWriteNode</a>
+    <li><a href="./YARP/ConstantOrWriteNode.html">YARP::ConstantOrWriteNode</a>
+    <li><a href="./YARP/ConstantPathAndWriteNode.html">YARP::ConstantPathAndWriteNode</a>
+    <li><a href="./YARP/ConstantPathNode.html">YARP::ConstantPathNode</a>
+    <li><a href="./YARP/ConstantPathOperatorWriteNode.html">YARP::ConstantPathOperatorWriteNode</a>
+    <li><a href="./YARP/ConstantPathOrWriteNode.html">YARP::ConstantPathOrWriteNode</a>
+    <li><a href="./YARP/ConstantPathTargetNode.html">YARP::ConstantPathTargetNode</a>
+    <li><a href="./YARP/ConstantPathWriteNode.html">YARP::ConstantPathWriteNode</a>
+    <li><a href="./YARP/ConstantReadNode.html">YARP::ConstantReadNode</a>
+    <li><a href="./YARP/ConstantTargetNode.html">YARP::ConstantTargetNode</a>
+    <li><a href="./YARP/ConstantWriteNode.html">YARP::ConstantWriteNode</a>
+    <li><a href="./YARP/DSL.html">YARP::DSL</a>
+    <li><a href="./YARP/Debug.html">YARP::Debug</a>
+    <li><a href="./YARP/Debug/ISeq.html">YARP::Debug::ISeq</a>
+    <li><a href="./YARP/DefNode.html">YARP::DefNode</a>
+    <li><a href="./YARP/DefinedNode.html">YARP::DefinedNode</a>
+    <li><a href="./YARP/DesugarVisitor.html">YARP::DesugarVisitor</a>
+    <li><a href="./YARP/ElseNode.html">YARP::ElseNode</a>
+    <li><a href="./YARP/EmbeddedStatementsNode.html">YARP::EmbeddedStatementsNode</a>
+    <li><a href="./YARP/EmbeddedVariableNode.html">YARP::EmbeddedVariableNode</a>
+    <li><a href="./YARP/EnsureNode.html">YARP::EnsureNode</a>
+    <li><a href="./YARP/FalseNode.html">YARP::FalseNode</a>
+    <li><a href="./YARP/FindPatternNode.html">YARP::FindPatternNode</a>
+    <li><a href="./YARP/FlipFlopNode.html">YARP::FlipFlopNode</a>
+    <li><a href="./YARP/FloatNode.html">YARP::FloatNode</a>
+    <li><a href="./YARP/ForNode.html">YARP::ForNode</a>
+    <li><a href="./YARP/ForwardingArgumentsNode.html">YARP::ForwardingArgumentsNode</a>
+    <li><a href="./YARP/ForwardingParameterNode.html">YARP::ForwardingParameterNode</a>
+    <li><a href="./YARP/ForwardingSuperNode.html">YARP::ForwardingSuperNode</a>
+    <li><a href="./YARP/GlobalVariableAndWriteNode.html">YARP::GlobalVariableAndWriteNode</a>
+    <li><a href="./YARP/GlobalVariableOperatorWriteNode.html">YARP::GlobalVariableOperatorWriteNode</a>
+    <li><a href="./YARP/GlobalVariableOrWriteNode.html">YARP::GlobalVariableOrWriteNode</a>
+    <li><a href="./YARP/GlobalVariableReadNode.html">YARP::GlobalVariableReadNode</a>
+    <li><a href="./YARP/GlobalVariableTargetNode.html">YARP::GlobalVariableTargetNode</a>
+    <li><a href="./YARP/GlobalVariableWriteNode.html">YARP::GlobalVariableWriteNode</a>
+    <li><a href="./YARP/HashNode.html">YARP::HashNode</a>
+    <li><a href="./YARP/HashPatternNode.html">YARP::HashPatternNode</a>
+    <li><a href="./YARP/IfNode.html">YARP::IfNode</a>
+    <li><a href="./YARP/ImaginaryNode.html">YARP::ImaginaryNode</a>
+    <li><a href="./YARP/InNode.html">YARP::InNode</a>
+    <li><a href="./YARP/InstanceVariableAndWriteNode.html">YARP::InstanceVariableAndWriteNode</a>
+    <li><a href="./YARP/InstanceVariableOperatorWriteNode.html">YARP::InstanceVariableOperatorWriteNode</a>
+    <li><a href="./YARP/InstanceVariableOrWriteNode.html">YARP::InstanceVariableOrWriteNode</a>
+    <li><a href="./YARP/InstanceVariableReadNode.html">YARP::InstanceVariableReadNode</a>
+    <li><a href="./YARP/InstanceVariableTargetNode.html">YARP::InstanceVariableTargetNode</a>
+    <li><a href="./YARP/InstanceVariableWriteNode.html">YARP::InstanceVariableWriteNode</a>
+    <li><a href="./YARP/IntegerBaseFlags.html">YARP::IntegerBaseFlags</a>
+    <li><a href="./YARP/IntegerNode.html">YARP::IntegerNode</a>
+    <li><a href="./YARP/InterpolatedMatchLastLineNode.html">YARP::InterpolatedMatchLastLineNode</a>
+    <li><a href="./YARP/InterpolatedRegularExpressionNode.html">YARP::InterpolatedRegularExpressionNode</a>
+    <li><a href="./YARP/InterpolatedStringNode.html">YARP::InterpolatedStringNode</a>
+    <li><a href="./YARP/InterpolatedSymbolNode.html">YARP::InterpolatedSymbolNode</a>
+    <li><a href="./YARP/InterpolatedXStringNode.html">YARP::InterpolatedXStringNode</a>
+    <li><a href="./YARP/KeywordHashNode.html">YARP::KeywordHashNode</a>
+    <li><a href="./YARP/KeywordParameterNode.html">YARP::KeywordParameterNode</a>
+    <li><a href="./YARP/KeywordRestParameterNode.html">YARP::KeywordRestParameterNode</a>
+    <li><a href="./YARP/LambdaNode.html">YARP::LambdaNode</a>
+    <li><a href="./YARP/LanguageServer.html">YARP::LanguageServer</a>
+    <li><a href="./YARP/LexCompat.html">YARP::LexCompat</a>
+    <li><a href="./YARP/LexCompat/EndContentToken.html">YARP::LexCompat::EndContentToken</a>
+    <li><a href="./YARP/LexCompat/Heredoc.html">YARP::LexCompat::Heredoc</a>
+    <li><a href="./YARP/LexCompat/Heredoc/DashHeredoc.html">YARP::LexCompat::Heredoc::DashHeredoc</a>
+    <li><a href="./YARP/LexCompat/Heredoc/DedentingHeredoc.html">YARP::LexCompat::Heredoc::DedentingHeredoc</a>
+    <li><a href="./YARP/LexCompat/Heredoc/PlainHeredoc.html">YARP::LexCompat::Heredoc::PlainHeredoc</a>
+    <li><a href="./YARP/LexCompat/IdentToken.html">YARP::LexCompat::IdentToken</a>
+    <li><a href="./YARP/LexCompat/IgnoreStateToken.html">YARP::LexCompat::IgnoreStateToken</a>
+    <li><a href="./YARP/LexCompat/IgnoredNewlineToken.html">YARP::LexCompat::IgnoredNewlineToken</a>
+    <li><a href="./YARP/LexCompat/ParamToken.html">YARP::LexCompat::ParamToken</a>
+    <li><a href="./YARP/LexCompat/Token.html">YARP::LexCompat::Token</a>
+    <li><a href="./YARP/LibRubyParser.html">YARP::LibRubyParser</a>
+    <li><a href="./YARP/LibRubyParser/YPBuffer.html">YARP::LibRubyParser::YPBuffer</a>
+    <li><a href="./YARP/LibRubyParser/YPString.html">YARP::LibRubyParser::YPString</a>
+    <li><a href="./YARP/LocalVariableAndWriteNode.html">YARP::LocalVariableAndWriteNode</a>
+    <li><a href="./YARP/LocalVariableOperatorWriteNode.html">YARP::LocalVariableOperatorWriteNode</a>
+    <li><a href="./YARP/LocalVariableOrWriteNode.html">YARP::LocalVariableOrWriteNode</a>
+    <li><a href="./YARP/LocalVariableReadNode.html">YARP::LocalVariableReadNode</a>
+    <li><a href="./YARP/LocalVariableTargetNode.html">YARP::LocalVariableTargetNode</a>
+    <li><a href="./YARP/LocalVariableWriteNode.html">YARP::LocalVariableWriteNode</a>
+    <li><a href="./YARP/Location.html">YARP::Location</a>
+    <li><a href="./YARP/LoopFlags.html">YARP::LoopFlags</a>
+    <li><a href="./YARP/MatchLastLineNode.html">YARP::MatchLastLineNode</a>
+    <li><a href="./YARP/MatchPredicateNode.html">YARP::MatchPredicateNode</a>
+    <li><a href="./YARP/MatchRequiredNode.html">YARP::MatchRequiredNode</a>
+    <li><a href="./YARP/MissingNode.html">YARP::MissingNode</a>
+    <li><a href="./YARP/ModuleNode.html">YARP::ModuleNode</a>
+    <li><a href="./YARP/MultiTargetNode.html">YARP::MultiTargetNode</a>
+    <li><a href="./YARP/MultiWriteNode.html">YARP::MultiWriteNode</a>
+    <li><a href="./YARP/MutationVisitor.html">YARP::MutationVisitor</a>
+    <li><a href="./YARP/NextNode.html">YARP::NextNode</a>
+    <li><a href="./YARP/NilNode.html">YARP::NilNode</a>
+    <li><a href="./YARP/NoKeywordsParameterNode.html">YARP::NoKeywordsParameterNode</a>
+    <li><a href="./YARP/Node.html">YARP::Node</a>
+    <li><a href="./YARP/NodeInspector.html">YARP::NodeInspector</a>
+    <li><a href="./YARP/NumberedReferenceReadNode.html">YARP::NumberedReferenceReadNode</a>
+    <li><a href="./YARP/OptionalParameterNode.html">YARP::OptionalParameterNode</a>
+    <li><a href="./YARP/OrNode.html">YARP::OrNode</a>
+    <li><a href="./YARP/Pack.html">YARP::Pack</a>
+    <li><a href="./YARP/Pack/Directive.html">YARP::Pack::Directive</a>
+    <li><a href="./YARP/Pack/Format.html">YARP::Pack::Format</a>
+    <li><a href="./YARP/ParametersNode.html">YARP::ParametersNode</a>
+    <li><a href="./YARP/ParenthesesNode.html">YARP::ParenthesesNode</a>
+    <li><a href="./YARP/ParseError.html">YARP::ParseError</a>
+    <li><a href="./YARP/ParseResult.html">YARP::ParseResult</a>
+    <li><a href="./YARP/ParseResult/Comments.html">YARP::ParseResult::Comments</a>
+    <li><a href="./YARP/ParseResult/Comments/LocationTarget.html">YARP::ParseResult::Comments::LocationTarget</a>
+    <li><a href="./YARP/ParseResult/Comments/NodeTarget.html">YARP::ParseResult::Comments::NodeTarget</a>
+    <li><a href="./YARP/ParseResult/Newlines.html">YARP::ParseResult::Newlines</a>
+    <li><a href="./YARP/ParseWarning.html">YARP::ParseWarning</a>
+    <li><a href="./YARP/Pattern.html">YARP::Pattern</a>
+    <li><a href="./YARP/Pattern/CompilationError.html">YARP::Pattern::CompilationError</a>
+    <li><a href="./YARP/PinnedExpressionNode.html">YARP::PinnedExpressionNode</a>
+    <li><a href="./YARP/PinnedVariableNode.html">YARP::PinnedVariableNode</a>
+    <li><a href="./YARP/PostExecutionNode.html">YARP::PostExecutionNode</a>
+    <li><a href="./YARP/PreExecutionNode.html">YARP::PreExecutionNode</a>
+    <li><a href="./YARP/ProgramNode.html">YARP::ProgramNode</a>
+    <li><a href="./YARP/RangeFlags.html">YARP::RangeFlags</a>
+    <li><a href="./YARP/RangeNode.html">YARP::RangeNode</a>
+    <li><a href="./YARP/RationalNode.html">YARP::RationalNode</a>
+    <li><a href="./YARP/RedoNode.html">YARP::RedoNode</a>
+    <li><a href="./YARP/RegularExpressionFlags.html">YARP::RegularExpressionFlags</a>
+    <li><a href="./YARP/RegularExpressionNode.html">YARP::RegularExpressionNode</a>
+    <li><a href="./YARP/RequiredDestructuredParameterNode.html">YARP::RequiredDestructuredParameterNode</a>
+    <li><a href="./YARP/RequiredParameterNode.html">YARP::RequiredParameterNode</a>
+    <li><a href="./YARP/RescueModifierNode.html">YARP::RescueModifierNode</a>
+    <li><a href="./YARP/RescueNode.html">YARP::RescueNode</a>
+    <li><a href="./YARP/RestParameterNode.html">YARP::RestParameterNode</a>
+    <li><a href="./YARP/RetryNode.html">YARP::RetryNode</a>
+    <li><a href="./YARP/ReturnNode.html">YARP::ReturnNode</a>
+    <li><a href="./YARP/RipperCompat.html">YARP::RipperCompat</a>
+    <li><a href="./YARP/RipperCompat/SexpBuilder.html">YARP::RipperCompat::SexpBuilder</a>
+    <li><a href="./YARP/RipperCompat/SexpBuilderPP.html">YARP::RipperCompat::SexpBuilderPP</a>
+    <li><a href="./YARP/SelfNode.html">YARP::SelfNode</a>
+    <li><a href="./YARP/Serialize.html">YARP::Serialize</a>
+    <li><a href="./YARP/Serialize/Loader.html">YARP::Serialize::Loader</a>
+    <li><a href="./YARP/SingletonClassNode.html">YARP::SingletonClassNode</a>
+    <li><a href="./YARP/Source.html">YARP::Source</a>
+    <li><a href="./YARP/SourceEncodingNode.html">YARP::SourceEncodingNode</a>
+    <li><a href="./YARP/SourceFileNode.html">YARP::SourceFileNode</a>
+    <li><a href="./YARP/SourceLineNode.html">YARP::SourceLineNode</a>
+    <li><a href="./YARP/SplatNode.html">YARP::SplatNode</a>
+    <li><a href="./YARP/StatementsNode.html">YARP::StatementsNode</a>
+    <li><a href="./YARP/StringConcatNode.html">YARP::StringConcatNode</a>
+    <li><a href="./YARP/StringNode.html">YARP::StringNode</a>
+    <li><a href="./YARP/SuperNode.html">YARP::SuperNode</a>
+    <li><a href="./YARP/SymbolNode.html">YARP::SymbolNode</a>
+    <li><a href="./YARP/Token.html">YARP::Token</a>
+    <li><a href="./YARP/TrueNode.html">YARP::TrueNode</a>
+    <li><a href="./YARP/UndefNode.html">YARP::UndefNode</a>
+    <li><a href="./YARP/UnlessNode.html">YARP::UnlessNode</a>
+    <li><a href="./YARP/UntilNode.html">YARP::UntilNode</a>
+    <li><a href="./YARP/Visitor.html">YARP::Visitor</a>
+    <li><a href="./YARP/WhenNode.html">YARP::WhenNode</a>
+    <li><a href="./YARP/WhileNode.html">YARP::WhileNode</a>
+    <li><a href="./YARP/XStringNode.html">YARP::XStringNode</a>
+    <li><a href="./YARP/YieldNode.html">YARP::YieldNode</a>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</nav>
+
+
+<!--  carbon ads here -->
+
+<div id='extraz'>
+  <div class='adzbox-index'  >
+   
+  </div>
+ </div>         
+
+
+<main role="main">
+<p>This is the API documentation for yarp: Ruby Standard Library Documentation.</p>
+<p>This is the API documentation for .</p>
+</main>
+
+
+
+</div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

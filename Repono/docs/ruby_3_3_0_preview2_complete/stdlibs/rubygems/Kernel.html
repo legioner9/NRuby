@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module Kernel - rubygems: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="module">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="./index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-i-gem">#gem</a>
+    <li ><a href="#method-i-require">#require</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="module-Kernel">
+    <h1 id="module-Kernel" class="module">
+      module Kernel
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-gem" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">gem</span><span
+                                class="method-args">(gem_name, *requirements)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Use <a href="Kernel.html#method-i-gem"><code>Kernel#gem</code></a> to activate a specific version of <code>gem_name</code>.</p>
+
+<p><code>requirements</code> is a list of version requirements that the specified gem must match, most commonly “= example.version.number”.  See <a href="Gem/Requirement.html"><code>Gem::Requirement</code></a> for how to specify a version requirement.</p>
+
+<p>If you will be activating the latest version of a gem, there is no need to call <a href="Kernel.html#method-i-gem"><code>Kernel#gem</code></a>, <a href="Kernel.html#method-i-require"><code>Kernel#require</code></a> will do the right thing for you.</p>
+
+<p><a href="Kernel.html#method-i-gem"><code>Kernel#gem</code></a> returns true if the gem was activated, otherwise false.  If the gem could not be found, didn’t match the version requirements, or a different version was already activated, an exception will be raised.</p>
+
+<p><a href="Kernel.html#method-i-gem"><code>Kernel#gem</code></a> should be called <strong>before</strong> any require statements (otherwise RubyGems may load a conflicting library version).</p>
+
+<p><a href="Kernel.html#method-i-gem"><code>Kernel#gem</code></a> only loads prerelease versions when prerelease <code>requirements</code> are given:</p>
+
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;rake&#39;</span>, <span class="ruby-string">&#39;&gt;= 1.1.a&#39;</span>, <span class="ruby-string">&#39;&lt; 2&#39;</span>
+</pre>
+
+<p>In older RubyGems versions, the environment variable GEM_SKIP could be used to skip activation of specified gems, for example to test out changes that haven’t been installed yet.  Now RubyGems defers to -I and the RUBYLIB environment variable to skip activation of a gem.</p>
+
+<p>Example:</p>
+
+<pre>GEM_SKIP=libA:libB ruby -I../libA -I../libB ./mycode.rb</pre>
+
+                              <div class="method-source-code" id="gem-source">
+            <pre><span class="ruby-comment"># File rubygems/core_ext/kernel_gem.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">gem</span>(<span class="ruby-identifier">gem_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">requirements</span>) <span class="ruby-comment"># :doc:</span>
+  <span class="ruby-identifier">skip_list</span> = (<span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;GEM_SKIP&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&quot;&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/:/</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LoadError</span>, <span class="ruby-node">&quot;skipping #{gem_name}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">skip_list</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">gem_name</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">gem_name</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Dependency</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Deprecate</span>.<span class="ruby-identifier">skip</span>
+      <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;#{Gem.location_of_caller.join &quot;:&quot;}:Warning: Kernel.gem no longer &quot;</span>\
+        <span class="ruby-string">&quot;accepts a Gem::Dependency object, please pass the name &quot;</span>\
+        <span class="ruby-string">&quot;and requirements directly&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">requirements</span> = <span class="ruby-identifier">gem_name</span>.<span class="ruby-identifier">requirement</span>
+    <span class="ruby-identifier">gem_name</span> = <span class="ruby-identifier">gem_name</span>.<span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">dep</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Dependency</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">gem_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">requirements</span>)
+
+  <span class="ruby-identifier">loaded</span> = <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">loaded_specs</span>[<span class="ruby-identifier">gem_name</span>]
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">loaded</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">matches_spec?</span>(<span class="ruby-identifier">loaded</span>)
+
+  <span class="ruby-identifier">spec</span> = <span class="ruby-identifier">dep</span>.<span class="ruby-identifier">to_spec</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">spec</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LOADED_SPECS_MUTEX</span>.<span class="ruby-identifier">owned?</span>
+      <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">activate</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LOADED_SPECS_MUTEX</span>.<span class="ruby-identifier">synchronize</span> { <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">activate</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-require" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">require</span><span
+                                class="method-args">(path)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>When RubyGems is required, <a href="Kernel.html#method-i-require"><code>Kernel#require</code></a> is replaced with our own which is capable of loading gems on demand.</p>
+
+<p>When you call <code>require &#39;x&#39;</code>, this is what happens:</p>
+<ul><li>
+<p>If the file can be loaded from the existing Ruby loadpath, it is.</p>
+</li><li>
+<p>Otherwise, installed gems are searched for a file that matches. If it’s found in gem ‘y’, that gem is activated (added to the loadpath).</p>
+</li></ul>
+
+<p>The normal <code>require</code> functionality of returning false if that file has already been loaded is preserved.</p>
+
+                              <div class="method-source-code" id="require-source">
+            <pre><span class="ruby-comment"># File rubygems/core_ext/kernel_require.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">require</span>(<span class="ruby-identifier">path</span>) <span class="ruby-comment"># :doc:</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">gem_original_require</span>(<span class="ruby-identifier">path</span>) <span class="ruby-keyword">unless</span> <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">discover_gems_on_require</span>
+
+  <span class="ruby-constant">RUBYGEMS_ACTIVATION_MONITOR</span>.<span class="ruby-identifier">synchronize</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">path</span>(<span class="ruby-identifier">path</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">spec</span> = <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">find_unresolved_default_spec</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-comment"># Ensure -I beats a default gem</span>
+      <span class="ruby-identifier">resolved_path</span> = <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">rp</span> = <span class="ruby-keyword">nil</span>
+        <span class="ruby-identifier">load_path_check_index</span> = <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">load_path_insert_index</span> <span class="ruby-operator">-</span> <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">activated_gem_paths</span>
+        <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">suffixes</span>.<span class="ruby-identifier">find</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">$LOAD_PATH</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">load_path_check_index</span>].<span class="ruby-identifier">find</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">lp</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">safe_lp</span> = <span class="ruby-identifier">lp</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">tap</span>(<span class="ruby-operator">&amp;</span><span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">UNTAINT</span>)
+            <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">symlink?</span> <span class="ruby-identifier">safe_lp</span> <span class="ruby-comment"># for backward compatibility</span>
+              <span class="ruby-keyword">next</span>
+            <span class="ruby-keyword">end</span>
+
+            <span class="ruby-identifier">full_path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">safe_lp</span>, <span class="ruby-node">&quot;#{path}#{s}&quot;</span>))
+            <span class="ruby-identifier">rp</span> = <span class="ruby-identifier">full_path</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-identifier">full_path</span>)
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">rp</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:gem</span>, <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">name</span>, <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Requirement</span>.<span class="ruby-identifier">default_prerelease</span>) <span class="ruby-keyword">unless</span>
+        <span class="ruby-identifier">resolved_path</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># If there are no unresolved deps, then we can use just try</span>
+    <span class="ruby-comment"># normal require handle loading a gem from the rescue below.</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">unresolved_deps</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># If +path+ is for a gem that has already been loaded, don&#39;t</span>
+    <span class="ruby-comment"># bother trying to find it in an unresolved gem, just go straight</span>
+    <span class="ruby-comment"># to normal require.</span>
+    <span class="ruby-comment">#--</span>
+    <span class="ruby-comment"># TODO request access to the C implementation of this to speed up RubyGems</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">find_active_stub_by_path</span>(<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Attempt to find +path+ in any unresolved gems...</span>
+
+    <span class="ruby-identifier">found_specs</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">find_in_unresolved</span> <span class="ruby-identifier">path</span>
+
+    <span class="ruby-comment"># If there are no directly unresolved gems, then try and find +path+</span>
+    <span class="ruby-comment"># in any gems that are available via the currently unresolved gems.</span>
+    <span class="ruby-comment"># For example, given:</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment">#   a =&gt; b =&gt; c =&gt; d</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># If a and b are currently active with c being unresolved and d.rb is</span>
+    <span class="ruby-comment"># requested, then find_in_unresolved_tree will find d.rb in d because</span>
+    <span class="ruby-comment"># it&#39;s a dependency of c.</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">found_specs</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">found_specs</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">find_in_unresolved_tree</span> <span class="ruby-identifier">path</span>
+
+      <span class="ruby-identifier">found_specs</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:activate</span>)
+
+    <span class="ruby-comment"># We found +path+ directly in an unresolved gem. Now we figure out, of</span>
+    <span class="ruby-comment"># the possible found specs, which one we should activate.</span>
+    <span class="ruby-keyword">else</span>
+
+      <span class="ruby-comment"># Check that all the found specs are just different</span>
+      <span class="ruby-comment"># versions of the same gem</span>
+      <span class="ruby-identifier">names</span> = <span class="ruby-identifier">found_specs</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:name</span>).<span class="ruby-identifier">uniq</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LoadError</span>, <span class="ruby-node">&quot;#{path} found in multiple gems: #{names.join &quot;, &quot;}&quot;</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># Ok, now find a gem that has no conflicts, starting</span>
+      <span class="ruby-comment"># at the highest version.</span>
+      <span class="ruby-identifier">valid</span> = <span class="ruby-identifier">found_specs</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">s</span>.<span class="ruby-identifier">has_conflicts?</span> }
+
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">valid</span>
+        <span class="ruby-identifier">le</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LoadError</span>.<span class="ruby-identifier">new</span> <span class="ruby-node">&quot;unable to find a version of &#39;#{names.first}&#39; to activate&quot;</span>
+        <span class="ruby-identifier">le</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">names</span>.<span class="ruby-identifier">first</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-identifier">le</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">valid</span>.<span class="ruby-identifier">activate</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">gem_original_require</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">LoadError</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">load_error</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">load_error</span>.<span class="ruby-identifier">path</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">&amp;&amp;</span>
+       <span class="ruby-constant">RUBYGEMS_ACTIVATION_MONITOR</span>.<span class="ruby-identifier">synchronize</span> { <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">try_activate</span>(<span class="ruby-identifier">path</span>) }
+
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">gem_original_require</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">raise</span> <span class="ruby-identifier">load_error</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>. </p><p><a href="https://jamesbritt.bandcamp.com/">Hack your world.  Feed your head.  Live curious</a>.</p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

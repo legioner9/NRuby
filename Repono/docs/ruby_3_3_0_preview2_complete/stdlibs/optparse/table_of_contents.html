@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Table of Contents - optparse: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" class="table-of-contents">
+  <!-- table_of_contents.html -->
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+    <div id='extraz'><div class='adzbox-index'  >
+        
+      </div>         
+    </div>
+
+    <main role="main">
+    <h1 class="class">Table of Contents - optparse: Ruby Standard Library Documentation</h1>
+
+
+          <h2 id="classes">Classes and Modules</h2>
+          <ul>
+              <li class="class">
+                <a href="Object.html">Object</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser.html">OptionParser</a>
+
+                <ul>
+                    <li><a href="OptionParser.html#label-OptionParser">OptionParser</a>
+                    <li><a href="OptionParser.html#label-New+to+OptionParser-3F">New to <code>OptionParser</code>?</a>
+                    <li><a href="OptionParser.html#label-Introduction">Introduction</a>
+                    <li><a href="OptionParser.html#label-Features">Features</a>
+                    <li><a href="OptionParser.html#label-Minimal+example">Minimal example</a>
+                    <li><a href="OptionParser.html#label-Generating+Help">Generating Help</a>
+                    <li><a href="OptionParser.html#label-Required+Arguments">Required Arguments</a>
+                    <li><a href="OptionParser.html#label-Type+Coercion">Type Coercion</a>
+                    <li><a href="OptionParser.html#label-Using+Built-in+Conversions">Using Built-in Conversions</a>
+                    <li><a href="OptionParser.html#label-Creating+Custom+Conversions">Creating Custom Conversions</a>
+                    <li><a href="OptionParser.html#label-Store+options+to+a+Hash">Store options to a Hash</a>
+                    <li><a href="OptionParser.html#label-Complete+example">Complete example</a>
+                    <li><a href="OptionParser.html#label-Shell+Completion">Shell Completion</a>
+                    <li><a href="OptionParser.html#label-Further+documentation">Further documentation</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/AC.html">OptionParser::AC</a>
+                  </li>
+              <li class="module">
+                <a href="OptionParser/Acceptables.html">OptionParser::Acceptables</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/AmbiguousArgument.html">OptionParser::AmbiguousArgument</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/AmbiguousOption.html">OptionParser::AmbiguousOption</a>
+                  </li>
+              <li class="module">
+                <a href="OptionParser/Arguable.html">OptionParser::Arguable</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/CompletingHash.html">OptionParser::CompletingHash</a>
+                  </li>
+              <li class="module">
+                <a href="OptionParser/Completion.html">OptionParser::Completion</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/InvalidArgument.html">OptionParser::InvalidArgument</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/InvalidOption.html">OptionParser::InvalidOption</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/List.html">OptionParser::List</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/MissingArgument.html">OptionParser::MissingArgument</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/NeedlessArgument.html">OptionParser::NeedlessArgument</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/OptionMap.html">OptionParser::OptionMap</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/ParseError.html">OptionParser::ParseError</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/Switch.html">OptionParser::Switch</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/Switch/NoArgument.html">OptionParser::Switch::NoArgument</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/Switch/OptionalArgument.html">OptionParser::Switch::OptionalArgument</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/Switch/PlacedArgument.html">OptionParser::Switch::PlacedArgument</a>
+                  </li>
+              <li class="class">
+                <a href="OptionParser/Switch/RequiredArgument.html">OptionParser::Switch::RequiredArgument</a>
+                  </li>
+                </ul>
+
+                <h2 id="methods">Methods</h2>
+                <ul>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-accept">::accept</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Completion.html#method-c-candidate">::candidate</a>
+                      &mdash;
+                      <span class="container">OptionParser::Completion</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-each_const">::each_const</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Arguable.html#method-c-extend_object">::extend_object</a>
+                      &mdash;
+                      <span class="container">OptionParser::Arguable</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-c-filter_backtrace">::filter_backtrace</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-getopts">::getopts</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch.html#method-c-guess">::guess</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-inc">::inc</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch.html#method-c-incompatible_argument_styles">::incompatible_argument_styles</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch/NoArgument.html#method-c-incompatible_argument_styles">::incompatible_argument_styles</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch::NoArgument</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Arguable.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">OptionParser::Arguable</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch.html#method-c-pattern">::pattern</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch/NoArgument.html#method-c-pattern">::pattern</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch::NoArgument</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Completion.html#method-c-regexp">::regexp</a>
+                      &mdash;
+                      <span class="container">OptionParser::Completion</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-reject">::reject</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-search_const">::search_const</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-show_version">::show_version</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-terminate">::terminate</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-top">::top</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-c-with">::with</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/AC.html#method-i-_ac_arg_enable">#_ac_arg_enable</a>
+                      &mdash;
+                      <span class="container">OptionParser::AC</span>
+
+                    <li class="method">
+                      <a href="OptionParser/AC.html#method-i-_check_ac_args">#_check_ac_args</a>
+                      &mdash;
+                      <span class="container">OptionParser::AC</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-abort">#abort</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/AC.html#method-i-ac_arg_disable">#ac_arg_disable</a>
+                      &mdash;
+                      <span class="container">OptionParser::AC</span>
+
+                    <li class="method">
+                      <a href="OptionParser/AC.html#method-i-ac_arg_enable">#ac_arg_enable</a>
+                      &mdash;
+                      <span class="container">OptionParser::AC</span>
+
+                    <li class="method">
+                      <a href="OptionParser/AC.html#method-i-ac_arg_with">#ac_arg_with</a>
+                      &mdash;
+                      <span class="container">OptionParser::AC</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-accept">#accept</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-accept">#accept</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-additional_message">#additional_message</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-append">#append</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-banner">#banner</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-base">#base</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-candidate">#candidate</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Completion.html#method-i-candidate">#candidate</a>
+                      &mdash;
+                      <span class="container">OptionParser::Completion</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-complete">#complete</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Completion.html#method-i-complete">#complete</a>
+                      &mdash;
+                      <span class="container">OptionParser::Completion</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Completion.html#method-i-convert">#convert</a>
+                      &mdash;
+                      <span class="container">OptionParser::Completion</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-def_head_option">#def_head_option</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-def_option">#def_option</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-def_tail_option">#def_tail_option</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-define">#define</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-define_by_keywords">#define_by_keywords</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-define_head">#define_head</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-define_tail">#define_tail</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-each_option">#each_option</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-environment">#environment</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-get_candidates">#get_candidates</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-getopts">#getopts</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Arguable.html#method-i-getopts">#getopts</a>
+                      &mdash;
+                      <span class="container">OptionParser::Arguable</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-help">#help</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-inc">#inc</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-i-inspect">#inspect</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-load">#load</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-make_switch">#make_switch</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/CompletingHash.html#method-i-match">#match</a>
+                      &mdash;
+                      <span class="container">OptionParser::CompletingHash</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-i-message">#message</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-new">#new</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-on">#on</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-on_head">#on_head</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-on_tail">#on_tail</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Arguable.html#method-i-options">#options</a>
+                      &mdash;
+                      <span class="container">OptionParser::Arguable</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Arguable.html#method-i-options-3D">#options=</a>
+                      &mdash;
+                      <span class="container">OptionParser::Arguable</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-order">#order</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-order-21">#order!</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Arguable.html#method-i-order-21">#order!</a>
+                      &mdash;
+                      <span class="container">OptionParser::Arguable</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-parse">#parse</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch/NoArgument.html#method-i-parse">#parse</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch::NoArgument</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch/RequiredArgument.html#method-i-parse">#parse</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch::RequiredArgument</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch/OptionalArgument.html#method-i-parse">#parse</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch::OptionalArgument</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch/PlacedArgument.html#method-i-parse">#parse</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch::PlacedArgument</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-parse-21">#parse!</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Arguable.html#method-i-parse-21">#parse!</a>
+                      &mdash;
+                      <span class="container">OptionParser::Arguable</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-permute">#permute</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-permute-21">#permute!</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Arguable.html#method-i-permute-21">#permute!</a>
+                      &mdash;
+                      <span class="container">OptionParser::Arguable</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-prepend">#prepend</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-program_name">#program_name</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-i-reason">#reason</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-i-recover">#recover</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-reject">#reject</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-reject">#reject</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-release">#release</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-remove">#remove</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-search">#search</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-separator">#separator</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-i-set_backtrace">#set_backtrace</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-i-set_option">#set_option</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-summarize">#summarize</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch.html#method-i-summarize">#summarize</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch</span>
+
+                    <li class="method">
+                      <a href="OptionParser/List.html#method-i-summarize">#summarize</a>
+                      &mdash;
+                      <span class="container">OptionParser::List</span>
+
+                    <li class="method">
+                      <a href="OptionParser/Switch.html#method-i-switch_name">#switch_name</a>
+                      &mdash;
+                      <span class="container">OptionParser::Switch</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-terminate">#terminate</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-to_a">#to_a</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-to_s">#to_s</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser/ParseError.html#method-i-to_s">#to_s</a>
+                      &mdash;
+                      <span class="container">OptionParser::ParseError</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-top">#top</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-ver">#ver</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-version">#version</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+
+                    <li class="method">
+                      <a href="OptionParser.html#method-i-warn">#warn</a>
+                      &mdash;
+                      <span class="container">OptionParser</span>
+                    </ul>
+                    </main>
+                  </div> 
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>. </p><p><a href="https://jamesbritt.bandcamp.com/">Hack your world.  Feed your head.  Live curious</a>.</p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

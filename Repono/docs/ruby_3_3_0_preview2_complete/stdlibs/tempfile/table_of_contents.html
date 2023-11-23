@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Table of Contents - tempfile: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" class="table-of-contents">
+  <!-- table_of_contents.html -->
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+    <div id='extraz'><div class='adzbox-index'  >
+        
+      </div>         
+    </div>
+
+    <main role="main">
+    <h1 class="class">Table of Contents - tempfile: Ruby Standard Library Documentation</h1>
+
+
+          <h2 id="classes">Classes and Modules</h2>
+          <ul>
+              <li class="class">
+                <a href="Tempfile.html">Tempfile</a>
+
+                <ul>
+                    <li><a href="Tempfile.html#label-Synopsis">Synopsis</a>
+                    <li><a href="Tempfile.html#label-Good+practices">Good practices</a>
+                    <li><a href="Tempfile.html#label-Explicit+close">Explicit close</a>
+                    <li><a href="Tempfile.html#label-Unlink+after+creation">Unlink after creation</a>
+                    <li><a href="Tempfile.html#label-Minor+notes">Minor notes</a>
+                    </ul>
+                  </li>
+                </ul>
+
+                <h2 id="methods">Methods</h2>
+                <ul>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-c-create">::create</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-c-open">::open</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-i-close">#close</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-i-close-21">#close!</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-i-delete">#delete</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-i-length">#length</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-i-open">#open</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-i-path">#path</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-i-size">#size</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+
+                    <li class="method">
+                      <a href="Tempfile.html#method-i-unlink">#unlink</a>
+                      &mdash;
+                      <span class="container">Tempfile</span>
+                    </ul>
+                    </main>
+                  </div> 
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

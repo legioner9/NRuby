@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>rbs: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="file">
+  <!-- index.html -->
+ <div id='actionbar' >
+   
+<div class='wrapper mdiv'>
+ <ul class='grids g0'></ul>
+</div> 
+<!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+</div> <!-- end action bar -->
+
+ <div class='wrapper hdiv'>
+
+ 
+
+<nav id='vapp' role="navigation">
+  <div id="project-navigation"    >
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="./index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+  
+  <button id='toggleThing' @click="isOpen = !isOpen" _click="toggleNav()" >Show/hide navigation</button>
+
+    <div id="project-metadata" >
+      <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+    
+
+    <div id="classindex-section" class="nav-section">
+  <h3>Class and Module Index</h3>
+
+  <ul class="link-list">
+    <li><a href="./Kernel.html">Kernel</a>
+    <li><a href="./Module.html">Module</a>
+    <li><a href="./Proc.html">Proc</a>
+    <li><a href="./RBS.html">RBS</a>
+    <li><a href="./RBS/AST.html">RBS::AST</a>
+    <li><a href="./RBS/AST/Annotation.html">RBS::AST::Annotation</a>
+    <li><a href="./RBS/AST/Comment.html">RBS::AST::Comment</a>
+    <li><a href="./RBS/AST/Declarations.html">RBS::AST::Declarations</a>
+    <li><a href="./RBS/AST/Declarations/AliasDecl.html">RBS::AST::Declarations::AliasDecl</a>
+    <li><a href="./RBS/AST/Declarations/Base.html">RBS::AST::Declarations::Base</a>
+    <li><a href="./RBS/AST/Declarations/Class.html">RBS::AST::Declarations::Class</a>
+    <li><a href="./RBS/AST/Declarations/Class/Super.html">RBS::AST::Declarations::Class::Super</a>
+    <li><a href="./RBS/AST/Declarations/ClassAlias.html">RBS::AST::Declarations::ClassAlias</a>
+    <li><a href="./RBS/AST/Declarations/Constant.html">RBS::AST::Declarations::Constant</a>
+    <li><a href="./RBS/AST/Declarations/Global.html">RBS::AST::Declarations::Global</a>
+    <li><a href="./RBS/AST/Declarations/Interface.html">RBS::AST::Declarations::Interface</a>
+    <li><a href="./RBS/AST/Declarations/MixinHelper.html">RBS::AST::Declarations::MixinHelper</a>
+    <li><a href="./RBS/AST/Declarations/Module.html">RBS::AST::Declarations::Module</a>
+    <li><a href="./RBS/AST/Declarations/Module/Self.html">RBS::AST::Declarations::Module::Self</a>
+    <li><a href="./RBS/AST/Declarations/ModuleAlias.html">RBS::AST::Declarations::ModuleAlias</a>
+    <li><a href="./RBS/AST/Declarations/NestedDeclarationHelper.html">RBS::AST::Declarations::NestedDeclarationHelper</a>
+    <li><a href="./RBS/AST/Declarations/TypeAlias.html">RBS::AST::Declarations::TypeAlias</a>
+    <li><a href="./RBS/AST/Directives.html">RBS::AST::Directives</a>
+    <li><a href="./RBS/AST/Directives/Base.html">RBS::AST::Directives::Base</a>
+    <li><a href="./RBS/AST/Directives/Use.html">RBS::AST::Directives::Use</a>
+    <li><a href="./RBS/AST/Directives/Use/SingleClause.html">RBS::AST::Directives::Use::SingleClause</a>
+    <li><a href="./RBS/AST/Directives/Use/WildcardClause.html">RBS::AST::Directives::Use::WildcardClause</a>
+    <li><a href="./RBS/AST/Members.html">RBS::AST::Members</a>
+    <li><a href="./RBS/AST/Members/Alias.html">RBS::AST::Members::Alias</a>
+    <li><a href="./RBS/AST/Members/AttrAccessor.html">RBS::AST::Members::AttrAccessor</a>
+    <li><a href="./RBS/AST/Members/AttrReader.html">RBS::AST::Members::AttrReader</a>
+    <li><a href="./RBS/AST/Members/AttrWriter.html">RBS::AST::Members::AttrWriter</a>
+    <li><a href="./RBS/AST/Members/Attribute.html">RBS::AST::Members::Attribute</a>
+    <li><a href="./RBS/AST/Members/Base.html">RBS::AST::Members::Base</a>
+    <li><a href="./RBS/AST/Members/ClassInstanceVariable.html">RBS::AST::Members::ClassInstanceVariable</a>
+    <li><a href="./RBS/AST/Members/ClassVariable.html">RBS::AST::Members::ClassVariable</a>
+    <li><a href="./RBS/AST/Members/Extend.html">RBS::AST::Members::Extend</a>
+    <li><a href="./RBS/AST/Members/Include.html">RBS::AST::Members::Include</a>
+    <li><a href="./RBS/AST/Members/InstanceVariable.html">RBS::AST::Members::InstanceVariable</a>
+    <li><a href="./RBS/AST/Members/LocationOnly.html">RBS::AST::Members::LocationOnly</a>
+    <li><a href="./RBS/AST/Members/MethodDefinition.html">RBS::AST::Members::MethodDefinition</a>
+    <li><a href="./RBS/AST/Members/MethodDefinition/Overload.html">RBS::AST::Members::MethodDefinition::Overload</a>
+    <li><a href="./RBS/AST/Members/Mixin.html">RBS::AST::Members::Mixin</a>
+    <li><a href="./RBS/AST/Members/Prepend.html">RBS::AST::Members::Prepend</a>
+    <li><a href="./RBS/AST/Members/Private.html">RBS::AST::Members::Private</a>
+    <li><a href="./RBS/AST/Members/Public.html">RBS::AST::Members::Public</a>
+    <li><a href="./RBS/AST/Members/Var.html">RBS::AST::Members::Var</a>
+    <li><a href="./RBS/AST/TypeParam.html">RBS::AST::TypeParam</a>
+    <li><a href="./RBS/AncestorGraph.html">RBS::AncestorGraph</a>
+    <li><a href="./RBS/Annotate.html">RBS::Annotate</a>
+    <li><a href="./RBS/Annotate/Annotations.html">RBS::Annotate::Annotations</a>
+    <li><a href="./RBS/Annotate/Annotations/Copy.html">RBS::Annotate::Annotations::Copy</a>
+    <li><a href="./RBS/Annotate/Annotations/Skip.html">RBS::Annotate::Annotations::Skip</a>
+    <li><a href="./RBS/Annotate/Annotations/Source.html">RBS::Annotate::Annotations::Source</a>
+    <li><a href="./RBS/Annotate/Formatter.html">RBS::Annotate::Formatter</a>
+    <li><a href="./RBS/Annotate/RDocAnnotator.html">RBS::Annotate::RDocAnnotator</a>
+    <li><a href="./RBS/Annotate/RDocSource.html">RBS::Annotate::RDocSource</a>
+    <li><a href="./RBS/BaseError.html">RBS::BaseError</a>
+    <li><a href="./RBS/Buffer.html">RBS::Buffer</a>
+    <li><a href="./RBS/BuiltinNames.html">RBS::BuiltinNames</a>
+    <li><a href="./RBS/BuiltinNames/Name.html">RBS::BuiltinNames::Name</a>
+    <li><a href="./RBS/CLI.html">RBS::CLI</a>
+    <li><a href="./RBS/CLI/LibraryOptions.html">RBS::CLI::LibraryOptions</a>
+    <li><a href="./RBS/Collection.html">RBS::Collection</a>
+    <li><a href="./RBS/Collection/Cleaner.html">RBS::Collection::Cleaner</a>
+    <li><a href="./RBS/Collection/Config.html">RBS::Collection::Config</a>
+    <li><a href="./RBS/Collection/Config/CollectionNotAvailable.html">RBS::Collection::Config::CollectionNotAvailable</a>
+    <li><a href="./RBS/Collection/Config/Lockfile.html">RBS::Collection::Config::Lockfile</a>
+    <li><a href="./RBS/Collection/Config/LockfileGenerator.html">RBS::Collection::Config::LockfileGenerator</a>
+    <li><a href="./RBS/Collection/Config/LockfileGenerator/GemfileLockMismatchError.html">RBS::Collection::Config::LockfileGenerator::GemfileLockMismatchError</a>
+    <li><a href="./RBS/Collection/Installer.html">RBS::Collection::Installer</a>
+    <li><a href="./RBS/Collection/Sources.html">RBS::Collection::Sources</a>
+    <li><a href="./RBS/Collection/Sources/Base.html">RBS::Collection::Sources::Base</a>
+    <li><a href="./RBS/Collection/Sources/Git.html">RBS::Collection::Sources::Git</a>
+    <li><a href="./RBS/Collection/Sources/Git/CommandError.html">RBS::Collection::Sources::Git::CommandError</a>
+    <li><a href="./RBS/Collection/Sources/Local.html">RBS::Collection::Sources::Local</a>
+    <li><a href="./RBS/Collection/Sources/Rubygems.html">RBS::Collection::Sources::Rubygems</a>
+    <li><a href="./RBS/Collection/Sources/Stdlib.html">RBS::Collection::Sources::Stdlib</a>
+    <li><a href="./RBS/Constant.html">RBS::Constant</a>
+    <li><a href="./RBS/CyclicClassAliasDefinitionError.html">RBS::CyclicClassAliasDefinitionError</a>
+    <li><a href="./RBS/CyclicTypeParameterBound.html">RBS::CyclicTypeParameterBound</a>
+    <li><a href="./RBS/Definition.html">RBS::Definition</a>
+    <li><a href="./RBS/Definition/Ancestor.html">RBS::Definition::Ancestor</a>
+    <li><a href="./RBS/Definition/Ancestor/Instance.html">RBS::Definition::Ancestor::Instance</a>
+    <li><a href="./RBS/Definition/Ancestor/Singleton.html">RBS::Definition::Ancestor::Singleton</a>
+    <li><a href="./RBS/Definition/InstanceAncestors.html">RBS::Definition::InstanceAncestors</a>
+    <li><a href="./RBS/Definition/Method.html">RBS::Definition::Method</a>
+    <li><a href="./RBS/Definition/Method/TypeDef.html">RBS::Definition::Method::TypeDef</a>
+    <li><a href="./RBS/Definition/SingletonAncestors.html">RBS::Definition::SingletonAncestors</a>
+    <li><a href="./RBS/Definition/Variable.html">RBS::Definition::Variable</a>
+    <li><a href="./RBS/DefinitionBuilder.html">RBS::DefinitionBuilder</a>
+    <li><a href="./RBS/DefinitionBuilder/AncestorBuilder.html">RBS::DefinitionBuilder::AncestorBuilder</a>
+    <li><a href="./RBS/DefinitionBuilder/AncestorBuilder/OneAncestors.html">RBS::DefinitionBuilder::AncestorBuilder::OneAncestors</a>
+    <li><a href="./RBS/DefinitionBuilder/MethodBuilder.html">RBS::DefinitionBuilder::MethodBuilder</a>
+    <li><a href="./RBS/DefinitionBuilder/MethodBuilder/Methods.html">RBS::DefinitionBuilder::MethodBuilder::Methods</a>
+    <li><a href="./RBS/DefinitionBuilder/MethodBuilder/Methods/Sorter.html">RBS::DefinitionBuilder::MethodBuilder::Methods::Sorter</a>
+    <li><a href="./RBS/DefinitionError.html">RBS::DefinitionError</a>
+    <li><a href="./RBS/DetailedMessageable.html">RBS::DetailedMessageable</a>
+    <li><a href="./RBS/DuplicatedDeclarationError.html">RBS::DuplicatedDeclarationError</a>
+    <li><a href="./RBS/DuplicatedInterfaceMethodDefinitionError.html">RBS::DuplicatedInterfaceMethodDefinitionError</a>
+    <li><a href="./RBS/DuplicatedMethodDefinitionError.html">RBS::DuplicatedMethodDefinitionError</a>
+    <li><a href="./RBS/Environment.html">RBS::Environment</a>
+    <li><a href="./RBS/Environment/ClassAliasEntry.html">RBS::Environment::ClassAliasEntry</a>
+    <li><a href="./RBS/Environment/ClassEntry.html">RBS::Environment::ClassEntry</a>
+    <li><a href="./RBS/Environment/ConstantEntry.html">RBS::Environment::ConstantEntry</a>
+    <li><a href="./RBS/Environment/ContextUtil.html">RBS::Environment::ContextUtil</a>
+    <li><a href="./RBS/Environment/GlobalEntry.html">RBS::Environment::GlobalEntry</a>
+    <li><a href="./RBS/Environment/InterfaceEntry.html">RBS::Environment::InterfaceEntry</a>
+    <li><a href="./RBS/Environment/ModuleAliasEntry.html">RBS::Environment::ModuleAliasEntry</a>
+    <li><a href="./RBS/Environment/ModuleEntry.html">RBS::Environment::ModuleEntry</a>
+    <li><a href="./RBS/Environment/MultiEntry.html">RBS::Environment::MultiEntry</a>
+    <li><a href="./RBS/Environment/SingleEntry.html">RBS::Environment::SingleEntry</a>
+    <li><a href="./RBS/Environment/TypeAliasEntry.html">RBS::Environment::TypeAliasEntry</a>
+    <li><a href="./RBS/Environment/UseMap.html">RBS::Environment::UseMap</a>
+    <li><a href="./RBS/Environment/UseMap/Table.html">RBS::Environment::UseMap::Table</a>
+    <li><a href="./RBS/EnvironmentLoader.html">RBS::EnvironmentLoader</a>
+    <li><a href="./RBS/EnvironmentLoader/UnknownLibraryError.html">RBS::EnvironmentLoader::UnknownLibraryError</a>
+    <li><a href="./RBS/EnvironmentWalker.html">RBS::EnvironmentWalker</a>
+    <li><a href="./RBS/Factory.html">RBS::Factory</a>
+    <li><a href="./RBS/FileFinder.html">RBS::FileFinder</a>
+    <li><a href="./RBS/GenericParameterMismatchError.html">RBS::GenericParameterMismatchError</a>
+    <li><a href="./RBS/InconsistentClassModuleAliasError.html">RBS::InconsistentClassModuleAliasError</a>
+    <li><a href="./RBS/InheritModuleError.html">RBS::InheritModuleError</a>
+    <li><a href="./RBS/InvalidOverloadMethodError.html">RBS::InvalidOverloadMethodError</a>
+    <li><a href="./RBS/InvalidTypeApplicationError.html">RBS::InvalidTypeApplicationError</a>
+    <li><a href="./RBS/InvalidVarianceAnnotationError.html">RBS::InvalidVarianceAnnotationError</a>
+    <li><a href="./RBS/LoadingError.html">RBS::LoadingError</a>
+    <li><a href="./RBS/Location.html">RBS::Location</a>
+    <li><a href="./RBS/Locator.html">RBS::Locator</a>
+    <li><a href="./RBS/MethodNameHelper.html">RBS::MethodNameHelper</a>
+    <li><a href="./RBS/MethodType.html">RBS::MethodType</a>
+    <li><a href="./RBS/MixinClassError.html">RBS::MixinClassError</a>
+    <li><a href="./RBS/Namespace.html">RBS::Namespace</a>
+    <li><a href="./RBS/NoMixinFoundError.html">RBS::NoMixinFoundError</a>
+    <li><a href="./RBS/NoSelfTypeFoundError.html">RBS::NoSelfTypeFoundError</a>
+    <li><a href="./RBS/NoSuperclassFoundError.html">RBS::NoSuperclassFoundError</a>
+    <li><a href="./RBS/NoTypeFoundError.html">RBS::NoTypeFoundError</a>
+    <li><a href="./RBS/NonregularTypeAliasError.html">RBS::NonregularTypeAliasError</a>
+    <li><a href="./RBS/Parser.html">RBS::Parser</a>
+    <li><a href="./RBS/ParsingError.html">RBS::Parser::LexerError</a>
+    <li><a href="./RBS/Parser/LocatedValue.html">RBS::Parser::LocatedValue</a>
+    <li><a href="./RBS/ParsingError.html">RBS::Parser::SemanticsError</a>
+    <li><a href="./RBS/ParsingError.html">RBS::Parser::SyntaxError</a>
+    <li><a href="./RBS/ParsingError.html">RBS::ParsingError</a>
+    <li><a href="./RBS/Prototype.html">RBS::Prototype</a>
+    <li><a href="./RBS/Prototype/Helpers.html">RBS::Prototype::Helpers</a>
+    <li><a href="./RBS/Prototype/NodeUsage.html">RBS::Prototype::NodeUsage</a>
+    <li><a href="./RBS/Prototype/RB.html">RBS::Prototype::RB</a>
+    <li><a href="./RBS/Prototype/RBI.html">RBS::Prototype::RBI</a>
+    <li><a href="./RBS/Prototype/Runtime.html">RBS::Prototype::Runtime</a>
+    <li><a href="./RBS/RDocPlugin.html">RBS::RDocPlugin</a>
+    <li><a href="./RBS/RDocPlugin/Parser.html">RBS::RDocPlugin::Parser</a>
+    <li><a href="./RBS/RecursiveAliasDefinitionError.html">RBS::RecursiveAliasDefinitionError</a>
+    <li><a href="./RBS/RecursiveAncestorError.html">RBS::RecursiveAncestorError</a>
+    <li><a href="./RBS/RecursiveTypeAliasError.html">RBS::RecursiveTypeAliasError</a>
+    <li><a href="./RBS/Repository.html">RBS::Repository</a>
+    <li><a href="./RBS/Repository/GemRBS.html">RBS::Repository::GemRBS</a>
+    <li><a href="./RBS/Resolver.html">RBS::Resolver</a>
+    <li><a href="./RBS/Resolver/ConstantResolver.html">RBS::Resolver::ConstantResolver</a>
+    <li><a href="./RBS/Resolver/ConstantResolver/Table.html">RBS::Resolver::ConstantResolver::Table</a>
+    <li><a href="./RBS/Resolver/TypeNameResolver.html">RBS::Resolver::TypeNameResolver</a>
+    <li><a href="./RBS/Sorter.html">RBS::Sorter</a>
+    <li><a href="./RBS/Substitution.html">RBS::Substitution</a>
+    <li><a href="./RBS/Subtractor.html">RBS::Subtractor</a>
+    <li><a href="./RBS/SuperclassMismatchError.html">RBS::SuperclassMismatchError</a>
+    <li><a href="./RBS/Test.html">RBS::Test</a>
+    <li><a href="./RBS/Test/ArgumentsReturn.html">RBS::Test::ArgumentsReturn</a>
+    <li><a href="./RBS/TypeAliasDependency.html">RBS::TypeAliasDependency</a>
+    <li><a href="./RBS/TypeAliasRegularity.html">RBS::TypeAliasRegularity</a>
+    <li><a href="./RBS/TypeAliasRegularity/Diagnostic.html">RBS::TypeAliasRegularity::Diagnostic</a>
+    <li><a href="./RBS/TypeName.html">RBS::TypeName</a>
+    <li><a href="./RBS/Types.html">RBS::Types</a>
+    <li><a href="./RBS/Types/Alias.html">RBS::Types::Alias</a>
+    <li><a href="./RBS/Types/Application.html">RBS::Types::Application</a>
+    <li><a href="./RBS/Types/Bases.html">RBS::Types::Bases</a>
+    <li><a href="./RBS/Types/Bases/Any.html">RBS::Types::Bases::Any</a>
+    <li><a href="./RBS/Types/Bases/Base.html">RBS::Types::Bases::Base</a>
+    <li><a href="./RBS/Types/Bases/Bool.html">RBS::Types::Bases::Bool</a>
+    <li><a href="./RBS/Types/Bases/Bottom.html">RBS::Types::Bases::Bottom</a>
+    <li><a href="./RBS/Types/Bases/Class.html">RBS::Types::Bases::Class</a>
+    <li><a href="./RBS/Types/Bases/Instance.html">RBS::Types::Bases::Instance</a>
+    <li><a href="./RBS/Types/Bases/Nil.html">RBS::Types::Bases::Nil</a>
+    <li><a href="./RBS/Types/Bases/Self.html">RBS::Types::Bases::Self</a>
+    <li><a href="./RBS/Types/Bases/Top.html">RBS::Types::Bases::Top</a>
+    <li><a href="./RBS/Types/Bases/Void.html">RBS::Types::Bases::Void</a>
+    <li><a href="./RBS/Types/Block.html">RBS::Types::Block</a>
+    <li><a href="./RBS/Types/ClassInstance.html">RBS::Types::ClassInstance</a>
+    <li><a href="./RBS/Types/ClassSingleton.html">RBS::Types::ClassSingleton</a>
+    <li><a href="./RBS/Types/EmptyEachType.html">RBS::Types::EmptyEachType</a>
+    <li><a href="./RBS/Types/Function.html">RBS::Types::Function</a>
+    <li><a href="./RBS/Types/Function/Param.html">RBS::Types::Function::Param</a>
+    <li><a href="./RBS/Types/Interface.html">RBS::Types::Interface</a>
+    <li><a href="./RBS/Types/Intersection.html">RBS::Types::Intersection</a>
+    <li><a href="./RBS/Types/Literal.html">RBS::Types::Literal</a>
+    <li><a href="./RBS/Types/NoFreeVariables.html">RBS::Types::NoFreeVariables</a>
+    <li><a href="./RBS/Types/NoSubst.html">RBS::Types::NoSubst</a>
+    <li><a href="./RBS/Types/NoTypeName.html">RBS::Types::NoTypeName</a>
+    <li><a href="./RBS/Types/Optional.html">RBS::Types::Optional</a>
+    <li><a href="./RBS/Types/Proc.html">RBS::Types::Proc</a>
+    <li><a href="./RBS/Types/Record.html">RBS::Types::Record</a>
+    <li><a href="./RBS/Types/SelfTypeBindingHelper.html">RBS::Types::SelfTypeBindingHelper</a>
+    <li><a href="./RBS/Types/Tuple.html">RBS::Types::Tuple</a>
+    <li><a href="./RBS/Types/Union.html">RBS::Types::Union</a>
+    <li><a href="./RBS/Types/Variable.html">RBS::Types::Variable</a>
+    <li><a href="./RBS/UnknownMethodAliasError.html">RBS::UnknownMethodAliasError</a>
+    <li><a href="./RBS/Validator.html">RBS::Validator</a>
+    <li><a href="./RBS/VarianceCalculator.html">RBS::VarianceCalculator</a>
+    <li><a href="./RBS/VarianceCalculator/Result.html">RBS::VarianceCalculator::Result</a>
+    <li><a href="./RBS/Vendorer.html">RBS::Vendorer</a>
+    <li><a href="./RBS/Writer.html">RBS::Writer</a>
+    <li><a href="./RDoc.html">RDoc</a>
+    <li><a href="./RDoc/Parser.html">RDoc::Parser</a>
+    <li><a href="./RDoc/Parser/RBS.html">RDoc::Parser::RBS</a>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</nav>
+
+
+<!--  carbon ads here -->
+
+<div id='extraz'>
+  <div class='adzbox-index'  >
+   
+  </div>
+ </div>         
+
+
+<main role="main">
+<p>This is the API documentation for rbs: Ruby Standard Library Documentation.</p>
+<p>This is the API documentation for .</p>
+</main>
+
+
+
+</div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class StringPrepTablesGenerator - net-imap: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="./index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">Object
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-arrays">#arrays</a>
+    <li ><a href="#method-i-asgn_regex">#asgn_regex</a>
+    <li ><a href="#method-i-asgn_regexps">#asgn_regexps</a>
+    <li ><a href="#method-i-asgn_regexps-21">#asgn_regexps!</a>
+    <li ><a href="#method-i-asgn_table">#asgn_table</a>
+    <li ><a href="#method-i-bidi_L">#bidi_L</a>
+    <li ><a href="#method-i-bidi_R_AL">#bidi_R_AL</a>
+    <li ><a href="#method-i-bidi_consts">#bidi_consts</a>
+    <li ><a href="#method-i-bidi_fails_req2">#bidi_fails_req2</a>
+    <li ><a href="#method-i-bidi_fails_req3">#bidi_fails_req3</a>
+    <li ><a href="#method-i-bidi_failure_regexp">#bidi_failure_regexp</a>
+    <li ><a href="#method-i-bidi_not_R_AL">#bidi_not_R_AL</a>
+    <li ><a href="#method-i-clean_deps">#clean_deps</a>
+    <li ><a href="#method-i-generate_json_data_file">#generate_json_data_file</a>
+    <li ><a href="#method-i-json_deps">#json_deps</a>
+    <li ><a href="#method-i-load_tables_and_titles_from_json-21">#load_tables_and_titles_from_json!</a>
+    <li ><a href="#method-i-merged_tables_regex">#merged_tables_regex</a>
+    <li ><a href="#method-i-parse_rfc_text">#parse_rfc_text</a>
+    <li ><a href="#method-i-ranges">#ranges</a>
+    <li ><a href="#method-i-rb_deps">#rb_deps</a>
+    <li ><a href="#method-i-regex_str">#regex_str</a>
+    <li ><a href="#method-i-regexp_const_desc">#regexp_const_desc</a>
+    <li ><a href="#method-i-regexp_const_name">#regexp_const_name</a>
+    <li ><a href="#method-i-regexp_for">#regexp_for</a>
+    <li ><a href="#method-i-regexps">#regexps</a>
+    <li ><a href="#method-i-saslprep_rb">#saslprep_rb</a>
+    <li ><a href="#method-i-sets">#sets</a>
+    <li ><a href="#method-i-stringprep_rb">#stringprep_rb</a>
+    <li ><a href="#method-i-table_regexps_rb">#table_regexps_rb</a>
+    <li ><a href="#method-i-table_titles_rb">#table_titles_rb</a>
+    <li ><a href="#method-i-tables">#tables</a>
+    <li ><a href="#method-i-titles">#titles</a>
+    <li ><a href="#method-i-to_ranges">#to_ranges</a>
+    <li ><a href="#method-i-to_regexp">#to_regexp</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-StringPrepTablesGenerator">
+    <h1 id="class-StringPrepTablesGenerator" class="class">
+      class StringPrepTablesGenerator
+    </h1>
+
+    <section class="description">
+    
+<p>Generator for stringprep regexps.</p>
+
+<p>Combines Unicode character classes with generated tables.  Generated regexps are still used to test that the written regexps conform to the specification. Some tables don’t match up well with any character properties available to ruby’s regexp engine.  Those use the table-generated regexps.</p>
+
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+      <section class="constants-list">
+      <header>
+      <h3>Constants</h3>
+      </header>
+      <dl>
+          <dt id="SASL_TABLES_PROHIBITED">SASL_TABLES_PROHIBITED
+          <dd>
+          <dt id="SASL_TABLES_PROHIBITED_STORED">SASL_TABLES_PROHIBITED_STORED
+          <dd>
+          <dt id="STRINGPREP_JSON_FILE">STRINGPREP_JSON_FILE
+          <dd>
+          <dt id="STRINGPREP_RFC_FILE">STRINGPREP_RFC_FILE
+          <dd>
+          <dt id="SURROGATES_RANGE">SURROGATES_RANGE
+          <dd><p>valid UTF-8 can’t contain these codepoints checking for them anyway, using /p{Cs}/  ;)</p>
+        </dl>
+        </section>
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-json_filename" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">json_filename</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-rfc_filename" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">rfc_filename</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">(rfc_filename: STRINGPREP_RFC_FILE, json_filename: STRINGPREP_JSON_FILE)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-value">rfc_filename:</span>  <span class="ruby-constant">STRINGPREP_RFC_FILE</span>,
+               <span class="ruby-value">json_filename:</span> <span class="ruby-constant">STRINGPREP_JSON_FILE</span>)
+  <span class="ruby-ivar">@rfc_filename</span>  = <span class="ruby-identifier">rfc_filename</span>
+  <span class="ruby-ivar">@json_filename</span> = <span class="ruby-identifier">json_filename</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-arrays" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">arrays</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="arrays-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">arrays</span>;  <span class="ruby-ivar">@arrays</span>  <span class="ruby-operator">||=</span> <span class="ruby-identifier">ranges</span>.<span class="ruby-identifier">transform_values</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">flat_map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:to_a</span>) } <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-asgn_regexps" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">asgn_regexps</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="asgn_regexps-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">asgn_regexps</span>; <span class="ruby-ivar">@asgn_regexps</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">asgn_regexps!</span> <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-clean_deps" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">clean_deps</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="clean_deps-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">clean_deps</span>; <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">FileList</span>.<span class="ruby-identifier">new</span>           <span class="ruby-constant">STRINGPREP_JSON_FILE</span> <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-generate_json_data_file" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">generate_json_data_file</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="generate_json_data_file-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_json_data_file</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&quot;json&quot;</span>
+  <span class="ruby-identifier">rfc_filename</span>
+    .<span class="ruby-identifier">then</span>(<span class="ruby-operator">&amp;</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:read</span>))
+    .<span class="ruby-identifier">then</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">method</span>(<span class="ruby-value">:parse_rfc_text</span>))
+    .<span class="ruby-identifier">then</span>(<span class="ruby-operator">&amp;</span><span class="ruby-constant">JSON</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:pretty_generate</span>))
+    .<span class="ruby-identifier">then</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">data</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">json_filename</span>, <span class="ruby-identifier">data</span> }
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-json_deps" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">json_deps</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>for rake deps</p>
+
+                              <div class="method-source-code" id="json_deps-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">json_deps</span>;  <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">FileList</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">__FILE__</span>, <span class="ruby-constant">STRINGPREP_RFC_FILE</span>  <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-merged_tables_regex" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">merged_tables_regex</span><span
+                                class="method-args">(*table_names, negate: false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="merged_tables_regex-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">merged_tables_regex</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">table_names</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">table_names</span>
+    .<span class="ruby-identifier">flat_map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">arrays</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:fetch</span>))
+    .<span class="ruby-identifier">then</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">array</span><span class="ruby-operator">|</span> <span class="ruby-identifier">to_regexp</span>(<span class="ruby-identifier">array</span>, <span class="ruby-value">negate:</span> <span class="ruby-identifier">negate</span>) }
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-ranges" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">ranges</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="ranges-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">ranges</span>;  <span class="ruby-ivar">@ranges</span>  <span class="ruby-operator">||=</span> <span class="ruby-identifier">tables</span>.<span class="ruby-identifier">transform_values</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">method</span>(<span class="ruby-value">:to_ranges</span>)) <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-rb_deps" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">rb_deps</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="rb_deps-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rb_deps</span>;    <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">FileList</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">__FILE__</span>, <span class="ruby-constant">STRINGPREP_JSON_FILE</span> <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-regexp_for" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">regexp_for</span><span
+                                class="method-args">(*names, negate: false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="regexp_for-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">regexp_for</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">asgn_regexps</span>[[<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>, <span class="ruby-identifier">negate</span>]] <span class="ruby-operator">||=</span> <span class="ruby-identifier">merged_tables_regex</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>, <span class="ruby-value">negate:</span> <span class="ruby-identifier">negate</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-regexps" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">regexps</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="regexps-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">regexps</span>; <span class="ruby-ivar">@regexps</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">arrays</span>.<span class="ruby-identifier">transform_values</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">method</span>(<span class="ruby-value">:to_regexp</span>)) <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-saslprep_rb" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">saslprep_rb</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="saslprep_rb-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 152</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">saslprep_rb</span>
+    <span class="ruby-identifier">&lt;&lt;~RUBY</span>
+<span class="ruby-value">      # frozen_string_literal: true
+
+      #--
+      # This file is generated from RFC3454, by rake.  Don&#39;t edit directly.
+      #++
+
+      module Net::IMAP::SASL
+
+        module SASLprep
+
+          # RFC4013 §2.1 Mapping - mapped to space
+          # * non-ASCII space characters (\\StringPrep\\[\\&quot;C.1.2\\&quot;]) that can be
+          #   mapped to SPACE (U+0020), and
+          #
+          # Equal to \\StringPrep\\[\\&quot;C.1.2\\&quot;].
+          # Redefined here to avoid loading the StringPrep module.
+          MAP_TO_SPACE = #{regex_str &quot;C.1.2&quot;}
+
+          # RFC4013 §2.1 Mapping - mapped to nothing
+          #   the &quot;commonly mapped to nothing&quot; characters (\\StringPrep\\[\\&quot;B.1\\&quot;])
+          #   that can be mapped to nothing.
+          #
+          # Equal to \\StringPrep\\[\\&quot;B.1\\&quot;].
+          # Redefined here to avoid loading the StringPrep module.
+          MAP_TO_NOTHING = #{regex_str &quot;B.1&quot;}
+
+          # RFC4013 §2.3 Prohibited Output::
+          # * Non-ASCII space characters — \\StringPrep\\[\\&quot;C.1.2\\&quot;]
+          # * ASCII control characters — \\StringPrep\\[\\&quot;C.2.1\\&quot;]
+          # * Non-ASCII control characters — \\StringPrep\\[\\&quot;C.2.2\\&quot;]
+          # * Private Use characters — \\StringPrep\\[\\&quot;C.3\\&quot;]
+          # * Non-character code points — \\StringPrep\\[\\&quot;C.4\\&quot;]
+          # * Surrogate code points — \\StringPrep\\[\\&quot;C.5\\&quot;]
+          # * Inappropriate for plain text characters — \\StringPrep\\[\\&quot;C.6\\&quot;]
+          # * Inappropriate for canonical representation characters — \\StringPrep\\[\\&quot;C.7\\&quot;]
+          # * Change display properties or deprecated characters — \\StringPrep\\[\\&quot;C.8\\&quot;]
+          # * Tagging characters — \\StringPrep\\[\\&quot;C.9\\&quot;]
+          TABLES_PROHIBITED = #{SASL_TABLES_PROHIBITED.inspect}.freeze
+
+          # Adds unassigned (by Unicode 3.2) codepoints to TABLES_PROHIBITED.
+          #
+          # RFC4013 §2.5 Unassigned Code Points::
+          #   This profile specifies the \\StringPrep\\[\\&quot;A.1\\&quot;] table as its list of
+          #   unassigned code points.
+          TABLES_PROHIBITED_STORED = [&quot;A.1&quot;, *TABLES_PROHIBITED].freeze
+
+          # Matches codepoints prohibited by RFC4013 §2.3.
+          #
+          # See TABLES_PROHIBITED.
+          #
+          # Equal to +Regexp.union+ of the TABLES_PROHIBITED tables.  Redefined
+          # here to avoid loading the StringPrep module unless necessary.
+          PROHIBITED_OUTPUT = #{regex_str(*SASL_TABLES_PROHIBITED)}
+
+          # RFC4013 §2.5 Unassigned Code Points::
+          #   This profile specifies the \\StringPrep\\[\\&quot;A.1\\&quot;] table as its list of
+          #   unassigned code points.
+          UNASSIGNED = #{regex_str &quot;A.1&quot;}
+
+          # Matches codepoints prohibited by RFC4013 §2.3 and §2.5.
+          #
+          # See TABLES_PROHIBITED_STORED.
+          PROHIBITED_OUTPUT_STORED = Regexp.union(
+            UNASSIGNED, PROHIBITED_OUTPUT
+          ).freeze
+
+          # Bidirectional Characters [StringPrep, §6]
+          BIDI_FAILURE = #{bidi_failure_regexp.inspect}.freeze
+
+          # Matches strings prohibited by RFC4013 §2.3 and §2.4.
+          #
+          # This checks prohibited output and bidirectional characters.
+          PROHIBITED = Regexp.union(
+            PROHIBITED_OUTPUT, BIDI_FAILURE,
+          )
+
+          # Matches strings prohibited by RFC4013 §2.3, §2.4, and §2.5.
+          #
+          # This checks prohibited output, bidirectional characters, and
+          # unassigned codepoints.
+          PROHIBITED_STORED = Regexp.union(
+            PROHIBITED_OUTPUT_STORED, BIDI_FAILURE,
+          )
+
+        end
+      end
+</span><span class="ruby-identifier">    RUBY</span>
+  <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-sets" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">sets</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="sets-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sets</span>;    <span class="ruby-ivar">@sets</span>    <span class="ruby-operator">||=</span> <span class="ruby-identifier">arrays</span>.<span class="ruby-identifier">transform_values</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:to_set</span>) <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-stringprep_rb" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">stringprep_rb</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="stringprep_rb-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 57</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stringprep_rb</span>
+    <span class="ruby-identifier">&lt;&lt;~RUBY</span>
+<span class="ruby-value">      # frozen_string_literal: true
+
+      #--
+      # This file is generated from RFC3454, by rake.  Don&#39;t edit directly.
+      #++
+
+      module Net::IMAP::SASL
+
+        module StringPrep
+
+          #{asgn_table &quot;A.1&quot;}
+
+          #{asgn_table &quot;B.1&quot;}
+
+          #{asgn_table &quot;B.2&quot;}
+
+          #{asgn_table &quot;B.3&quot;}
+
+          #{asgn_table &quot;C.1.1&quot;}
+
+          #{asgn_table &quot;C.1.2&quot;}
+
+          #{asgn_table &quot;C.2.1&quot;}
+
+          #{asgn_table &quot;C.2.2&quot;}
+
+          #{asgn_table &quot;C.3&quot;}
+
+          #{asgn_table &quot;C.4&quot;}
+
+          #{asgn_table &quot;C.5&quot;}
+
+          #{asgn_table &quot;C.6&quot;}
+
+          #{asgn_table &quot;C.7&quot;}
+
+          #{asgn_table &quot;C.8&quot;}
+
+          #{asgn_table &quot;C.9&quot;}
+
+          #{asgn_table &quot;D.1&quot;}
+
+          # Used to check req3 of bidirectional checks
+          #{asgn_table &quot;D.1&quot;, negate: true}
+
+          #{asgn_table &quot;D.2&quot;}
+
+          BIDI_DESC_REQ2 = &quot;A string with RandALCat characters must not contain LCat characters.&quot;
+
+          # Bidirectional Characters [StringPrep, §6], Requirement 2::
+          #   If a string contains any RandALCat character, the string MUST NOT
+          #   contain any LCat character.
+          BIDI_FAILS_REQ2 = #{bidi_fails_req2.inspect}.freeze
+
+          BIDI_DESC_REQ3 = &quot;A string with RandALCat characters must start and end with RandALCat characters.&quot;
+
+          # Bidirectional Characters [StringPrep, §6], Requirement 3::
+          #   If a string contains any RandALCat character, a RandALCat
+          #   character MUST be the first character of the string, and a
+          #   RandALCat character MUST be the last character of the string.
+          BIDI_FAILS_REQ3 = #{bidi_fails_req3.inspect}.freeze
+
+          # Bidirectional Characters [StringPrep, §6]
+          BIDI_FAILURE = #{bidi_failure_regexp.inspect}.freeze
+
+          # Names of each codepoint table in the RFC-3454 appendices
+          TABLE_TITLES = {
+            #{table_titles_rb}
+          }.freeze
+
+          # Regexps matching each codepoint table in the RFC-3454 appendices
+          TABLE_REGEXPS = {
+            #{table_regexps_rb}
+          }.freeze
+
+        end
+      end
+</span><span class="ruby-identifier">    RUBY</span>
+  <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-table_regexps_rb" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">table_regexps_rb</span><span
+                                class="method-args">(indent = 3)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="table_regexps_rb-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 145</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">table_regexps_rb</span>(<span class="ruby-identifier">indent</span> = <span class="ruby-value">3</span>)
+  <span class="ruby-identifier">asgn_regexps</span> <span class="ruby-comment"># =&gt; { [&quot;A.1&quot;, false] =&gt; regexp, ... }</span>
+    .<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span>(<span class="ruby-identifier">_</span>, <span class="ruby-identifier">n</span>), <span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span> }
+    .<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span>(<span class="ruby-identifier">t</span>, <span class="ruby-identifier">_</span>), <span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;%p =&gt; %s,&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">t</span>, <span class="ruby-identifier">regexp_const_name</span>(<span class="ruby-identifier">t</span>)] }
+    .<span class="ruby-identifier">join</span>(<span class="ruby-node">&quot;\n#{&quot;  &quot;*indent}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-table_titles_rb" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">table_titles_rb</span><span
+                                class="method-args">(indent = 3)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="table_titles_rb-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">table_titles_rb</span>(<span class="ruby-identifier">indent</span> = <span class="ruby-value">3</span>)
+  <span class="ruby-identifier">titles</span>
+    .<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;%p =&gt; %p,&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">t</span> }
+    .<span class="ruby-identifier">join</span>(<span class="ruby-node">&quot;\n#{&quot;  &quot;*indent}&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-tables" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">tables</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="tables-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">tables</span>;  <span class="ruby-ivar">@tables</span>  <span class="ruby-operator">||=</span> <span class="ruby-identifier">load_tables_and_titles_from_json!</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-titles" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">titles</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="titles-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">titles</span>;  <span class="ruby-ivar">@titles</span>  <span class="ruby-operator">||=</span> <span class="ruby-identifier">load_tables_and_titles_from_json!</span>.<span class="ruby-identifier">last</span> <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-asgn_regex" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">asgn_regex</span><span
+                                class="method-args">(name, regexp, negate: false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="asgn_regex-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 365</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">asgn_regex</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">regexp</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">asgn_regexps</span>[[<span class="ruby-identifier">name</span>, <span class="ruby-identifier">negate</span>]] = <span class="ruby-identifier">regexp</span>
+  <span class="ruby-string">&quot;# %s\n%s%s = %p.freeze&quot;</span> <span class="ruby-operator">%</span> [
+    <span class="ruby-identifier">regexp_const_desc</span>(<span class="ruby-identifier">name</span>, <span class="ruby-value">negate:</span> <span class="ruby-identifier">negate</span>), <span class="ruby-string">&quot; &quot;</span> <span class="ruby-operator">*</span> <span class="ruby-value">4</span>,
+    <span class="ruby-identifier">regexp_const_name</span>(<span class="ruby-identifier">name</span>, <span class="ruby-value">negate:</span> <span class="ruby-identifier">negate</span>),
+    <span class="ruby-identifier">regexp</span>,
+  ]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-asgn_regexps-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">asgn_regexps!</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="asgn_regexps-21-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 309</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">asgn_regexps!</span>
+  <span class="ruby-ivar">@asgn_regexps</span> = {}
+  <span class="ruby-comment"># preset the regexp for each table</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;A.1&quot;</span>, <span class="ruby-regexp">/\p{^AGE=3.2}/</span>
+  <span class="ruby-comment"># If ruby supported all unicode properties (i.e. line break = word joiner):</span>
+  <span class="ruby-comment">#   /[\u{00ad 034f 1806}\p{join_c}\p{VS}\p{lb=WJ}&amp;&amp;\p{age=3.2}]/</span>
+  <span class="ruby-identifier">asgn_table</span> <span class="ruby-string">&quot;B.1&quot;</span>
+  <span class="ruby-identifier">asgn_table</span> <span class="ruby-string">&quot;B.2&quot;</span>
+  <span class="ruby-identifier">asgn_table</span> <span class="ruby-string">&quot;B.3&quot;</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.1.1&quot;</span>, <span class="ruby-regexp">/ /</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.1.2&quot;</span>, <span class="ruby-regexp">/[\u200b\p{Zs}&amp;&amp;[^ ]]/</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.2.1&quot;</span>, <span class="ruby-regexp">/[\x00-\x1f\x7f]/</span>
+  <span class="ruby-comment"># C.2.2 is a union:</span>
+  <span class="ruby-comment">#   Cc + Cf (as defined by Unicode 3.2) + Zl + Zp + 0xfffc</span>
+  <span class="ruby-comment">#   - any codepoints covered by C.2.1 or C.8 or C.9</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># But modern Unicode properties are significantly different, so it&#39;s better</span>
+  <span class="ruby-comment"># to just load the table definition.</span>
+  <span class="ruby-identifier">asgn_table</span> <span class="ruby-string">&quot;C.2.2&quot;</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.3&quot;</span>, <span class="ruby-regexp">/\p{private use}/</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.4&quot;</span>, <span class="ruby-regexp">/\p{noncharacter code point}/</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.5&quot;</span>, <span class="ruby-regexp">/\p{surrogate}/</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.6&quot;</span>, <span class="ruby-regexp">/[\p{in specials}&amp;&amp;\p{AGE=3.2}&amp;&amp;\p{^NChar}]/</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.7&quot;</span>, <span class="ruby-regexp">/[\p{in ideographic description characters}&amp;&amp;\p{AGE=3.2}]/</span>
+  <span class="ruby-comment"># C.8 is a union of \p{Bidi Control} and Unicode 3.2 properties.  But those properties</span>
+  <span class="ruby-comment"># have changed for modern Unicode, and thus for modern ruby&#39;s regexp</span>
+  <span class="ruby-comment"># character properties.  It&#39;s better to just load the table definition.</span>
+  <span class="ruby-identifier">asgn_table</span> <span class="ruby-string">&quot;C.8&quot;</span>
+  <span class="ruby-identifier">asgn_regex</span> <span class="ruby-string">&quot;C.9&quot;</span>, <span class="ruby-regexp">/[\p{in Tags}&amp;&amp;\p{AGE=3.2}]/</span>
+  <span class="ruby-comment"># Unfortunately, ruby doesn&#39;t (currently) support /[\p{Bidi</span>
+  <span class="ruby-comment"># Class=R}\p{bc=AL}]/.  On the other hand, StringPrep (based on Unicode 3.2)</span>
+  <span class="ruby-comment"># might not be a good match for the modern (14.0) property value anyway.</span>
+  <span class="ruby-identifier">asgn_table</span> <span class="ruby-string">&quot;D.1&quot;</span>
+  <span class="ruby-identifier">asgn_table</span> <span class="ruby-string">&quot;D.1&quot;</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">true</span> <span class="ruby-comment"># used by BIDI_FAILS_REQ3</span>
+  <span class="ruby-identifier">asgn_table</span> <span class="ruby-string">&quot;D.2&quot;</span>
+  <span class="ruby-ivar">@asgn_regexps</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-asgn_table" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">asgn_table</span><span
+                                class="method-args">(name, negate: false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="asgn_table-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">asgn_table</span>(<span class="ruby-identifier">name</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">asgn_regex</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">regexp_for</span>(<span class="ruby-identifier">name</span>, <span class="ruby-value">negate:</span> <span class="ruby-identifier">negate</span>), <span class="ruby-value">negate:</span> <span class="ruby-identifier">negate</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-bidi_L" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bidi_L</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="bidi_L-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 376</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bidi_L</span>        ; <span class="ruby-identifier">regexp_for</span> <span class="ruby-string">&quot;D.2&quot;</span> <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-bidi_R_AL" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bidi_R_AL</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="bidi_R_AL-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 374</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bidi_R_AL</span>     ; <span class="ruby-identifier">regexp_for</span> <span class="ruby-string">&quot;D.1&quot;</span> <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-bidi_consts" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bidi_consts</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="bidi_consts-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 406</span>
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bidi_consts</span>
+    <span class="ruby-identifier">&lt;&lt;~RUBY</span>
+<span class="ruby-value">      #############
+          # Bidirectional checks.
+          #
+
+</span><span class="ruby-identifier">    RUBY</span>
+  <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-bidi_fails_req2" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bidi_fails_req2</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="bidi_fails_req2-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 378</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bidi_fails_req2</span>
+  <span class="ruby-regexp">/ # RandALCat followed by LCat
+    (?&lt;r_and_al_cat&gt;#{bidi_R_AL.source})
+      .*?
+      (?&lt;l_cat&gt;#{bidi_L.source})
+    | # RandALCat preceded by LCat
+      \g&lt;l_cat&gt; .*? \g&lt;r_and_al_cat&gt;
+  /mux</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-bidi_fails_req3" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bidi_fails_req3</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="bidi_fails_req3-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 388</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bidi_fails_req3</span>
+  <span class="ruby-regexp">/ # contains RandALCat but doesn&#39;t start with RandALCat
+    \A(?&lt;not_r_nor_al&gt;#{bidi_not_R_AL})
+      .*?
+      (?&lt;r_and_al_cat&gt;#{bidi_R_AL})
+    | # contains RandALCat but doesn&#39;t end with RandALCat
+      \g&lt;r_and_al_cat&gt; .*? \g&lt;not_r_nor_al&gt;\z
+  /mux</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-bidi_failure_regexp" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bidi_failure_regexp</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>shares the <a href="StringPrepTablesGenerator.html#method-i-bidi_R_AL"><code>bidi_R_AL</code></a> definition between both req2 and req3</p>
+
+                              <div class="method-source-code" id="bidi_failure_regexp-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 399</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bidi_failure_regexp</span>
+  <span class="ruby-identifier">req3_with_backref</span> = <span class="ruby-identifier">bidi_fails_req3</span>.<span class="ruby-identifier">source</span>
+    .<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">%r{\(\?\&lt;r_and_al_cat\&gt;\(.*?\)\)}</span>, <span class="ruby-string">&quot;\g&lt;r_and_al_cat&gt;&quot;</span>)
+    .<span class="ruby-identifier">then</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">re</span><span class="ruby-operator">|</span><span class="ruby-node">&quot;(?mx-i:#{re})&quot;</span>}
+  <span class="ruby-regexp">/#{bidi_fails_req2} | #{req3_with_backref}/mux</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-bidi_not_R_AL" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bidi_not_R_AL</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="bidi_not_R_AL-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 375</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bidi_not_R_AL</span> ; <span class="ruby-identifier">regexp_for</span> <span class="ruby-string">&quot;D.1&quot;</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-load_tables_and_titles_from_json-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">load_tables_and_titles_from_json!</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="load_tables_and_titles_from_json-21-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 272</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">load_tables_and_titles_from_json!</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&quot;json&quot;</span>
+  <span class="ruby-ivar">@tables</span> = <span class="ruby-identifier">json_filename</span>
+    .<span class="ruby-identifier">then</span>(<span class="ruby-operator">&amp;</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:read</span>))
+    .<span class="ruby-identifier">then</span>(<span class="ruby-operator">&amp;</span><span class="ruby-constant">JSON</span>.<span class="ruby-identifier">method</span>(<span class="ruby-value">:parse</span>))
+  <span class="ruby-ivar">@titles</span> = <span class="ruby-ivar">@tables</span>.<span class="ruby-identifier">delete</span> <span class="ruby-string">&quot;titles&quot;</span>
+  [<span class="ruby-ivar">@tables</span>, <span class="ruby-ivar">@titles</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-parse_rfc_text" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">parse_rfc_text</span><span
+                                class="method-args">(rfc3454_text)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="parse_rfc_text-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">parse_rfc_text</span>(<span class="ruby-identifier">rfc3454_text</span>)
+  <span class="ruby-identifier">titles</span> = {}
+  <span class="ruby-identifier">tables</span>, = <span class="ruby-identifier">rfc3454_text</span>
+    .<span class="ruby-identifier">lines</span>
+    .<span class="ruby-identifier">each_with_object</span>([]) {<span class="ruby-operator">|</span><span class="ruby-identifier">line</span>, <span class="ruby-identifier">acc</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">current</span>, <span class="ruby-identifier">table</span> = <span class="ruby-identifier">acc</span>.<span class="ruby-identifier">last</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">line</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^([A-D]\.[1-9](?:\.[1-9])?) (.*)/</span>
+        <span class="ruby-identifier">titles</span>[<span class="ruby-node">$1</span>] = <span class="ruby-node">$2</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^ {3}-{5} Start Table (\S*)/</span>
+        <span class="ruby-identifier">acc</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-node">$1</span>, []]
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^ {3}-{5} End Table /</span>
+        <span class="ruby-identifier">acc</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>]
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^ {3}([0-9A-F]+); ([ 0-9A-F]*)(?:;[^;]*)$/</span>  <span class="ruby-comment"># mapping tables</span>
+        <span class="ruby-identifier">table</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/ +/</span>)] <span class="ruby-keyword">if</span> <span class="ruby-identifier">current</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^ {3}([-0-9A-F]+)(?:;[^;]*)?$/</span>              <span class="ruby-comment"># regular tables</span>
+        <span class="ruby-identifier">table</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">$1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-regexp">/^ {3}(.*)/</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;expected to match %p&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-node">$1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current</span>
+      <span class="ruby-keyword">end</span>
+    }
+    .<span class="ruby-identifier">to_h</span>.<span class="ruby-identifier">compact</span>
+    .<span class="ruby-identifier">transform_values</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">to_h</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span> }
+  <span class="ruby-identifier">tables</span>[<span class="ruby-string">&quot;titles&quot;</span>] = <span class="ruby-identifier">titles</span>
+  <span class="ruby-identifier">tables</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-regex_str" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">regex_str</span><span
+                                class="method-args">(*names, negate: false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="regex_str-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 347</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">regex_str</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-string">&quot;%p.freeze&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">regexp_for</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">names</span>, <span class="ruby-value">negate:</span> <span class="ruby-identifier">negate</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-regexp_const_desc" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">regexp_const_desc</span><span
+                                class="method-args">(name, negate: false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="regexp_const_desc-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 355</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">regexp_const_desc</span>(<span class="ruby-identifier">name</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">negate</span> <span class="ruby-keyword">then</span> <span class="ruby-string">&quot;Matches the negation of the %s table&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">name</span>]
+  <span class="ruby-keyword">else</span> <span class="ruby-string">%q{%s \\StringPrep\\[\\&quot;%s\\&quot;]}</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">titles</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">name</span>), <span class="ruby-identifier">name</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-regexp_const_name" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">regexp_const_name</span><span
+                                class="method-args">(table_name, negate: false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="regexp_const_name-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 361</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">regexp_const_name</span>(<span class="ruby-identifier">table_name</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-string">&quot;IN_%s%s&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">table_name</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-string">&quot;.&quot;</span>, <span class="ruby-string">&quot;_&quot;</span>), <span class="ruby-identifier">negate</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;_NEGATED&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-to_ranges" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">to_ranges</span><span
+                                class="method-args">(table)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="to_ranges-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 281</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_ranges</span>(<span class="ruby-identifier">table</span>)
+  (<span class="ruby-identifier">table</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">table</span>.<span class="ruby-identifier">keys</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">table</span>)
+    .<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">range</span><span class="ruby-operator">|</span> <span class="ruby-identifier">range</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value">?-</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span> <span class="ruby-constant">Integer</span> <span class="ruby-identifier">cp</span>, <span class="ruby-value">16</span>} }
+    .<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">s</span>,<span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">e</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">s</span>)}
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-to_regexp" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">to_regexp</span><span
+                                class="method-args">(codepoints, negate: false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Starting from a codepoints array (rather than ranges) to deduplicate merged tables.</p>
+
+                              <div class="method-source-code" id="to_regexp-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/rakelib/string_prep_tables_generator.rb, line 289</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_regexp</span>(<span class="ruby-identifier">codepoints</span>, <span class="ruby-value">negate:</span> <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">codepoints</span>
+    .<span class="ruby-identifier">grep_v</span>(<span class="ruby-constant">SURROGATES_RANGE</span>) <span class="ruby-comment"># remove surrogate codepoints from C.5 and D.2</span>
+    .<span class="ruby-identifier">uniq</span>
+    .<span class="ruby-identifier">sort</span>
+    .<span class="ruby-identifier">chunk_while</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">cp1</span>,<span class="ruby-identifier">cp2</span><span class="ruby-operator">|</span> <span class="ruby-identifier">cp1</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">cp2</span> }     <span class="ruby-comment"># find contiguous chunks</span>
+    .<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">chunk</span><span class="ruby-operator">|</span> <span class="ruby-identifier">chunk</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">cp</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;%04x&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">cp</span> } } <span class="ruby-comment"># convert to hex strings</span>
+    .<span class="ruby-identifier">partition</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">chunk</span><span class="ruby-operator">|</span> <span class="ruby-identifier">chunk</span>[<span class="ruby-value">1</span>] }               <span class="ruby-comment"># ranges vs singles</span>
+    .<span class="ruby-identifier">then</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ranges</span>, <span class="ruby-identifier">singles</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">singles</span>.<span class="ruby-identifier">flatten!</span>
+      [
+        <span class="ruby-identifier">negate</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;^&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>,
+        <span class="ruby-identifier">singles</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">any?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&quot;\\u{%s}&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">singles</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot; &quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>,
+        <span class="ruby-identifier">ranges</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-string">&quot;\\u{%s}-\\u{%s}&quot;</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">r</span>.<span class="ruby-identifier">first</span>, <span class="ruby-identifier">r</span>.<span class="ruby-identifier">last</span>] }.<span class="ruby-identifier">join</span>,
+        <span class="ruby-identifier">codepoints</span>.<span class="ruby-identifier">any?</span>(<span class="ruby-constant">SURROGATES_RANGE</span>) <span class="ruby-operator">?</span> <span class="ruby-string">&quot;\\p{Cs}&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&quot;&quot;</span>, <span class="ruby-comment"># not necessary :)</span>
+      ].<span class="ruby-identifier">join</span>
+    }
+    .<span class="ruby-identifier">then</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">char_class</span><span class="ruby-operator">|</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span> <span class="ruby-node">&quot;[#{char_class}]&quot;</span> }
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>. </p><p><a href="https://jamesbritt.bandcamp.com/">Hack your world.  Feed your head.  Live curious</a>.</p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

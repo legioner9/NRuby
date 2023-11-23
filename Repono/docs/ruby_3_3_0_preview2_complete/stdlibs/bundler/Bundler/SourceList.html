@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Bundler::SourceList - bundler: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-add_git_source">#add_git_source</a>
+    <li ><a href="#method-i-add_global_rubygems_remote">#add_global_rubygems_remote</a>
+    <li ><a href="#method-i-add_path_source">#add_path_source</a>
+    <li ><a href="#method-i-add_plugin_source">#add_plugin_source</a>
+    <li ><a href="#method-i-add_rubygems_source">#add_rubygems_source</a>
+    <li ><a href="#method-i-add_source_to_list">#add_source_to_list</a>
+    <li ><a href="#method-i-aggregate_global_source-3F">#aggregate_global_source?</a>
+    <li ><a href="#method-i-all_sources">#all_sources</a>
+    <li ><a href="#method-i-cached-21">#cached!</a>
+    <li ><a href="#method-i-combine_rubygems_sources">#combine_rubygems_sources</a>
+    <li ><a href="#method-i-default_source">#default_source</a>
+    <li ><a href="#method-i-different_sources-3F">#different_sources?</a>
+    <li ><a href="#method-i-dup_with_replaced_sources">#dup_with_replaced_sources</a>
+    <li ><a href="#method-i-equivalent_source-3F">#equivalent_source?</a>
+    <li ><a href="#method-i-equivalent_sources-3F">#equivalent_sources?</a>
+    <li ><a href="#method-i-expired_sources-3F">#expired_sources?</a>
+    <li ><a href="#method-i-get">#get</a>
+    <li ><a href="#method-i-global_replacement_source">#global_replacement_source</a>
+    <li ><a href="#method-i-global_rubygems_source">#global_rubygems_source</a>
+    <li ><a href="#method-i-implicit_global_source-3F">#implicit_global_source?</a>
+    <li ><a href="#method-i-local_only-21">#local_only!</a>
+    <li ><a href="#method-i-lock_other_sources">#lock_other_sources</a>
+    <li ><a href="#method-i-lock_rubygems_sources">#lock_rubygems_sources</a>
+    <li ><a href="#method-i-lock_sources">#lock_sources</a>
+    <li ><a href="#method-i-map_sources">#map_sources</a>
+    <li ><a href="#method-i-merged_gem_lockfile_sections-21">#merged_gem_lockfile_sections!</a>
+    <li ><a href="#method-i-merged_gem_lockfile_sections-3F">#merged_gem_lockfile_sections?</a>
+    <li ><a href="#method-i-non_default_explicit_sources">#non_default_explicit_sources</a>
+    <li ><a href="#method-i-non_global_rubygems_sources">#non_global_rubygems_sources</a>
+    <li ><a href="#method-i-remote-21">#remote!</a>
+    <li ><a href="#method-i-replace_sources-21">#replace_sources!</a>
+    <li ><a href="#method-i-rubygems_aggregate_class">#rubygems_aggregate_class</a>
+    <li ><a href="#method-i-rubygems_remotes">#rubygems_remotes</a>
+    <li ><a href="#method-i-rubygems_sources">#rubygems_sources</a>
+    <li ><a href="#method-i-source_list_for">#source_list_for</a>
+    <li ><a href="#method-i-warn_on_git_protocol">#warn_on_git_protocol</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-Bundler::SourceList">
+    <h1 id="class-Bundler::SourceList" class="class">
+      class Bundler::SourceList
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-git_sources" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">git_sources</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-global_path_source" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">global_path_source</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-metadata_source" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">metadata_source</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-path_sources" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">path_sources</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-plugin_sources" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">plugin_sources</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>
+  <span class="ruby-ivar">@path_sources</span>           = []
+  <span class="ruby-ivar">@git_sources</span>            = []
+  <span class="ruby-ivar">@plugin_sources</span>         = []
+  <span class="ruby-ivar">@global_rubygems_source</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@global_path_source</span>     = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@rubygems_sources</span>       = []
+  <span class="ruby-ivar">@metadata_source</span>        = <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Metadata</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-ivar">@merged_gem_lockfile_sections</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-add_git_source" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_git_source</span><span
+                                class="method-args">(options = {})</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_git_source-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_git_source</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">add_source_to_list</span>(<span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Git</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>), <span class="ruby-identifier">git_sources</span>).<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">warn_on_git_protocol</span>(<span class="ruby-identifier">source</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_global_rubygems_remote" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_global_rubygems_remote</span><span
+                                class="method-args">(uri)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_global_rubygems_remote-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_global_rubygems_remote</span>(<span class="ruby-identifier">uri</span>)
+  <span class="ruby-identifier">global_rubygems_source</span>.<span class="ruby-identifier">add_remote</span>(<span class="ruby-identifier">uri</span>)
+  <span class="ruby-identifier">global_rubygems_source</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_path_source" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_path_source</span><span
+                                class="method-args">(options = {})</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_path_source-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_path_source</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">&quot;gemspec&quot;</span>]
+    <span class="ruby-identifier">add_source_to_list</span> <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Gemspec</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>), <span class="ruby-identifier">path_sources</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">path_source</span> = <span class="ruby-identifier">add_source_to_list</span> <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Path</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>), <span class="ruby-identifier">path_sources</span>
+    <span class="ruby-ivar">@global_path_source</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">path_source</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-string">&quot;global&quot;</span>]
+    <span class="ruby-identifier">path_source</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_plugin_source" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_plugin_source</span><span
+                                class="method-args">(source, options = {})</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_plugin_source-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 67</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_plugin_source</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">add_source_to_list</span> <span class="ruby-constant">Plugin</span>.<span class="ruby-identifier">source</span>(<span class="ruby-identifier">source</span>).<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>), <span class="ruby-ivar">@plugin_sources</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_rubygems_source" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_rubygems_source</span><span
+                                class="method-args">(options = {})</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_rubygems_source-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_rubygems_source</span>(<span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">new_source</span> = <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Rubygems</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@global_rubygems_source</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@global_rubygems_source</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_source</span>
+
+  <span class="ruby-identifier">add_source_to_list</span> <span class="ruby-identifier">new_source</span>, <span class="ruby-ivar">@rubygems_sources</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-aggregate_global_source-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">aggregate_global_source?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="aggregate_global_source-3F-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">aggregate_global_source?</span>
+  <span class="ruby-identifier">global_rubygems_source</span>.<span class="ruby-identifier">multiple_remotes?</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-all_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">all_sources</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="all_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">all_sources</span>
+  <span class="ruby-identifier">path_sources</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">git_sources</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">plugin_sources</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">rubygems_sources</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">metadata_source</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-cached-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">cached!</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="cached-21-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cached!</span>
+  <span class="ruby-identifier">all_sources</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:cached!</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-default_source" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">default_source</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="default_source-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">default_source</span>
+  <span class="ruby-identifier">global_path_source</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">global_rubygems_source</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-expired_sources-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">expired_sources?</span><span
+                                class="method-args">(replacement_sources)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Returns true if there are changes</p>
+
+                              <div class="method-source-code" id="expired_sources-3F-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 131</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">expired_sources?</span>(<span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">replacement_sources</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-identifier">lock_sources</span> = <span class="ruby-identifier">dup_with_replaced_sources</span>(<span class="ruby-identifier">replacement_sources</span>).<span class="ruby-identifier">lock_sources</span>
+
+  <span class="ruby-identifier">different_sources?</span>(<span class="ruby-identifier">lock_sources</span>, <span class="ruby-identifier">replacement_sources</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-get" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">get</span><span
+                                class="method-args">(source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="get-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get</span>(<span class="ruby-identifier">source</span>)
+  <span class="ruby-identifier">source_list_for</span>(<span class="ruby-identifier">source</span>).<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">equivalent_source?</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">s</span>) }
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-global_rubygems_source" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">global_rubygems_source</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="global_rubygems_source-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">global_rubygems_source</span>
+  <span class="ruby-ivar">@global_rubygems_source</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">rubygems_aggregate_class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;allow_local&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-implicit_global_source-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">implicit_global_source?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="implicit_global_source-3F-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">implicit_global_source?</span>
+  <span class="ruby-identifier">global_rubygems_source</span>.<span class="ruby-identifier">no_remotes?</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-local_only-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">local_only!</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="local_only-21-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">local_only!</span>
+  <span class="ruby-identifier">all_sources</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:local_only!</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-lock_other_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">lock_other_sources</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="lock_other_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lock_other_sources</span>
+  (<span class="ruby-identifier">path_sources</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">git_sources</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">plugin_sources</span>).<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:identifier</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-lock_rubygems_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">lock_rubygems_sources</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="lock_rubygems_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lock_rubygems_sources</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">merged_gem_lockfile_sections?</span>
+    [<span class="ruby-identifier">combine_rubygems_sources</span>]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">rubygems_sources</span>.<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:identifier</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-lock_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">lock_sources</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="lock_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lock_sources</span>
+  <span class="ruby-identifier">lock_other_sources</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lock_rubygems_sources</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-merged_gem_lockfile_sections-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">merged_gem_lockfile_sections!</span><span
+                                class="method-args">(replacement_source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="merged_gem_lockfile_sections-21-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">merged_gem_lockfile_sections!</span>(<span class="ruby-identifier">replacement_source</span>)
+  <span class="ruby-ivar">@merged_gem_lockfile_sections</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-ivar">@global_rubygems_source</span> = <span class="ruby-identifier">replacement_source</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-merged_gem_lockfile_sections-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">merged_gem_lockfile_sections?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="merged_gem_lockfile_sections-3F-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">merged_gem_lockfile_sections?</span>
+  <span class="ruby-ivar">@merged_gem_lockfile_sections</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-non_default_explicit_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">non_default_explicit_sources</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="non_default_explicit_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">non_default_explicit_sources</span>
+  <span class="ruby-identifier">all_sources</span> <span class="ruby-operator">-</span> [<span class="ruby-identifier">default_source</span>, <span class="ruby-identifier">metadata_source</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-non_global_rubygems_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">non_global_rubygems_sources</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="non_global_rubygems_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">non_global_rubygems_sources</span>
+  <span class="ruby-ivar">@rubygems_sources</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-remote-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">remote!</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="remote-21-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 147</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">remote!</span>
+  <span class="ruby-identifier">all_sources</span>.<span class="ruby-identifier">each</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:remote!</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-replace_sources-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">replace_sources!</span><span
+                                class="method-args">(replacement_sources)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Returns true if there are changes</p>
+
+                              <div class="method-source-code" id="replace_sources-21-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">replace_sources!</span>(<span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">replacement_sources</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-ivar">@rubygems_sources</span>, <span class="ruby-ivar">@path_sources</span>, <span class="ruby-ivar">@git_sources</span>, <span class="ruby-ivar">@plugin_sources</span> = <span class="ruby-identifier">map_sources</span>(<span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-ivar">@global_rubygems_source</span> = <span class="ruby-identifier">global_replacement_source</span>(<span class="ruby-identifier">replacement_sources</span>)
+
+  <span class="ruby-identifier">different_sources?</span>(<span class="ruby-identifier">lock_sources</span>, <span class="ruby-identifier">replacement_sources</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-rubygems_remotes" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">rubygems_remotes</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="rubygems_remotes-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rubygems_remotes</span>
+  <span class="ruby-identifier">rubygems_sources</span>.<span class="ruby-identifier">map</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:remotes</span>).<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">uniq</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-rubygems_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">rubygems_sources</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="rubygems_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rubygems_sources</span>
+  <span class="ruby-identifier">non_global_rubygems_sources</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">global_rubygems_source</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-add_source_to_list" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_source_to_list</span><span
+                                class="method-args">(source, list)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_source_to_list-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_source_to_list</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">list</span>)
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">source</span>).<span class="ruby-identifier">uniq!</span>
+  <span class="ruby-identifier">source</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-combine_rubygems_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">combine_rubygems_sources</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="combine_rubygems_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">combine_rubygems_sources</span>
+  <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Rubygems</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;remotes&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">rubygems_remotes</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-different_sources-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">different_sources?</span><span
+                                class="method-args">(lock_sources, replacement_sources)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="different_sources-3F-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">different_sources?</span>(<span class="ruby-identifier">lock_sources</span>, <span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-operator">!</span><span class="ruby-identifier">equivalent_sources?</span>(<span class="ruby-identifier">lock_sources</span>, <span class="ruby-identifier">replacement_sources</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-dup_with_replaced_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">dup_with_replaced_sources</span><span
+                                class="method-args">(replacement_sources)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="dup_with_replaced_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">dup_with_replaced_sources</span>(<span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-identifier">new_source_list</span> = <span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">new_source_list</span>.<span class="ruby-identifier">replace_sources!</span>(<span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-identifier">new_source_list</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-equivalent_source-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">equivalent_source?</span><span
+                                class="method-args">(source, other_source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="equivalent_source-3F-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">equivalent_source?</span>(<span class="ruby-identifier">source</span>, <span class="ruby-identifier">other_source</span>)
+  <span class="ruby-identifier">source</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other_source</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-equivalent_sources-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">equivalent_sources?</span><span
+                                class="method-args">(lock_sources, replacement_sources)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="equivalent_sources-3F-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">equivalent_sources?</span>(<span class="ruby-identifier">lock_sources</span>, <span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-identifier">lock_sources</span>.<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:identifier</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">replacement_sources</span>.<span class="ruby-identifier">sort_by</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:identifier</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-global_replacement_source" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">global_replacement_source</span><span
+                                class="method-args">(replacement_sources)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="global_replacement_source-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">global_replacement_source</span>(<span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-identifier">replacement_source</span> = <span class="ruby-identifier">replacement_sources</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">global_rubygems_source</span> }
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">global_rubygems_source</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">replacement_source</span>
+
+  <span class="ruby-identifier">replacement_source</span>.<span class="ruby-identifier">local!</span>
+  <span class="ruby-identifier">replacement_source</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-map_sources" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">map_sources</span><span
+                                class="method-args">(replacement_sources)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="map_sources-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">map_sources</span>(<span class="ruby-identifier">replacement_sources</span>)
+  <span class="ruby-identifier">rubygems</span>, <span class="ruby-identifier">git</span>, <span class="ruby-identifier">plugin</span> = [<span class="ruby-ivar">@rubygems_sources</span>, <span class="ruby-ivar">@git_sources</span>, <span class="ruby-ivar">@plugin_sources</span>].<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">sources</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">sources</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">replacement_sources</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">source</span> } <span class="ruby-operator">||</span> <span class="ruby-identifier">source</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">path</span> = <span class="ruby-ivar">@path_sources</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">source</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">replacement_sources</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> (<span class="ruby-identifier">source</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Gemspec</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">as_path_source</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">source</span>) } <span class="ruby-operator">||</span> <span class="ruby-identifier">source</span>
+  <span class="ruby-keyword">end</span>
+
+  [<span class="ruby-identifier">rubygems</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">git</span>, <span class="ruby-identifier">plugin</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-rubygems_aggregate_class" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">rubygems_aggregate_class</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="rubygems_aggregate_class-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rubygems_aggregate_class</span>
+  <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Rubygems</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-source_list_for" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">source_list_for</span><span
+                                class="method-args">(source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="source_list_for-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">source_list_for</span>(<span class="ruby-identifier">source</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">source</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Git</span>          <span class="ruby-keyword">then</span> <span class="ruby-identifier">git_sources</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Path</span>         <span class="ruby-keyword">then</span> <span class="ruby-identifier">path_sources</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Source</span><span class="ruby-operator">::</span><span class="ruby-constant">Rubygems</span>     <span class="ruby-keyword">then</span> <span class="ruby-identifier">rubygems_sources</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Plugin</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span><span class="ruby-operator">::</span><span class="ruby-constant">Source</span>  <span class="ruby-keyword">then</span> <span class="ruby-identifier">plugin_sources</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Invalid source: #{source.inspect}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-warn_on_git_protocol" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">warn_on_git_protocol</span><span
+                                class="method-args">(source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="warn_on_git_protocol-source">
+            <pre><span class="ruby-comment"># File bundler/source_list.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">warn_on_git_protocol</span>(<span class="ruby-identifier">source</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">settings</span>[<span class="ruby-string">&quot;git.allow_insecure&quot;</span>]
+
+  <span class="ruby-keyword">if</span> <span class="ruby-regexp">/^git\:/</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">source</span>.<span class="ruby-identifier">uri</span>)
+    <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;The git source `#{source.uri}` uses the `git` protocol, &quot;</span> \
+      <span class="ruby-string">&quot;which transmits data without encryption. Disable this warning with &quot;</span> \
+      <span class="ruby-string">&quot;`bundle config set --local git.allow_insecure true`, or switch to the `https` &quot;</span> \
+      <span class="ruby-string">&quot;protocol to keep your data secure.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

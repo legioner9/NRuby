@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Net::IMAP::FetchData - net-imap: Ruby Standard Library Documentation</title>
+
+
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
+
+<script src="../../js/jquery-3.2.0.min.js"></script>
+
+<script src="../../js/vue.min.js"></script>
+<script src="../../js/js.cookie.min.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../../css/rdoc.css" rel="stylesheet">
+<link href="../../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+  var darkModeCsseHref = "../../css/rdoc-dm.css"
+  var defaultModeCssHref = "../../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#class-Net::IMAP::FetchData-label-Fetch+attributes">Fetch attributes</a>
+    <li><a href="#class-Net::IMAP::FetchData-label-Static+fetch+data+items">Static fetch data items</a>
+    <li><a href="#class-Net::IMAP::FetchData-label-Dynamic+message+attributes">Dynamic message attributes</a>
+  </ul>
+</div>
+
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">Struct.new(:seqno, :attr)
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-i-attr">#attr</a>
+    <li ><a href="#method-i-seqno">#seqno</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-Net::IMAP::FetchData">
+    <h1 id="class-Net::IMAP::FetchData" class="class">
+      class Net::IMAP::FetchData
+    </h1>
+
+    <section class="description">
+    
+<p><a href="FetchData.html"><code>Net::IMAP::FetchData</code></a> represents the contents of a FETCH response.</p>
+
+<p><a href="../IMAP.html#method-i-fetch"><code>Net::IMAP#fetch</code></a> and <a href="../IMAP.html#method-i-uid_fetch"><code>Net::IMAP#uid_fetch</code></a> both return an array of <a href="FetchData.html"><code>FetchData</code></a> objects.</p>
+
+<h3 id="class-Net::IMAP::FetchData-label-Fetch+attributes">Fetch attributes<span><a href="#class-Net::IMAP::FetchData-label-Fetch+attributes">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Each key of the <a href="FetchData.html#method-i-attr"><code>attr</code></a> hash is the data item name for the fetched value. Each data item represents a message attribute, part of one, or an interpretation of one.  <a href="FetchData.html#method-i-seqno"><code>seqno</code></a> is not a message attribute.  Most message attributes are static and must never change for a given <code>[server, account, mailbox, UIDVALIDITY, UID]</code> tuple.  A few message attributes can be dynamically changed, e.g. using the <a href="../IMAP.html#method-i-store">STORE command</a>.</p>
+
+<p>See <a href="https://www.rfc-editor.org/rfc/rfc3501.html#section-7.4.2">[IMAP4rev1] §7.4.2</a> and <a href="https://www.rfc-editor.org/rfc/rfc9051.html#section-7.5.2">[IMAP4rev2] §7.5.2</a> for full description of the standard fetch response data items, and <a href="../IMAP.html#class-Net::IMAP-label-Message+envelope+and+body+structure">Message envelope and body structure at <code>Net::IMAP</code></a> for other relevant RFCs.</p>
+
+<h4 id="class-Net::IMAP::FetchData-label-Static+fetch+data+items">Static fetch data items<span><a href="#class-Net::IMAP::FetchData-label-Static+fetch+data+items">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>The static data items defined by [<a href="https://www.rfc-editor.org/rfc/rfc3501.html">IMAP4rev1</a>] are:</p>
+<dl class="rdoc-list label-list"><dt><code>&quot;UID&quot;</code>
+<dd>
+<p>A number expressing the unique identifier of the message.</p>
+</dd><dt><code>&quot;BODY[]&quot;</code>, <code>&quot;BODY[]&lt;#{offset}&gt;&quot;</code>
+<dd>
+<p>The [<a href="https://tools.ietf.org/html/rfc5322">RFC5322</a>] expression of the entire message, as a string.</p>
+
+<p>If <code>offset</code> is specified, this returned string is a substring of the entire contents, starting at that origin octet.  This means that <code>BODY[]&lt;0&gt;</code> MAY be truncated, but <code>BODY[]</code> is NEVER truncated.</p>
+
+<p><em>Messages can be parsed using the “mail” gem.</em></p>
+<dl class="rdoc-list label-list"><dt>Note
+<dd>
+<p>When fetching <code>BODY.PEEK[#{specifier}]</code>, the data will be returned in <code>BODY[#{specifier}]</code>, without the <code>PEEK</code>.  This is true for all of the <code>BODY[...]</code> attribute forms.</p>
+</dd></dl>
+</dd><dt><code>&quot;BODY[HEADER]&quot;</code>, <code>&quot;BODY[HEADER]&lt;#{offset}&gt;&quot;</code>
+<dd>
+<p>The [<a href="https://tools.ietf.org/html/rfc5322">RFC5322</a>] header of the message.</p>
+
+<p><em>Message headers can be parsed using the “mail” gem.</em></p>
+</dd><dt><code>&quot;BODY[HEADER.FIELDS (#{fields.join(&quot; &quot;)})]&quot;</code>,
+<dt><code>&quot;BODY[HEADER.FIELDS (#{fields.join(&quot; &quot;)})]&lt;#{offset}&gt;&quot;</code>
+<dd>
+<p>When field names are given, the subset contains only the header fields that matches one of the names in the list.  The field names are based on what was requested, not on what was returned.</p>
+</dd><dt><code>&quot;BODY[HEADER.FIELDS.NOT (#{fields.join(&quot; &quot;)})]&quot;</code>,
+<dt><code>&quot;BODY[HEADER.FIELDS.NOT (#{fields.join(&quot; &quot;)})]&lt;#{offset}&gt;&quot;</code>
+<dd>
+<p>When the <code>HEADER.FIELDS.NOT</code> is used, the subset is all of the fields that <em>do not</em> match any names in the list.</p>
+</dd><dt><code>&quot;BODY[TEXT]&quot;</code>, <code>&quot;BODY[TEXT]&lt;#{offset}&gt;&quot;</code>
+<dd>
+<p>The text body of the message, omitting the [<a href="https://tools.ietf.org/html/rfc5322">RFC5322</a>] header.</p>
+</dd><dt><code>&quot;BODY[#{part}]&quot;</code>, <code>&quot;BODY[#{part}]&lt;#{offset}&gt;&quot;</code>
+<dd>
+<p>The text of a particular body section, if it was fetched.</p>
+
+<p>Multiple part specifiers will be joined with <code>&quot;.&quot;</code>.  Numeric part specifiers refer to the MIME part number, counting up from <code>1</code>. Messages that don’t use MIME, or MIME messages that are not multipart and don’t hold an encapsulated message, only have a part <code>1</code>.</p>
+
+<p>8-bit textual data is permitted if a [<a href="https://tools.ietf.org/html/rfc2978">CHARSET</a>] identifier is part of the body parameter parenthesized list for this section.  See <a href="BodyTypeBasic.html"><code>BodyTypeBasic</code></a>.</p>
+
+<p>MESSAGE/RFC822 or MESSAGE/GLOBAL message, or a subset of the header, if it was fetched.</p>
+</dd><dt><code>&quot;BODY[#{part}.HEADER]&quot;</code>,
+<dt><code>&quot;BODY[#{part}.HEADER]&lt;#{offset}&gt;&quot;</code>,
+<dt><code>&quot;BODY[#{part}.HEADER.FIELDS.NOT (#{fields.join(&quot; &quot;)})]&quot;</code>,
+<dt><code>&quot;BODY[#{part}.HEADER.FIELDS.NOT (#{fields.join(&quot; &quot;)})]&lt;#{offset}&gt;&quot;</code>,
+<dt><code>&quot;BODY[#{part}.TEXT]&quot;</code>,
+<dt><code>&quot;BODY[#{part}.TEXT]&lt;#{offset}&gt;&quot;</code>,
+<dt><code>&quot;BODY[#{part}.MIME]&quot;</code>,
+<dt><code>&quot;BODY[#{part}.MIME]&lt;#{offset}&gt;&quot;</code>
+<dd>
+<p><code>HEADER</code>, <code>HEADER.FIELDS</code>, <code>HEADER.FIELDS.NOT</code>, and <code>TEXT</code> can be prefixed by numeric part specifiers, if it refers to a part of type <code>message/rfc822</code> or <code>message/global</code>.</p>
+
+<p><code>MIME</code> refers to the [<a href="https://tools.ietf.org/html/rfc2045">MIME-IMB</a>] header for this part.</p>
+</dd><dt><code>&quot;BODY&quot;</code>
+<dd>
+<p>A form of <code>BODYSTRUCTURE</code>, without any extension data.</p>
+</dd><dt><code>&quot;BODYSTRUCTURE&quot;</code>
+<dd>
+<p>Returns a <a href="BodyStructure.html"><code>BodyStructure</code></a> object that describes the [<a href="https://tools.ietf.org/html/rfc2045">MIME-IMB</a>] body structure of a message, if it was fetched.</p>
+</dd><dt><code>&quot;ENVELOPE&quot;</code>
+<dd>
+<p>An <a href="Envelope.html"><code>Envelope</code></a> object that describes the envelope structure of a message. See the documentation for <a href="Envelope.html"><code>Envelope</code></a> for a description of the envelope structure attributes.</p>
+</dd><dt><code>&quot;INTERNALDATE&quot;</code>
+<dd>
+<p>The internal date and time of the message on the server.  This is not the date and time in the [<a href="https://tools.ietf.org/html/rfc5322">RFC5322</a>] header, but rather a date and time which reflects when the message was received.</p>
+</dd><dt><code>&quot;RFC822.SIZE&quot;</code>
+<dd>
+<p>A number expressing the [<a href="https://tools.ietf.org/html/rfc5322">RFC5322</a>] size of the message.</p>
+<dl class="rdoc-list label-list"><dt>Note
+<dd>
+<p>IMAP was originally developed for the older RFC-822 standard, and as a consequence several fetch items in IMAP incorporate “RFC822” in their name.  With the exception of <code>RFC822.SIZE</code>, there are more modern replacements; for example, the modern version of <code>RFC822.HEADER</code> is <code>BODY.PEEK[HEADER]</code>.  In all cases, “RFC822” should be interpreted as a reference to the updated [<a href="https://tools.ietf.org/html/rfc5322">RFC5322</a>] standard.</p>
+</dd></dl>
+</dd><dt><code>&quot;RFC822&quot;</code>
+<dd>
+<p>Semantically equivalent to <code>BODY[]</code>.</p>
+</dd><dt><code>&quot;RFC822.HEADER&quot;</code>
+<dd>
+<p>Semantically equivalent to <code>BODY[HEADER]</code>.</p>
+</dd><dt><code>&quot;RFC822.TEXT&quot;</code>
+<dd>
+<p>Semantically equivalent to <code>BODY[TEXT]</code>.</p>
+</dd><dt>Note:
+<dd>
+<blockquote>
+<p>Additional static fields are defined in IMAP extensions and [<a href="https://www.rfc-editor.org/rfc/rfc9051.html">IMAP4rev2</a>], but <a href="../IMAP.html"><code>Net::IMAP</code></a> can’t parse them yet.</p>
+</blockquote>
+</dd></dl>
+
+<h4 id="class-Net::IMAP::FetchData-label-Dynamic+message+attributes">Dynamic message attributes<span><a href="#class-Net::IMAP::FetchData-label-Dynamic+message+attributes">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>The only dynamic item defined by [<a href="https://www.rfc-editor.org/rfc/rfc3501.html">IMAP4rev1</a>] is:</p>
+<dl class="rdoc-list label-list"><dt><code>&quot;FLAGS&quot;</code>
+<dd>
+<p>An array of flags that are set for this message.  System flags are symbols that have been capitalized by String#capitalize.  Keyword flags are strings and their case is not changed.</p>
+</dd></dl>
+
+<p>IMAP extensions define new dynamic fields, e.g.:</p>
+<dl class="rdoc-list label-list"><dt><code>&quot;MODSEQ&quot;</code>
+<dd>
+<p>The modification sequence number associated with this <a href="../IMAP.html"><code>IMAP</code></a> message.</p>
+
+<p>Requires the [<a href="https://tools.ietf.org/html/rfc7162">CONDSTORE</a>] server <a href="../IMAP.html#method-i-capability">capability</a>.</p>
+</dd><dt>Note:
+<dd>
+<blockquote>
+<p>Additional dynamic fields are defined in IMAP extensions, but <a href="../IMAP.html"><code>Net::IMAP</code></a> can’t parse them yet.</p>
+</blockquote>
+</dd></dl>
+
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-attr" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          attr &rarr; hash
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>A hash.  Each key is specifies a message attribute, and the value is the corresponding data item.</p>
+
+<p>See <a href="FetchData.html#class-Net::IMAP::FetchData-label-Fetch+attributes">Fetch attributes at <code>FetchData</code></a> for descriptions of possible values.</p>
+
+                              <div class="method-source-code" id="attr-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/lib/net/imap/response_data.rb, line 645</span>
+    </pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-seqno" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          seqno &rarr; Integer
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>The message sequence number.</p>
+<dl class="rdoc-list label-list"><dt>Note
+<dd>
+<p>This is never the unique identifier (UID), not even for the <a href="../IMAP.html#method-i-uid_fetch"><code>Net::IMAP#uid_fetch</code></a> result.  If it was returned, the UID is available from <code>attr[&quot;UID&quot;]</code>.</p>
+</dd></dl>
+
+                              <div class="method-source-code" id="seqno-source">
+            <pre><span class="ruby-comment"># File net-imap-0.3.7/lib/net/imap/response_data.rb, line 634</span>
+      </pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>NEWS.ja - racc: Ruby Standard Library Documentation</title>
+
+
+<script src="../../../js/navigation.js" defer></script>
+<script src="../../../js/search.js" defer></script>
+<script src="../../../js/search_index.js" defer></script>
+<script src="../../../js/searcher.js" defer></script>
+<script src="../../../js/darkfish.js" defer></script>
+
+<script src="../../../js/jquery-3.2.0.min.js"></script>
+
+<script src="../../../js/vue.min.js"></script>
+<script src="../../../js/js.cookie.min.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../../../css/rdoc.css" rel="stylesheet">
+<link href="../../../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+  var index_rel_prefix = "../../../";
+  var darkModeCsseHref = "../../../css/rdoc-dm.css"
+  var defaultModeCssHref = "../../../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="file">
+  <!-- this is page.html -->
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+
+ <div class='wrapper hdiv'>
+
+ 
+
+
+<nav id='vapp' role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../../../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-NEWS">NEWS</a>
+    <li><a href="#label-1.4.6">1.4.6</a>
+    <li><a href="#label-1.4.5+-282005-11-21-29">1.4.5 (2005-11-21)</a>
+    <li><a href="#label-1.4.4+-282003-10-12-29">1.4.4 (2003-10-12)</a>
+    <li><a href="#label-1.4.3+-282002-11-14-29">1.4.3 (2002-11-14)</a>
+    <li><a href="#label-1.4.2+-282002-01-29-29">1.4.2 (2002-01-29)</a>
+    <li><a href="#label-1.4.1+-282001-12-02-29">1.4.1 (2001-12-02)</a>
+    <li><a href="#label-1.4.0+-282001-11-30-29">1.4.0 (2001-11-30)</a>
+    <li><a href="#label-1.3.12+-282001-11-22-29">1.3.12 (2001-11-22)</a>
+    <li><a href="#label-1.3.11+-282001-08-28-29">1.3.11 (2001-08-28)</a>
+    <li><a href="#label-1.3.10+-282001-08-12-29">1.3.10 (2001-08-12)</a>
+    <li><a href="#label-1.3.9+-282001-04-07-29">1.3.9 (2001-04-07)</a>
+    <li><a href="#label-1.3.8+-282001-03-17-29">1.3.8 (2001-03-17)</a>
+    <li><a href="#label-1.3.7+-282001-02-04-29">1.3.7 (2001-02-04)</a>
+    <li><a href="#label-1.3.6+-282001-01-22-29">1.3.6 (2001-01-22)</a>
+    <li><a href="#label-1.3.5+-282001-01-18-29">1.3.5 (2001-01-18)</a>
+    <li><a href="#label-1.3.4+-282001-01-11-29">1.3.4 (2001-01-11)</a>
+    <li><a href="#label-1.3.3+-282000-12-25-29">1.3.3 (2000-12-25)</a>
+    <li><a href="#label-1.3.2+-282000-12-21-29">1.3.2 (2000-12-21)</a>
+    <li><a href="#label-1.3.1+-282000-12-17-29">1.3.1 (2000-12-17)</a>
+    <li><a href="#label-1.3.0+-282000-11-30-29">1.3.0 (2000-11-30)</a>
+    <li><a href="#label-1.2.6+-282000-11-28-29">1.2.6 (2000-11-28)</a>
+    <li><a href="#label-1.2.5+-282000-11-20-29">1.2.5 (2000-11-20)</a>
+    <li><a href="#label-1.2.4+-282000-09-13-29">1.2.4 (2000-09-13)</a>
+    <li><a href="#label-1.2.3+-282000-08-14-29">1.2.3 (2000-08-14)</a>
+    <li><a href="#label-1.2.2+-282000-08-12-29">1.2.2 (2000-08-12)</a>
+    <li><a href="#label-1.2.1+-282000-08-05-29">1.2.1 (2000-08-05)</a>
+    <li><a href="#label-1.2.0+-282000-08-02-29">1.2.0 (2000-08-02)</a>
+    <li><a href="#label-1.1.6+-282000-07-25-29">1.1.6 (2000-07-25)</a>
+    <li><a href="#label-1.1.5+-282000-07-21-29">1.1.5 (2000-07-21)</a>
+    <li><a href="#label-1.1.4+-282000-07-13-29">1.1.4 (2000-07-13)</a>
+    <li><a href="#label-1.1.3+-282000-06-30-29">1.1.3 (2000-06-30)</a>
+    <li><a href="#label-1.1.2+-282000-06-29-29">1.1.2 (2000-06-29)</a>
+    <li><a href="#label-1.1.1+-282000-06-15-29">1.1.1 (2000-06-15)</a>
+    <li><a href="#label-1.1.0+-282000-06-12-29">1.1.0 (2000-06-12)</a>
+    <li><a href="#label-1.0.4+-282000-06-04-29">1.0.4 (2000-06-04)</a>
+    <li><a href="#label-1.0.3+-282000-06-03-29">1.0.3 (2000-06-03)</a>
+    <li><a href="#label-1.0.2+-282000-05-16-29">1.0.2 (2000-05-16)</a>
+    <li><a href="#label-1.0.1+-282000-05-12-29">1.0.1 (2000-05-12)</a>
+    <li><a href="#label-1.0.0+-282000-05-06-29">1.0.0 (2000-05-06)</a>
+    <li><a href="#label-0.14.6+-282000-05-05-29">0.14.6 (2000-05-05)</a>
+    <li><a href="#label-0.14.5+-282000-05-01-29">0.14.5 (2000-05-01)</a>
+    <li><a href="#label-0.14.4+-282000-04-09-29">0.14.4 (2000-04-09)</a>
+    <li><a href="#label-0.14.3+-282000-04-04-29">0.14.3 (2000-04-04)</a>
+    <li><a href="#label-0.14.2+-282000-04-03-29">0.14.2 (2000-04-03)</a>
+    <li><a href="#label-0.14.1+-282000-03-31-29">0.14.1 (2000-03-31)</a>
+    <li><a href="#label-0.14.0+-282000-03-21-29">0.14.0 (2000-03-21)</a>
+    <li><a href="#label-0.13.1+-282000-03-21-29">0.13.1 (2000-03-21)</a>
+    <li><a href="#label-0.13.0+-282000-03-20-29">0.13.0 (2000-03-20)</a>
+    <li><a href="#label-0.12.2+-282000-03-19-29">0.12.2 (2000-03-19)</a>
+    <li><a href="#label-0.12.1+-282000-03-16-29">0.12.1 (2000-03-16)</a>
+    <li><a href="#label-0.12.0+-282000-03-15-29">0.12.0 (2000-03-15)</a>
+    <li><a href="#label-0.11.3+-282000-03-09-29">0.11.3 (2000-03-09)</a>
+    <li><a href="#label-0.11.2+-282000-03-09-29">0.11.2 (2000-03-09)</a>
+    <li><a href="#label-0.11.1+-282000-03-08-29">0.11.1 (2000-03-08)</a>
+    <li><a href="#label-0.11.0+-282000-02-19-29">0.11.0 (2000-02-19)</a>
+    <li><a href="#label-0.10.9+-282000-01-19-29">0.10.9 (2000-01-19)</a>
+    <li><a href="#label-0.10.8+-282000-01-03-29">0.10.8 (2000-01-03)</a>
+    <li><a href="#label-0.10.7+-282000-01-03-29">0.10.7 (2000-01-03)</a>
+    <li><a href="#label-0.10.6+-281999-12-24-29">0.10.6 (1999-12-24)</a>
+    <li><a href="#label-0.10.5+-281999-12-21-29">0.10.5 (1999-12-21)</a>
+    <li><a href="#label-0.10.4+-281999-12-19-29">0.10.4 (1999-12-19)</a>
+    <li><a href="#label-0.10.3+-281999-12-01-29">0.10.3 (1999-12-01)</a>
+    <li><a href="#label-0.10.2+-281999-11-27-29">0.10.2 (1999-11-27)</a>
+    <li><a href="#label-0.10.1+-281999-11-19-29">0.10.1 (1999-11-19)</a>
+    <li><a href="#label-0.10.0+-281999-11-06-29">0.10.0 (1999-11-06)</a>
+    <li><a href="#label-0.9.5+-281999-10-03-29">0.9.5 (1999-10-03)</a>
+    <li><a href="#label-0.9.4+-281999-09--3F-3F-29">0.9.4 (1999-09-??)</a>
+    <li><a href="#label-0.9.3+-281999-09-03-29">0.9.3 (1999-09-03)</a>
+    <li><a href="#label-0.9.2+-281999-06-26-29">0.9.2 (1999-06-26)</a>
+    <li><a href="#label-0.9.1+-281999-06-08-29">0.9.1 (1999-06-08)</a>
+    <li><a href="#label-0.9.0+-281999-06-03-29">0.9.0 (1999-06-03)</a>
+    <li><a href="#label-0.8.11+-28-3F-29">0.8.11 (?)</a>
+    <li><a href="#label-0.8.10+-28-3F-29">0.8.10 (?)</a>
+    <li><a href="#label-0.8.9+-281999-03-21-29">0.8.9 (1999-03-21)</a>
+    <li><a href="#label-0.8.8+-281999-03-20-29">0.8.8 (1999-03-20)</a>
+    <li><a href="#label-0.8.7+-281999-03-01-29">0.8.7 (1999-03-01)</a>
+    <li><a href="#label-0.8.0+-281999-01-16-29">0.8.0 (1999-01-16)</a>
+    <li><a href="#label-0.5.0+-281999-01-07-29">0.5.0 (1999-01-07)</a>
+    <li><a href="#label-0.1.0+-281999-01-01-29">0.1.0 (1999-01-01)</a>
+  </ul>
+</div>
+
+  <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+
+  <div id="project-metadata">
+   <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="../../../racc-1_7_1/README_ja_rdoc.html">README.ja</a>
+    <li><a href="../../../racc-1_7_1/README_rdoc.html">README</a>
+    <li><a href="../../../racc-1_7_1/doc/en/NEWS_en_rdoc.html">NEWS.en</a>
+    <li><a href="../../../racc-1_7_1/doc/en/grammar_en_rdoc.html">grammar.en</a>
+    <li><a href="../../../racc-1_7_1/doc/en/grammar2_en_rdoc.html">grammar2.en</a>
+    <li><a href="../../../racc-1_7_1/doc/ja/NEWS_ja_rdoc.html">NEWS.ja</a>
+    <li><a href="../../../racc-1_7_1/doc/ja/debug_ja_rdoc.html">debug.ja</a>
+    <li><a href="../../../racc-1_7_1/doc/ja/grammar_ja_rdoc.html">grammar.ja</a>
+    <li><a href="../../../racc-1_7_1/doc/ja/parser_ja_rdoc.html">parser.ja</a>
+  </ul>
+</div>
+
+   </div>
+  </div>
+</nav>
+
+
+<!--  carbon ads here -->
+
+<div id='extraz'>
+  <div class='adzbox-index'  >
+   
+  </div>
+ </div>         
+
+
+<main role="main" aria-label="Page racc-1.7.1/doc/ja/NEWS.ja.rdoc">
+
+<h1 id="label-NEWS">NEWS<span><a href="#label-NEWS">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<h3 id="label-1.4.6">1.4.6<span><a href="#label-1.4.6">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>バグの修正</p>
+<ul><li>
+<p>bin/racc -g オプションを -t に改名</p>
+</li><li>
+<p>racc/compiler.rb を削除</p>
+</li><li>
+<p>‘|’ が meta rules によって許可</p>
+</li><li>
+<p>Ruby 1.8.7 互換性を修正</p>
+</li><li>
+<p>Ruby 1.9 互換性を修正</p>
+</li></ul>
+</li></ul>
+
+<h3 id="label-1.4.5+-282005-11-21-29">1.4.5 (2005-11-21)<span><a href="#label-1.4.5+-282005-11-21-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* [FEATURE CHANGE] --no-extensions オプションを削除
+* [fix] racc パッケージのみで -E を使えるように修正
+* [fix] --no-omit-actions が動作していなかったのを修正
+* setup.rb 3.4.1.</pre>
+
+<h3 id="label-1.4.4+-282003-10-12-29">1.4.4 (2003-10-12)<span><a href="#label-1.4.4+-282003-10-12-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* Ruby 1.8.0 に対応するリリース。本体に変更はなし
+* -all パッケージに strscan, amstd の同梱するのをやめた
+* setup.rb 3.2.1</pre>
+
+<h3 id="label-1.4.3+-282002-11-14-29">1.4.3 (2002-11-14)<span><a href="#label-1.4.3+-282002-11-14-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* [fix] ruby 1.8 の警告を消した</pre>
+
+<h3 id="label-1.4.2+-282002-01-29-29">1.4.2 (2002-01-29)<span><a href="#label-1.4.2+-282002-01-29-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* [new] 新しいオプション --no-extentions</pre>
+
+<h3 id="label-1.4.1+-282001-12-02-29">1.4.1 (2001-12-02)<span><a href="#label-1.4.1+-282001-12-02-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* amstd 非依存になった (ただし -all パッケージへバンドルは継続)
+* y2racc racc2y を 1.4 対応にした</pre>
+
+<h3 id="label-1.4.0+-282001-11-30-29">1.4.0 (2001-11-30)<span><a href="#label-1.4.0+-282001-11-30-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* ランタイムを Ruby の CVS に入れたのにあわせてマイナーバージョンアップ
+* RaccParser, RaccScanner → GrammarFileParser, GrammarFileScanner
+* ハズい typo を修正 (grammer → grammar)</pre>
+
+<h3 id="label-1.3.12+-282001-11-22-29">1.3.12 (2001-11-22)<span><a href="#label-1.3.12+-282001-11-22-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* インストーラのバグを修正 (thanks Tanaka Akira)
+* アクション中の正規表現や % 文字列、グローバル変数の検出を向上させた</pre>
+
+<h3 id="label-1.3.11+-282001-08-28-29">1.3.11 (2001-08-28)<span><a href="#label-1.3.11+-282001-08-28-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* アクション中の $&#39; $` $/ などを正しくスキャン</pre>
+
+<h3 id="label-1.3.10+-282001-08-12-29">1.3.10 (2001-08-12)<span><a href="#label-1.3.10+-282001-08-12-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* cparse.c のプロトタイプ違いを直した</pre>
+
+<h3 id="label-1.3.9+-282001-04-07-29">1.3.9 (2001-04-07)<span><a href="#label-1.3.9+-282001-04-07-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* Ruby 1.4 に(再び)対応した</pre>
+
+<h3 id="label-1.3.8+-282001-03-17-29">1.3.8 (2001-03-17)<span><a href="#label-1.3.8+-282001-03-17-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* パースエラーの時に記号名も出力するようにした
+* Racc::Parser#token_to_s</pre>
+
+<h3 id="label-1.3.7+-282001-02-04-29">1.3.7 (2001-02-04)<span><a href="#label-1.3.7+-282001-02-04-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* サンプルを増やした</pre>
+
+<h3 id="label-1.3.6+-282001-01-22-29">1.3.6 (2001-01-22)<span><a href="#label-1.3.6+-282001-01-22-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* cparse がスタティックリンクされても動くようにした</pre>
+
+<h3 id="label-1.3.5+-282001-01-18-29">1.3.5 (2001-01-18)<span><a href="#label-1.3.5+-282001-01-18-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* % 文字列のスキャンがバグってた
+* 新しい命令 expect</pre>
+
+<h3 id="label-1.3.4+-282001-01-11-29">1.3.4 (2001-01-11)<span><a href="#label-1.3.4+-282001-01-11-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* cparse: シンボルのタイプチェックを入れた
+* cparse: depend を消した
+* cparse: rb_iterate 中の GC で落ちるバグを修正</pre>
+
+<h3 id="label-1.3.3+-282000-12-25-29">1.3.3 (2000-12-25)<span><a href="#label-1.3.3+-282000-12-25-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* ジェネレータに致命的なバグ。1.3.1 から混入 (format.rb)
+* racc --runtime-version</pre>
+
+<h3 id="label-1.3.2+-282000-12-21-29">1.3.2 (2000-12-21)<span><a href="#label-1.3.2+-282000-12-21-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* -E が失敗するのを直した
+* 再度 strscan を同梱 (y2racc/racc2y に必要)</pre>
+
+<h3 id="label-1.3.1+-282000-12-17-29">1.3.1 (2000-12-17)<span><a href="#label-1.3.1+-282000-12-17-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 正規表現の繰り返し指定の上限を動的に決定する (RE_DUP_MAX)
+* パースルーチンが常に Ruby 版になっていた (消し忘れ)</pre>
+
+<h3 id="label-1.3.0+-282000-11-30-29">1.3.0 (2000-11-30)<span><a href="#label-1.3.0+-282000-11-30-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* スキャナから yield でトークンを渡せるようになった</pre>
+
+<h3 id="label-1.2.6+-282000-11-28-29">1.2.6 (2000-11-28)<span><a href="#label-1.2.6+-282000-11-28-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* class M::C を許した</pre>
+
+<h3 id="label-1.2.5+-282000-11-20-29">1.2.5 (2000-11-20)<span><a href="#label-1.2.5+-282000-11-20-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* オプションに大変動。非互換オプションは -h -f -p -i -n -c -A
+* ロングオプションをサポート
+* y2racc, racc2y はデフォルトでアクションを残すようにした</pre>
+
+<h3 id="label-1.2.4+-282000-09-13-29">1.2.4 (2000-09-13)<span><a href="#label-1.2.4+-282000-09-13-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* インストーラとドキュメントを更新</pre>
+
+<h3 id="label-1.2.3+-282000-08-14-29">1.2.3 (2000-08-14)<span><a href="#label-1.2.3+-282000-08-14-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 使われない規則と非終端記号を出力 (強力版)
+* S/R conflict の時 nonassoc で解決するならばエラー</pre>
+
+<h3 id="label-1.2.2+-282000-08-12-29">1.2.2 (2000-08-12)<span><a href="#label-1.2.2+-282000-08-12-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 内部の変更</pre>
+
+<h3 id="label-1.2.1+-282000-08-05-29">1.2.1 (2000-08-05)<span><a href="#label-1.2.1+-282000-08-05-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* yacc との変換コマンド racc2y・y2racc を添付</pre>
+
+<h3 id="label-1.2.0+-282000-08-02-29">1.2.0 (2000-08-02)<span><a href="#label-1.2.0+-282000-08-02-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 先読みアルゴリズムを bison のものに変更</pre>
+
+<h3 id="label-1.1.6+-282000-07-25-29">1.1.6 (2000-07-25)<span><a href="#label-1.1.6+-282000-07-25-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 新たなキーワード options とその引数 no_result_var</pre>
+
+<h3 id="label-1.1.5+-282000-07-21-29">1.1.5 (2000-07-21)<span><a href="#label-1.1.5+-282000-07-21-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* [重要] token を convert に変更
+* 「新たな」キーワード token (終端記号の宣言)</pre>
+
+<h3 id="label-1.1.4+-282000-07-13-29">1.1.4 (2000-07-13)<span><a href="#label-1.1.4+-282000-07-13-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* サンプルがバグってた</pre>
+
+<h3 id="label-1.1.3+-282000-06-30-29">1.1.3 (2000-06-30)<span><a href="#label-1.1.3+-282000-06-30-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 空アクションの呼び出しを省略しないようにするオプション -a</pre>
+
+<h3 id="label-1.1.2+-282000-06-29-29">1.1.2 (2000-06-29)<span><a href="#label-1.1.2+-282000-06-29-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* スキャナで strscan を使わないようにした
+* ScanError -&amp;gt; Racc::ScanError, ParseError -&amp;gt; Racc::ParseError
+* エラーメッセージを強化</pre>
+
+<h3 id="label-1.1.1+-282000-06-15-29">1.1.1 (2000-06-15)<span><a href="#label-1.1.1+-282000-06-15-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* requireミス (thanks Toshさん)
+* -v をつけるとconflictが報告されなくなっていた</pre>
+
+<h3 id="label-1.1.0+-282000-06-12-29">1.1.0 (2000-06-12)<span><a href="#label-1.1.0+-282000-06-12-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 新しい 状態遷移表生成アルゴリズム</pre>
+
+<h3 id="label-1.0.4+-282000-06-04-29">1.0.4 (2000-06-04)<span><a href="#label-1.0.4+-282000-06-04-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* S/R conflict がおきると .output 出力で落ちるバグ修正 (Tosh さんの報告)
+* 使われない非終端記号・規則を表示</pre>
+
+<h3 id="label-1.0.3+-282000-06-03-29">1.0.3 (2000-06-03)<span><a href="#label-1.0.3+-282000-06-03-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* filter -&amp;gt; collect!</pre>
+
+<h3 id="label-1.0.2+-282000-05-16-29">1.0.2 (2000-05-16)<span><a href="#label-1.0.2+-282000-05-16-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* インストーラをアップデート</pre>
+
+<h3 id="label-1.0.1+-282000-05-12-29">1.0.1 (2000-05-12)<span><a href="#label-1.0.1+-282000-05-12-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* state.rb:  先読みルーチンをちょっとだけ高速化 &amp;&amp; 追加デバッグ
+* コードを整理した。著作権表示全体を全部のファイルにつけた。
+* amstd アップデート (1.7.0)</pre>
+
+<h3 id="label-1.0.0+-282000-05-06-29">1.0.0 (2000-05-06)<span><a href="#label-1.0.0+-282000-05-06-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* バージョン 1.0</pre>
+
+<h3 id="label-0.14.6+-282000-05-05-29">0.14.6 (2000-05-05)<span><a href="#label-0.14.6+-282000-05-05-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* デバッグ出力を詳細にした</pre>
+
+<h3 id="label-0.14.5+-282000-05-01-29">0.14.5 (2000-05-01)<span><a href="#label-0.14.5+-282000-05-01-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* インストーラを ruby 1.4.4 系の新しいパスに対応させた</pre>
+
+<h3 id="label-0.14.4+-282000-04-09-29">0.14.4 (2000-04-09)<span><a href="#label-0.14.4+-282000-04-09-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* パーサの定数を削減(Racc_arg にまとめた)
+* state 生成を微妙に高速化(コアを文字列に変換)</pre>
+
+<h3 id="label-0.14.3+-282000-04-04-29">0.14.3 (2000-04-04)<span><a href="#label-0.14.3+-282000-04-04-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* cparse の SYM2ID と ID2SYM のチェックを分離 (thanks 小松さん)</pre>
+
+<h3 id="label-0.14.2+-282000-04-03-29">0.14.2 (2000-04-03)<span><a href="#label-0.14.2+-282000-04-03-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 一行目の class がパースエラーになっていた (thanks 和田さん)
+* 新しいフラグ racc -V</pre>
+
+<h3 id="label-0.14.1+-282000-03-31-29">0.14.1 (2000-03-31)<span><a href="#label-0.14.1+-282000-03-31-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<h3 id="label-0.14.0+-282000-03-21-29">0.14.0 (2000-03-21)<span><a href="#label-0.14.0+-282000-03-21-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 高速テーブルを実装
+* 一時的にファイル名/行番号の変換をやめた(Rubyのバグのため。)</pre>
+
+<h3 id="label-0.13.1+-282000-03-21-29">0.13.1 (2000-03-21)<span><a href="#label-0.13.1+-282000-03-21-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* --version --copyright などがうまく働いてなかった (thanks ふなばさん)</pre>
+
+<h3 id="label-0.13.0+-282000-03-20-29">0.13.0 (2000-03-20)<span><a href="#label-0.13.0+-282000-03-20-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* yyerror/yyerrok/yyaccept を実装</pre>
+
+<h3 id="label-0.12.2+-282000-03-19-29">0.12.2 (2000-03-19)<span><a href="#label-0.12.2+-282000-03-19-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* -E フラグがバグってた (thanks ふなばさん)</pre>
+
+<h3 id="label-0.12.1+-282000-03-16-29">0.12.1 (2000-03-16)<span><a href="#label-0.12.1+-282000-03-16-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* デフォルトアクションの決め方をちょっと修正(元に戻しただけ)</pre>
+
+<h3 id="label-0.12.0+-282000-03-15-29">0.12.0 (2000-03-15)<span><a href="#label-0.12.0+-282000-03-15-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 完全な LALR を実装したら遅くなったので SLR も併用するようにした。効果絶大。</pre>
+
+<h3 id="label-0.11.3+-282000-03-09-29">0.11.3 (2000-03-09)<span><a href="#label-0.11.3+-282000-03-09-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 状態遷移表生成のバグの修正がまだ甘かった。さらに別のバグもあるようだ。</pre>
+
+<h3 id="label-0.11.2+-282000-03-09-29">0.11.2 (2000-03-09)<span><a href="#label-0.11.2+-282000-03-09-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* cparse が Symbol に対応できてなかった</pre>
+
+<h3 id="label-0.11.1+-282000-03-08-29">0.11.1 (2000-03-08)<span><a href="#label-0.11.1+-282000-03-08-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* ruby 1.5 の Symbol に対応
+* strscan を最新に</pre>
+
+<h3 id="label-0.11.0+-282000-02-19-29">0.11.0 (2000-02-19)<span><a href="#label-0.11.0+-282000-02-19-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 例外のとき、元のファイルの行番号が出るようにした</pre>
+
+<h3 id="label-0.10.9+-282000-01-19-29">0.10.9 (2000-01-19)<span><a href="#label-0.10.9+-282000-01-19-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* セットアップ方法など細かな変更</pre>
+
+<h3 id="label-0.10.8+-282000-01-03-29">0.10.8 (2000-01-03)<span><a href="#label-0.10.8+-282000-01-03-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 忘れてしまったけどたしかインストーラ関係の修正
+* (1/17 repacked) ドキュメントの追加と修正</pre>
+
+<h3 id="label-0.10.7+-282000-01-03-29">0.10.7 (2000-01-03)<span><a href="#label-0.10.7+-282000-01-03-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* setup.rb compile.rb amstd/inst などのバグ修正</pre>
+
+<h3 id="label-0.10.6+-281999-12-24-29">0.10.6 (1999-12-24)<span><a href="#label-0.10.6+-281999-12-24-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* racc -e ruby でデフォルトパスを使用
+* 空のアクションの呼びだしは省略するようにした</pre>
+
+<h3 id="label-0.10.5+-281999-12-21-29">0.10.5 (1999-12-21)<span><a href="#label-0.10.5+-281999-12-21-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 埋めこみアクションの実装がすさまじくバグってた
+* setup.rb が inst.rb の変化に追従してなかった
+* calc.y calc2.y を 0.10 用に修正</pre>
+
+<h3 id="label-0.10.4+-281999-12-19-29">0.10.4 (1999-12-19)<span><a href="#label-0.10.4+-281999-12-19-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* エラー回復モードを実装
+* racc -E で単体で動作するパーサを生成
+* Racc は class から module になった</pre>
+
+<h3 id="label-0.10.3+-281999-12-01-29">0.10.3 (1999-12-01)<span><a href="#label-0.10.3+-281999-12-01-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 埋めこみアクションをサポート
+* .output の出力内容にバグがあったのを修正</pre>
+
+<h3 id="label-0.10.2+-281999-11-27-29">0.10.2 (1999-11-27)<span><a href="#label-0.10.2+-281999-11-27-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* ドキュメントの訂正と更新
+* libracc.rb を分割</pre>
+
+<h3 id="label-0.10.1+-281999-11-19-29">0.10.1 (1999-11-19)<span><a href="#label-0.10.1+-281999-11-19-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* C でランタイムを書きなおした
+* next_token が false を返したらもう読みこまない
+* アクションがトークンによらず決まるときは next_token を呼ばない
+* $end 廃止
+* LALRactionTable</pre>
+
+<h3 id="label-0.10.0+-281999-11-06-29">0.10.0 (1999-11-06)<span><a href="#label-0.10.0+-281999-11-06-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* next_* を next_token に一本化、peep_token 廃止
+* @__debug__ -&amp;lt; @yydebug など変数名を大幅変更
+* 文法ファイルの構造が class...rule...end に変わった
+* コアのコードを一新、高速化
+* strscan を併合
+* ライブラリを racc/ ディレクトリに移動</pre>
+
+<h3 id="label-0.9.5+-281999-10-03-29">0.9.5 (1999-10-03)<span><a href="#label-0.9.5+-281999-10-03-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 0.9.4 の変更がすごくバグってた
+* $end が通らなかったのを修正
+* __show_stack__ の引数が違ってた</pre>
+
+<h3 id="label-0.9.4+-281999-09--3F-3F-29">0.9.4 (1999-09-??)<span><a href="#label-0.9.4+-281999-09--3F-3F-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* Parser::Reporter をなくしてメソッドに戻した
+* d.format.rb を再編成</pre>
+
+<h3 id="label-0.9.3+-281999-09-03-29">0.9.3 (1999-09-03)<span><a href="#label-0.9.3+-281999-09-03-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* racc.rb -&gt; racc</pre>
+
+<h3 id="label-0.9.2+-281999-06-26-29">0.9.2 (1999-06-26)<span><a href="#label-0.9.2+-281999-06-26-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* strscan使用</pre>
+
+<h3 id="label-0.9.1+-281999-06-08-29">0.9.1 (1999-06-08)<span><a href="#label-0.9.1+-281999-06-08-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* アクション中の正規表現に対応 ( /= にも注意だ)
+* アクション中の # コメントに対応</pre>
+
+<h3 id="label-0.9.0+-281999-06-03-29">0.9.0 (1999-06-03)<span><a href="#label-0.9.0+-281999-06-03-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* アクションを { } 形式にした
+* ユーザーコードを &#39;----&#39; を使う形式にした</pre>
+
+<h3 id="label-0.8.11+-28-3F-29">0.8.11 (?)<span><a href="#label-0.8.11+-28-3F-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* -g の出力をわかりやすくした</pre>
+
+<h3 id="label-0.8.10+-28-3F-29">0.8.10 (?)<span><a href="#label-0.8.10+-28-3F-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* アクションからreturnできるようにした</pre>
+
+<h3 id="label-0.8.9+-281999-03-21-29">0.8.9 (1999-03-21)<span><a href="#label-0.8.9+-281999-03-21-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* -g + @__debug__をつかったデバッグメッセージ操作
+* エラー発生時のバグを修正
+* TOKEN_TO_S_TABLEを付加するようにした</pre>
+
+<h3 id="label-0.8.8+-281999-03-20-29">0.8.8 (1999-03-20)<span><a href="#label-0.8.8+-281999-03-20-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 100倍程度の高速化
+* defaultトークンを加えた
+* デバッグ用ソースを出力するオプション-gをくわえた
+* user_initializeを廃止し、普通にinitializeを使えるようにした
+* parse_initialize/finalize,parseメソッドを廃止
+* next_token,next_value,peep_tokenのデフォルトを廃止
+* %precと同等の機能を加えた</pre>
+
+<h3 id="label-0.8.7+-281999-03-01-29">0.8.7 (1999-03-01)<span><a href="#label-0.8.7+-281999-03-01-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 内部構造が大幅に変化
+* マニュアルがHTMLになった</pre>
+
+<h3 id="label-0.8.0+-281999-01-16-29">0.8.0 (1999-01-16)<span><a href="#label-0.8.0+-281999-01-16-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 文法がブロック型に変化</pre>
+
+<h3 id="label-0.5.0+-281999-01-07-29">0.5.0 (1999-01-07)<span><a href="#label-0.5.0+-281999-01-07-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* 演算子優先順位が実装されたようだ
+* スタート規則が実装されたようだ
+* トークン値の置換が実装されたようだ(後に致命的なバグ発見)</pre>
+
+<h3 id="label-0.1.0+-281999-01-01-29">0.1.0 (1999-01-01)<span><a href="#label-0.1.0+-281999-01-01-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>* とにかく動くようになった</pre>
+
+</main>
+
+</div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

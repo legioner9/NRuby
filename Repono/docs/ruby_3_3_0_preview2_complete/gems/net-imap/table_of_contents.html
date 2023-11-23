@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Table of Contents - net-imap: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" class="table-of-contents">
+  <!-- table_of_contents.html -->
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+    <div id='extraz'><div class='adzbox-index'  >
+        
+      </div>         
+    </div>
+
+    <main role="main">
+    <h1 class="class">Table of Contents - net-imap: Ruby Standard Library Documentation</h1>
+
+
+          <h2 id="classes">Classes and Modules</h2>
+          <ul>
+              <li class="module">
+                <a href="Net.html">Net</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP.html">Net::IMAP</a>
+
+                <ul>
+                    <li><a href="Net/IMAP.html#label-IMAP+Overview">IMAP Overview</a>
+                    <li><a href="Net/IMAP.html#label-Sequence+numbers+and+UIDs">Sequence numbers and UIDs</a>
+                    <li><a href="Net/IMAP.html#label-Server+capabilities+and+protocol+extensions">Server capabilities and protocol extensions</a>
+                    <li><a href="Net/IMAP.html#label-Examples+of+Usage">Examples of Usage</a>
+                    <li><a href="Net/IMAP.html#label-List+sender+and+subject+of+all+recent+messages+in+the+default+mailbox">List sender and subject of all recent messages in the default mailbox</a>
+                    <li><a href="Net/IMAP.html#label-Move+all+messages+from+April+2003+from+-22Mail-2Fsent-mail-22+to+-22Mail-2Fsent-apr03-22">Move all messages from April 2003 from “Mail/sent-mail” to “Mail/sent-apr03”</a>
+                    <li><a href="Net/IMAP.html#label-Thread+Safety">Thread Safety</a>
+                    <li><a href="Net/IMAP.html#label-Errors">Errors</a>
+                    <li><a href="Net/IMAP.html#label-What-27s+here-3F">What’s here?</a>
+                    <li><a href="Net/IMAP.html#label-Connection+control+methods">Connection control methods</a>
+                    <li><a href="Net/IMAP.html#label-Core+IMAP+commands">Core IMAP commands</a>
+                    <li><a href="Net/IMAP.html#label-IMAP+commands+for+any+state">IMAP commands for any state</a>
+                    <li><a href="Net/IMAP.html#label-IMAP+commands+for+the+-22Not+Authenticated-22+state">IMAP commands for the “Not Authenticated” state</a>
+                    <li><a href="Net/IMAP.html#label-IMAP+commands+for+the+-22Authenticated-22+state">IMAP commands for the “Authenticated” state</a>
+                    <li><a href="Net/IMAP.html#label-IMAP+commands+for+the+-22Selected-22+state">IMAP commands for the “Selected” state</a>
+                    <li><a href="Net/IMAP.html#label-IMAP+commands+for+the+-22Logout-22+state">IMAP commands for the “Logout” state</a>
+                    <li><a href="Net/IMAP.html#label-Supported+IMAP+extensions">Supported IMAP extensions</a>
+                    <li><a href="Net/IMAP.html#label-RFC9051-3A+IMAP4rev2">RFC9051: <code>IMAP4rev2</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC2087-3A+QUOTA">RFC2087: <code>QUOTA</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC2177-3A+IDLE">RFC2177: <code>IDLE</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC2342-3A+NAMESPACE">RFC2342: <code>NAMESPACE</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC2971-3A+ID">RFC2971: <code>ID</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC3691-3A+UNSELECT">RFC3691: <code>UNSELECT</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC4314-3A+ACL">RFC4314: <code>ACL</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC4315-3A+UIDPLUS">RFC4315: <code>UIDPLUS</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC5256-3A+SORT">RFC5256: <code>SORT</code></a>
+                    <li><a href="Net/IMAP.html#label-RFC5256-3A+THREAD">RFC5256: <code>THREAD</code></a>
+                    <li><a href="Net/IMAP.html#label-XLIST+-28non-standard-2C+deprecated-29"><code>XLIST</code> (non-standard, deprecated)</a>
+                    <li><a href="Net/IMAP.html#label-RFC6851-3A+MOVE">RFC6851: <code>MOVE</code></a>
+                    <li><a href="Net/IMAP.html#label-Handling+server+responses">Handling server responses</a>
+                    <li><a href="Net/IMAP.html#label-References">References</a>
+                    <li><a href="Net/IMAP.html#label-Message+envelope+and+body+structure">Message envelope and body structure</a>
+                    <li><a href="Net/IMAP.html#label-Supported+IMAP+Extensions">Supported IMAP Extensions</a>
+                    <li><a href="Net/IMAP.html#label-IANA+registries">IANA registries</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/Address.html">Net::IMAP::Address</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/Address.html#label-Group+syntax">Group syntax</a>
+                    </ul>
+                  </li>
+              <li class="module">
+                <a href="Net/IMAP/Authenticators.html">Net::IMAP::Authenticators</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/BadResponseError.html">Net::IMAP::BadResponseError</a>
+                  </li>
+              <li class="module">
+                <a href="Net/IMAP/BodyStructure.html">Net::IMAP::BodyStructure</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/BodyStructure.html#label-Classes+that+include+BodyStructure">Classes that include BodyStructure</a>
+                    <li><a href="Net/IMAP/BodyStructure.html#label-Deprecated+BodyStructure+classes">Deprecated BodyStructure classes</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/BodyTypeAttachment.html">Net::IMAP::BodyTypeAttachment</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/BodyTypeAttachment.html#label-WARNING">WARNING</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/BodyTypeBasic.html">Net::IMAP::BodyTypeBasic</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/BodyTypeExtension.html">Net::IMAP::BodyTypeExtension</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/BodyTypeExtension.html#label-WARNING-3A">WARNING:</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/BodyTypeMessage.html">Net::IMAP::BodyTypeMessage</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/BodyTypeMultipart.html">Net::IMAP::BodyTypeMultipart</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/BodyTypeText.html">Net::IMAP::BodyTypeText</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ByeResponseError.html">Net::IMAP::ByeResponseError</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ContentDisposition.html">Net::IMAP::ContentDisposition</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ContinuationRequest.html">Net::IMAP::ContinuationRequest</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/CramMD5Authenticator.html">Net::IMAP::CramMD5Authenticator</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/CramMD5Authenticator.html#label-Deprecated">Deprecated</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/DataFormatError.html">Net::IMAP::DataFormatError</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/DigestMD5Authenticator.html">Net::IMAP::DigestMD5Authenticator</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/DigestMD5Authenticator.html#label-Deprecated">Deprecated</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/Envelope.html">Net::IMAP::Envelope</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/Error.html">Net::IMAP::Error</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/FetchData.html">Net::IMAP::FetchData</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/FetchData.html#label-Fetch+attributes">Fetch attributes</a>
+                    <li><a href="Net/IMAP/FetchData.html#label-Static+fetch+data+items">Static fetch data items</a>
+                    <li><a href="Net/IMAP/FetchData.html#label-Dynamic+message+attributes">Dynamic message attributes</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/IgnoredResponse.html">Net::IMAP::IgnoredResponse</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/LoginAuthenticator.html">Net::IMAP::LoginAuthenticator</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/LoginAuthenticator.html#label-Deprecated">Deprecated</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/MailboxACLItem.html">Net::IMAP::MailboxACLItem</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/MailboxACLItem.html#label-Required+capability">Required capability</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/MailboxList.html">Net::IMAP::MailboxList</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/MailboxQuota.html">Net::IMAP::MailboxQuota</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/MailboxQuotaRoot.html">Net::IMAP::MailboxQuotaRoot</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/Namespace.html">Net::IMAP::Namespace</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/Namespaces.html">Net::IMAP::Namespaces</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/NoResponseError.html">Net::IMAP::NoResponseError</a>
+                  </li>
+              <li class="module">
+                <a href="Net/IMAP/NumValidator.html">Net::IMAP::NumValidator</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/PlainAuthenticator.html">Net::IMAP::PlainAuthenticator</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ResponseCode.html">Net::IMAP::ResponseCode</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ResponseError.html">Net::IMAP::ResponseError</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ResponseParseError.html">Net::IMAP::ResponseParseError</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ResponseParser.html">Net::IMAP::ResponseParser</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ResponseText.html">Net::IMAP::ResponseText</a>
+                  </li>
+              <li class="module">
+                <a href="Net/IMAP/SASL.html">Net::IMAP::SASL</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/SASL/BidiStringError.html">Net::IMAP::SASL::BidiStringError</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/SASL/ProhibitedCodepoint.html">Net::IMAP::SASL::ProhibitedCodepoint</a>
+                  </li>
+              <li class="module">
+                <a href="Net/IMAP/SASL/SASLprep.html">Net::IMAP::SASL::SASLprep</a>
+                  </li>
+              <li class="module">
+                <a href="Net/IMAP/SASL/StringPrep.html">Net::IMAP::SASL::StringPrep</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/SASL/StringPrepError.html">Net::IMAP::SASL::StringPrepError</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/StatusData.html">Net::IMAP::StatusData</a>
+                  </li>
+              <li class="module">
+                <a href="Net/IMAP/StringFormatter.html">Net::IMAP::StringFormatter</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/TaggedResponse.html">Net::IMAP::TaggedResponse</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/ThreadMember.html">Net::IMAP::ThreadMember</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/UIDPlusData.html">Net::IMAP::UIDPlusData</a>
+
+                <ul>
+                    <li><a href="Net/IMAP/UIDPlusData.html#label-Capability+requirement">Capability requirement</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/UnknownResponseError.html">Net::IMAP::UnknownResponseError</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/UntaggedResponse.html">Net::IMAP::UntaggedResponse</a>
+                  </li>
+              <li class="class">
+                <a href="Net/IMAP/XOauth2Authenticator.html">Net::IMAP::XOauth2Authenticator</a>
+                  </li>
+              <li class="class">
+                <a href="StringPrepTablesGenerator.html">StringPrepTablesGenerator</a>
+                  </li>
+                </ul>
+
+                <h2 id="methods">Methods</h2>
+                <ul>
+
+                    <li class="method">
+                      <a href="Net/IMAP/SASL/StringPrep.html#method-c-5B-5D">::[]</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::SASL::StringPrep</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-debug">::debug</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-debug-3D">::debug=</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-decode_date">::decode_date</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-decode_datetime">::decode_datetime</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-decode_time">::decode_time</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-decode_utf7">::decode_utf7</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-default_imap_port">::default_imap_port</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-default_imaps_port">::default_imaps_port</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-default_port">::default_port</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-default_ssl_port">::default_ssl_port</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-default_tls_port">::default_tls_port</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-encode_date">::encode_date</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-encode_datetime">::encode_datetime</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-encode_time">::encode_time</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-encode_utf7">::encode_utf7</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-format_date">::format_date</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-format_datetime">::format_datetime</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-format_time">::format_time</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/CramMD5Authenticator.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::CramMD5Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/DigestMD5Authenticator.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::DigestMD5Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/LoginAuthenticator.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::LoginAuthenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/XOauth2Authenticator.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::XOauth2Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ResponseError.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ResponseError</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ResponseParser.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ResponseParser</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/SASL/StringPrepError.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::SASL::StringPrepError</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/SASL/ProhibitedCodepoint.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::SASL::ProhibitedCodepoint</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-parse_date">::parse_date</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-parse_datetime">::parse_datetime</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-c-parse_time">::parse_time</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Authenticators.html#method-i-add_authenticator">#add_authenticator</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Authenticators</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-add_response_handler">#add_response_handler</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-append">#append</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-arrays">#arrays</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-asgn_regex">#asgn_regex</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-asgn_regexps">#asgn_regexps</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-asgn_regexps-21">#asgn_regexps!</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-asgn_table">#asgn_table</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/UIDPlusData.html#method-i-assigned_uids">#assigned_uids</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::UIDPlusData</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxList.html#method-i-attr">#attr</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxList</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/StatusData.html#method-i-attr">#attr</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::StatusData</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/FetchData.html#method-i-attr">#attr</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::FetchData</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-authenticate">#authenticate</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Authenticators.html#method-i-authenticator">#authenticator</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Authenticators</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Authenticators.html#method-i-authenticators">#authenticators</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Authenticators</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-bcc">#bcc</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-bidi_L">#bidi_L</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-bidi_R_AL">#bidi_R_AL</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-bidi_consts">#bidi_consts</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-bidi_fails_req2">#bidi_fails_req2</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-bidi_fails_req3">#bidi_fails_req3</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-bidi_failure_regexp">#bidi_failure_regexp</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-bidi_not_R_AL">#bidi_not_R_AL</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMessage.html#method-i-body">#body</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMessage</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/XOauth2Authenticator.html#method-i-build_oauth2_string">#build_oauth2_string</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::XOauth2Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-capability">#capability</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-cc">#cc</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-check">#check</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/SASL/StringPrep.html#method-i-check_bidi-21">#check_bidi!</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::SASL::StringPrep</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/SASL/StringPrep.html#method-i-check_prohibited-21">#check_prohibited!</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::SASL::StringPrep</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ThreadMember.html#method-i-children">#children</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ThreadMember</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-clean_deps">#clean_deps</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-close">#close</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ResponseText.html#method-i-code">#code</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ResponseText</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-content_id">#content_id</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-copy">#copy</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-copy_internal">#copy_internal</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-create">#create</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-create_ssl_params">#create_ssl_params</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ContinuationRequest.html#method-i-data">#data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ContinuationRequest</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/UntaggedResponse.html#method-i-data">#data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::UntaggedResponse</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/TaggedResponse.html#method-i-data">#data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::TaggedResponse</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ResponseCode.html#method-i-data">#data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ResponseCode</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-date">#date</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-delete">#delete</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxList.html#method-i-delim">#delim</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxList</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Namespace.html#method-i-delim">#delim</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Namespace</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-description">#description</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-disconnect">#disconnect</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-disconnected-3F">#disconnected?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-disposition">#disposition</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-disposition">#disposition</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ContentDisposition.html#method-i-dsp_type">#dsp_type</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ContentDisposition</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeAttachment.html#method-i-dsp_type">#dsp_type</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeAttachment</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-encoding">#encoding</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/NumValidator.html#method-i-ensure_mod_sequence_value">#ensure_mod_sequence_value</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::NumValidator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/NumValidator.html#method-i-ensure_number">#ensure_number</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::NumValidator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/NumValidator.html#method-i-ensure_nz_number">#ensure_nz_number</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::NumValidator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMessage.html#method-i-envelope">#envelope</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMessage</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-examine">#examine</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-expunge">#expunge</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-extension">#extension</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-extension">#extension</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Namespace.html#method-i-extensions">#extensions</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Namespace</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-fetch">#fetch</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-fetch_internal">#fetch_internal</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-from">#from</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-generate_json_data_file">#generate_json_data_file</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-generate_tag">#generate_tag</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-get_response">#get_response</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-get_tagged_response">#get_tagged_response</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-getacl">#getacl</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-getquota">#getquota</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-getquotaroot">#getquotaroot</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/CramMD5Authenticator.html#method-i-hmac_md5">#hmac_md5</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::CramMD5Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Address.html#method-i-host">#host</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Address</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-id">#id</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-idle">#idle</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-idle_done">#idle_done</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-in_reply_to">#in_reply_to</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-json_deps">#json_deps</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-language">#language</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-language">#language</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeText.html#method-i-lines">#lines</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeText</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-list">#list</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-load_tables_and_titles_from_json-21">#load_tables_and_titles_from_json!</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-login">#login</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-logout">#logout</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-lsub">#lsub</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxQuota.html#method-i-mailbox">#mailbox</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxQuota</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxQuotaRoot.html#method-i-mailbox">#mailbox</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxQuotaRoot</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxACLItem.html#method-i-mailbox">#mailbox</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxACLItem</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/StatusData.html#method-i-mailbox">#mailbox</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::StatusData</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Address.html#method-i-mailbox">#mailbox</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Address</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-md5">#md5</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-media_subtype">#media_subtype</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeText.html#method-i-media_subtype">#media_subtype</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeText</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMessage.html#method-i-media_subtype">#media_subtype</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMessage</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-media_subtype">#media_subtype</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-media_type">#media_type</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeAttachment.html#method-i-media_type">#media_type</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeAttachment</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-media_type">#media_type</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-merged_tables_regex">#merged_tables_regex</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-message_id">#message_id</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-move">#move</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-multipart-3F">#multipart?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeText.html#method-i-multipart-3F">#multipart?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeText</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMessage.html#method-i-multipart-3F">#multipart?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMessage</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeAttachment.html#method-i-multipart-3F">#multipart?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeAttachment</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-multipart-3F">#multipart?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeExtension.html#method-i-multipart-3F">#multipart?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeExtension</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/UntaggedResponse.html#method-i-name">#name</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::UntaggedResponse</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/TaggedResponse.html#method-i-name">#name</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::TaggedResponse</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ResponseCode.html#method-i-name">#name</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ResponseCode</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxList.html#method-i-name">#name</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxList</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Address.html#method-i-name">#name</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Address</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-namespace">#namespace</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/DigestMD5Authenticator.html#method-i-nc">#nc</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::DigestMD5Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-noop">#noop</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-normalize_searching_criteria">#normalize_searching_criteria</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/StringFormatter.html#method-i-nstring">#nstring</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::StringFormatter</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Namespaces.html#method-i-other">#other</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Namespaces</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ContentDisposition.html#method-i-param">#param</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ContentDisposition</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-param">#param</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeAttachment.html#method-i-param">#param</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeAttachment</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-param">#param</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ResponseParser.html#method-i-parse">#parse</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ResponseParser</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-parse_rfc_text">#parse_rfc_text</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-parts">#parts</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Namespaces.html#method-i-personal">#personal</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Namespaces</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Namespace.html#method-i-prefix">#prefix</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Namespace</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/CramMD5Authenticator.html#method-i-process">#process</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::CramMD5Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/DigestMD5Authenticator.html#method-i-process">#process</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::DigestMD5Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/LoginAuthenticator.html#method-i-process">#process</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::LoginAuthenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/PlainAuthenticator.html#method-i-process">#process</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::PlainAuthenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/XOauth2Authenticator.html#method-i-process">#process</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::XOauth2Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-put_string">#put_string</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/DigestMD5Authenticator.html#method-i-qdval">#qdval</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::DigestMD5Authenticator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxQuota.html#method-i-quota">#quota</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxQuota</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-ranges">#ranges</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ContinuationRequest.html#method-i-raw_data">#raw_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ContinuationRequest</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/UntaggedResponse.html#method-i-raw_data">#raw_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::UntaggedResponse</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/IgnoredResponse.html#method-i-raw_data">#raw_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::IgnoredResponse</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/TaggedResponse.html#method-i-raw_data">#raw_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::TaggedResponse</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-rb_deps">#rb_deps</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-receive_responses">#receive_responses</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-record_response">#record_response</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-regex_str">#regex_str</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-regexp_const_desc">#regexp_const_desc</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-regexp_const_name">#regexp_const_name</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-regexp_for">#regexp_for</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-regexps">#regexps</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-remove_response_handler">#remove_response_handler</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-rename">#rename</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-reply_to">#reply_to</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxACLItem.html#method-i-rights">#rights</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxACLItem</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Address.html#method-i-route">#route</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Address</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/SASL.html#method-i-saslprep">#saslprep</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::SASL</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/SASL/SASLprep.html#method-i-saslprep">#saslprep</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::SASL::SASLprep</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-saslprep_rb">#saslprep_rb</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-search">#search</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-search_internal">#search_internal</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-select">#select</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_command">#send_command</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_data">#send_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_date_data">#send_date_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_list_data">#send_list_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_literal">#send_literal</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_number_data">#send_number_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_quoted_string">#send_quoted_string</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_string_data">#send_string_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_symbol_data">#send_symbol_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-send_time_data">#send_time_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-sender">#sender</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/FetchData.html#method-i-seqno">#seqno</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::FetchData</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ThreadMember.html#method-i-seqno">#seqno</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ThreadMember</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-setacl">#setacl</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-setquota">#setquota</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-sets">#sets</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Namespaces.html#method-i-shared">#shared</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Namespaces</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-size">#size</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-sort">#sort</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-sort_internal">#sort_internal</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/UIDPlusData.html#method-i-source_uids">#source_uids</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::UIDPlusData</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-start_tls_session">#start_tls_session</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-starttls">#starttls</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-status">#status</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-store">#store</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-store_internal">#store_internal</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/StringFormatter.html#method-i-string">#string</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::StringFormatter</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-stringprep_rb">#stringprep_rb</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-subject">#subject</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-subscribe">#subscribe</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeBasic.html#method-i-subtype">#subtype</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeBasic</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeAttachment.html#method-i-subtype">#subtype</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeAttachment</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/BodyTypeMultipart.html#method-i-subtype">#subtype</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::BodyTypeMultipart</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-table_regexps_rb">#table_regexps_rb</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-table_titles_rb">#table_titles_rb</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-tables">#tables</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/TaggedResponse.html#method-i-tag">#tag</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::TaggedResponse</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-tcp_socket">#tcp_socket</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/ResponseText.html#method-i-text">#text</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::ResponseText</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-thread">#thread</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-thread_internal">#thread_internal</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-titles">#titles</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/Envelope.html#method-i-to">#to</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::Envelope</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-to_ranges">#to_ranges</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="StringPrepTablesGenerator.html#method-i-to_regexp">#to_regexp</a>
+                      &mdash;
+                      <span class="container">StringPrepTablesGenerator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-uid_copy">#uid_copy</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-uid_expunge">#uid_expunge</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-uid_fetch">#uid_fetch</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/UIDPlusData.html#method-i-uid_mapping">#uid_mapping</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::UIDPlusData</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-uid_move">#uid_move</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-uid_search">#uid_search</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-uid_sort">#uid_sort</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-uid_store">#uid_store</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-uid_thread">#uid_thread</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/UIDPlusData.html#method-i-uidvalidity">#uidvalidity</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::UIDPlusData</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-unselect">#unselect</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-unsubscribe">#unsubscribe</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxQuota.html#method-i-usage">#usage</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxQuota</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/MailboxACLItem.html#method-i-user">#user</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::MailboxACLItem</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/NumValidator.html#method-i-valid_mod_sequence_value-3F">#valid_mod_sequence_value?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::NumValidator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/StringFormatter.html#method-i-valid_nstring-3F">#valid_nstring?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::StringFormatter</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/NumValidator.html#method-i-valid_number-3F">#valid_number?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::NumValidator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/NumValidator.html#method-i-valid_nz_number-3F">#valid_nz_number?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::NumValidator</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP/StringFormatter.html#method-i-valid_string-3F">#valid_string?</a>
+                      &mdash;
+                      <span class="container">Net::IMAP::StringFormatter</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-validate_data">#validate_data</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+
+                    <li class="method">
+                      <a href="Net/IMAP.html#method-i-xlist">#xlist</a>
+                      &mdash;
+                      <span class="container">Net::IMAP</span>
+                    </ul>
+                    </main>
+                  </div> 
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

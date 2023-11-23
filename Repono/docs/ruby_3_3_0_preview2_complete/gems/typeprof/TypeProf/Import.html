@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class TypeProf::Import - typeprof: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-import_builtin">::import_builtin</a>
+    <li ><a href="#method-c-import_library">::import_library</a>
+    <li ><a href="#method-c-import_rbs_code">::import_rbs_code</a>
+    <li ><a href="#method-c-import_rbs_files">::import_rbs_files</a>
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-conv_attr_defs">#conv_attr_defs</a>
+    <li ><a href="#method-i-conv_block">#conv_block</a>
+    <li ><a href="#method-i-conv_func">#conv_func</a>
+    <li ><a href="#method-i-conv_method_def">#conv_method_def</a>
+    <li ><a href="#method-i-conv_type">#conv_type</a>
+    <li ><a href="#method-i-import">#import</a>
+    <li ><a href="#method-i-path_to_klass">#path_to_klass</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-TypeProf::Import">
+    <h1 id="class-TypeProf::Import" class="class">
+      class TypeProf::Import
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-import_builtin" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">import_builtin</span><span
+                                class="method-args">(scratch)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="import_builtin-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 567</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">import_builtin</span>(<span class="ruby-identifier">scratch</span>)
+  <span class="ruby-constant">Import</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">scratch</span>, <span class="ruby-identifier">scratch</span>.<span class="ruby-identifier">rbs_reader</span>.<span class="ruby-identifier">load_builtin</span>).<span class="ruby-identifier">import</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-import_library" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">import_library</span><span
+                                class="method-args">(scratch, feature)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="import_library-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 571</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">import_library</span>(<span class="ruby-identifier">scratch</span>, <span class="ruby-identifier">feature</span>)
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">json</span> = <span class="ruby-identifier">scratch</span>.<span class="ruby-identifier">rbs_reader</span>.<span class="ruby-identifier">load_library</span>(<span class="ruby-identifier">feature</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RBS</span><span class="ruby-operator">::</span><span class="ruby-constant">EnvironmentLoader</span><span class="ruby-operator">::</span><span class="ruby-constant">UnknownLibraryError</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">RBS</span><span class="ruby-operator">::</span><span class="ruby-constant">DuplicatedDeclarationError</span>, <span class="ruby-constant">RBSReader</span><span class="ruby-operator">::</span><span class="ruby-constant">RBSCollectionDefined</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># need cache?</span>
+  <span class="ruby-constant">Import</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">scratch</span>, <span class="ruby-identifier">json</span>).<span class="ruby-identifier">import</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-import_rbs_code" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">import_rbs_code</span><span
+                                class="method-args">(scratch, rbs_name, rbs_code)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="import_rbs_code-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 588</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">import_rbs_code</span>(<span class="ruby-identifier">scratch</span>, <span class="ruby-identifier">rbs_name</span>, <span class="ruby-identifier">rbs_code</span>)
+  <span class="ruby-constant">Import</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">scratch</span>, <span class="ruby-identifier">scratch</span>.<span class="ruby-identifier">rbs_reader</span>.<span class="ruby-identifier">load_rbs_string</span>(<span class="ruby-identifier">rbs_name</span>, <span class="ruby-identifier">rbs_code</span>)).<span class="ruby-identifier">import</span>(<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-import_rbs_files" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">import_rbs_files</span><span
+                                class="method-args">(scratch, rbs_paths)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="import_rbs_files-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 583</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">import_rbs_files</span>(<span class="ruby-identifier">scratch</span>, <span class="ruby-identifier">rbs_paths</span>)
+  <span class="ruby-identifier">rbs_paths</span> = <span class="ruby-identifier">rbs_paths</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">rbs_path</span><span class="ruby-operator">|</span> <span class="ruby-constant">Pathname</span>(<span class="ruby-identifier">rbs_path</span>) }
+  <span class="ruby-constant">Import</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">scratch</span>, <span class="ruby-identifier">scratch</span>.<span class="ruby-identifier">rbs_reader</span>.<span class="ruby-identifier">load_paths</span>(<span class="ruby-identifier">rbs_paths</span>)).<span class="ruby-identifier">import</span>(<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">(scratch, json)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 592</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">scratch</span>, <span class="ruby-identifier">json</span>)
+  <span class="ruby-ivar">@scratch</span> = <span class="ruby-identifier">scratch</span>
+  <span class="ruby-ivar">@json</span> = <span class="ruby-identifier">json</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-conv_attr_defs" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">conv_attr_defs</span><span
+                                class="method-args">(mdef, rbs_source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="conv_attr_defs-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 700</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">conv_attr_defs</span>(<span class="ruby-identifier">mdef</span>, <span class="ruby-identifier">rbs_source</span>)
+  <span class="ruby-identifier">ivar</span> = <span class="ruby-value">:&quot;@#{ mdef[:ivar] }&quot;</span>
+  <span class="ruby-identifier">kind</span> = <span class="ruby-identifier">mdef</span>[<span class="ruby-value">:kind</span>]
+  <span class="ruby-identifier">pub_meth</span> = <span class="ruby-identifier">mdef</span>[<span class="ruby-value">:visibility</span>]
+
+  <span class="ruby-identifier">defs</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:reader</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:accessor</span>
+    <span class="ruby-identifier">defs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">TypedAttrMethodDef</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ivar</span>, <span class="ruby-value">:reader</span>, <span class="ruby-identifier">pub_meth</span>, <span class="ruby-identifier">rbs_source</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:writer</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:accessor</span>
+    <span class="ruby-identifier">defs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">TypedAttrMethodDef</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ivar</span>, <span class="ruby-value">:writer</span>, <span class="ruby-identifier">pub_meth</span>, <span class="ruby-identifier">rbs_source</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">defs</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-identifier">defs</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-conv_block" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">conv_block</span><span
+                                class="method-args">(blk)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="conv_block-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 750</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">conv_block</span>(<span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword">return</span> [<span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>] <span class="ruby-keyword">unless</span> <span class="ruby-identifier">blk</span>
+
+  <span class="ruby-identifier">required_block</span> = <span class="ruby-identifier">blk</span>[<span class="ruby-value">:required_block</span>]
+  <span class="ruby-identifier">lead_tys</span> = <span class="ruby-identifier">blk</span>[<span class="ruby-value">:lead_tys</span>]
+  <span class="ruby-identifier">opt_tys</span> = <span class="ruby-identifier">blk</span>[<span class="ruby-value">:opt_tys</span>]
+  <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">blk</span>[<span class="ruby-value">:rest_ty</span>]
+  <span class="ruby-identifier">req_kw_tys</span> = <span class="ruby-identifier">blk</span>[<span class="ruby-value">:req_kw_tys</span>]
+  <span class="ruby-identifier">opt_kw_tys</span> = <span class="ruby-identifier">blk</span>[<span class="ruby-value">:opt_kw_tys</span>]
+  <span class="ruby-identifier">rest_kw_ty</span> = <span class="ruby-identifier">blk</span>[<span class="ruby-value">:rest_kw_ty</span>]
+  <span class="ruby-identifier">ret_ty</span> = <span class="ruby-identifier">blk</span>[<span class="ruby-value">:ret_ty</span>]
+
+  <span class="ruby-identifier">lead_tys</span> = <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>) }
+  <span class="ruby-identifier">opt_tys</span> = <span class="ruby-identifier">opt_tys</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>) }
+  <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">rest_ty</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">rest_ty</span>
+  <span class="ruby-identifier">kw_tys</span> = []
+  <span class="ruby-identifier">req_kw_tys</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">kw_tys</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-keyword">true</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>)] }
+  <span class="ruby-identifier">opt_kw_tys</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">kw_tys</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-keyword">false</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>)] }
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rest_kw_ty</span>
+    <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">rest_kw_ty</span>)
+    <span class="ruby-identifier">kw_rest_ty</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">gen_hash</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">k_ty</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:sym</span>])
+      <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k_ty</span>] = <span class="ruby-identifier">ty</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">msig</span> = <span class="ruby-constant">MethodSignature</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lead_tys</span>, <span class="ruby-identifier">opt_tys</span>, <span class="ruby-identifier">rest_ty</span>, [], <span class="ruby-identifier">kw_tys</span>, <span class="ruby-identifier">kw_rest_ty</span>, <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>)
+
+  <span class="ruby-identifier">ret_ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ret_ty</span>)
+
+  <span class="ruby-identifier">ret</span> = [<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">TypedBlock</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">msig</span>, <span class="ruby-identifier">ret_ty</span>), <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:proc</span>])]
+  <span class="ruby-identifier">ret</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">required_block</span>
+  <span class="ruby-identifier">ret</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-conv_func" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">conv_func</span><span
+                                class="method-args">(sig_ret)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="conv_func-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 716</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">conv_func</span>(<span class="ruby-identifier">sig_ret</span>)
+  <span class="ruby-comment">#type_params = sig_ret[:type_params] # XXX</span>
+  <span class="ruby-identifier">lead_tys</span> = <span class="ruby-identifier">sig_ret</span>[<span class="ruby-value">:lead_tys</span>]
+  <span class="ruby-identifier">opt_tys</span> = <span class="ruby-identifier">sig_ret</span>[<span class="ruby-value">:opt_tys</span>]
+  <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">sig_ret</span>[<span class="ruby-value">:rest_ty</span>]
+  <span class="ruby-identifier">req_kw_tys</span> = <span class="ruby-identifier">sig_ret</span>[<span class="ruby-value">:req_kw_tys</span>]
+  <span class="ruby-identifier">opt_kw_tys</span> = <span class="ruby-identifier">sig_ret</span>[<span class="ruby-value">:opt_kw_tys</span>]
+  <span class="ruby-identifier">rest_kw_ty</span> = <span class="ruby-identifier">sig_ret</span>[<span class="ruby-value">:rest_kw_ty</span>]
+  <span class="ruby-identifier">blk</span> = <span class="ruby-identifier">sig_ret</span>[<span class="ruby-value">:blk</span>]
+  <span class="ruby-identifier">ret_ty</span> = <span class="ruby-identifier">sig_ret</span>[<span class="ruby-value">:ret_ty</span>]
+
+  <span class="ruby-identifier">lead_tys</span> = <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>) }
+  <span class="ruby-identifier">opt_tys</span> = <span class="ruby-identifier">opt_tys</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>) }
+  <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">rest_ty</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">rest_ty</span>
+  <span class="ruby-identifier">kw_tys</span> = []
+  <span class="ruby-identifier">req_kw_tys</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">kw_tys</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-keyword">true</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>)] }
+  <span class="ruby-identifier">opt_kw_tys</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">kw_tys</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-keyword">false</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>)] }
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rest_kw_ty</span>
+    <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">rest_kw_ty</span>)
+    <span class="ruby-identifier">kw_rest_ty</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">gen_hash</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">k_ty</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:sym</span>])
+      <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k_ty</span>] = <span class="ruby-identifier">ty</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">blks</span> = <span class="ruby-identifier">conv_block</span>(<span class="ruby-identifier">blk</span>)
+
+  <span class="ruby-identifier">ret_ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ret_ty</span>)
+
+  <span class="ruby-identifier">blks</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">blk</span><span class="ruby-operator">|</span>
+    [<span class="ruby-constant">MethodSignature</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lead_tys</span>, <span class="ruby-identifier">opt_tys</span>, <span class="ruby-identifier">rest_ty</span>, [], <span class="ruby-identifier">kw_tys</span>, <span class="ruby-identifier">kw_rest_ty</span>, <span class="ruby-identifier">blk</span>), <span class="ruby-identifier">ret_ty</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-conv_method_def" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">conv_method_def</span><span
+                                class="method-args">(method_name, mdef, rbs_source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="conv_method_def-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 692</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">conv_method_def</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">mdef</span>, <span class="ruby-identifier">rbs_source</span>)
+  <span class="ruby-identifier">sig_rets</span> = <span class="ruby-identifier">mdef</span>[<span class="ruby-value">:sig_rets</span>].<span class="ruby-identifier">flat_map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">sig_ret</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">conv_func</span>(<span class="ruby-identifier">sig_ret</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">TypedMethodDef</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">sig_rets</span>, <span class="ruby-identifier">rbs_source</span>, <span class="ruby-identifier">mdef</span>[<span class="ruby-value">:visibility</span>])
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-conv_type" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">conv_type</span><span
+                                class="method-args">(ty)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="conv_type-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 785</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">conv_type</span>(<span class="ruby-identifier">ty</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:class</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">ty</span>[<span class="ruby-value">1</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:instance</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">ty</span>[<span class="ruby-value">1</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:cell</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Cell</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Cell</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ty</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>) }), <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>[<span class="ruby-value">1</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:any</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">any</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:void</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Void</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:nil</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:optional</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">optional</span>(<span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>[<span class="ruby-value">1</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:bool</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">bool</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:self</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Var</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:self</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:int</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:int</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:str</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:str</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:sym</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Symbol</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ty</span>.<span class="ruby-identifier">last</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:sym</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:true</span>  <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:true</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:false</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:false</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:array</span>
+    <span class="ruby-identifier">_</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">lead_tys</span>, <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">ty</span>
+    <span class="ruby-identifier">lead_tys</span> = <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>) }
+    <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">rest_ty</span>)
+    <span class="ruby-identifier">base_type</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">path</span>))
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lead_tys</span>, <span class="ruby-identifier">rest_ty</span>), <span class="ruby-identifier">base_type</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:hash</span>
+    <span class="ruby-identifier">_</span>, <span class="ruby-identifier">path</span>, (<span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span>) = <span class="ruby-identifier">ty</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">gen_hash</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">path</span>))) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">k_ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">k</span>)
+      <span class="ruby-identifier">v_ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">v</span>)
+      <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k_ty</span>] = <span class="ruby-identifier">v_ty</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:hash_record</span>
+    <span class="ruby-identifier">_</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">key_tys</span> = <span class="ruby-identifier">ty</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">gen_hash</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">path</span>))) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">key_tys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">k_ty</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Symbol</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">key</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:sym</span>]))
+        <span class="ruby-identifier">v_ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>)
+        <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k_ty</span>] = <span class="ruby-identifier">v_ty</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:union</span>
+    <span class="ruby-identifier">tys</span> = <span class="ruby-identifier">ty</span>[<span class="ruby-value">1</span>]
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>.<span class="ruby-identifier">create</span>(<span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Set</span>[<span class="ruby-operator">*</span><span class="ruby-identifier">tys</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty2</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty2</span>) }], <span class="ruby-keyword">nil</span>) <span class="ruby-comment"># XXX: Array and Hash support</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:intersection</span>
+    <span class="ruby-identifier">tys</span> = <span class="ruby-identifier">ty</span>[<span class="ruby-value">1</span>]
+    <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">tys</span>.<span class="ruby-identifier">first</span>) <span class="ruby-comment"># XXX: This is wrong! We need to support intersection type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:var</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Var</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ty</span>[<span class="ruby-value">1</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:proc</span>
+    <span class="ruby-identifier">msig</span>, <span class="ruby-identifier">ret_ty</span> = <span class="ruby-identifier">conv_func</span>(<span class="ruby-identifier">ty</span>[<span class="ruby-value">1</span>]).<span class="ruby-identifier">first</span> <span class="ruby-comment"># Currently, RBS Proc does not accept a block, so the size should be always one</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">TypedBlock</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">msig</span>, <span class="ruby-identifier">ret_ty</span>), <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:proc</span>]))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">pp</span> <span class="ruby-identifier">ty</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-import" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">import</span><span
+                                class="method-args">(explicit = false)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="import-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 597</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">import</span>(<span class="ruby-identifier">explicit</span> = <span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">classes</span> = <span class="ruby-ivar">@json</span>[<span class="ruby-value">:classes</span>].<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">classpath</span>, <span class="ruby-identifier">cdef</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">type_params</span> = <span class="ruby-identifier">cdef</span>[<span class="ruby-value">:type_params</span>]
+    <span class="ruby-identifier">superclass</span>, <span class="ruby-identifier">superclass_type_args</span> = <span class="ruby-identifier">cdef</span>[<span class="ruby-value">:superclass</span>]
+    <span class="ruby-identifier">members</span> = <span class="ruby-identifier">cdef</span>[<span class="ruby-value">:members</span>]
+
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">classpath</span>.<span class="ruby-identifier">last</span>
+    <span class="ruby-identifier">superclass</span> = <span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">superclass</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">superclass</span>
+    <span class="ruby-identifier">base_klass</span> = <span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">classpath</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>])
+
+    <span class="ruby-identifier">klass</span>, = <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">get_constant</span>(<span class="ruby-identifier">base_klass</span>, <span class="ruby-identifier">name</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Any</span>)
+      <span class="ruby-identifier">klass</span> = <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">new_class</span>(<span class="ruby-identifier">base_klass</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">type_params</span>, <span class="ruby-identifier">superclass</span>, <span class="ruby-keyword">nil</span>)
+
+      <span class="ruby-comment"># There builtin classes are needed to interpret RBS declarations</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">classpath</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:NilClass</span>]   <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:nil</span>]   = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:TrueClass</span>]  <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:true</span>]  = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:FalseClass</span>] <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:false</span>] = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:Integer</span>]    <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:int</span>]   = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:String</span>]     <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:str</span>]   = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:Symbol</span>]     <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:sym</span>]   = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:Array</span>]      <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:ary</span>]   = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:Hash</span>]       <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:hash</span>]  = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">when</span> [<span class="ruby-value">:Proc</span>]       <span class="ruby-keyword">then</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:proc</span>]  = <span class="ruby-identifier">klass</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    [<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">superclass_type_args</span>, <span class="ruby-identifier">members</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">classes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span>, <span class="ruby-identifier">superclass_type_args</span>, <span class="ruby-identifier">members</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">add_superclass_type_args!</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">superclass_type_args</span>&amp;.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>) })
+    <span class="ruby-identifier">modules</span> = <span class="ruby-identifier">members</span>[<span class="ruby-value">:modules</span>]
+    <span class="ruby-identifier">methods</span> = <span class="ruby-identifier">members</span>[<span class="ruby-value">:methods</span>]
+    <span class="ruby-identifier">attr_methods</span> = <span class="ruby-identifier">members</span>[<span class="ruby-value">:attr_methods</span>]
+    <span class="ruby-identifier">ivars</span> = <span class="ruby-identifier">members</span>[<span class="ruby-value">:ivars</span>]
+    <span class="ruby-identifier">cvars</span> = <span class="ruby-identifier">members</span>[<span class="ruby-value">:cvars</span>]
+    <span class="ruby-identifier">rbs_sources</span> = <span class="ruby-identifier">members</span>[<span class="ruby-value">:rbs_sources</span>]
+
+    <span class="ruby-identifier">modules</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">kind</span>, <span class="ruby-identifier">mods</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">mods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">mod</span>, <span class="ruby-identifier">type_args</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">type_args</span> = <span class="ruby-identifier">type_args</span>&amp;.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>) }
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">kind</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:include</span>
+          <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">mix_module</span>(<span class="ruby-value">:after</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">mod</span>), <span class="ruby-identifier">type_args</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">nil</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:extend</span>
+          <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">mix_module</span>(<span class="ruby-value">:after</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">mod</span>), <span class="ruby-identifier">type_args</span>, <span class="ruby-keyword">true</span>, <span class="ruby-keyword">nil</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:prepend</span>
+          <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">mix_module</span>(<span class="ruby-value">:before</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">mod</span>), <span class="ruby-identifier">type_args</span>, <span class="ruby-keyword">false</span>, <span class="ruby-keyword">nil</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">methods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">method_name</span>), <span class="ruby-identifier">mdef</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">rbs_source</span> = <span class="ruby-identifier">explicit</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">rbs_sources</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">method_name</span>]] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">mdef</span> = <span class="ruby-identifier">conv_method_def</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">mdef</span>, <span class="ruby-identifier">rbs_source</span>)
+      <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">add_method</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mdef</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">attr_methods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">method_name</span>), <span class="ruby-identifier">mdef</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">rbs_source</span> = <span class="ruby-identifier">explicit</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">rbs_sources</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">method_name</span>]] <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">mdef</span>[<span class="ruby-value">:ty</span>]).<span class="ruby-identifier">remove_type_vars</span>
+      <span class="ruby-identifier">mdefs</span> = <span class="ruby-identifier">conv_attr_defs</span>(<span class="ruby-identifier">mdef</span>, <span class="ruby-identifier">rbs_source</span>)
+      <span class="ruby-identifier">mdefs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">mdef</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">add_typed_attr_method</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">mdef</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">add_ivar_write!</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">klass</span>), <span class="ruby-value">:&quot;@#{ mdef[:ivar] }&quot;</span>, <span class="ruby-identifier">ty</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">ivars</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ivar_name</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>).<span class="ruby-identifier">remove_type_vars</span>
+      <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">add_ivar_write!</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">klass</span>), <span class="ruby-identifier">ivar_name</span>, <span class="ruby-identifier">ty</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">cvars</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ivar_name</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>).<span class="ruby-identifier">remove_type_vars</span>
+      <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">add_cvar_write!</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">ivar_name</span>, <span class="ruby-identifier">ty</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@json</span>[<span class="ruby-value">:constants</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">classpath</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">base_klass</span> = <span class="ruby-identifier">path_to_klass</span>(<span class="ruby-identifier">classpath</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">-2</span>])
+    <span class="ruby-identifier">value</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">value</span>).<span class="ruby-identifier">remove_type_vars</span>
+    <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">add_constant</span>(<span class="ruby-identifier">base_klass</span>, <span class="ruby-identifier">classpath</span>[<span class="ruby-value">-1</span>], <span class="ruby-identifier">value</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@json</span>[<span class="ruby-value">:globals</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">conv_type</span>(<span class="ruby-identifier">ty</span>).<span class="ruby-identifier">remove_type_vars</span>
+    <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">add_gvar_write!</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">ty</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-path_to_klass" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">path_to_klass</span><span
+                                class="method-args">(path)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="path_to_klass-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/import.rb, line 841</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">path_to_klass</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:obj</span>]
+  <span class="ruby-identifier">path</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">klass</span>, = <span class="ruby-ivar">@scratch</span>.<span class="ruby-identifier">get_constant</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">name</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">klass</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">any</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeProfError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;A constant `#{ path.join(&quot;::&quot;) }&#39; is used but not defined in RBS&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">klass</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>. </p><p><a href="https://jamesbritt.bandcamp.com/">Hack your world.  Feed your head.  Live curious</a>.</p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>debug.ja - racc: Ruby Standard Library Documentation</title>
+
+
+<script src="../../../js/navigation.js" defer></script>
+<script src="../../../js/search.js" defer></script>
+<script src="../../../js/search_index.js" defer></script>
+<script src="../../../js/searcher.js" defer></script>
+<script src="../../../js/darkfish.js" defer></script>
+
+<script src="../../../js/jquery-3.2.0.min.js"></script>
+
+<script src="../../../js/vue.min.js"></script>
+<script src="../../../js/js.cookie.min.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../../../css/rdoc.css" rel="stylesheet">
+<link href="../../../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+  var index_rel_prefix = "../../../";
+  var darkModeCsseHref = "../../../css/rdoc-dm.css"
+  var defaultModeCssHref = "../../../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="file">
+  <!-- this is page.html -->
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+
+ <div class='wrapper hdiv'>
+
+ 
+
+
+<nav id='vapp' role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../../../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-E3-83-91-E3-83-BC-E3-82-B5-E3-81-AE-E3-83-87-E3-83-90-E3-83-83-E3-82-B0">パーサのデバッグ</a>
+    <li><a href="#label-E6-96-87-E6-B3-95-E3-83-95-E3-82-A1-E3-82-A4-E3-83-AB-E3-81-8C-E3-83-91-E3-83-BC-E3-82-B9-E3-82-A8-E3-83-A9-E3-83-BC-E3-81-AB-E3-81-AA-E3-82-8B">文法ファイルがパースエラーになる</a>
+    <li><a href="#label-E3-81-AA-E3-82-93-E3-81-9F-E3-82-89+conflict+-E3-81-A3-E3-81-A6-E8-A8-80-E3-82-8F-E3-82-8C-E3-81-9F">なんたら conflict って言われた</a>
+    <li><a href="#label-E3-83-91-E3-83-BC-E3-82-B5-E3-81-AF-E5-95-8F-E9-A1-8C-E3-81-AA-E3-81-8F-E7-94-9F-E6-88-90-E3-81-A7-E3-81-8D-E3-81-9F-E3-81-91-E3-81-A9-E4-BA-88-E6-83-B3-E3-81-A9-E3-81-8A-E3-82-8A-E3-81-AB-E5-8B-95-E3-81-8B-E3-81-AA-E3-81-84">パーサは問題なく生成できたけど予想どおりに動かない</a>
+    <li><a href="#label-next_token+-E3-81-AB-E9-96-A2-E3-81-97-E3-81-A6">next_token に関して</a>
+  </ul>
+</div>
+
+  <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+
+  <div id="project-metadata">
+   <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="../../../racc-1_7_1/README_ja_rdoc.html">README.ja</a>
+    <li><a href="../../../racc-1_7_1/README_rdoc.html">README</a>
+    <li><a href="../../../racc-1_7_1/doc/en/NEWS_en_rdoc.html">NEWS.en</a>
+    <li><a href="../../../racc-1_7_1/doc/en/grammar_en_rdoc.html">grammar.en</a>
+    <li><a href="../../../racc-1_7_1/doc/en/grammar2_en_rdoc.html">grammar2.en</a>
+    <li><a href="../../../racc-1_7_1/doc/ja/NEWS_ja_rdoc.html">NEWS.ja</a>
+    <li><a href="../../../racc-1_7_1/doc/ja/debug_ja_rdoc.html">debug.ja</a>
+    <li><a href="../../../racc-1_7_1/doc/ja/grammar_ja_rdoc.html">grammar.ja</a>
+    <li><a href="../../../racc-1_7_1/doc/ja/parser_ja_rdoc.html">parser.ja</a>
+  </ul>
+</div>
+
+   </div>
+  </div>
+</nav>
+
+
+<!--  carbon ads here -->
+
+<div id='extraz'>
+  <div class='adzbox-index'  >
+   
+  </div>
+ </div>         
+
+
+<main role="main" aria-label="Page racc-1.7.1/doc/ja/debug.ja.rdoc">
+
+<h1 id="label-E3-83-91-E3-83-BC-E3-82-B5-E3-81-AE-E3-83-87-E3-83-90-E3-83-83-E3-82-B0">パーサのデバッグ<span><a href="#label-E3-83-91-E3-83-BC-E3-82-B5-E3-81-AE-E3-83-87-E3-83-90-E3-83-83-E3-82-B0">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>ここでは、Racc を使っていくうえで遭遇しそうな問題について書きます。</p>
+
+<h2 id="label-E6-96-87-E6-B3-95-E3-83-95-E3-82-A1-E3-82-A4-E3-83-AB-E3-81-8C-E3-83-91-E3-83-BC-E3-82-B9-E3-82-A8-E3-83-A9-E3-83-BC-E3-81-AB-E3-81-AA-E3-82-8B">文法ファイルがパースエラーになる<span><a href="#label-E6-96-87-E6-B3-95-E3-83-95-E3-82-A1-E3-82-A4-E3-83-AB-E3-81-8C-E3-83-91-E3-83-BC-E3-82-B9-E3-82-A8-E3-83-A9-E3-83-BC-E3-81-AB-E3-81-AA-E3-82-8B">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>エラーメッセージに出ている行番号のあたりを見て間違いを 探してください。ブロックを閉じる行でエラーになる場合は、 どこかで開き括弧などを増やしてしまっている可能性が高いです。</p>
+
+<h2 id="label-E3-81-AA-E3-82-93-E3-81-9F-E3-82-89+conflict+-E3-81-A3-E3-81-A6-E8-A8-80-E3-82-8F-E3-82-8C-E3-81-9F">なんたら conflict って言われた<span><a href="#label-E3-81-AA-E3-82-93-E3-81-9F-E3-82-89+conflict+-E3-81-A3-E3-81-A6-E8-A8-80-E3-82-8F-E3-82-8C-E3-81-9F">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>一番ありがちで一番面倒な問題は衝突 (conflict) でしょう。 文法中に衝突があると、racc はコンパイル後に 「5 shift/reduce conflict」のようなメッセージを表示します。 -v をつけると出力される .output ファイルからはさらに詳しい情報が得られます。 それをどう使うか、とかそういうことに関しては、それなりの本を読んでください。 とてもここに書けるような単純な話ではありません。 当然ながら『Ruby を 256 倍使うための本 無道編』(青木峰郎著)がお勧めです。</p>
+
+<h2 id="label-E3-83-91-E3-83-BC-E3-82-B5-E3-81-AF-E5-95-8F-E9-A1-8C-E3-81-AA-E3-81-8F-E7-94-9F-E6-88-90-E3-81-A7-E3-81-8D-E3-81-9F-E3-81-91-E3-81-A9-E4-BA-88-E6-83-B3-E3-81-A9-E3-81-8A-E3-82-8A-E3-81-AB-E5-8B-95-E3-81-8B-E3-81-AA-E3-81-84">パーサは問題なく生成できたけど予想どおりに動かない<span><a href="#label-E3-83-91-E3-83-BC-E3-82-B5-E3-81-AF-E5-95-8F-E9-A1-8C-E3-81-AA-E3-81-8F-E7-94-9F-E6-88-90-E3-81-A7-E3-81-8D-E3-81-9F-E3-81-91-E3-81-A9-E4-BA-88-E6-83-B3-E3-81-A9-E3-81-8A-E3-82-8A-E3-81-AB-E5-8B-95-E3-81-8B-E3-81-AA-E3-81-84">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>racc に -g オプションをつけてパーサを出力すると、デバッグ用のコードが 付加されます。ここで、パーサクラスのインスタンス変数 @yydebug を true に しておいてから do_parse/yyparse を呼ぶと、デバッグ用メッセージが出力 されます。パーサが動作する様子が直接見えますので、完全に現在の状態を 把握できます。これを見てどこがおかしいのかわかったらあとは直すだけ。</p>
+
+<h2 id="label-next_token+-E3-81-AB-E9-96-A2-E3-81-97-E3-81-A6">next_token に関して<span><a href="#label-next_token+-E3-81-AB-E9-96-A2-E3-81-97-E3-81-A6">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>いまだ自分でも忘れることが多いのが 「送るトークンが尽きたら [false,なにか] を送る」ということです。 ちなみに <a href="../../../Racc.html"><code>Racc</code></a> 0.10.2 以降では一度 [false,なにか] を受け取ったら それ以上 next_token は呼ばないことが保証されています。</p>
+
+<p>追記： 最近は [false,なにか] ではなく nil でもよいことになった。</p>
+
+</main>
+
+</div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

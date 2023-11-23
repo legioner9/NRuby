@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class TypeProf::Scratch::ClassDef - typeprof: Ruby Standard Library Documentation</title>
+
+
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
+
+<script src="../../js/jquery-3.2.0.min.js"></script>
+
+<script src="../../js/vue.min.js"></script>
+<script src="../../js/js.cookie.min.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../../css/rdoc.css" rel="stylesheet">
+<link href="../../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+  var darkModeCsseHref = "../../css/rdoc-dm.css"
+  var defaultModeCssHref = "../../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-add_class_open">#add_class_open</a>
+    <li ><a href="#method-i-add_constant">#add_constant</a>
+    <li ><a href="#method-i-add_method">#add_method</a>
+    <li ><a href="#method-i-adjust_substitution">#adjust_substitution</a>
+    <li ><a href="#method-i-adjust_substitution_for_module">#adjust_substitution_for_module</a>
+    <li ><a href="#method-i-check_typed">#check_typed</a>
+    <li ><a href="#method-i-check_typed_attr">#check_typed_attr</a>
+    <li ><a href="#method-i-check_typed_method">#check_typed_method</a>
+    <li ><a href="#method-i-consts">#consts</a>
+    <li ><a href="#method-i-get_constant">#get_constant</a>
+    <li ><a href="#method-i-mix_module">#mix_module</a>
+    <li ><a href="#method-i-search_method">#search_method</a>
+    <li ><a href="#method-i-set_method">#set_method</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-TypeProf::Scratch::ClassDef">
+    <h1 id="class-TypeProf::Scratch::ClassDef" class="class">
+      class TypeProf::Scratch::ClassDef
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-absolute_path" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">absolute_path</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-cvars" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">cvars</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-ivars" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">ivars</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-kind" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">kind</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-klass_obj" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">klass_obj</span><span
+                class="attribute-access-type">[RW]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-methods" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">methods</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-modules" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">modules</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-name" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">name</span><span
+                class="attribute-access-type">[RW]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-subclasses" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">subclasses</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-superclass" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">superclass</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">(kind, name, absolute_path, superclass)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 348</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">kind</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">absolute_path</span>, <span class="ruby-identifier">superclass</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+  <span class="ruby-ivar">@kind</span> = <span class="ruby-identifier">kind</span>
+  <span class="ruby-ivar">@modules</span> = {
+    <span class="ruby-value">:before</span> <span class="ruby-operator">=&gt;</span> { <span class="ruby-keyword">true</span> <span class="ruby-operator">=&gt;</span> [], <span class="ruby-keyword">false</span> <span class="ruby-operator">=&gt;</span> [] }, <span class="ruby-comment"># before = include/extend</span>
+    <span class="ruby-value">:after</span>  <span class="ruby-operator">=&gt;</span> { <span class="ruby-keyword">true</span> <span class="ruby-operator">=&gt;</span> [], <span class="ruby-keyword">false</span> <span class="ruby-operator">=&gt;</span> [] }, <span class="ruby-comment"># after = prepend</span>
+  }
+  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+  <span class="ruby-ivar">@consts</span> = {}
+  <span class="ruby-ivar">@methods</span> = {}
+  <span class="ruby-ivar">@ivars</span> = <span class="ruby-constant">VarTable</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@cvars</span> = <span class="ruby-constant">VarTable</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@absolute_path</span> = <span class="ruby-identifier">absolute_path</span>
+  <span class="ruby-ivar">@namespace</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@superclass</span> = <span class="ruby-identifier">superclass</span>
+  <span class="ruby-ivar">@subclasses</span> = []
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-add_class_open" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_class_open</span><span
+                                class="method-args">(name, open_ep)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_class_open-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 404</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_class_open</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">open_ep</span>)
+  <span class="ruby-identifier">ty</span>, <span class="ruby-identifier">eps</span> = <span class="ruby-ivar">@consts</span>[<span class="ruby-identifier">name</span>]
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;call this only if the class is opened more than once&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-ivar">@consts</span>[<span class="ruby-identifier">name</span>] = [<span class="ruby-identifier">ty</span>, <span class="ruby-identifier">eps</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">open_ep</span>&amp;.<span class="ruby-identifier">detailed_source_location</span>]]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_constant" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_constant</span><span
+                                class="method-args">(name, ty, def_ep)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_constant-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 386</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_constant</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">ty</span>, <span class="ruby-identifier">def_ep</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@consts</span>[<span class="ruby-identifier">name</span>]
+    <span class="ruby-comment"># XXX: warn!</span>
+    <span class="ruby-identifier">_</span>, <span class="ruby-identifier">eps</span> = <span class="ruby-ivar">@consts</span>[<span class="ruby-identifier">name</span>]
+    <span class="ruby-ivar">@consts</span>[<span class="ruby-identifier">name</span>] = [<span class="ruby-identifier">ty</span>, <span class="ruby-identifier">eps</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">def_ep</span>&amp;.<span class="ruby-identifier">detailed_source_location</span>]]
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@consts</span>[<span class="ruby-identifier">name</span>] = [<span class="ruby-identifier">ty</span>, [<span class="ruby-identifier">def_ep</span>&amp;.<span class="ruby-identifier">detailed_source_location</span>]]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_method" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_method</span><span
+                                class="method-args">(mid, singleton, mdef)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_method-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 466</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_method</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mdef</span>)
+  <span class="ruby-ivar">@methods</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>]] <span class="ruby-operator">||=</span> <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">MutableSet</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@methods</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>]] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">mdef</span>
+  <span class="ruby-comment"># Need to restart...?</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-adjust_substitution" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">adjust_substitution</span><span
+                                class="method-args">(singleton, mid, mthd, subst, direct) { |subst, direct| ... }</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="adjust_substitution-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 424</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">adjust_substitution</span>(<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>, <span class="ruby-identifier">mthd</span>, <span class="ruby-identifier">subst</span>, <span class="ruby-identifier">direct</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-identifier">adjust_substitution_for_module</span>(<span class="ruby-ivar">@modules</span>[<span class="ruby-value">:before</span>][<span class="ruby-identifier">singleton</span>], <span class="ruby-identifier">mid</span>, <span class="ruby-identifier">mthd</span>, <span class="ruby-identifier">subst</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+
+  <span class="ruby-identifier">mthds</span> = <span class="ruby-ivar">@methods</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>]]
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">subst</span>, <span class="ruby-identifier">direct</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mthds</span>&amp;.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">mthd</span>)
+
+  <span class="ruby-identifier">adjust_substitution_for_module</span>(<span class="ruby-ivar">@modules</span>[<span class="ruby-value">:after</span>][<span class="ruby-identifier">singleton</span>], <span class="ruby-identifier">mid</span>, <span class="ruby-identifier">mthd</span>, <span class="ruby-identifier">subst</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-adjust_substitution_for_module" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">adjust_substitution_for_module</span><span
+                                class="method-args">(mods, mid, mthd, subst, &amp;blk)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="adjust_substitution_for_module-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 411</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">adjust_substitution_for_module</span>(<span class="ruby-identifier">mods</span>, <span class="ruby-identifier">mid</span>, <span class="ruby-identifier">mthd</span>, <span class="ruby-identifier">subst</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-identifier">mods</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">mod_def</span>, <span class="ruby-identifier">type_args</span>,<span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">mod_def</span>.<span class="ruby-identifier">klass_obj</span>.<span class="ruby-identifier">type_params</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">type_args</span>
+      <span class="ruby-identifier">subst2</span> = {}
+      <span class="ruby-identifier">mod_def</span>.<span class="ruby-identifier">klass_obj</span>.<span class="ruby-identifier">type_params</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">type_args</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">tyvar</span>, <span class="ruby-operator">*</span>), <span class="ruby-identifier">tyarg</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">tyvar</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Var</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tyvar</span>)
+        <span class="ruby-identifier">subst2</span>[<span class="ruby-identifier">tyvar</span>] = <span class="ruby-identifier">tyarg</span>.<span class="ruby-identifier">substitute</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-constant">Config</span>.<span class="ruby-identifier">current</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:type_depth_limit</span>])
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">mod_def</span>.<span class="ruby-identifier">adjust_substitution</span>(<span class="ruby-keyword">false</span>, <span class="ruby-identifier">mid</span>, <span class="ruby-identifier">mthd</span>, <span class="ruby-identifier">subst2</span>, <span class="ruby-keyword">false</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-check_typed" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">check_typed</span><span
+                                class="method-args">(mid, singleton, klass)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="check_typed-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 450</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_typed</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">klass</span>)
+  <span class="ruby-identifier">set</span> = <span class="ruby-ivar">@methods</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>]]
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">set</span>
+  <span class="ruby-identifier">set</span> = <span class="ruby-identifier">set</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">mdef</span><span class="ruby-operator">|</span> <span class="ruby-identifier">mdef</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-identifier">klass</span>) }
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">set</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">set</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-check_typed_attr" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">check_typed_attr</span><span
+                                class="method-args">(mid, singleton)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="check_typed_attr-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 462</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_typed_attr</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-identifier">singleton</span>)
+  <span class="ruby-identifier">check_typed</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-identifier">singleton</span>, <span class="ruby-constant">TypedAttrMethodDef</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-check_typed_method" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">check_typed_method</span><span
+                                class="method-args">(mid, singleton)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="check_typed_method-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 458</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_typed_method</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-identifier">singleton</span>)
+  <span class="ruby-identifier">check_typed</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-identifier">singleton</span>, <span class="ruby-constant">TypedMethodDef</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-consts" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">consts</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="consts-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 396</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">consts</span>
+  <span class="ruby-ivar">@consts</span>.<span class="ruby-identifier">lazy</span>.<span class="ruby-identifier">flat_map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, (<span class="ruby-identifier">ty</span>, <span class="ruby-identifier">eps</span>)<span class="ruby-operator">|</span>
+    <span class="ruby-identifier">eps</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ep</span><span class="ruby-operator">|</span>
+      [<span class="ruby-identifier">name</span>, [<span class="ruby-identifier">ty</span>, <span class="ruby-identifier">ep</span>]]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-get_constant" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">get_constant</span><span
+                                class="method-args">(name)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="get_constant-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_constant</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">ty</span>, <span class="ruby-identifier">locs</span> = <span class="ruby-ivar">@consts</span>[<span class="ruby-identifier">name</span>]
+  <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">ty</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">any</span> <span class="ruby-comment"># XXX: warn?</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">ty</span>, <span class="ruby-identifier">locs</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-mix_module" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">mix_module</span><span
+                                class="method-args">(kind, mod, type_args, singleton, absolute_path)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="mix_module-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 369</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">mix_module</span>(<span class="ruby-identifier">kind</span>, <span class="ruby-identifier">mod</span>, <span class="ruby-identifier">type_args</span>, <span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">absolute_path</span>)
+  <span class="ruby-identifier">mod_</span>, <span class="ruby-identifier">module_type_args</span>, <span class="ruby-identifier">absolute_paths</span> = <span class="ruby-ivar">@modules</span>[<span class="ruby-identifier">kind</span>][<span class="ruby-identifier">singleton</span>].<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">m</span>,<span class="ruby-operator">|</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">mod</span> }
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">mod_</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;inconsistent #{ kind == :after ? &quot;include/extend&quot; : &quot;prepend&quot; } type args in RBS?&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">module_type_args</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">type_args</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">type_args</span> <span class="ruby-operator">!=</span> [] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">type_args</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">absolute_paths</span> = <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">MutableSet</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-ivar">@modules</span>[<span class="ruby-identifier">kind</span>][<span class="ruby-identifier">singleton</span>].<span class="ruby-identifier">unshift</span>([<span class="ruby-identifier">mod</span>, <span class="ruby-identifier">type_args</span>, <span class="ruby-identifier">absolute_paths</span>])
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">absolute_paths</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">absolute_path</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-search_method" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">search_method</span><span
+                                class="method-args">(singleton, mid, visited) { |mthds, klass_obj, singleton| ... }</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="search_method-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 433</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">search_method</span>(<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>, <span class="ruby-identifier">visited</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-comment"># Currently, circular inclusion of modules is allowed</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">visited</span>[<span class="ruby-keyword">self</span>]
+  <span class="ruby-identifier">visited</span>[<span class="ruby-keyword">self</span>] = <span class="ruby-keyword">true</span>
+
+  <span class="ruby-ivar">@modules</span>[<span class="ruby-value">:before</span>][<span class="ruby-identifier">singleton</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">mod_def</span>,<span class="ruby-operator">|</span>
+    <span class="ruby-identifier">mod_def</span>.<span class="ruby-identifier">search_method</span>(<span class="ruby-keyword">false</span>, <span class="ruby-identifier">mid</span>, <span class="ruby-identifier">visited</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">mthds</span> = <span class="ruby-ivar">@methods</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>]]
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">mthds</span>, <span class="ruby-ivar">@klass_obj</span>, <span class="ruby-identifier">singleton</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">mthds</span>
+
+  <span class="ruby-ivar">@modules</span>[<span class="ruby-value">:after</span>][<span class="ruby-identifier">singleton</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">mod_def</span>,<span class="ruby-operator">|</span>
+    <span class="ruby-identifier">mod_def</span>.<span class="ruby-identifier">search_method</span>(<span class="ruby-keyword">false</span>, <span class="ruby-identifier">mid</span>, <span class="ruby-identifier">visited</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-set_method" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">set_method</span><span
+                                class="method-args">(mid, singleton, mdef)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="set_method-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/analyzer.rb, line 472</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">set_method</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mdef</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">mdef</span>
+    <span class="ruby-ivar">@methods</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>]] = <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">MutableSet</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-ivar">@methods</span>[[<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>]] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">mdef</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@methods</span>.<span class="ruby-identifier">delete</span>([<span class="ruby-identifier">singleton</span>, <span class="ruby-identifier">mid</span>])
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

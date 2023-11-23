@@ -1,0 +1,1 @@
+var search_data = {"index":{"searchIndex":["fcntl"],"longSearchIndex":["fcntl"],"info":[["Fcntl","","Fcntl.html","",""]]}}

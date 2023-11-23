@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Bundler::PubGrub::PartialSolution - bundler: Ruby Standard Library Documentation</title>
+
+
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
+
+<script src="../../js/jquery-3.2.0.min.js"></script>
+
+<script src="../../js/vue.min.js"></script>
+<script src="../../js/js.cookie.min.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../../css/rdoc.css" rel="stylesheet">
+<link href="../../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+  var darkModeCsseHref = "../../css/rdoc-dm.css"
+  var defaultModeCssHref = "../../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-add_assignment">#add_assignment</a>
+    <li ><a href="#method-i-backtrack">#backtrack</a>
+    <li ><a href="#method-i-decide">#decide</a>
+    <li ><a href="#method-i-decision_level">#decision_level</a>
+    <li ><a href="#method-i-derive">#derive</a>
+    <li ><a href="#method-i-relation">#relation</a>
+    <li ><a href="#method-i-reset-21">#reset!</a>
+    <li ><a href="#method-i-satisfier">#satisfier</a>
+    <li ><a href="#method-i-satisfies-3F">#satisfies?</a>
+    <li ><a href="#method-i-unsatisfied">#unsatisfied</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-Bundler::PubGrub::PartialSolution">
+    <h1 id="class-Bundler::PubGrub::PartialSolution" class="class">
+      class Bundler::PubGrub::PartialSolution
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-assignments" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">assignments</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-attempted_solutions" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">attempted_solutions</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-decisions" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">decisions</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>
+  <span class="ruby-identifier">reset!</span>
+
+  <span class="ruby-ivar">@attempted_solutions</span> = <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@backtracking</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-backtrack" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">backtrack</span><span
+                                class="method-args">(previous_level)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="backtrack-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">backtrack</span>(<span class="ruby-identifier">previous_level</span>)
+  <span class="ruby-ivar">@backtracking</span> = <span class="ruby-keyword">true</span>
+
+  <span class="ruby-identifier">new_assignments</span> = <span class="ruby-identifier">assignments</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assignment</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">assignment</span>.<span class="ruby-identifier">decision_level</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">previous_level</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">new_decisions</span> = <span class="ruby-constant">Hash</span>[<span class="ruby-identifier">decisions</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">previous_level</span>)]
+
+  <span class="ruby-identifier">reset!</span>
+
+  <span class="ruby-ivar">@decisions</span> = <span class="ruby-identifier">new_decisions</span>
+
+  <span class="ruby-identifier">new_assignments</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assignment</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">add_assignment</span>(<span class="ruby-identifier">assignment</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-decide" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">decide</span><span
+                                class="method-args">(package, version)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="decide-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 53</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">decide</span>(<span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>)
+  <span class="ruby-ivar">@attempted_solutions</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@backtracking</span>
+  <span class="ruby-ivar">@backtracking</span> = <span class="ruby-keyword">false</span>;
+
+  <span class="ruby-identifier">decisions</span>[<span class="ruby-identifier">package</span>] = <span class="ruby-identifier">version</span>
+  <span class="ruby-identifier">assignment</span> = <span class="ruby-constant">Assignment</span>.<span class="ruby-identifier">decision</span>(<span class="ruby-identifier">package</span>, <span class="ruby-identifier">version</span>, <span class="ruby-identifier">decision_level</span>, <span class="ruby-identifier">assignments</span>.<span class="ruby-identifier">length</span>)
+  <span class="ruby-identifier">add_assignment</span>(<span class="ruby-identifier">assignment</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-decision_level" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">decision_level</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="decision_level-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">decision_level</span>
+  <span class="ruby-ivar">@decisions</span>.<span class="ruby-identifier">length</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-derive" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">derive</span><span
+                                class="method-args">(term, cause)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="derive-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">derive</span>(<span class="ruby-identifier">term</span>, <span class="ruby-identifier">cause</span>)
+  <span class="ruby-identifier">add_assignment</span>(<span class="ruby-constant">Assignment</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">term</span>, <span class="ruby-identifier">cause</span>, <span class="ruby-identifier">decision_level</span>, <span class="ruby-identifier">assignments</span>.<span class="ruby-identifier">length</span>))
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-relation" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">relation</span><span
+                                class="method-args">(term)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="relation-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">relation</span>(<span class="ruby-identifier">term</span>)
+  <span class="ruby-identifier">package</span> = <span class="ruby-identifier">term</span>.<span class="ruby-identifier">package</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-value">:overlap</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@terms</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">package</span>)
+
+  <span class="ruby-ivar">@relation_cache</span>[<span class="ruby-identifier">package</span>][<span class="ruby-identifier">term</span>] <span class="ruby-operator">||=</span>
+    <span class="ruby-ivar">@terms</span>[<span class="ruby-identifier">package</span>].<span class="ruby-identifier">relation</span>(<span class="ruby-identifier">term</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-satisfier" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">satisfier</span><span
+                                class="method-args">(term)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="satisfier-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">satisfier</span>(<span class="ruby-identifier">term</span>)
+  <span class="ruby-identifier">assignment</span> =
+    <span class="ruby-ivar">@assignments_by</span>[<span class="ruby-identifier">term</span>.<span class="ruby-identifier">package</span>].<span class="ruby-identifier">bsearch</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">assignment_by</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@cumulative_assignments</span>[<span class="ruby-identifier">assignment_by</span>].<span class="ruby-identifier">satisfies?</span>(<span class="ruby-identifier">term</span>)
+    <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">assignment</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">raise</span>(<span class="ruby-node">&quot;#{term} unsatisfied&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-satisfies-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">satisfies?</span><span
+                                class="method-args">(term)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="satisfies-3F-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">satisfies?</span>(<span class="ruby-identifier">term</span>)
+  <span class="ruby-identifier">relation</span>(<span class="ruby-identifier">term</span>) <span class="ruby-operator">==</span> <span class="ruby-value">:subset</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-unsatisfied" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">unsatisfied</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>A list of unsatisfied terms</p>
+
+                              <div class="method-source-code" id="unsatisfied-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">unsatisfied</span>
+  <span class="ruby-ivar">@required</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">reject</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">package</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@decisions</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">package</span>)
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">package</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@terms</span>[<span class="ruby-identifier">package</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-add_assignment" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_assignment</span><span
+                                class="method-args">(assignment)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_assignment-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_assignment</span>(<span class="ruby-identifier">assignment</span>)
+  <span class="ruby-identifier">term</span> = <span class="ruby-identifier">assignment</span>.<span class="ruby-identifier">term</span>
+  <span class="ruby-identifier">package</span> = <span class="ruby-identifier">term</span>.<span class="ruby-identifier">package</span>
+
+  <span class="ruby-ivar">@assignments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">assignment</span>
+  <span class="ruby-ivar">@assignments_by</span>[<span class="ruby-identifier">package</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">assignment</span>
+
+  <span class="ruby-ivar">@required</span>[<span class="ruby-identifier">package</span>] = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">term</span>.<span class="ruby-identifier">positive?</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@terms</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">package</span>)
+    <span class="ruby-identifier">old_term</span> = <span class="ruby-ivar">@terms</span>[<span class="ruby-identifier">package</span>]
+    <span class="ruby-ivar">@terms</span>[<span class="ruby-identifier">package</span>] = <span class="ruby-identifier">old_term</span>.<span class="ruby-identifier">intersect</span>(<span class="ruby-identifier">term</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@terms</span>[<span class="ruby-identifier">package</span>] = <span class="ruby-identifier">term</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@relation_cache</span>[<span class="ruby-identifier">package</span>].<span class="ruby-identifier">clear</span>
+
+  <span class="ruby-ivar">@cumulative_assignments</span>[<span class="ruby-identifier">assignment</span>] = <span class="ruby-ivar">@terms</span>[<span class="ruby-identifier">package</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-reset-21" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">reset!</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="reset-21-source">
+            <pre><span class="ruby-comment"># File bundler/vendor/pub_grub/lib/pub_grub/partial_solution.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">reset!</span>
+  <span class="ruby-comment"># { Array&lt;Assignment&gt; }</span>
+  <span class="ruby-ivar">@assignments</span> = []
+
+  <span class="ruby-comment"># { Package =&gt; Array&lt;Assignment&gt; }</span>
+  <span class="ruby-ivar">@assignments_by</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>,<span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = [] }
+  <span class="ruby-ivar">@cumulative_assignments</span> = {}.<span class="ruby-identifier">compare_by_identity</span>
+
+  <span class="ruby-comment"># { Package =&gt; Package::Version }</span>
+  <span class="ruby-ivar">@decisions</span> = {}
+
+  <span class="ruby-comment"># { Package =&gt; Term }</span>
+  <span class="ruby-ivar">@terms</span> = {}
+  <span class="ruby-ivar">@relation_cache</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>,<span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = {} }
+
+  <span class="ruby-comment"># { Package =&gt; Boolean }</span>
+  <span class="ruby-ivar">@required</span> = {}
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

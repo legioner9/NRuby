@@ -1,0 +1,16 @@
+Thu, 14 Sep 2023 20:29:25 -0700
+uri.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/common.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/file.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/ftp.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/generic.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/http.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/https.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/ldap.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/ldaps.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/mailto.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/rfc2396_parser.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/rfc3986_parser.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/version.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/ws.rb	Wed, 13 Sep 2023 18:09:33 -0700
+uri/wss.rb	Wed, 13 Sep 2023 18:09:33 -0700

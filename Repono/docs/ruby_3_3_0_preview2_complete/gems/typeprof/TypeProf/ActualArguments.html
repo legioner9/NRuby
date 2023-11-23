@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class TypeProf::ActualArguments - typeprof: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-argument_error">#argument_error</a>
+    <li ><a href="#method-i-consistent_with_method_signature-3F">#consistent_with_method_signature?</a>
+    <li ><a href="#method-i-for_method_missing">#for_method_missing</a>
+    <li ><a href="#method-i-globalize">#globalize</a>
+    <li ><a href="#method-i-limit_size">#limit_size</a>
+    <li ><a href="#method-i-setup_formal_arguments">#setup_formal_arguments</a>
+    <li ><a href="#method-i-to_block_signature">#to_block_signature</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-TypeProf::ActualArguments">
+    <h1 id="class-TypeProf::ActualArguments" class="class">
+      class TypeProf::ActualArguments
+    </h1>
+
+    <section class="description">
+    
+<p>Arguments from caller side</p>
+
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-blk_ty" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">blk_ty</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-kw_tys" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">kw_tys</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-lead_tys" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">lead_tys</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-node_id" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">node_id</span><span
+                class="attribute-access-type">[RW]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-rest_ty" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">rest_ty</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">(lead_tys, rest_ty, kw_tys, blk_ty)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/arguments.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">lead_tys</span>, <span class="ruby-identifier">rest_ty</span>, <span class="ruby-identifier">kw_tys</span>, <span class="ruby-identifier">blk_ty</span>)
+  <span class="ruby-ivar">@lead_tys</span> = <span class="ruby-identifier">lead_tys</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">lead_tys</span>
+  <span class="ruby-ivar">@rest_ty</span> = <span class="ruby-identifier">rest_ty</span>
+  <span class="ruby-ivar">@kw_tys</span> = <span class="ruby-identifier">kw_tys</span> <span class="ruby-comment"># kw_tys should be {:key1 =&gt; Type, :key2 =&gt; Type, ...} or {nil =&gt; Type}</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">kw_tys</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Hash</span>)
+  <span class="ruby-ivar">@blk_ty</span> = <span class="ruby-identifier">blk_ty</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">blk_ty</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-argument_error" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">argument_error</span><span
+                                class="method-args">(given, exp_lower, exp_upper)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="argument_error-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/arguments.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">argument_error</span>(<span class="ruby-identifier">given</span>, <span class="ruby-identifier">exp_lower</span>, <span class="ruby-identifier">exp_upper</span>)
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">!</span><span class="ruby-identifier">exp_upper</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">exp</span> = <span class="ruby-node">&quot;#{ exp_lower }+&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">exp_lower</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">exp_upper</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">exp</span> = <span class="ruby-node">&quot;#{ exp_lower }&quot;</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-identifier">exp</span> = <span class="ruby-node">&quot;#{ exp_lower }..#{ exp_upper }&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-node">&quot;wrong number of arguments (given #{ given }, expected #{ exp })&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-consistent_with_method_signature-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">consistent_with_method_signature?</span><span
+                                class="method-args">(msig)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="consistent_with_method_signature-3F-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/arguments.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">consistent_with_method_signature?</span>(<span class="ruby-identifier">msig</span>)
+  <span class="ruby-identifier">aargs</span> = <span class="ruby-ivar">@lead_tys</span>.<span class="ruby-identifier">dup</span>
+
+  <span class="ruby-comment"># aargs: lead_tys, rest_ty</span>
+  <span class="ruby-comment"># msig: lead_tys, opt_tys, rest_ty, post_tys</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rest_ty</span>
+    <span class="ruby-identifier">lower_bound</span> = [<span class="ruby-value">0</span>, <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">post_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">max</span>
+    <span class="ruby-identifier">upper_bound</span> = [<span class="ruby-value">0</span>, <span class="ruby-identifier">lower_bound</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">opt_tys</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">max</span>
+    (<span class="ruby-identifier">lower_bound</span><span class="ruby-operator">..</span><span class="ruby-identifier">upper_bound</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment"># BUG: @rest_ty is an Array, so need to squash</span>
+      <span class="ruby-identifier">tmp_aargs</span> = <span class="ruby-constant">ActualArguments</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@lead_tys</span> <span class="ruby-operator">+</span> [<span class="ruby-ivar">@rest_ty</span>] <span class="ruby-operator">*</span> <span class="ruby-identifier">n</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@kw_tys</span>, <span class="ruby-ivar">@blk_ty</span>)
+      <span class="ruby-identifier">subst</span> = <span class="ruby-identifier">tmp_aargs</span>.<span class="ruby-identifier">consistent_with_method_signature?</span>(<span class="ruby-identifier">msig</span>) <span class="ruby-comment"># XXX: wrong subst handling in the loop!</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">subst</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">subst</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">subst</span> = {}
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">rest_ty</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">post_tys</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">shift</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">lead_tys</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span>)
+      <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">pop</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">post_tys</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">post_tys</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span>)
+      <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">opt_tys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">farg</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">aarg</span> = <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span>)
+      <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aarg</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">rest_ty</span>)
+      <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">post_tys</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">post_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">opt_tys</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">shift</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">lead_tys</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span>)
+      <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">pop</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">post_tys</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">post_tys</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span>)
+      <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">aargs</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">msig</span>.<span class="ruby-identifier">opt_tys</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">aarg</span>, <span class="ruby-identifier">farg</span>)
+      <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># XXX: msig.keyword_tys</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">msig</span>.<span class="ruby-identifier">blk_ty</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Proc</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@blk_ty</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@blk_ty</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Any</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;unknown type of formal block signature&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">subst</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-for_method_missing" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">for_method_missing</span><span
+                                class="method-args">(mid)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="for_method_missing-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/arguments.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">for_method_missing</span>(<span class="ruby-identifier">mid</span>)
+  <span class="ruby-constant">ActualArguments</span>.<span class="ruby-identifier">new</span>([<span class="ruby-identifier">mid</span>] <span class="ruby-operator">+</span> <span class="ruby-ivar">@lead_tys</span>, <span class="ruby-ivar">@rest_ty</span>, <span class="ruby-ivar">@kw_tys</span>, <span class="ruby-ivar">@blk_ty</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-globalize" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">globalize</span><span
+                                class="method-args">(caller_env, visited, depth)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="globalize-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/arguments.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">globalize</span>(<span class="ruby-identifier">caller_env</span>, <span class="ruby-identifier">visited</span>, <span class="ruby-identifier">depth</span>)
+  <span class="ruby-identifier">lead_tys</span> = <span class="ruby-ivar">@lead_tys</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">globalize</span>(<span class="ruby-identifier">caller_env</span>, <span class="ruby-identifier">visited</span>, <span class="ruby-identifier">depth</span>) }
+  <span class="ruby-identifier">rest_ty</span> = <span class="ruby-ivar">@rest_ty</span>.<span class="ruby-identifier">globalize</span>(<span class="ruby-identifier">caller_env</span>, <span class="ruby-identifier">visited</span>, <span class="ruby-identifier">depth</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rest_ty</span>
+  <span class="ruby-identifier">kw_tys</span> = <span class="ruby-ivar">@kw_tys</span>.<span class="ruby-identifier">to_h</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span>
+    [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">globalize</span>(<span class="ruby-identifier">caller_env</span>, <span class="ruby-identifier">visited</span>, <span class="ruby-identifier">depth</span>)]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">ActualArguments</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lead_tys</span>, <span class="ruby-identifier">rest_ty</span>, <span class="ruby-identifier">kw_tys</span>, <span class="ruby-ivar">@blk_ty</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-limit_size" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">limit_size</span><span
+                                class="method-args">(limit)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="limit_size-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/arguments.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">limit_size</span>(<span class="ruby-identifier">limit</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-setup_formal_arguments" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">setup_formal_arguments</span><span
+                                class="method-args">(kind, locals, fargs_format)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="setup_formal_arguments-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/arguments.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setup_formal_arguments</span>(<span class="ruby-identifier">kind</span>, <span class="ruby-identifier">locals</span>, <span class="ruby-identifier">fargs_format</span>)
+  <span class="ruby-identifier">lead_num</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:lead_num</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">post_num</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:post_num</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">post_index</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:post_start</span>]
+  <span class="ruby-identifier">rest_index</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:rest_start</span>]
+  <span class="ruby-identifier">keyword</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:keyword</span>]
+  <span class="ruby-identifier">kw_index</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:kwbits</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">keyword</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">keyword</span>
+  <span class="ruby-identifier">kwrest_index</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:kwrest</span>]
+  <span class="ruby-identifier">block_index</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:block_start</span>]
+  <span class="ruby-identifier">opt</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:opt</span>] <span class="ruby-operator">||</span> [<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">ambiguous_param0</span> = <span class="ruby-identifier">fargs_format</span>[<span class="ruby-value">:ambiguous_param0</span>]
+
+  <span class="ruby-identifier">lead_tys</span> = <span class="ruby-ivar">@lead_tys</span>
+  <span class="ruby-identifier">rest_ty</span> = <span class="ruby-ivar">@rest_ty</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:block</span>
+    <span class="ruby-comment"># The rule of passing arguments to block:</span>
+    <span class="ruby-comment">#</span>
+    <span class="ruby-comment"># Let A is actual arguments and F is formal arguments.</span>
+    <span class="ruby-comment"># If F is NOT ambiguous_param0, and if length(A) == 1, and if A[0] is an Array,</span>
+    <span class="ruby-comment"># then replace A with A[0]. And then, F[i] = A[i] for all 0 &lt;= i &lt; length(F).</span>
+
+    <span class="ruby-comment"># Handling the special case</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">ambiguous_param0</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">rest_ty</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@kw_tys</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-comment"># length(A) == 1</span>
+        <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">lead_tys</span>[<span class="ruby-value">0</span>]
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">ty</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>
+          <span class="ruby-identifier">lead_tys</span> = <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">lead_tys</span>
+          <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">rest_ty</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">elems</span>
+            <span class="ruby-identifier">other_elems</span> = {}
+            <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">container_kind</span>, <span class="ruby-identifier">base_type</span>), <span class="ruby-identifier">elems</span><span class="ruby-operator">|</span>
+              <span class="ruby-keyword">if</span> <span class="ruby-identifier">container_kind</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>
+                <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">rest_ty</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">rest_ty</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">squash</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">elems</span>.<span class="ruby-identifier">squash</span>
+              <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">other_elems</span>[[<span class="ruby-identifier">container_kind</span>, <span class="ruby-identifier">base_type</span>]] = <span class="ruby-identifier">elems</span>
+              <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+          <span class="ruby-identifier">lead_tys</span> = [<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ty</span>.<span class="ruby-identifier">types</span>, <span class="ruby-identifier">other_elems</span>)]
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Normal case: copy actual args to formal args</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">rest_ty</span>
+    <span class="ruby-identifier">ty</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">bot</span>
+    <span class="ruby-identifier">additional_lead_size</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">rest_ty</span>.<span class="ruby-identifier">each_child_global</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ty0</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty0</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>)
+        <span class="ruby-identifier">additional_lead_size</span> = [<span class="ruby-identifier">additional_lead_size</span>, <span class="ruby-identifier">ty0</span>.<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">min</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">additional_lead_size</span> = <span class="ruby-value">0</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">additional_lead_tys</span> = [<span class="ruby-constant">Type</span>.<span class="ruby-identifier">bot</span>] <span class="ruby-operator">*</span> (<span class="ruby-identifier">additional_lead_size</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>)
+    <span class="ruby-identifier">rest_ty</span>.<span class="ruby-identifier">each_child_global</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ty0</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty0</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>)
+        <span class="ruby-identifier">tys</span>, <span class="ruby-identifier">new_rest_ty</span> = <span class="ruby-identifier">ty0</span>.<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">take_first</span>(<span class="ruby-identifier">additional_lead_size</span>)
+        <span class="ruby-identifier">tys</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ty00</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">additional_lead_tys</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">additional_lead_tys</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">union</span>(<span class="ruby-identifier">ty00</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">new_rest_ty</span>.<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">squash</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment"># XXX: to_ary?</span>
+        <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">ty0</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">lead_tys</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">additional_lead_tys</span>
+    <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">ty</span>
+
+    <span class="ruby-comment"># XXX: Strictly speaking, this is needed, but it brings false positives. Which is better?</span>
+    <span class="ruby-comment">#rest_ty = rest_ty.union(Type.nil)</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">rest_index</span>
+      <span class="ruby-comment"># foo(a0, a1, a2, ...(rest_ty)) --&gt;</span>
+      <span class="ruby-comment">#            def foo(l0, l1, o0=, o1=, *rest, p0, p1)</span>
+      <span class="ruby-comment"># lead_ty argc == 0:  -   -   -    -      -    -   -</span>
+      <span class="ruby-comment"># lead_ty argc == 1: a0   -   -    -      -    -   -</span>
+      <span class="ruby-comment"># lead_ty argc == 2: a0  a1   -    -      -    -   -</span>
+      <span class="ruby-comment"># lead_ty argc == 3: a0  a1   -    -      -   a2   -</span>
+      <span class="ruby-comment"># lead_ty argc == 4: a0  a1   -    -      -   a2  a3</span>
+      <span class="ruby-comment"># lead_ty argc == 5: a0  a1  a2    -      -   a3  a4</span>
+      <span class="ruby-comment"># lead_ty argc == 6: a0  a1  a2   a3      -   a4  a5</span>
+      <span class="ruby-comment"># lead_ty argc == 7: a0  a1  a2   a3    a4    a5  a6</span>
+      <span class="ruby-comment"># lead_ty argc == 8: a0  a1  a2   a3    a4|a5 a6  a7</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># l0   = a0</span>
+      <span class="ruby-comment"># l1   = a1</span>
+      <span class="ruby-comment"># o0   = a2</span>
+      <span class="ruby-comment"># o1   = a3</span>
+      <span class="ruby-comment"># rest = a4|a5|...|rest_ty (= cum_lead_tys[4])</span>
+      <span class="ruby-comment"># p0   = a2|a3|...|rest_ty (= cum_lead_tys[2])</span>
+      <span class="ruby-comment"># p1   = a3|a4|...|rest_ty (= cum_lead_tys[3])</span>
+
+      <span class="ruby-identifier">cum_lead_tys</span> = []
+      <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">rest_ty</span>
+      <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ty0</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">cum_lead_tys</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">ty</span> = <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">ty0</span>))
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># l1, l2, o1, o2</span>
+      (<span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">rest_ty</span> }
+      <span class="ruby-identifier">opt_count</span> = <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+
+      <span class="ruby-comment"># rest</span>
+      <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">cum_lead_tys</span>[<span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">rest_ty</span>
+      <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">rest_index</span>] = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">new</span>([], <span class="ruby-identifier">ty</span>), <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:ary</span>]))
+
+      <span class="ruby-comment"># p0, p1</span>
+      <span class="ruby-identifier">off</span> = [<span class="ruby-identifier">lead_num</span>, <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">post_num</span>].<span class="ruby-identifier">max</span>
+      <span class="ruby-identifier">post_num</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">post_index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] = <span class="ruby-identifier">cum_lead_tys</span>[<span class="ruby-identifier">off</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">rest_ty</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># foo(a0, a1, a2, ...(rest_ty)) --&gt;</span>
+      <span class="ruby-comment">#            def foo(l0, l1, o0=, o1=, p0, p1)</span>
+      <span class="ruby-comment"># lead_ty argc == 0:  -   -   -    -    -   -</span>
+      <span class="ruby-comment"># lead_ty argc == 1: a0   -   -    -    -   -</span>
+      <span class="ruby-comment"># lead_ty argc == 2: a0  a1   -    -    -   -</span>
+      <span class="ruby-comment"># lead_ty argc == 3: a0  a1   -    -   a2   -</span>
+      <span class="ruby-comment"># lead_ty argc == 4: a0  a1   -    -   a2  a3</span>
+      <span class="ruby-comment"># lead_ty argc == 5: a0  a1  a2    -   a3  a4</span>
+      <span class="ruby-comment"># lead_ty argc == 6: a0  a1  a2   a3   a4  a5</span>
+      <span class="ruby-comment"># lead_ty argc == 7: a0  a1  a2   a3   a4  a5 (if there is a6, report error if kind is method, or ignore if kind is block)</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># l0 = a0</span>
+      <span class="ruby-comment"># l1 = a1</span>
+      <span class="ruby-comment"># o0 = a2</span>
+      <span class="ruby-comment"># o1 = a3</span>
+      <span class="ruby-comment"># p0 = a2|a3|a4</span>
+      <span class="ruby-comment"># p1 = a3|a4|a5</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:method</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">argument_error</span>(<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span>, <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span>, <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># l1, l2, o1, o2</span>
+      (<span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">rest_ty</span> }
+      <span class="ruby-identifier">opt_count</span> = <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+
+      <span class="ruby-comment"># p0, p1</span>
+      <span class="ruby-identifier">post_num</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">candidates</span> = <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">lead_num</span>, <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span>] <span class="ruby-operator">||</span> []
+        <span class="ruby-identifier">candidates</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rest_ty</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">candidates</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span>
+        <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">post_index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] = <span class="ruby-identifier">candidates</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-operator">&amp;</span><span class="ruby-value">:union</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">rest_index</span>
+      <span class="ruby-comment"># foo(a0, a1, a2) --&gt;</span>
+      <span class="ruby-comment">#            def foo(l0, l1, o0=, o1=, *rest, p0, p1)</span>
+      <span class="ruby-comment"># lead_ty argc == 0:  -   -   -    -      -    -   - (error if kind is method)</span>
+      <span class="ruby-comment"># lead_ty argc == 1: a0   -   -    -      -    -   - (error if kind is method)</span>
+      <span class="ruby-comment"># lead_ty argc == 2: a0  a1   -    -      -    -   - (error if kind is method)</span>
+      <span class="ruby-comment"># lead_ty argc == 3: a0  a1   -    -      -   a2   - (error if kind is method)</span>
+      <span class="ruby-comment"># lead_ty argc == 4: a0  a1   -    -      -   a2  a3</span>
+      <span class="ruby-comment"># lead_ty argc == 5: a0  a1  a2    -      -   a3  a4</span>
+      <span class="ruby-comment"># lead_ty argc == 6: a0  a1  a2   a3      -   a4  a5</span>
+      <span class="ruby-comment"># lead_ty argc == 7: a0  a1  a2   a3    a4    a5  a6</span>
+      <span class="ruby-comment"># lead_ty argc == 8: a0  a1  a2   a3    a4|a5 a6  a7</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># len(a) &lt; 4 -&gt; error</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># l0   = a0</span>
+      <span class="ruby-comment"># l1   = a1</span>
+      <span class="ruby-comment"># o0   = a2</span>
+      <span class="ruby-comment"># o1   = a3</span>
+      <span class="ruby-comment"># rest = a4|a5|...|a[[4,len(a)-3].max]</span>
+      <span class="ruby-comment"># p0   = a[[2,len(a)-2].max]</span>
+      <span class="ruby-comment"># p1   = a[[3,len(a)-1].max]</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:method</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">argument_error</span>(<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span>, <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span>, <span class="ruby-keyword">nil</span>)
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># l0, l1</span>
+      <span class="ruby-identifier">lead_num</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span> }
+
+      <span class="ruby-comment"># o0, o1</span>
+      <span class="ruby-identifier">opt_count</span> = (<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">post_num</span>).<span class="ruby-identifier">clamp</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+      (<span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] = <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">opt_count</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] <span class="ruby-operator">:</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span> }
+
+      <span class="ruby-comment"># rest</span>
+      <span class="ruby-identifier">rest_b</span> = <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt_count</span>
+      <span class="ruby-identifier">rest_e</span> = [<span class="ruby-value">0</span>, <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">post_num</span>].<span class="ruby-identifier">max</span>
+      <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">rest_index</span>] = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">rest_b</span><span class="ruby-operator">...</span><span class="ruby-identifier">rest_e</span>] <span class="ruby-operator">||</span> [], <span class="ruby-constant">Type</span>.<span class="ruby-identifier">bot</span>), <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:ary</span>]))
+
+      <span class="ruby-comment"># p0, p1</span>
+      <span class="ruby-identifier">off</span> = [<span class="ruby-identifier">lead_num</span>, <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">post_num</span>].<span class="ruby-identifier">max</span>
+      <span class="ruby-identifier">post_num</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">post_index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] = <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">off</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span> }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># yield a0, a1, a2 --&gt;</span>
+      <span class="ruby-comment">#                do |l0, l1, o0=, o1=, p0, p1|</span>
+      <span class="ruby-comment"># lead_ty argc == 0:  -   -   -    -    -   - (error if kind is method)</span>
+      <span class="ruby-comment"># lead_ty argc == 1: a0   -   -    -    -   - (error if kind is method)</span>
+      <span class="ruby-comment"># lead_ty argc == 2: a0  a1   -    -    -   - (error if kind is method)</span>
+      <span class="ruby-comment"># lead_ty argc == 3: a0  a1   -    -   a2   - (error if kind is method)</span>
+      <span class="ruby-comment"># lead_ty argc == 4: a0  a1   -    -   a2  a3</span>
+      <span class="ruby-comment"># lead_ty argc == 5: a0  a1  a2    -   a3  a4</span>
+      <span class="ruby-comment"># lead_ty argc == 6: a0  a1  a2   a3   a4  a5</span>
+      <span class="ruby-comment"># lead_ty argc == 7: a0  a1  a2   a3   a4  a5 (if there is a6, report error if kind is method, or ignore if kind is block)</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># l0 = a0</span>
+      <span class="ruby-comment"># l1 = a1</span>
+      <span class="ruby-comment"># o0 = a2</span>
+      <span class="ruby-comment"># o1 = a3</span>
+      <span class="ruby-comment"># p0 = a2|a3|a4</span>
+      <span class="ruby-comment"># p1 = a3|a4|a5</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:method</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">argument_error</span>(<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span>, <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span>, <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">post_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># l0, l1</span>
+      <span class="ruby-identifier">lead_num</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span> }
+
+      <span class="ruby-comment"># o0, o1</span>
+      <span class="ruby-identifier">opt_count</span> = (<span class="ruby-identifier">lead_tys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">post_num</span>).<span class="ruby-identifier">clamp</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+      (<span class="ruby-identifier">opt</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] = <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">opt_count</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] <span class="ruby-operator">:</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span> }
+
+      <span class="ruby-comment"># p0, p1</span>
+      <span class="ruby-identifier">off</span> = <span class="ruby-identifier">lead_num</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">opt_count</span>
+      <span class="ruby-identifier">post_num</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">post_index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] = <span class="ruby-identifier">lead_tys</span>[<span class="ruby-identifier">off</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">kw_tys</span> = <span class="ruby-ivar">@kw_tys</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">keyword</span>
+    <span class="ruby-identifier">keyword</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">kw</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">case</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">kw</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-comment"># required keyword</span>
+        <span class="ruby-identifier">key</span> = <span class="ruby-identifier">kw</span>
+        <span class="ruby-identifier">req</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-identifier">kw</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span> <span class="ruby-comment"># optional keyword (default value is a literal)</span>
+        <span class="ruby-identifier">key</span>, <span class="ruby-identifier">default_ty</span> = <span class="ruby-operator">*</span><span class="ruby-identifier">kw</span>
+        <span class="ruby-identifier">default_ty</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">guess_literal_type</span>(<span class="ruby-identifier">default_ty</span>)
+        <span class="ruby-identifier">default_ty</span> = <span class="ruby-identifier">default_ty</span>.<span class="ruby-identifier">base_type</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">default_ty</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>)
+        <span class="ruby-identifier">req</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">else</span> <span class="ruby-comment"># optional keyword (default value is an expression)</span>
+        <span class="ruby-identifier">key</span>, = <span class="ruby-identifier">kw</span>
+        <span class="ruby-identifier">req</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">kw_tys</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">key</span>)
+        <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">kw_tys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">kw_tys</span>[<span class="ruby-keyword">nil</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">bot</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">bot</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">req</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-string">&quot;no argument for required keywords&quot;</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">default_ty</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">default_ty</span>
+      <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">kw_index</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>] = <span class="ruby-identifier">ty</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">kwrest_index</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">kw_tys</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-keyword">nil</span>)
+      <span class="ruby-identifier">kw_rest_ty</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">gen_hash</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-constant">Type</span>.<span class="ruby-identifier">any</span>] = <span class="ruby-identifier">kw_tys</span>[<span class="ruby-keyword">nil</span>] }
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">kw_rest_ty</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">gen_hash</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">kw_tys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">sym</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Symbol</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">key</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:sym</span>]))
+          <span class="ruby-identifier">h</span>[<span class="ruby-identifier">sym</span>] = <span class="ruby-identifier">ty</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">kwrest_index</span>] = <span class="ruby-identifier">kw_rest_ty</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">kw_tys</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-node">&quot;unknown keyword: #{ kw_tys.keys.join(&quot;, &quot;) }&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_index</span>
+    <span class="ruby-identifier">locals</span>[<span class="ruby-identifier">block_index</span>] = <span class="ruby-ivar">@blk_ty</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">start_pcs</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">opt_count</span>]
+
+  <span class="ruby-keyword">return</span> <span class="ruby-ivar">@blk_ty</span>, <span class="ruby-identifier">start_pcs</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-to_block_signature" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">to_block_signature</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="to_block_signature-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/arguments.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_block_signature</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rest_ty</span>
+    <span class="ruby-identifier">rest_ty</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">bot</span>
+    <span class="ruby-ivar">@rest_ty</span>.<span class="ruby-identifier">each_child_global</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ty</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>)
+        <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">rest_ty</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">ty</span>.<span class="ruby-identifier">elems</span>.<span class="ruby-identifier">squash</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment"># XXX: to_ary?</span>
+        <span class="ruby-identifier">rest_ty</span> = <span class="ruby-identifier">rest_ty</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">ty</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">BlockSignature</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@lead_tys</span>, [], <span class="ruby-identifier">rest_ty</span>, <span class="ruby-ivar">@blk_ty</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>. </p><p><a href="https://jamesbritt.bandcamp.com/">Hack your world.  Feed your head.  Live curious</a>.</p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class TCPSocket - socket: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="./index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="IPSocket.html">IPSocket</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-gethostbyname">::gethostbyname</a>
+    <li ><a href="#method-c-new">::new</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-TCPSocket">
+    <h1 id="class-TCPSocket" class="class">
+      class TCPSocket
+    </h1>
+
+    <section class="description">
+    
+<p><a href="TCPSocket.html"><code>TCPSocket</code></a> represents a TCP/IP client socket.</p>
+
+<p>A simple client may look like:</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;socket&#39;</span>
+
+<span class="ruby-identifier">s</span> = <span class="ruby-constant">TCPSocket</span>.<span class="ruby-identifier">new</span> <span class="ruby-string">&#39;localhost&#39;</span>, <span class="ruby-value">2000</span>
+
+<span class="ruby-keyword">while</span> <span class="ruby-identifier">line</span> = <span class="ruby-identifier">s</span>.<span class="ruby-identifier">gets</span> <span class="ruby-comment"># Read lines from socket</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">line</span>         <span class="ruby-comment"># and print them</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">s</span>.<span class="ruby-identifier">close</span>             <span class="ruby-comment"># close socket when done</span>
+</pre>
+
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-gethostbyname" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          gethostbyname(hostname) &rarr; [official_hostname, alias_hostnames, address_family, *address_list]
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Use <a href="Addrinfo.html#method-c-getaddrinfo"><code>Addrinfo.getaddrinfo</code></a> instead. This method is deprecated for the following reasons:</p>
+<ul><li>
+<p>The 3rd element of the result is the address family of the first address. The address families of the rest of the addresses are not returned.</p>
+</li><li>
+<p>gethostbyname() may take a long time and it may block other threads. (GVL cannot be released since gethostbyname() is not thread safe.)</p>
+</li><li>
+<p>This method uses gethostbyname() function already removed from POSIX.</p>
+</li></ul>
+
+<p>This method lookups host information by <em>hostname</em>.</p>
+
+<pre class="ruby"><span class="ruby-constant">TCPSocket</span>.<span class="ruby-identifier">gethostbyname</span>(<span class="ruby-string">&quot;localhost&quot;</span>)
+<span class="ruby-comment">#=&gt; [&quot;localhost&quot;, [&quot;hal&quot;], 2, &quot;127.0.0.1&quot;]</span>
+</pre>
+
+                              <div class="method-source-code" id="gethostbyname-source">
+            <pre>static VALUE
+tcp_s_gethostbyname(VALUE obj, VALUE host)
+{
+    rb_warn(&quot;TCPSocket.gethostbyname is deprecated; use Addrinfo.getaddrinfo instead.&quot;);
+    struct rb_addrinfo *res =
+        rsock_addrinfo(host, Qnil, AF_UNSPEC, SOCK_STREAM, AI_CANONNAME);
+    return rsock_make_hostent(host, res, tcp_sockaddr);
+}</pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-new" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          new(remote_host, remote_port, local_host=nil, local_port=nil, connect_timeout: nil)
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Opens a TCP connection to <code>remote_host</code> on <code>remote_port</code>.  If <code>local_host</code> and <code>local_port</code> are specified, then those parameters are used on the local end to establish the connection.</p>
+<dl class="rdoc-list label-list"><dt>:connect_timeout
+<dd>
+<p>specify the timeout in seconds.</p>
+</dd></dl>
+
+                              <div class="method-source-code" id="new-source">
+            <pre>static VALUE
+tcp_init(int argc, VALUE *argv, VALUE sock)
+{
+    VALUE remote_host, remote_serv;
+    VALUE local_host, local_serv;
+    VALUE opt;
+    static ID keyword_ids[2];
+    VALUE kwargs[2];
+    VALUE resolv_timeout = Qnil;
+    VALUE connect_timeout = Qnil;
+
+    if (!keyword_ids[0]) {
+        CONST_ID(keyword_ids[0], &quot;resolv_timeout&quot;);
+        CONST_ID(keyword_ids[1], &quot;connect_timeout&quot;);
+    }
+
+    rb_scan_args(argc, argv, &quot;22:&quot;, &amp;remote_host, &amp;remote_serv,
+                        &amp;local_host, &amp;local_serv, &amp;opt);
+
+    if (!NIL_P(opt)) {
+        rb_get_kwargs(opt, keyword_ids, 0, 2, kwargs);
+        if (kwargs[0] != Qundef) { resolv_timeout = kwargs[0]; }
+        if (kwargs[1] != Qundef) { connect_timeout = kwargs[1]; }
+    }
+
+    return rsock_init_inetsock(sock, remote_host, remote_serv,
+                               local_host, local_serv, INET_CLIENT,
+                               resolv_timeout, connect_timeout);
+}</pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

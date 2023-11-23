@@ -1,0 +1,20 @@
+Thu, 14 Sep 2023 20:17:43 -0700
+net-imap-0.3.7/lib/net/imap/authenticators/cram_md5.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/authenticators/digest_md5.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/authenticators/login.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/authenticators/plain.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/authenticators/xoauth2.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/authenticators.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/command_data.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/data_encoding.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/errors.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/flags.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/response_data.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/response_parser.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/sasl/saslprep.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/sasl/saslprep_tables.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/sasl/stringprep.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/sasl/stringprep_tables.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap/sasl.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/lib/net/imap.rb	Wed, 13 Sep 2023 18:09:35 -0700
+net-imap-0.3.7/rakelib/string_prep_tables_generator.rb	Wed, 13 Sep 2023 18:09:35 -0700

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Ractor::Selector - RDoc Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0-preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-add">#add</a>
+    <li ><a href="#method-i-clear">#clear</a>
+    <li ><a href="#method-i-empty-3F">#empty?</a>
+    <li ><a href="#method-i-remove">#remove</a>
+    <li ><a href="#method-i-wait">#wait</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-Ractor::Selector">
+    <h1 id="class-Ractor::Selector" class="class">
+      class Ractor::Selector
+    </h1>
+
+    <section class="description">
+    
+<p><a href="Selector.html"><code>Ractor::Selector</code></a> provides a functionality to wait multiple <a href="../Ractor.html"><code>Ractor</code></a> events. <a href="Selector.html#method-i-wait"><code>Ractor::Selector#wait</code></a> is more lightweight than <a href="../Ractor.html#method-c-select"><code>Ractor.select()</code></a> because we don’t have to specify all target ractors for each wait time.</p>
+
+<p><a href="../Ractor.html#method-c-select"><code>Ractor.select()</code></a> uses <a href="Selector.html"><code>Ractor::Selector</code></a> internally to implement it.</p>
+
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-new" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          Ractor::Selector.new(*ractors)
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Creates a selector object.</p>
+
+<p>If a ractors parameter is given, it is same as the following code.</p>
+
+<pre class="ruby"><span class="ruby-identifier">selector</span> = <span class="ruby-constant">Ractor</span><span class="ruby-operator">::</span><span class="ruby-constant">Selector</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-identifier">ractors</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">add</span> <span class="ruby-identifier">r</span>}
+</pre>
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File ruby_3_3_0_preview2/ractor.rb, line 397</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">new</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">rs</span>)
+  <span class="ruby-identifier">selector</span> = <span class="ruby-identifier">__builtin_cexpr!</span> <span class="ruby-string">%q{
+    ractor_selector_create(self);
+  }</span>
+  <span class="ruby-identifier">rs</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">r</span>) }
+  <span class="ruby-identifier">selector</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-add" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          add(ractor)
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Registers a ractor as a taking target by the selector.</p>
+
+                              <div class="method-source-code" id="add-source">
+            <pre><span class="ruby-comment"># File ruby_3_3_0_preview2/ractor.rb, line 410</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add</span> <span class="ruby-identifier">r</span>
+  <span class="ruby-identifier">__builtin_ractor_selector_add</span> <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-clear" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          clear
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Deregisters all ractors.</p>
+
+                              <div class="method-source-code" id="clear-source">
+            <pre><span class="ruby-comment"># File ruby_3_3_0_preview2/ractor.rb, line 427</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">clear</span>
+  <span class="ruby-identifier">__builtin_ractor_selector_clear</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-empty-3F" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          empty?
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Returns true if the number of ractors in the waiting set at the current time is zero.</p>
+
+<p>Note that even if <code>#empty?</code> returns false, the subsequent <code>#wait</code> may raise an exception because other ractors may close the target ractors.</p>
+
+                              <div class="method-source-code" id="empty-3F-source">
+            <pre><span class="ruby-comment"># File ruby_3_3_0_preview2/ractor.rb, line 439</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">empty?</span>
+  <span class="ruby-identifier">__builtin_ractor_selector_empty_p</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-remove" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          remove(ractor)
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Deregisters a ractor as a taking target by the selector.</p>
+
+                              <div class="method-source-code" id="remove-source">
+            <pre><span class="ruby-comment"># File ruby_3_3_0_preview2/ractor.rb, line 419</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">remove</span> <span class="ruby-identifier">r</span>
+  <span class="ruby-identifier">__builtin_ractor_selector_remove</span> <span class="ruby-identifier">r</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-wait" class="method-detail ">
+                      <div class="method-heading">
+                        <span class="method-callseq">
+                          wait(receive: false, yield_value: yield_value, move: false) &rarr; [ractor or symbol, value]
+                              </span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Waits <a href="../Ractor.html"><code>Ractor</code></a> events. It is lighter than <a href="../Ractor.html#method-c-select"><code>Ractor.select()</code></a> for many ractors.</p>
+
+<p>The simplest form is waiting for taking a value from one of registerred ractors like that.</p>
+
+<pre class="ruby"><span class="ruby-identifier">selector</span> = <span class="ruby-constant">Ractor</span><span class="ruby-operator">::</span><span class="ruby-constant">Selector</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">r1</span>, <span class="ruby-identifier">r2</span>, <span class="ruby-identifier">r3</span>)
+<span class="ruby-identifier">r</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">wait</span>
+</pre>
+
+<p>On this case, when r1, r2 or r3 is ready to take (yielding a value), this method takes the value from the ready (yielded) ractor and returns [the yielded ractor, the taking value].</p>
+
+<p>Note that if a take target ractor is closed, the ractor will be removed automatically.</p>
+
+<p>If you also want to wait with receiving an object from other ractors, you can specify receive: true keyword like:</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">wait</span> <span class="ruby-value">receive:</span> <span class="ruby-keyword">true</span>
+</pre>
+
+<p>On this case, wait for taking from r1, r2 or r3 and waiting for receving a value from other ractors. If it successes the receiving, it returns an array object [:receive, the received value].</p>
+
+<p>If you also want to wait with yielding a value, you can specify :yield_value like:</p>
+
+<pre class="ruby"><span class="ruby-identifier">r</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">wait</span> <span class="ruby-value">yield_value:</span> <span class="ruby-identifier">obj</span>
+</pre>
+
+<p>On this case wait for taking from r1, r2, or r3 and waiting for taking yielding value (obj) by another ractor. If antoher ractor takes the value (obj), it returns an array object [:yield, nil].</p>
+
+<p>You can specify a keyword parameter <code>move: true</code> like <a href="../Ractor.html#method-c-yield"><code>Ractor.yield</code></a>(obj, move: true)</p>
+
+                              <div class="method-source-code" id="wait-source">
+            <pre><span class="ruby-comment"># File ruby_3_3_0_preview2/ractor.rb, line 481</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">wait</span> <span class="ruby-value">receive:</span> <span class="ruby-keyword">false</span>, <span class="ruby-value">yield_value:</span> <span class="ruby-identifier">yield_unspecified</span> = <span class="ruby-keyword">true</span>, <span class="ruby-value">move:</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">__builtin_ractor_selector_wait</span> <span class="ruby-identifier">receive</span>, <span class="ruby-operator">!</span><span class="ruby-identifier">yield_unspecified</span>, <span class="ruby-identifier">yield_value</span>, <span class="ruby-identifier">move</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

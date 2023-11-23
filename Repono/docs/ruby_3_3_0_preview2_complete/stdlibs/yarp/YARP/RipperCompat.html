@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class YARP::RipperCompat - yarp: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-c-sexp">::sexp</a>
+    <li ><a href="#method-c-sexp_raw">::sexp_raw</a>
+    <li ><a href="#method-i-_dispatch0">#_dispatch0</a>
+    <li ><a href="#method-i-_dispatch1">#_dispatch1</a>
+    <li ><a href="#method-i-_dispatch2">#_dispatch2</a>
+    <li ><a href="#method-i-_dispatch3">#_dispatch3</a>
+    <li ><a href="#method-i-_dispatch4">#_dispatch4</a>
+    <li ><a href="#method-i-_dispatch5">#_dispatch5</a>
+    <li ><a href="#method-i-_dispatch7">#_dispatch7</a>
+    <li ><a href="#method-i-bounds">#bounds</a>
+    <li ><a href="#method-i-error-3F">#error?</a>
+    <li ><a href="#method-i-parse">#parse</a>
+    <li ><a href="#method-i-result">#result</a>
+    <li ><a href="#method-i-visit">#visit</a>
+    <li ><a href="#method-i-visit_call_node">#visit_call_node</a>
+    <li ><a href="#method-i-visit_integer_node">#visit_integer_node</a>
+    <li ><a href="#method-i-visit_program_node">#visit_program_node</a>
+    <li ><a href="#method-i-visit_statements_node">#visit_statements_node</a>
+    <li ><a href="#method-i-visit_token">#visit_token</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-YARP::RipperCompat">
+    <h1 id="class-YARP::RipperCompat" class="class">
+      class YARP::RipperCompat
+    </h1>
+
+    <section class="description">
+    
+<p>This class is meant to provide a compatibility layer between <a href="../YARP.html"><code>YARP</code></a> and Ripper. It functions by parsing the entire tree first and then walking it and executing each of the Ripper callbacks as it goes.</p>
+
+<p>This class is going to necessarily be slower than the native Ripper API. It is meant as a stopgap until developers migrate to using <a href="../YARP.html"><code>YARP</code></a>. It is also meant as a test harness for the <a href="../YARP.html"><code>YARP</code></a> parser.</p>
+
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-column" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">column</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-lineno" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">lineno</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-source" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">source</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">(source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">source</span>)
+  <span class="ruby-ivar">@source</span> = <span class="ruby-identifier">source</span>
+  <span class="ruby-ivar">@result</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@lineno</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@column</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-sexp" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">sexp</span><span
+                                class="method-args">(source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>This is a convenience method that runs the <a href="RipperCompat/SexpBuilderPP.html"><code>SexpBuilderPP</code></a> subclass parser.</p>
+
+                              <div class="method-source-code" id="sexp-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 140</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">sexp</span>(<span class="ruby-identifier">source</span>)
+  <span class="ruby-constant">SexpBuilderPP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">source</span>).<span class="ruby-identifier">parse</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-sexp_raw" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">sexp_raw</span><span
+                                class="method-args">(source)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>This is a convenience method that runs the <a href="RipperCompat/SexpBuilder.html"><code>SexpBuilder</code></a> subclass parser.</p>
+
+                              <div class="method-source-code" id="sexp_raw-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 135</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">sexp_raw</span>(<span class="ruby-identifier">source</span>)
+  <span class="ruby-constant">SexpBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">source</span>).<span class="ruby-identifier">parse</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-error-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">error?</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Public interface</p>
+
+                              <div class="method-source-code" id="error-3F-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">error?</span>
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">any?</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-parse" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">parse</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="parse-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">parse</span>
+  <span class="ruby-identifier">result</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">accept</span>(<span class="ruby-keyword">self</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">error?</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-visit" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">visit</span><span
+                                class="method-args">(node)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p><a href="Visitor.html"><code>Visitor</code></a> methods</p>
+
+                              <div class="method-source-code" id="visit-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">visit</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">node</span>&amp;.<span class="ruby-identifier">accept</span>(<span class="ruby-keyword">self</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-visit_call_node" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">visit_call_node</span><span
+                                class="method-args">(node)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="visit_call_node-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">visit_call_node</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">node</span>.<span class="ruby-identifier">opening_loc</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">bounds</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">receiver</span>.<span class="ruby-identifier">location</span>)
+    <span class="ruby-identifier">left</span> = <span class="ruby-identifier">visit</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">receiver</span>)
+
+    <span class="ruby-identifier">bounds</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">location</span>)
+    <span class="ruby-identifier">right</span> = <span class="ruby-identifier">visit</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">first</span>)
+
+    <span class="ruby-identifier">on_binary</span>(<span class="ruby-identifier">left</span>, <span class="ruby-identifier">source</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">message_loc</span>.<span class="ruby-identifier">start_offset</span><span class="ruby-operator">...</span><span class="ruby-identifier">node</span>.<span class="ruby-identifier">message_loc</span>.<span class="ruby-identifier">end_offset</span>].<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">right</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-visit_integer_node" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">visit_integer_node</span><span
+                                class="method-args">(node)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="visit_integer_node-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">visit_integer_node</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">bounds</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">location</span>)
+  <span class="ruby-identifier">on_int</span>(<span class="ruby-identifier">source</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">location</span>.<span class="ruby-identifier">start_offset</span><span class="ruby-operator">...</span><span class="ruby-identifier">node</span>.<span class="ruby-identifier">location</span>.<span class="ruby-identifier">end_offset</span>])
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-visit_program_node" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">visit_program_node</span><span
+                                class="method-args">(node)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="visit_program_node-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">visit_program_node</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">bounds</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">location</span>)
+  <span class="ruby-identifier">on_program</span>(<span class="ruby-identifier">visit</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">statements</span>))
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-visit_statements_node" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">visit_statements_node</span><span
+                                class="method-args">(node)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="visit_statements_node-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">visit_statements_node</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">bounds</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">location</span>)
+  <span class="ruby-identifier">node</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-identifier">on_stmts_new</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stmts</span>, <span class="ruby-identifier">stmt</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">on_stmts_add</span>(<span class="ruby-identifier">stmts</span>, <span class="ruby-identifier">visit</span>(<span class="ruby-identifier">stmt</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-visit_token" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">visit_token</span><span
+                                class="method-args">(node)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="visit_token-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 112</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">visit_token</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">bounds</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">location</span>)
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:MINUS</span>
+    <span class="ruby-identifier">on_op</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:PLUS</span>
+    <span class="ruby-identifier">on_op</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-node">&quot;Unknown token: #{node.type}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-_dispatch0" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">_dispatch0</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="_dispatch0-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">_dispatch0</span>; <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-_dispatch1" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">_dispatch1</span><span
+                                class="method-args">(_)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="_dispatch1-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">_dispatch1</span>(<span class="ruby-identifier">_</span>); <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-_dispatch2" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">_dispatch2</span><span
+                                class="method-args">(_, _)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="_dispatch2-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">_dispatch2</span>(<span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>); <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-_dispatch3" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">_dispatch3</span><span
+                                class="method-args">(_, _, _)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="_dispatch3-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 165</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">_dispatch3</span>(<span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>); <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-_dispatch4" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">_dispatch4</span><span
+                                class="method-args">(_, _, _, _)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="_dispatch4-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">_dispatch4</span>(<span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>); <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-_dispatch5" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">_dispatch5</span><span
+                                class="method-args">(_, _, _, _, _)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="_dispatch5-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">_dispatch5</span>(<span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>); <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-_dispatch7" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">_dispatch7</span><span
+                                class="method-args">(_, _, _, _, _, _, _)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="_dispatch7-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">_dispatch7</span>(<span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>); <span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-bounds" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bounds</span><span
+                                class="method-args">(location)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>This method is responsible for updating lineno and column information to reflect the current node.</p>
+
+<p>This method could be drastically improved with some caching on the start of every line, but for now it’s good enough.</p>
+
+                              <div class="method-source-code" id="bounds-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 151</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">bounds</span>(<span class="ruby-identifier">location</span>)
+  <span class="ruby-identifier">start_offset</span> = <span class="ruby-identifier">location</span>.<span class="ruby-identifier">start_offset</span>
+
+  <span class="ruby-ivar">@lineno</span> = <span class="ruby-identifier">source</span>[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">start_offset</span>].<span class="ruby-identifier">count</span>(<span class="ruby-string">&quot;\n&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@column</span> = <span class="ruby-identifier">start_offset</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">source</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-string">&quot;\n&quot;</span>, <span class="ruby-identifier">start_offset</span>) <span class="ruby-operator">||</span> <span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-result" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">result</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="result-source">
+            <pre><span class="ruby-comment"># File yarp/ripper_compat.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">result</span>
+  <span class="ruby-ivar">@result</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">YARP</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

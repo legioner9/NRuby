@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class TypeProf::Type - typeprof: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+<div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+    <li><a class="include" href="Utils/StructuralEquality.html">TypeProf::Utils::StructuralEquality</a>
+  </ul>
+</div>
+
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-any">::any</a>
+    <li ><a href="#method-c-bool">::bool</a>
+    <li ><a href="#method-c-bot">::bot</a>
+    <li ><a href="#method-c-builtin_global_variable_type">::builtin_global_variable_type</a>
+    <li ><a href="#method-c-gen_hash">::gen_hash</a>
+    <li ><a href="#method-c-guess_literal_type">::guess_literal_type</a>
+    <li ><a href="#method-c-match-3F">::match?</a>
+    <li ><a href="#method-c-merge_substitution">::merge_substitution</a>
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-c-nil">::nil</a>
+    <li ><a href="#method-c-optional">::optional</a>
+    <li ><a href="#method-i-each_child">#each_child</a>
+    <li ><a href="#method-i-each_child_global">#each_child_global</a>
+    <li ><a href="#method-i-each_free_type_variable">#each_free_type_variable</a>
+    <li ><a href="#method-i-generate_substitution">#generate_substitution</a>
+    <li ><a href="#method-i-globalize">#globalize</a>
+    <li ><a href="#method-i-include_untyped-3F">#include_untyped?</a>
+    <li ><a href="#method-i-limit_size">#limit_size</a>
+    <li ><a href="#method-i-localize">#localize</a>
+    <li ><a href="#method-i-remove_type_vars">#remove_type_vars</a>
+    <li ><a href="#method-i-substitute">#substitute</a>
+    <li ><a href="#method-i-union">#union</a>
+    <li ><a href="#method-i-union_elems">#union_elems</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-TypeProf::Type">
+    <h1 id="class-TypeProf::Type" class="class">
+      class TypeProf::Type
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+      <section class="constants-list">
+      <header>
+      <h3>Constants</h3>
+      </header>
+      <dl>
+          <dt id="Builtin">Builtin
+          <dd>
+          <dt id="DummySubstitution">DummySubstitution
+          <dd>
+        </dl>
+        </section>
+
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-any" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">any</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="any-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 427</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">any</span>
+  <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-value">:any</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Any</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-bool" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bool</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="bool-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 435</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">bool</span>
+  <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-value">:bool</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Union</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Set</span>[
+    <span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:true</span>]),
+    <span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:false</span>])
+  ], <span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-bot" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">bot</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="bot-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 431</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">bot</span>
+  <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-value">:bot</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Union</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Set</span>[], <span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-builtin_global_variable_type" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">builtin_global_variable_type</span><span
+                                class="method-args">(var)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="builtin_global_variable_type-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 809</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">builtin_global_variable_type</span>(<span class="ruby-identifier">var</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">var</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$_</span>, <span class="ruby-value">:$/</span>, <span class="ruby-value">:$\</span>, <span class="ruby-value">:$,</span>, <span class="ruby-value">:$;</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">optional</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:str</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$0</span>, <span class="ruby-value">:$PROGRAM_NAME</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:str</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$~</span>
+    <span class="ruby-comment"># optional type is tentatively disabled; it is too conservative</span>
+    <span class="ruby-comment">#Type.optional(Type::Instance.new(Type::Builtin[:matchdata]))</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:matchdata</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$.</span>, <span class="ruby-value">:$$</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:int</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$?</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">optional</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:int</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$!</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">optional</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:exc</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$@</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:str</span>])
+    <span class="ruby-identifier">base_ty</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:ary</span>])
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">optional</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">new</span>([], <span class="ruby-identifier">str</span>), <span class="ruby-identifier">base_ty</span>))
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$*</span>, <span class="ruby-value">:$:</span>, <span class="ruby-value">:$LOAD_PATH</span>, <span class="ruby-value">:$&quot;</span>, <span class="ruby-value">:$LOADED_FEATURES</span>
+    <span class="ruby-identifier">str</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:str</span>])
+    <span class="ruby-identifier">base_ty</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:ary</span>])
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">new</span>([], <span class="ruby-identifier">str</span>), <span class="ruby-identifier">base_ty</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$&lt;</span>
+    <span class="ruby-value">:ARGF</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$&gt;</span>
+    <span class="ruby-value">:STDOUT</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$DEBUG</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">bool</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$FILENAME</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:str</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$stdin</span>
+    <span class="ruby-value">:STDIN</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$stdout</span>
+    <span class="ruby-value">:STDOUT</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$stderr</span>
+    <span class="ruby-value">:STDERR</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:$VERBOSE</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">bool</span>.<span class="ruby-identifier">union</span>(<span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-gen_hash" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">gen_hash</span><span
+                                class="method-args">(base_ty = Type::Instance.new(Type::Builtin[:hash])) { |hg| ... }</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="gen_hash-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 750</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">gen_hash</span>(<span class="ruby-identifier">base_ty</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:hash</span>]))
+  <span class="ruby-identifier">hg</span> = <span class="ruby-constant">HashGenerator</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-identifier">hg</span>
+  <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Hash</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">hg</span>.<span class="ruby-identifier">map_tys</span>), <span class="ruby-identifier">base_ty</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-guess_literal_type" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">guess_literal_type</span><span
+                                class="method-args">(obj)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="guess_literal_type-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 756</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">guess_literal_type</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">obj</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Symbol</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Symbol</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:sym</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Integer</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:int</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Rational</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:rational</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Complex</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:complex</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Float</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:float</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Class</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Type</span>.<span class="ruby-identifier">any</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">obj</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Exception</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">obj</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Object</span>
+      <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:obj</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Array</span>
+      <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:ary</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown class: #{ obj.inspect }&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">TrueClass</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:true</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">FalseClass</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:false</span>])
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Array</span>
+    <span class="ruby-identifier">base_ty</span> = <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:ary</span>])
+    <span class="ruby-identifier">lead_tys</span> = <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span> <span class="ruby-identifier">guess_literal_type</span>(<span class="ruby-identifier">arg</span>) }
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Array</span><span class="ruby-operator">::</span><span class="ruby-constant">Elements</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">lead_tys</span>), <span class="ruby-identifier">base_ty</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Hash</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">gen_hash</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">k_ty</span> = <span class="ruby-identifier">guess_literal_type</span>(<span class="ruby-identifier">k</span>).<span class="ruby-identifier">globalize</span>(<span class="ruby-keyword">nil</span>, {}, <span class="ruby-constant">Config</span>.<span class="ruby-identifier">current</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:type_depth_limit</span>])
+        <span class="ruby-identifier">v_ty</span> = <span class="ruby-identifier">guess_literal_type</span>(<span class="ruby-identifier">v</span>)
+        <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k_ty</span>] = <span class="ruby-identifier">v_ty</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">String</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:str</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Regexp</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:regexp</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">NilClass</span>
+    <span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Range</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:range</span>]))
+  <span class="ruby-keyword">when</span> <span class="ruby-operator">::</span><span class="ruby-constant">Encoding</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Literal</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:encoding</span>]))
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown object: #{ obj.inspect }&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-match-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">match?</span><span
+                                class="method-args">(ty1, ty2)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="match-3F-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">match?</span>(<span class="ruby-identifier">ty1</span>, <span class="ruby-identifier">ty2</span>)
+  <span class="ruby-comment"># both ty1 and ty2 should be global</span>
+  <span class="ruby-comment"># ty1 is always concrete; it should not have type variables</span>
+  <span class="ruby-comment"># ty2 might be abstract; it may have type variables</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">ty2</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Var</span>
+    { <span class="ruby-identifier">ty2</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ty1</span> }
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Any</span>
+    {}
+  <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>
+    <span class="ruby-identifier">subst</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">each_child_global</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ty2</span><span class="ruby-operator">|</span>
+      <span class="ruby-comment"># this is very conservative to create subst:</span>
+      <span class="ruby-comment"># Type.match?( int | str, int | X) creates { X =&gt; int | str } but should be { X =&gt; str }???</span>
+      <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">ty1</span>, <span class="ruby-identifier">ty2</span>)
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span>
+      <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">subst</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">ty1</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Var</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;should not occur&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Any</span>
+      <span class="ruby-identifier">subst</span> = {}
+      <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">each_free_type_variable</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tyvar</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">subst</span>[<span class="ruby-identifier">tyvar</span>] = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">any</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">subst</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>
+      <span class="ruby-identifier">subst</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">each_child_global</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ty1</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">subst2</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">ty1</span>, <span class="ruby-identifier">ty2</span>)
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">subst2</span>
+        <span class="ruby-identifier">subst</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">merge_substitution</span>(<span class="ruby-identifier">subst</span>, <span class="ruby-identifier">subst2</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">subst</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">ContainerType</span>)
+        <span class="ruby-comment"># ty2 may have type variables</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">class</span>
+          <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">ty2</span>)
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">ty1</span>, <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">base_type</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">ContainerType</span>)
+        <span class="ruby-constant">Type</span>.<span class="ruby-identifier">match?</span>(<span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">base_type</span>, <span class="ruby-identifier">ty2</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">consistent?</span>(<span class="ruby-identifier">ty2</span>) <span class="ruby-operator">?</span> {} <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-merge_substitution" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">merge_substitution</span><span
+                                class="method-args">(subst1, subst2)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="merge_substitution-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">merge_substitution</span>(<span class="ruby-identifier">subst1</span>, <span class="ruby-identifier">subst2</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">subst1</span>
+    <span class="ruby-identifier">subst1</span> = <span class="ruby-identifier">subst1</span>.<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">subst2</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tyvar</span>, <span class="ruby-identifier">ty</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">subst1</span>[<span class="ruby-identifier">tyvar</span>]
+        <span class="ruby-identifier">subst1</span>[<span class="ruby-identifier">tyvar</span>] = <span class="ruby-identifier">subst1</span>[<span class="ruby-identifier">tyvar</span>].<span class="ruby-identifier">union</span>(<span class="ruby-identifier">ty</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">subst1</span>[<span class="ruby-identifier">tyvar</span>] = <span class="ruby-identifier">ty</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">subst1</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">subst2</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;cannot instantiate abstract type&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-nil" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">nil</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="nil-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 442</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-keyword">nil</span>
+  <span class="ruby-constant">Thread</span>.<span class="ruby-identifier ruby-title">current</span>[<span class="ruby-value">:nil</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Instance</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Builtin</span>[<span class="ruby-value">:nil</span>])
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-optional" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">optional</span><span
+                                class="method-args">(ty)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="optional-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 446</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">optional</span>(<span class="ruby-identifier">ty</span>)
+  <span class="ruby-identifier">ty</span>.<span class="ruby-identifier">union</span>(<span class="ruby-constant">Type</span>.<span class="ruby-identifier">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-each_child" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">each_child</span><span
+                                class="method-args">() { |self| ... }</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="each_child-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">each_child</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-each_child_global" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">each_child_global</span><span
+                                class="method-args">() { |self| ... }</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="each_child_global-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">each_child_global</span>
+  <span class="ruby-keyword">yield</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-each_free_type_variable" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">each_free_type_variable</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="each_free_type_variable-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">each_free_type_variable</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-generate_substitution" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">generate_substitution</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="generate_substitution-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">generate_substitution</span>
+  {}
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-globalize" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">globalize</span><span
+                                class="method-args">(_env, _visited, _depth)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="globalize-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">globalize</span>(<span class="ruby-identifier">_env</span>, <span class="ruby-identifier">_visited</span>, <span class="ruby-identifier">_depth</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-include_untyped-3F" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">include_untyped?</span><span
+                                class="method-args">(_scratch)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="include_untyped-3F-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">include_untyped?</span>(<span class="ruby-identifier">_scratch</span>)
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-limit_size" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">limit_size</span><span
+                                class="method-args">(limit)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="limit_size-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">limit_size</span>(<span class="ruby-identifier">limit</span>)
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-localize" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">localize</span><span
+                                class="method-args">(env, _alloc_site, _depth)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="localize-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">localize</span>(<span class="ruby-identifier">env</span>, <span class="ruby-identifier">_alloc_site</span>, <span class="ruby-identifier">_depth</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">env</span>, <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-remove_type_vars" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">remove_type_vars</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="remove_type_vars-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">remove_type_vars</span>
+  <span class="ruby-identifier">substitute</span>(<span class="ruby-constant">DummySubstitution</span>, <span class="ruby-constant">Config</span>.<span class="ruby-identifier">current</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:type_depth_limit</span>])
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-substitute" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">substitute</span><span
+                                class="method-args">(_subst, _depth)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="substitute-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 160</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">substitute</span>(<span class="ruby-identifier">_subst</span>, <span class="ruby-identifier">_depth</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;cannot substitute abstract type: #{ self.class }&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-union" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">union</span><span
+                                class="method-args">(other)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="union-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">union</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span> <span class="ruby-comment"># fastpath</span>
+
+  <span class="ruby-identifier">ty1</span>, <span class="ruby-identifier">ty2</span> = <span class="ruby-keyword">self</span>, <span class="ruby-identifier">other</span>
+
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Union</span>)
+    <span class="ruby-identifier">ty1_types</span> = <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">types</span>
+    <span class="ruby-identifier">ty1_elems</span> = <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">elems</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">ty1_types</span> = <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Set</span>[]
+    <span class="ruby-identifier">ty1_elems</span> = {[<span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">base_type</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ty1</span>.<span class="ruby-identifier">elems</span>}
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ty1_types</span> = <span class="ruby-identifier">ty1_elems</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">case</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Union</span>)
+    <span class="ruby-identifier">ty2_types</span> = <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">types</span>
+    <span class="ruby-identifier">ty2_elems</span> = <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">elems</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+    <span class="ruby-identifier">ty2_types</span> = <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Set</span>[]
+    <span class="ruby-identifier">ty2_elems</span> = {[<span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">base_type</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">ty2</span>.<span class="ruby-identifier">elems</span>}
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">ty2_types</span> = <span class="ruby-identifier">ty2_elems</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ty1_types</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ty2_types</span>
+    <span class="ruby-identifier">ty</span> = <span class="ruby-identifier">ty1_types</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-identifier">ty2_types</span>)
+    <span class="ruby-identifier">all_elems</span> = <span class="ruby-identifier">ty1_elems</span>.<span class="ruby-identifier">dup</span> <span class="ruby-operator">||</span> {}
+    <span class="ruby-identifier">ty2_elems</span>&amp;.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">elems</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">all_elems</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">union_elems</span>(<span class="ruby-identifier">all_elems</span>[<span class="ruby-identifier">key</span>], <span class="ruby-identifier">elems</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">all_elems</span> = <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">all_elems</span>.<span class="ruby-identifier">empty?</span>
+
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">ty</span>, <span class="ruby-identifier">all_elems</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">ty1_types</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">ty1_types</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">ty2</span>), <span class="ruby-identifier">ty1_elems</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">ty2_types</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">ty2_types</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">ty1</span>), <span class="ruby-identifier">ty2_elems</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Type</span><span class="ruby-operator">::</span><span class="ruby-constant">Union</span>.<span class="ruby-identifier">create</span>(<span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">Set</span>[<span class="ruby-identifier">ty1</span>, <span class="ruby-identifier">ty2</span>], <span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-union_elems" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">union_elems</span><span
+                                class="method-args">(e1, e2)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="union_elems-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/type.rb, line 148</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">union_elems</span>(<span class="ruby-identifier">e1</span>, <span class="ruby-identifier">e2</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">e1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">e2</span>
+      <span class="ruby-identifier">e1</span>.<span class="ruby-identifier">union</span>(<span class="ruby-identifier">e2</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">e1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">e2</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

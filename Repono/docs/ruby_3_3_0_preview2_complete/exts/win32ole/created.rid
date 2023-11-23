@@ -1,0 +1,14 @@
+Thu, 14 Sep 2023 20:30:00 -0700
+win32ole/lib/win32ole/property.rb	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/lib/win32ole.rb	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_error.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_event.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_method.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_param.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_record.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_type.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_typelib.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_variable.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_variant.c	Wed, 13 Sep 2023 18:09:33 -0700
+win32ole/win32ole_variant_m.c	Wed, 13 Sep 2023 18:09:33 -0700

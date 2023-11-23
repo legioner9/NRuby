@@ -1,0 +1,10 @@
+Thu, 14 Sep 2023 20:09:43 -0700
+bigdecimal/bigdecimal.c	Wed, 13 Sep 2023 18:09:33 -0700
+bigdecimal/lib/bigdecimal/jacobian.rb	Wed, 13 Sep 2023 18:09:33 -0700
+bigdecimal/lib/bigdecimal/ludcmp.rb	Wed, 13 Sep 2023 18:09:33 -0700
+bigdecimal/lib/bigdecimal/math.rb	Wed, 13 Sep 2023 18:09:33 -0700
+bigdecimal/lib/bigdecimal/newton.rb	Wed, 13 Sep 2023 18:09:33 -0700
+bigdecimal/lib/bigdecimal/util.rb	Wed, 13 Sep 2023 18:09:33 -0700
+bigdecimal/lib/bigdecimal.rb	Wed, 13 Sep 2023 18:09:33 -0700
+bigdecimal/missing/dtoa.c	Wed, 13 Sep 2023 18:09:33 -0700
+bigdecimal/missing.c	Wed, 13 Sep 2023 18:09:33 -0700

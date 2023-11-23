@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>NEWS - RDoc Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="file">
+  <!-- this is page.html -->
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0-preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+
+ <div class='wrapper hdiv'>
+
+ 
+
+
+<nav id='vapp' role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-NEWS+for+Ruby+3.3.0">NEWS for Ruby 3.3.0</a>
+    <li><a href="#label-Language+changes">Language changes</a>
+    <li><a href="#label-Command+line+options">Command line options</a>
+    <li><a href="#label-Core+classes+updates">Core classes updates</a>
+    <li><a href="#label-Stdlib+updates">Stdlib updates</a>
+    <li><a href="#label-Supported+platforms">Supported platforms</a>
+    <li><a href="#label-Compatibility+issues">Compatibility issues</a>
+    <li><a href="#label-Stdlib+compatibility+issues">Stdlib compatibility issues</a>
+    <li><a href="#label-C+API+updates">C API updates</a>
+    <li><a href="#label-Implementation+improvements">Implementation improvements</a>
+    <li><a href="#label-YJIT">YJIT</a>
+    <li><a href="#label-RJIT">RJIT</a>
+  </ul>
+</div>
+
+  <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+
+  <div id="project-metadata">
+   <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="../NEWS/NEWS-1_8_7.html">NEWS-1.8.7</a>
+    <li><a href="../NEWS/NEWS-1_9_1.html">NEWS-1.9.1</a>
+    <li><a href="../NEWS/NEWS-1_9_2.html">NEWS-1.9.2</a>
+    <li><a href="../NEWS/NEWS-1_9_3.html">NEWS-1.9.3</a>
+    <li><a href="../NEWS/NEWS-2_0_0.html">NEWS-2.0.0</a>
+    <li><a href="../NEWS/NEWS-2_1_0.html">NEWS-2.1.0</a>
+    <li><a href="../NEWS/NEWS-2_2_0.html">NEWS-2.2.0</a>
+    <li><a href="../NEWS/NEWS-2_3_0.html">NEWS-2.3.0</a>
+    <li><a href="../NEWS/NEWS-2_4_0.html">NEWS-2.4.0</a>
+    <li><a href="../NEWS/NEWS-2_5_0.html">NEWS-2.5.0</a>
+    <li><a href="../NEWS/NEWS-2_6_0.html">NEWS-2.6.0</a>
+    <li><a href="../NEWS/NEWS-2_7_0.html">NEWS-2.7.0</a>
+    <li><a href="../NEWS/NEWS-3_0_0_md.html">NEWS-3.0.0</a>
+    <li><a href="../NEWS/NEWS-3_1_0_md.html">NEWS-3.1.0</a>
+    <li><a href="../NEWS/NEWS-3_2_0_md.html">NEWS-3.2.0</a>
+    <li><a href="../bsearch_rdoc.html">bsearch</a>
+    <li><a href="../bug_triaging_rdoc.html">bug_triaging</a>
+    <li><a href="../case_mapping_rdoc.html">case_mapping</a>
+    <li><a href="../character_selectors_rdoc.html">character_selectors</a>
+    <li><a href="../command_injection_rdoc.html">command_injection</a>
+    <li><a href="../contributing_md.html">contributing</a>
+    <li><a href="../contributing/building_ruby_md.html">building_ruby</a>
+    <li><a href="../contributing/documentation_guide_md.html">documentation_guide</a>
+    <li><a href="../contributing/glossary_md.html">glossary</a>
+    <li><a href="../contributing/making_changes_to_ruby_md.html">making_changes_to_ruby</a>
+    <li><a href="../contributing/making_changes_to_stdlibs_md.html">making_changes_to_stdlibs</a>
+    <li><a href="../contributing/reporting_issues_md.html">reporting_issues</a>
+    <li><a href="../contributing/testing_ruby_md.html">testing_ruby</a>
+    <li><a href="../dig_methods_rdoc.html">dig_methods</a>
+    <li><a href="../distribution_md.html">distribution</a>
+    <li><a href="../dtrace_probes_rdoc.html">dtrace_probes</a>
+    <li><a href="../encodings_rdoc.html">encodings</a>
+    <li><a href="../extension_ja_rdoc.html">extension.ja</a>
+    <li><a href="../extension_rdoc.html">extension</a>
+    <li><a href="../fiber_md.html">fiber</a>
+    <li><a href="../format_specifications_rdoc.html">format_specifications</a>
+    <li><a href="../globals_rdoc.html">globals</a>
+    <li><a href="../implicit_conversion_rdoc.html">implicit_conversion</a>
+    <li><a href="../keywords_rdoc.html">keywords</a>
+    <li><a href="../maintainers_md.html">maintainers</a>
+    <li><a href="../marshal_rdoc.html">marshal</a>
+    <li><a href="../memory_view_md.html">memory_view</a>
+    <li><a href="../optparse/argument_converters_rdoc.html">argument_converters</a>
+    <li><a href="../optparse/creates_option_rdoc.html">creates_option</a>
+    <li><a href="../optparse/option_params_rdoc.html">option_params</a>
+    <li><a href="../optparse/tutorial_rdoc.html">tutorial</a>
+    <li><a href="../packed_data_rdoc.html">packed_data</a>
+    <li><a href="../ractor_md.html">ractor</a>
+    <li><a href="../regexp_rdoc.html">regexp</a>
+    <li><a href="../regexp/methods_rdoc.html">methods</a>
+    <li><a href="../regexp/unicode_properties_rdoc.html">unicode_properties</a>
+    <li><a href="../ruby_3_3_0_preview2/COPYING.html">COPYING</a>
+    <li><a href="../ruby_3_3_0_preview2/COPYING_ja.html">COPYING.ja</a>
+    <li><a href="../ruby_3_3_0_preview2/LEGAL.html">LEGAL</a>
+    <li><a href="../ruby_3_3_0_preview2/NEWS_md.html">NEWS</a>
+    <li><a href="../ruby_3_3_0_preview2/README_ja_md.html">README.ja</a>
+    <li><a href="../ruby_3_3_0_preview2/README_md.html">README</a>
+    <li><a href="../security_rdoc.html">security</a>
+    <li><a href="../signals_rdoc.html">signals</a>
+    <li><a href="../standard_library_rdoc.html">standard_library</a>
+    <li><a href="../strftime_formatting_rdoc.html">strftime_formatting</a>
+    <li><a href="../syntax_rdoc.html">syntax</a>
+    <li><a href="../syntax/assignment_rdoc.html">assignment</a>
+    <li><a href="../syntax/calling_methods_rdoc.html">calling_methods</a>
+    <li><a href="../syntax/comments_rdoc.html">comments</a>
+    <li><a href="../syntax/control_expressions_rdoc.html">control_expressions</a>
+    <li><a href="../syntax/exceptions_rdoc.html">exceptions</a>
+    <li><a href="../syntax/literals_rdoc.html">literals</a>
+    <li><a href="../syntax/methods_rdoc.html">methods</a>
+    <li><a href="../syntax/miscellaneous_rdoc.html">miscellaneous</a>
+    <li><a href="../syntax/modules_and_classes_rdoc.html">modules_and_classes</a>
+    <li><a href="../syntax/pattern_matching_rdoc.html">pattern_matching</a>
+    <li><a href="../syntax/precedence_rdoc.html">precedence</a>
+    <li><a href="../syntax/refinements_rdoc.html">refinements</a>
+    <li><a href="../timezones_rdoc.html">timezones</a>
+    <li><a href="../windows_md.html">windows</a>
+    <li><a href="../yjit/yjit_md.html">yjit</a>
+    <li><a href="../yjit/yjit_hacking_md.html">yjit_hacking</a>
+  </ul>
+</div>
+
+   </div>
+  </div>
+</nav>
+
+
+<!--  carbon ads here -->
+
+<div id='extraz'>
+  <div class='adzbox-index'  >
+   
+  </div>
+ </div>         
+
+
+<main role="main" aria-label="Page ruby_3_3_0_preview2/NEWS.md">
+
+<h1 id="label-NEWS+for+Ruby+3.3.0"><a href="NEWS_md.html">NEWS</a> for Ruby 3.3.0<span><a href="#label-NEWS+for+Ruby+3.3.0">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>This document is a list of user-visible feature changes since the <strong>3.2.0</strong> release, except for bug fixes.</p>
+
+<p>Note that each entry is kept to a minimum, see links for details.</p>
+
+<h2 id="label-Language+changes">Language changes<span><a href="#label-Language+changes">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h2 id="label-Command+line+options">Command line options<span><a href="#label-Command+line+options">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>A new <code>performance</code> warning category was introduced.  They are not displayed by default even in verbose mode.  Turn them on with <code>-W:performance</code> or <code>Warning[:performance] = true</code>. [<a href="https://bugs.ruby-lang.org/issues/19538">Feature #19538</a>]</p>
+</li><li>
+<p>The <code>RUBY_GC_HEAP_INIT_SLOTS</code> environment variable has been deprecated and  removed. Environment variables <code>RUBY_GC_HEAP_%d_INIT_SLOTS</code> should be  used instead. [<a href="https://bugs.ruby-lang.org/issues/19785">Feature #19785</a>]</p>
+</li></ul>
+
+<h2 id="label-Core+classes+updates">Core classes updates<span><a href="#label-Core+classes+updates">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Note: We’re only listing outstanding class updates.</p>
+<ul><li>
+<p><a href="../Array.html"><code>Array</code></a></p>
+<ul><li>
+<p><a href="../Array.html#method-i-pack"><code>Array#pack</code></a> now raises <a href="../ArgumentError.html"><code>ArgumentError</code></a> for unknown directives. [<a href="https://bugs.ruby-lang.org/issues/19150">Bug #19150</a>]</p>
+</li></ul>
+</li><li>
+<p><a href="../Dir.html"><code>Dir</code></a></p>
+<ul><li>
+<p><a href="../Dir.html#method-c-for_fd"><code>Dir.for_fd</code></a> added for returning a <a href="../Dir.html"><code>Dir</code></a> object for the directory specified  by the provided directory file descriptor. [<a href="https://bugs.ruby-lang.org/issues/19347">Feature #19347</a>]</p>
+</li><li>
+<p><a href="../Dir.html#method-c-fchdir"><code>Dir.fchdir</code></a> added for changing the directory to the directory specified  by the provided directory file descriptor. [<a href="https://bugs.ruby-lang.org/issues/19347">Feature #19347</a>]</p>
+</li><li>
+<p><a href="../Dir.html#method-i-chdir"><code>Dir#chdir</code></a> added for changing the directory to the directory specified by  the provided <code>Dir</code> object. [<a href="https://bugs.ruby-lang.org/issues/19347">Feature #19347</a>]</p>
+</li></ul>
+</li><li>
+<p><a href="../MatchData.html"><code>MatchData</code></a></p>
+<ul><li>
+<p><a href="../MatchData.html#method-i-named_captures"><code>MatchData#named_captures</code></a> now accepts optional <code>symbolize_names</code>  keyword. [<a href="https://bugs.ruby-lang.org/issues/19591">Feature #19591</a>]</p>
+</li></ul>
+</li><li>
+<p><a href="../String.html"><code>String</code></a></p>
+<ul><li>
+<p><a href="../String.html#method-i-unpack"><code>String#unpack</code></a> now raises <a href="../ArgumentError.html"><code>ArgumentError</code></a> for unknown directives. [<a href="https://bugs.ruby-lang.org/issues/19150">Bug #19150</a>]</p>
+</li><li>
+<p><a href="../String.html#method-i-bytesplice"><code>String#bytesplice</code></a> now accepts new arguments index/length or range of the  source string to be copied. [<a href="https://bugs.ruby-lang.org/issues/19314">Feature #19314</a>]</p>
+</li></ul>
+</li><li>
+<p><a href="../ObjectSpace/WeakKeyMap.html"><code>ObjectSpace::WeakKeyMap</code></a></p>
+<ul><li>
+<p>New core class to build collections with weak references.  The class use equality semantic to lookup keys like a regular hash,  but it doesn't hold strong references on the keys. [<a href="https://bugs.ruby-lang.org/issues/18498">Feature #18498</a>]</p>
+</li></ul>
+</li><li>
+<p><a href="../Module.html"><code>Module</code></a></p>
+<ul><li>
+<p><a href="../Module.html#method-i-set_temporary_name"><code>Module#set_temporary_name</code></a> added for setting a temporary name for a  module. [<a href="https://bugs.ruby-lang.org/issues/19521">Feature #19521</a>]</p>
+</li></ul>
+</li><li>
+<p><a href="../Process.html#method-c-warmup"><code>Process.warmup</code></a></p>
+<ul><li>
+<p>Notify the Ruby virtual machine that the boot sequence is finished,  and that now is a good time to optimize the application. This is useful  for long running applications. The actual optimizations performed are entirely  implementation specific and may change in the future without notice. [<a href="https://bugs.ruby-lang.org/issues/18885">Feature #18885</a>]</p>
+</li></ul>
+</li><li>
+<p><a href="../Refinement.html"><code>Refinement</code></a></p>
+<ul><li>
+<p>Add Refinement#target as an alternative of Refinement#refined_class.  Refinement#refined_class is deprecated and will be removed in Ruby  3.4. [<a href="https://bugs.ruby-lang.org/issues/19714">Feature #19714</a>]</p>
+</li></ul>
+</li></ul>
+
+<h2 id="label-Stdlib+updates">Stdlib updates<span><a href="#label-Stdlib+updates">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>RubyGems and Bundler warn if users require gem that is scheduled to become the bundled gems  in the future version of Ruby. [<a href="https://bugs.ruby-lang.org/issues/19351">Feature #19351</a>] [<a href="https://bugs.ruby-lang.org/issues/19776">Feature #19776</a>] [<a href="https://bugs.ruby-lang.org/issues/19843">Feature #19843</a>]</p>
+</li><li>
+<p>Random::Formatter#alphanumeric is extended to accept optional <code>chars</code>  keyword argument. [<a href="https://bugs.ruby-lang.org/issues/18183">Feature #18183</a>]</p>
+</li></ul>
+
+<p>The following default gems are updated.</p>
+<ul><li>
+<p>RubyGems 3.5.0.dev</p>
+</li><li>
+<p>bigdecimal 3.1.4</p>
+</li><li>
+<p>bundler 2.5.0.dev</p>
+</li><li>
+<p>csv 3.2.8</p>
+</li><li>
+<p>erb 4.0.3</p>
+</li><li>
+<p>fiddle 1.1.2</p>
+</li><li>
+<p>fileutils 1.7.1</p>
+</li><li>
+<p>irb 1.8.1</p>
+</li><li>
+<p>nkf 0.1.3</p>
+</li><li>
+<p>optparse 0.4.0.pre.1</p>
+</li><li>
+<p>psych 5.1.0</p>
+</li><li>
+<p>reline 0.3.8</p>
+</li><li>
+<p>stringio 3.0.9</p>
+</li><li>
+<p>strscan 3.0.7</p>
+</li><li>
+<p>syntax_suggest 1.1.0</p>
+</li><li>
+<p>time 0.2.2</p>
+</li><li>
+<p>timeout 0.4.0</p>
+</li><li>
+<p>uri 0.12.2</p>
+</li><li>
+<p>yarp 0.11.0</p>
+</li></ul>
+
+<p>The following bundled gems are updated.</p>
+<ul><li>
+<p>minitest 5.20.0</p>
+</li><li>
+<p>test-unit 3.6.1</p>
+</li><li>
+<p>rexml 3.2.6</p>
+</li><li>
+<p>rss 0.3.0</p>
+</li><li>
+<p>net-imap 0.3.7</p>
+</li><li>
+<p>rbs 3.2.1</p>
+</li><li>
+<p>typeprof 0.21.8</p>
+</li><li>
+<p>debug 1.8.0</p>
+</li></ul>
+
+<p>The following default gem is now bundled.</p>
+<ul><li>
+<p>racc 1.7.1</p>
+</li></ul>
+
+<p>See GitHub releases like <a href="https://github.com/ruby/logger/releases">Logger</a> or changelog for details of the default gems or bundled gems.</p>
+
+<h2 id="label-Supported+platforms">Supported platforms<span><a href="#label-Supported+platforms">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h2 id="label-Compatibility+issues">Compatibility issues<span><a href="#label-Compatibility+issues">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h2 id="label-Stdlib+compatibility+issues">Stdlib compatibility issues<span><a href="#label-Stdlib+compatibility+issues">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p><code>racc</code> is promoted bundled gems.</p>
+</li><li>
+<p>You need to add <code>racc</code> to your <code>Gemfile</code> if you use <code>racc</code> under bundler environment.</p>
+</li><li>
+<p><code>ext/readline</code> is retired</p>
+</li><li>
+<p>We have <code>reline</code> that is pure Ruby implementation compatible with <code>ext/readline</code> API. We rely on <code>reline</code> in the future. If you need to use <code>ext/readline</code>, you can install <code>ext/readline</code> via rubygems.org with <code>gem install readline-ext</code>.</p>
+</li><li>
+<p>We no longer need to install libraries like <code>libreadline</code> or <code>libedit</code>.</p>
+</li></ul>
+
+<h2 id="label-C+API+updates">C API updates<span><a href="#label-C+API+updates">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h2 id="label-Implementation+improvements">Implementation improvements<span><a href="#label-Implementation+improvements">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p><code>defined?(@ivar)</code> is optimized with <a href="../Object.html"><code>Object</code></a> Shapes.</p>
+</li></ul>
+
+<h3 id="label-YJIT">YJIT<span><a href="#label-YJIT">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Major performance improvements over 3.2</p>
+</li><li>
+<p>Support for splat and rest arguments has been improved.</p>
+</li><li>
+<p>Registers are allocated for stack operations of the virtual machine.</p>
+</li><li>
+<p>More calls with optional arguments are compiled.</p>
+</li><li>
+<p><a href="../Exception.html"><code>Exception</code></a> handlers are also compiled.</p>
+</li><li>
+<p>Instance variables no longer exit to the interpreter with megamorphic <a href="../Object.html"><code>Object</code></a> Shapes.</p>
+</li><li>
+<p>Unsupported call types no longer exit to the interpreter.</p>
+</li><li>
+<p>Integer#!=, String#!=, <a href="../Kernel.html#method-i-block_given-3F"><code>Kernel#block_given?</code></a>, Kernel#is_a?, Kernel#instance_of?, <a href="../Module.html#method-i-3D-3D-3D"><code>Module#===</code></a> are specially optimized.</p>
+</li><li>
+<p>Now more than 3x faster than the interpreter on optcarrot!</p>
+</li><li>
+<p>Metadata for compiled code uses a lot less memory.</p>
+</li><li>
+<p>Generate more compact code on ARM64</p>
+</li><li>
+<p>Option to start YJIT in paused mode and then later enable it manually</p>
+</li><li>
+<p><code>--yjit-pause</code> and <a href="../RubyVM/YJIT.html#method-c-resume"><code>RubyVM::YJIT.resume</code></a></p>
+</li><li>
+<p>This can be used to enable YJIT only once your application is done booting</p>
+</li><li>
+<p><code>ratio_in_yjit</code> stat produced by <code>--yjit-stats</code> is now avaiable in release builds,  a special stats or dev build is no longer required.</p>
+</li><li>
+<p>Exit tracing option now supports sampling</p>
+</li><li>
+<p><code>--trace-exits-sample-rate=N</code></p>
+</li><li>
+<p><code>--yjit-stats=quiet</code> is added to avoid printing stats on exit.</p>
+</li><li>
+<p>The default value for <code>--yjit-exec-mem-size</code> is changed from 64 to 128.</p>
+</li><li>
+<p>More thorough testing and multiple bug fixes</p>
+</li></ul>
+
+<h3 id="label-RJIT">RJIT<span><a href="#label-RJIT">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Introduced a pure-Ruby JIT compiler RJIT and replaced MJIT.</p>
+</li><li>
+<p>RJIT supports only x86_64 architecture on Unix platforms.</p>
+</li><li>
+<p>Unlike MJIT, it doesn’t require a C compiler at runtime.</p>
+</li><li>
+<p>RJIT exists only for experimental purposes.</p>
+</li><li>
+<p>You should keep using YJIT in production.</p>
+</li></ul>
+
+</main>
+
+</div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

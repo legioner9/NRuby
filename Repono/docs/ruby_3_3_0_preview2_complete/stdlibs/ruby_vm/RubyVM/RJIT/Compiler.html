@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class RubyVM::RJIT::Compiler - ruby_vm: Ruby Standard Library Documentation</title>
+
+
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
+
+<script src="../../js/jquery-3.2.0.min.js"></script>
+
+<script src="../../js/vue.min.js"></script>
+<script src="../../js/js.cookie.min.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../../css/rdoc.css" rel="stylesheet">
+<link href="../../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+  var darkModeCsseHref = "../../css/rdoc-dm.css"
+  var defaultModeCssHref = "../../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">Object
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-decode_insn">::decode_insn</a>
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-add_block">#add_block</a>
+    <li ><a href="#method-i-assert">#assert</a>
+    <li ><a href="#method-i-assert_compatible">#assert_compatible</a>
+    <li ><a href="#method-i-branch_stub_hit">#branch_stub_hit</a>
+    <li ><a href="#method-i-compile">#compile</a>
+    <li ><a href="#method-i-compile_block">#compile_block</a>
+    <li ><a href="#method-i-compile_entry_chain_guard">#compile_entry_chain_guard</a>
+    <li ><a href="#method-i-compile_prologue">#compile_prologue</a>
+    <li ><a href="#method-i-entry_stub_hit">#entry_stub_hit</a>
+    <li ><a href="#method-i-find_block">#find_block</a>
+    <li ><a href="#method-i-incr_counter">#incr_counter</a>
+    <li ><a href="#method-i-invalidate_block">#invalidate_block</a>
+    <li ><a href="#method-i-invalidate_blocks">#invalidate_blocks</a>
+    <li ><a href="#method-i-iseq_lineno">#iseq_lineno</a>
+    <li ><a href="#method-i-leave_exit">#leave_exit</a>
+    <li ><a href="#method-i-limit_block_versions">#limit_block_versions</a>
+    <li ><a href="#method-i-list_blocks">#list_blocks</a>
+    <li ><a href="#method-i-remove_block">#remove_block</a>
+    <li ><a href="#method-i-rjit_blocks">#rjit_blocks</a>
+    <li ><a href="#method-i-verify_ctx">#verify_ctx</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-RubyVM::RJIT::Compiler">
+    <h1 id="class-RubyVM::RJIT::Compiler" class="class">
+      class RubyVM::RJIT::Compiler
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-write_pos" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">write_pos</span><span
+                class="attribute-access-type">[RW]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-decode_insn" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">decode_insn</span><span
+                                class="method-args">(encoded)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="decode_insn-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">decode_insn</span>(<span class="ruby-identifier">encoded</span>)
+  <span class="ruby-constant">INSNS</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-constant">C</span>.<span class="ruby-identifier">rb_vm_insn_decode</span>(<span class="ruby-identifier">encoded</span>))
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>
+  <span class="ruby-identifier">mem_size</span> = <span class="ruby-constant">C</span>.<span class="ruby-identifier">rjit_opts</span>.<span class="ruby-identifier">exec_mem_size</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span> <span class="ruby-operator">*</span> <span class="ruby-value">1024</span>
+  <span class="ruby-identifier">mem_block</span> = <span class="ruby-constant">C</span>.<span class="ruby-identifier">mmap</span>(<span class="ruby-identifier">mem_size</span>)
+  <span class="ruby-ivar">@cb</span> = <span class="ruby-constant">CodeBlock</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">mem_block:</span> <span class="ruby-identifier">mem_block</span>, <span class="ruby-value">mem_size:</span> <span class="ruby-identifier">mem_size</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@ocb</span> = <span class="ruby-constant">CodeBlock</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">mem_block:</span> <span class="ruby-identifier">mem_block</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mem_size</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>, <span class="ruby-value">mem_size:</span> <span class="ruby-identifier">mem_size</span> <span class="ruby-operator">/</span> <span class="ruby-value">2</span>, <span class="ruby-value">outlined:</span> <span class="ruby-keyword">true</span>)
+  <span class="ruby-ivar">@exit_compiler</span> = <span class="ruby-constant">ExitCompiler</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-ivar">@insn_compiler</span> = <span class="ruby-constant">InsnCompiler</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@cb</span>, <span class="ruby-ivar">@ocb</span>, <span class="ruby-ivar">@exit_compiler</span>)
+  <span class="ruby-constant">Invariants</span>.<span class="ruby-identifier">initialize</span>(<span class="ruby-ivar">@cb</span>, <span class="ruby-ivar">@ocb</span>, <span class="ruby-keyword">self</span>, <span class="ruby-ivar">@exit_compiler</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-branch_stub_hit" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">branch_stub_hit</span><span
+                                class="method-args">(branch_stub, cfp, target0_p)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Compile a branch stub. @param branch_stub [RubyVM::RJIT::BranchStub] @param cfp ‘RubyVM::RJIT::CPointer::Struct_rb_control_frame_t` @param target0_p [TrueClass,FalseClass] @return [Integer] The starting address of the compiled branch stub</p>
+
+                              <div class="method-source-code" id="branch_stub_hit-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">branch_stub_hit</span>(<span class="ruby-identifier">branch_stub</span>, <span class="ruby-identifier">cfp</span>, <span class="ruby-identifier">target0_p</span>)
+  <span class="ruby-comment"># Update cfp-&gt;pc for `jit.at_current_insn?`</span>
+  <span class="ruby-identifier">target</span> = <span class="ruby-identifier">target0_p</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">target0</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">target1</span>
+  <span class="ruby-identifier">cfp</span>.<span class="ruby-identifier">pc</span> = <span class="ruby-identifier">target</span>.<span class="ruby-identifier">pc</span>
+
+  <span class="ruby-comment"># Reuse an existing block if it already exists</span>
+  <span class="ruby-identifier">block</span> = <span class="ruby-identifier">find_block</span>(<span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">target</span>.<span class="ruby-identifier">pc</span>, <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ctx</span>)
+
+  <span class="ruby-comment"># If the branch stub&#39;s jump is the last code, allow overwriting part of</span>
+  <span class="ruby-comment"># the old branch code with the new block code.</span>
+  <span class="ruby-identifier">fallthrough</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write_addr</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">end_addr</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">fallthrough</span>
+    <span class="ruby-comment"># If the branch stub&#39;s jump is the last code, allow overwriting part of</span>
+    <span class="ruby-comment"># the old branch code with the new block code.</span>
+    <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">set_write_addr</span>(<span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">start_addr</span>)
+    <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">shape</span> = <span class="ruby-identifier">target0_p</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Next0</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Next1</span>
+    <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">branch_asm</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">compile</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">branch_asm</span>)
+      <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">branch_asm</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Reuse or generate a block</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
+    <span class="ruby-identifier">target</span>.<span class="ruby-identifier">address</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">start_addr</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">jit</span> = <span class="ruby-constant">JITState</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">iseq:</span> <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">iseq</span>, <span class="ruby-value">cfp:</span>)
+    <span class="ruby-identifier">target</span>.<span class="ruby-identifier">address</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">then</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">asm</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">compile_block</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-value">jit:</span>, <span class="ruby-value">pc:</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">pc</span>, <span class="ruby-value">ctx:</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">dup</span>)
+      <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">asm</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">block</span> = <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">block</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">block</span>.<span class="ruby-identifier">incoming</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">branch_stub</span> <span class="ruby-comment"># prepare for invalidate_block</span>
+
+  <span class="ruby-comment"># Re-generate the branch code for non-fallthrough cases</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">fallthrough</span>
+    <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">with_write_addr</span>(<span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">start_addr</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">branch_asm</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">compile</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">branch_asm</span>)
+      <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">branch_asm</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">address</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">full_message</span>
+  <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-compile" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">compile</span><span
+                                class="method-args">(iseq, cfp)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Compile an ISEQ from its entry point. @param iseq ‘RubyVM::RJIT::CPointer::Struct_rb_iseq_t` @param cfp `RubyVM::RJIT::CPointer::Struct_rb_control_frame_t`</p>
+
+                              <div class="method-source-code" id="compile-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">compile</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">cfp</span>)
+  <span class="ruby-identifier">pc</span> = <span class="ruby-identifier">cfp</span>.<span class="ruby-identifier">pc</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">jit</span> = <span class="ruby-constant">JITState</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">iseq:</span>, <span class="ruby-value">cfp:</span>)
+  <span class="ruby-identifier">asm</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">compile_prologue</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>)
+  <span class="ruby-identifier">compile_block</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-value">jit:</span>, <span class="ruby-value">pc:</span>)
+  <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">jit_entry</span> = <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">asm</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">full_message</span>
+  <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-entry_stub_hit" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">entry_stub_hit</span><span
+                                class="method-args">(entry_stub, cfp)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Compile an entry. @param entry [RubyVM::RJIT::EntryStub]</p>
+
+                              <div class="method-source-code" id="entry_stub_hit-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">entry_stub_hit</span>(<span class="ruby-identifier">entry_stub</span>, <span class="ruby-identifier">cfp</span>)
+  <span class="ruby-comment"># Compile a new entry guard as a next entry</span>
+  <span class="ruby-identifier">pc</span> = <span class="ruby-identifier">cfp</span>.<span class="ruby-identifier">pc</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">next_entry</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">then</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">asm</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">compile_entry_chain_guard</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-identifier">cfp</span>.<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>)
+    <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">asm</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Try to find an existing compiled version of this block</span>
+  <span class="ruby-identifier">ctx</span> = <span class="ruby-constant">Context</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">block</span> = <span class="ruby-identifier">find_block</span>(<span class="ruby-identifier">cfp</span>.<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>, <span class="ruby-identifier">ctx</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
+    <span class="ruby-comment"># If an existing block is found, generate a jump to the block.</span>
+    <span class="ruby-identifier">asm</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">jmp</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">start_addr</span>)
+    <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">asm</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># If this block hasn&#39;t yet been compiled, generate blocks after the entry guard.</span>
+    <span class="ruby-identifier">asm</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">jit</span> = <span class="ruby-constant">JITState</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">iseq:</span> <span class="ruby-identifier">cfp</span>.<span class="ruby-identifier">iseq</span>, <span class="ruby-value">cfp:</span>)
+    <span class="ruby-identifier">compile_block</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-value">jit:</span>, <span class="ruby-value">pc:</span>, <span class="ruby-value">ctx:</span>)
+    <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">asm</span>)
+
+    <span class="ruby-identifier">block</span> = <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">block</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Regenerate the previous entry</span>
+  <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">with_write_addr</span>(<span class="ruby-identifier">entry_stub</span>.<span class="ruby-identifier">start_addr</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># The last instruction of compile_entry_chain_guard is jne</span>
+    <span class="ruby-identifier">asm</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">jne</span>(<span class="ruby-identifier">next_entry</span>)
+    <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">asm</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">start_addr</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">e</span>
+  <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">full_message</span>
+  <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-invalidate_block" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">invalidate_block</span><span
+                                class="method-args">(block)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="invalidate_block-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 184</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">invalidate_block</span>(<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">iseq</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">iseq</span>
+  <span class="ruby-comment"># Avoid touching GCed ISEQs. We assume it won&#39;t be re-entered.</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">C</span>.<span class="ruby-identifier">imemo_type_p</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-constant">C</span>.<span class="ruby-identifier">imemo_iseq</span>)
+
+  <span class="ruby-comment"># Remove this block from the version array</span>
+  <span class="ruby-identifier">remove_block</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">block</span>)
+
+  <span class="ruby-comment"># Invalidate the block with entry exit</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">invalidated</span>
+    <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">with_write_addr</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">start_addr</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">asm</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">comment</span>(<span class="ruby-string">&#39;invalidate_block&#39;</span>)
+      <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">jmp</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">entry_exit</span>)
+      <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">asm</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">block</span>.<span class="ruby-identifier">invalidated</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Re-stub incoming branches</span>
+  <span class="ruby-identifier">block</span>.<span class="ruby-identifier">incoming</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">branch_stub</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">target</span> = [<span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">target0</span>, <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">target1</span>].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">find</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">target</span>.<span class="ruby-identifier">pc</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">pc</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ctx</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">ctx</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-comment"># TODO: Could target.address be a stub address? Is invalidation not needed in that case?</span>
+
+    <span class="ruby-comment"># If the target being re-generated is currently a fallthrough block,</span>
+    <span class="ruby-comment"># the fallthrough code must be rewritten with a jump to the stub.</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">address</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">end_addr</span>
+      <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">shape</span> = <span class="ruby-constant">Default</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">target</span>.<span class="ruby-identifier">address</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">then</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ocb_asm</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@exit_compiler</span>.<span class="ruby-identifier">compile_branch_stub</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">ctx</span>, <span class="ruby-identifier">ocb_asm</span>, <span class="ruby-identifier">branch_stub</span>, <span class="ruby-identifier">target</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">target0</span>)
+      <span class="ruby-ivar">@ocb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">ocb_asm</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">with_write_addr</span>(<span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">start_addr</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">branch_asm</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">branch_stub</span>.<span class="ruby-identifier">compile</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">branch_asm</span>)
+      <span class="ruby-ivar">@cb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">branch_asm</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-invalidate_blocks" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">invalidate_blocks</span><span
+                                class="method-args">(iseq, pc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>@param iseq ‘RubyVM::RJIT::CPointer::Struct_rb_iseq_t` @param pc [Integer]</p>
+
+                              <div class="method-source-code" id="invalidate_blocks-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">invalidate_blocks</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>)
+  <span class="ruby-identifier">list_blocks</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">invalidate_block</span>(<span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># If they were the ISEQ&#39;s first blocks, re-compile RJIT entry as well</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">iseq_encoded</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pc</span>
+    <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">jit_entry</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">jit_entry_calls</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-add_block" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_block</span><span
+                                class="method-args">(iseq, block)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>@param [RubyVM::RJIT::Block] block</p>
+
+                              <div class="method-source-code" id="add_block-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_block</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">rjit_blocks</span>(<span class="ruby-identifier">iseq</span>)[<span class="ruby-identifier">block</span>.<span class="ruby-identifier">pc</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-assert" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">assert</span><span
+                                class="method-args">(cond)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="assert-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 503</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">assert</span>(<span class="ruby-identifier">cond</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">cond</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;&#39;#{cond.inspect}&#39; was not true&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-assert_compatible" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">assert_compatible</span><span
+                                class="method-args">(actual_type, ctx_type)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="assert_compatible-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 497</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">assert_compatible</span>(<span class="ruby-identifier">actual_type</span>, <span class="ruby-identifier">ctx_type</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">actual_type</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">ctx_type</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;verify_ctx: ctx type (#{ctx_type.type.inspect}) is incompatible with actual type (#{actual_type.type.inspect})&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-compile_block" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">compile_block</span><span
+                                class="method-args">(asm, jit:, pc:, ctx: Context.new)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>@param asm [RubyVM::RJIT::Assembler] @param jit [RubyVM::RJIT::JITState] @param ctx [RubyVM::RJIT::Context]</p>
+
+                              <div class="method-source-code" id="compile_block-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 284</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">compile_block</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-value">jit:</span>, <span class="ruby-value">pc:</span>, <span class="ruby-value">ctx:</span> <span class="ruby-constant">Context</span>.<span class="ruby-identifier">new</span>)
+  <span class="ruby-comment"># Mark the block start address and prepare an exit code storage</span>
+  <span class="ruby-identifier">ctx</span> = <span class="ruby-identifier">limit_block_versions</span>(<span class="ruby-identifier">jit</span>.<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>, <span class="ruby-identifier">ctx</span>)
+  <span class="ruby-identifier">block</span> = <span class="ruby-constant">Block</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">iseq:</span> <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">iseq</span>, <span class="ruby-value">pc:</span>, <span class="ruby-value">ctx:</span> <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">dup</span>)
+  <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">block</span> = <span class="ruby-identifier">block</span>
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">block</span>(<span class="ruby-identifier">block</span>)
+
+  <span class="ruby-identifier">iseq</span> = <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">iseq</span>
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">comment</span>(<span class="ruby-node">&quot;Block: #{iseq.body.location.label}@#{C.rb_iseq_path(iseq)}:#{iseq_lineno(iseq, pc)}&quot;</span>)
+
+  <span class="ruby-comment"># Compile each insn</span>
+  <span class="ruby-identifier">index</span> = (<span class="ruby-identifier">pc</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">iseq_encoded</span>.<span class="ruby-identifier">to_i</span>) <span class="ruby-operator">/</span> <span class="ruby-constant">C</span>.<span class="ruby-constant">VALUE</span>.<span class="ruby-identifier">size</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">iseq_size</span>
+    <span class="ruby-comment"># Set the current instruction</span>
+    <span class="ruby-identifier">insn</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">decode_insn</span>(<span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">iseq_encoded</span>[<span class="ruby-identifier">index</span>])
+    <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">pc</span> = (<span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">iseq_encoded</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span>).<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">stack_size_for_pc</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">stack_size</span>
+    <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">side_exit_for_pc</span>.<span class="ruby-identifier">clear</span>
+
+    <span class="ruby-comment"># If previous instruction requested to record the boundary</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">record_boundary_patch_point</span>
+      <span class="ruby-comment"># Generate an exit to this instruction and record it</span>
+      <span class="ruby-identifier">exit_pos</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">then</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ocb_asm</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@exit_compiler</span>.<span class="ruby-identifier">compile_side_exit</span>(<span class="ruby-identifier">jit</span>.<span class="ruby-identifier">pc</span>, <span class="ruby-identifier">ctx</span>, <span class="ruby-identifier">ocb_asm</span>)
+        <span class="ruby-ivar">@ocb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">ocb_asm</span>)
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-constant">Invariants</span>.<span class="ruby-identifier">record_global_inval_patch</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-identifier">exit_pos</span>)
+      <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">record_boundary_patch_point</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># In debug mode, verify our existing assumption</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">C</span>.<span class="ruby-identifier">rjit_opts</span>.<span class="ruby-identifier">verify_ctx</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">at_current_insn?</span>
+      <span class="ruby-identifier">verify_ctx</span>(<span class="ruby-identifier">jit</span>, <span class="ruby-identifier">ctx</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">status</span> = <span class="ruby-ivar">@insn_compiler</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-identifier">jit</span>, <span class="ruby-identifier">ctx</span>, <span class="ruby-identifier">asm</span>, <span class="ruby-identifier">insn</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">KeepCompiling</span>
+      <span class="ruby-comment"># For now, reset the chain depth after each instruction as only the</span>
+      <span class="ruby-comment"># first instruction in the block can concern itself with the depth.</span>
+      <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">chain_depth</span> = <span class="ruby-value">0</span>
+
+      <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">len</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">EndBlock</span>
+      <span class="ruby-comment"># TODO: pad nops if entry exit exists (not needed for x86_64?)</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">CantCompile</span>
+      <span class="ruby-comment"># Rewind stack_size using ctx.with_stack_size to allow stack_size changes</span>
+      <span class="ruby-comment"># before you return CantCompile.</span>
+      <span class="ruby-ivar">@exit_compiler</span>.<span class="ruby-identifier">compile_side_exit</span>(<span class="ruby-identifier">jit</span>.<span class="ruby-identifier">pc</span>, <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">with_stack_size</span>(<span class="ruby-identifier">jit</span>.<span class="ruby-identifier">stack_size_for_pc</span>), <span class="ruby-identifier">asm</span>)
+
+      <span class="ruby-comment"># If this is the first instruction, this block never needs to be invalidated.</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">pc</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">iseq_encoded</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">*</span> <span class="ruby-constant">C</span>.<span class="ruby-constant">VALUE</span>.<span class="ruby-identifier">size</span>
+        <span class="ruby-identifier">block</span>.<span class="ruby-identifier">invalidated</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;compiling #{insn.name} returned unexpected status: #{status.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">incr_counter</span>(<span class="ruby-value">:compiled_block_count</span>)
+  <span class="ruby-identifier">add_block</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-compile_entry_chain_guard" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">compile_entry_chain_guard</span><span
+                                class="method-args">(asm, iseq, pc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="compile_entry_chain_guard-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">compile_entry_chain_guard</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>)
+  <span class="ruby-identifier">entry_stub</span> = <span class="ruby-constant">EntryStub</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">stub_addr</span> = <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">then</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ocb_asm</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@exit_compiler</span>.<span class="ruby-identifier">compile_entry_stub</span>(<span class="ruby-identifier">ocb_asm</span>, <span class="ruby-identifier">entry_stub</span>)
+    <span class="ruby-ivar">@ocb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">ocb_asm</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">comment</span>(<span class="ruby-string">&#39;guard expected PC&#39;</span>)
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">mov</span>(<span class="ruby-value">:rax</span>, <span class="ruby-identifier">pc</span>)
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">cmp</span>([<span class="ruby-constant">CFP</span>, <span class="ruby-constant">C</span>.<span class="ruby-identifier">rb_control_frame_t</span>.<span class="ruby-identifier">offsetof</span>(<span class="ruby-value">:pc</span>)], <span class="ruby-value">:rax</span>)
+
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">stub</span>(<span class="ruby-identifier">entry_stub</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">jne</span>(<span class="ruby-identifier">stub_addr</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-compile_prologue" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">compile_prologue</span><span
+                                class="method-args">(asm, iseq, pc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Callee-saved: rbx, rsp, rbp, r12, r13, r14, r15 Caller-saved: rax, rdi, rsi, rdx, rcx, r8, r9, r10, r11</p>
+
+<p>@param asm [RubyVM::RJIT::Assembler]</p>
+
+                              <div class="method-source-code" id="compile_prologue-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 235</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">compile_prologue</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>)
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">comment</span>(<span class="ruby-string">&#39;RJIT entry point&#39;</span>)
+
+  <span class="ruby-comment"># Save callee-saved registers used by JITed code</span>
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">CFP</span>)
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">EC</span>)
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">SP</span>)
+
+  <span class="ruby-comment"># Move arguments EC and CFP to dedicated registers</span>
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">mov</span>(<span class="ruby-constant">EC</span>, <span class="ruby-value">:rdi</span>)
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">mov</span>(<span class="ruby-constant">CFP</span>, <span class="ruby-value">:rsi</span>)
+
+  <span class="ruby-comment"># Load sp to a dedicated register</span>
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">mov</span>(<span class="ruby-constant">SP</span>, [<span class="ruby-constant">CFP</span>, <span class="ruby-constant">C</span>.<span class="ruby-identifier">rb_control_frame_t</span>.<span class="ruby-identifier">offsetof</span>(<span class="ruby-value">:sp</span>)]) <span class="ruby-comment"># rbx = cfp-&gt;sp</span>
+
+  <span class="ruby-comment"># Setup cfp-&gt;jit_return</span>
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">mov</span>(<span class="ruby-value">:rax</span>, <span class="ruby-identifier">leave_exit</span>)
+  <span class="ruby-identifier">asm</span>.<span class="ruby-identifier">mov</span>([<span class="ruby-constant">CFP</span>, <span class="ruby-constant">C</span>.<span class="ruby-identifier">rb_control_frame_t</span>.<span class="ruby-identifier">offsetof</span>(<span class="ruby-value">:jit_return</span>)], <span class="ruby-value">:rax</span>)
+
+  <span class="ruby-comment"># We&#39;re compiling iseqs that we *expect* to start at `insn_idx`. But in</span>
+  <span class="ruby-comment"># the case of optional parameters, the interpreter can set the pc to a</span>
+  <span class="ruby-comment"># different location depending on the optional parameters.  If an iseq</span>
+  <span class="ruby-comment"># has optional parameters, we&#39;ll add a runtime check that the PC we&#39;ve</span>
+  <span class="ruby-comment"># compiled for is the same PC that the interpreter wants us to run with.</span>
+  <span class="ruby-comment"># If they don&#39;t match, then we&#39;ll take a side exit.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">param</span>.<span class="ruby-identifier">flags</span>.<span class="ruby-identifier">has_opt</span>
+    <span class="ruby-identifier">compile_entry_chain_guard</span>(<span class="ruby-identifier">asm</span>, <span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-find_block" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">find_block</span><span
+                                class="method-args">(iseq, pc, ctx)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>@param [Integer] pc @param [RubyVM::RJIT::Context] ctx @return [RubyVM::RJIT::Block,NilClass]</p>
+
+                              <div class="method-source-code" id="find_block-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 395</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_block</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>, <span class="ruby-identifier">ctx</span>)
+  <span class="ruby-identifier">versions</span> = <span class="ruby-identifier">rjit_blocks</span>(<span class="ruby-identifier">iseq</span>)[<span class="ruby-identifier">pc</span>]
+
+  <span class="ruby-identifier">best_version</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">best_diff</span> = <span class="ruby-constant">Float</span><span class="ruby-operator">::</span><span class="ruby-constant">INFINITY</span>
+
+  <span class="ruby-identifier">versions</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># Note that we always prefer the first matching</span>
+    <span class="ruby-comment"># version found because of inline-cache chains</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">block</span>.<span class="ruby-identifier">ctx</span>)
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Compatible</span>[<span class="ruby-identifier">diff</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">diff</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">best_diff</span>
+      <span class="ruby-identifier">best_version</span> = <span class="ruby-identifier">block</span>
+      <span class="ruby-identifier">best_diff</span> = <span class="ruby-identifier">diff</span>
+    <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">best_version</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-incr_counter" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">incr_counter</span><span
+                                class="method-args">(name)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="incr_counter-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 356</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">incr_counter</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">C</span>.<span class="ruby-identifier">rjit_opts</span>.<span class="ruby-identifier">stats</span>
+    <span class="ruby-constant">C</span>.<span class="ruby-identifier">rb_rjit_counters</span>[<span class="ruby-identifier">name</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-iseq_lineno" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">iseq_lineno</span><span
+                                class="method-args">(iseq, pc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="iseq_lineno-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 441</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">iseq_lineno</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>)
+  <span class="ruby-constant">C</span>.<span class="ruby-identifier">rb_iseq_line_no</span>(<span class="ruby-identifier">iseq</span>, (<span class="ruby-identifier">pc</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">iseq_encoded</span>.<span class="ruby-identifier">to_i</span>) <span class="ruby-operator">/</span> <span class="ruby-constant">C</span>.<span class="ruby-constant">VALUE</span>.<span class="ruby-identifier">size</span>)
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">RangeError</span> <span class="ruby-comment"># bignum too big to convert into `unsigned long long&#39; (RangeError)</span>
+  <span class="ruby-value">-1</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-leave_exit" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">leave_exit</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="leave_exit-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 349</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">leave_exit</span>
+  <span class="ruby-ivar">@leave_exit</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Assembler</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">then</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">asm</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@exit_compiler</span>.<span class="ruby-identifier">compile_leave_exit</span>(<span class="ruby-identifier">asm</span>)
+    <span class="ruby-ivar">@ocb</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">asm</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-limit_block_versions" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">limit_block_versions</span><span
+                                class="method-args">(iseq, pc, ctx)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Produce a generic context when the block version limit is hit for the block</p>
+
+                              <div class="method-source-code" id="limit_block_versions-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">limit_block_versions</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>, <span class="ruby-identifier">ctx</span>)
+  <span class="ruby-comment"># Guard chains implement limits separately, do nothing</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">chain_depth</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">dup</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># If this block version we&#39;re about to add will hit the version limit</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">list_blocks</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>).<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">MAX_VERSIONS</span>
+    <span class="ruby-comment"># Produce a generic context that stores no type information,</span>
+    <span class="ruby-comment"># but still respects the stack_size and sp_offset constraints.</span>
+    <span class="ruby-comment"># This new context will then match all future requests.</span>
+    <span class="ruby-identifier">generic_ctx</span> = <span class="ruby-constant">Context</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">generic_ctx</span>.<span class="ruby-identifier">stack_size</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">stack_size</span>
+    <span class="ruby-identifier">generic_ctx</span>.<span class="ruby-identifier">sp_offset</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">sp_offset</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">diff</span>(<span class="ruby-identifier">generic_ctx</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">TypeDiff</span><span class="ruby-operator">::</span><span class="ruby-constant">Incompatible</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-string">&#39;should substitute a compatible context&#39;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">generic_ctx</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">dup</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-list_blocks" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">list_blocks</span><span
+                                class="method-args">(iseq, pc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="list_blocks-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 388</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">list_blocks</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">pc</span>)
+  <span class="ruby-identifier">rjit_blocks</span>(<span class="ruby-identifier">iseq</span>)[<span class="ruby-identifier">pc</span>]
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-remove_block" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">remove_block</span><span
+                                class="method-args">(iseq, block)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>@param [RubyVM::RJIT::Block] block</p>
+
+                              <div class="method-source-code" id="remove_block-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 421</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">remove_block</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">rjit_blocks</span>(<span class="ruby-identifier">iseq</span>)[<span class="ruby-identifier">block</span>.<span class="ruby-identifier">pc</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">block</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-rjit_blocks" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">rjit_blocks</span><span
+                                class="method-args">(iseq)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="rjit_blocks-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rjit_blocks</span>(<span class="ruby-identifier">iseq</span>)
+  <span class="ruby-comment"># Guard against ISEQ GC at random moments</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">C</span>.<span class="ruby-identifier">imemo_type_p</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-constant">C</span>.<span class="ruby-identifier">imemo_iseq</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = [] }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">rjit_blocks</span>
+    <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">rjit_blocks</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">blocks</span>, <span class="ruby-identifier">pc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">blocks</span>[<span class="ruby-identifier">pc</span>] = [] }
+    <span class="ruby-comment"># For some reason, rb_rjit_iseq_mark didn&#39;t protect this Hash</span>
+    <span class="ruby-comment"># from being freed. So we rely on GC_REFS to keep the Hash.</span>
+    <span class="ruby-constant">GC_REFS</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">rjit_blocks</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">rjit_blocks</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-verify_ctx" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">verify_ctx</span><span
+                                class="method-args">(jit, ctx)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Verify the ctx’s types and mappings against the compile-time stack, self, and locals. @param jit [RubyVM::RJIT::JITState] @param ctx [RubyVM::RJIT::Context]</p>
+
+                              <div class="method-source-code" id="verify_ctx-source">
+            <pre><span class="ruby-comment"># File ruby_vm/rjit/compiler.rb, line 450</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">verify_ctx</span>(<span class="ruby-identifier">jit</span>, <span class="ruby-identifier">ctx</span>)
+  <span class="ruby-comment"># Only able to check types when at current insn</span>
+  <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">jit</span>.<span class="ruby-identifier">at_current_insn?</span>)
+
+  <span class="ruby-identifier">self_val</span> = <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">peek_at_self</span>
+  <span class="ruby-identifier">self_val_type</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">from</span>(<span class="ruby-identifier">self_val</span>)
+
+  <span class="ruby-comment"># Verify self operand type</span>
+  <span class="ruby-identifier">assert_compatible</span>(<span class="ruby-identifier">self_val_type</span>, <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">get_opnd_type</span>(<span class="ruby-constant">SelfOpnd</span>))
+
+  <span class="ruby-comment"># Verify stack operand types</span>
+  [<span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">stack_size</span>, <span class="ruby-constant">MAX_TEMP_TYPES</span>].<span class="ruby-identifier">min</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">learned_mapping</span>, <span class="ruby-identifier">learned_type</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">get_opnd_mapping</span>(<span class="ruby-constant">StackOpnd</span>[<span class="ruby-identifier">i</span>])
+    <span class="ruby-identifier">stack_val</span> = <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">peek_at_stack</span>(<span class="ruby-identifier">i</span>)
+    <span class="ruby-identifier">val_type</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">from</span>(<span class="ruby-identifier">stack_val</span>)
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">learned_mapping</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToSelf</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">C</span>.<span class="ruby-identifier">to_value</span>(<span class="ruby-identifier">self_val</span>) <span class="ruby-operator">!=</span> <span class="ruby-constant">C</span>.<span class="ruby-identifier">to_value</span>(<span class="ruby-identifier">stack_val</span>)
+        <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;verify_ctx: stack value was mapped to self, but values did not match:\n&quot;</span>\
+          <span class="ruby-node">&quot;stack: #{stack_val.inspect}, self: #{self_val.inspect}&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToLocal</span>[<span class="ruby-identifier">local_idx</span>]
+      <span class="ruby-identifier">local_val</span> = <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">peek_at_local</span>(<span class="ruby-identifier">local_idx</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">C</span>.<span class="ruby-identifier">to_value</span>(<span class="ruby-identifier">local_val</span>) <span class="ruby-operator">!=</span> <span class="ruby-constant">C</span>.<span class="ruby-identifier">to_value</span>(<span class="ruby-identifier">stack_val</span>)
+        <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;verify_ctx: stack value was mapped to local, but values did not match:\n&quot;</span>\
+          <span class="ruby-node">&quot;stack: #{stack_val.inspect}, local: #{local_val.inspect}&quot;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">in</span> <span class="ruby-constant">MapToStack</span>
+      <span class="ruby-comment"># noop</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># If the actual type differs from the learned type</span>
+    <span class="ruby-identifier">assert_compatible</span>(<span class="ruby-identifier">val_type</span>, <span class="ruby-identifier">learned_type</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Verify local variable types</span>
+  <span class="ruby-identifier">local_table_size</span> = <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">local_table_size</span>
+  [<span class="ruby-identifier">local_table_size</span>, <span class="ruby-constant">MAX_TEMP_TYPES</span>].<span class="ruby-identifier">min</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">learned_type</span> = <span class="ruby-identifier">ctx</span>.<span class="ruby-identifier">get_local_type</span>(<span class="ruby-identifier">i</span>)
+    <span class="ruby-identifier">local_val</span> = <span class="ruby-identifier">jit</span>.<span class="ruby-identifier">peek_at_local</span>(<span class="ruby-identifier">i</span>)
+    <span class="ruby-identifier">local_type</span> = <span class="ruby-constant">Type</span>.<span class="ruby-identifier">from</span>(<span class="ruby-identifier">local_val</span>)
+
+    <span class="ruby-identifier">assert_compatible</span>(<span class="ruby-identifier">local_type</span>, <span class="ruby-identifier">learned_type</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>. </p><p><a href="https://jamesbritt.bandcamp.com/">Hack your world.  Feed your head.  Live curious</a>.</p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

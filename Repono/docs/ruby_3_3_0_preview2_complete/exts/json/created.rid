@@ -1,0 +1,22 @@
+Thu, 14 Sep 2023 20:15:57 -0700
+json/generator/generator.c	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/bigdecimal.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/complex.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/core.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/date.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/date_time.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/exception.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/ostruct.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/range.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/rational.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/regexp.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/set.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/struct.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/symbol.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/add/time.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/common.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/ext.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/generic_object.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json/version.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/lib/json.rb	Wed, 13 Sep 2023 18:09:33 -0700
+json/parser/parser.c	Wed, 13 Sep 2023 18:09:33 -0700

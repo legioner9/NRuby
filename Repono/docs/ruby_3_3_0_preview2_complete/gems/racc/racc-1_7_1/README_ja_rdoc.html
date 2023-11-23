@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README.ja - racc: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="file">
+  <!-- this is page.html -->
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+
+ <div class='wrapper hdiv'>
+
+ 
+
+
+<nav id='vapp' role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Racc">Racc</a>
+    <li><a href="#label-DESCRIPTION-3A">DESCRIPTION:</a>
+    <li><a href="#label-E5-BF-85-E8-A6-81-E7-92-B0-E5-A2-83">必要環境</a>
+    <li><a href="#label-E3-82-A4-E3-83-B3-E3-82-B9-E3-83-88-E3-83-BC-E3-83-AB">インストール</a>
+    <li><a href="#label-E3-83-86-E3-82-B9-E3-83-88">テスト</a>
+    <li><a href="#label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9">ライセンス</a>
+    <li><a href="#label-E3-83-90-E3-82-B0-E3-81-AA-E3-81-A9">バグなど</a>
+  </ul>
+</div>
+
+  <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+
+  <div id="project-metadata">
+   <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="../racc-1_7_1/README_ja_rdoc.html">README.ja</a>
+    <li><a href="../racc-1_7_1/README_rdoc.html">README</a>
+    <li><a href="../racc-1_7_1/doc/en/NEWS_en_rdoc.html">NEWS.en</a>
+    <li><a href="../racc-1_7_1/doc/en/grammar_en_rdoc.html">grammar.en</a>
+    <li><a href="../racc-1_7_1/doc/en/grammar2_en_rdoc.html">grammar2.en</a>
+    <li><a href="../racc-1_7_1/doc/ja/NEWS_ja_rdoc.html">NEWS.ja</a>
+    <li><a href="../racc-1_7_1/doc/ja/debug_ja_rdoc.html">debug.ja</a>
+    <li><a href="../racc-1_7_1/doc/ja/grammar_ja_rdoc.html">grammar.ja</a>
+    <li><a href="../racc-1_7_1/doc/ja/parser_ja_rdoc.html">parser.ja</a>
+  </ul>
+</div>
+
+   </div>
+  </div>
+</nav>
+
+
+<!--  carbon ads here -->
+
+<div id='extraz'>
+  <div class='adzbox-index'  >
+   
+  </div>
+ </div>         
+
+
+<main role="main" aria-label="Page racc-1.7.1/README.ja.rdoc">
+
+<h1 id="label-Racc"><a href="../Racc.html"><code>Racc</code></a><span><a href="#label-Racc">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<ul><li>
+<p><a href="http://i.loveruby.net/en/projects/racc">i.loveruby.net/en/projects/racc</a>/</p>
+</li></ul>
+
+<h2 id="label-DESCRIPTION-3A">DESCRIPTION:<span><a href="#label-DESCRIPTION-3A">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>Racc は LALR(1) パーサジェネレータです。
+yacc の Ruby 版に相当します。
+
+NOTE:
+Ruby 1.8.0 からは Racc のランタイムが標準添付されているので、
+Racc で生成したパーサを安心して配布できます。また Ruby 1.6 系に
+対応させたい場合は racc -E で生成してください。</pre>
+
+<h2 id="label-E5-BF-85-E8-A6-81-E7-92-B0-E5-A2-83">必要環境<span><a href="#label-E5-BF-85-E8-A6-81-E7-92-B0-E5-A2-83">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre> *  Ruby 1.8 以降
+(*) C コンパイラと make</pre>
+
+<h2 id="label-E3-82-A4-E3-83-B3-E3-82-B9-E3-83-88-E3-83-BC-E3-83-AB">インストール<span><a href="#label-E3-82-A4-E3-83-B3-E3-82-B9-E3-83-88-E3-83-BC-E3-83-AB">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>gem インストール:
+
+  $ gem install racc
+
+setup.rb インストル：
+
+パッケージのトップディレクトリで次のように入力してください。
+($ は通常ユーザ、# はルートのプロンプトです)
+
+    $ ruby setup.rb config
+    $ ruby setup.rb setup
+   ($ su)
+    # ruby setup.rb install
+
+これで通常のパスに Racc がインストールされます。自分の好き
+なディレクトリにインストールしたいときは、setup.rb config に
+各種オプションをつけて実行してください。オプションのリストは
+
+    $ ruby setup.rb --help
+
+で見られます。
+
+コンパイラがない場合
+--------------------
+
+config を以下のようにすれば、拡張モジュールなしで
+インストールできます。
+
+    $ ruby setup.rb config --without-ext</pre>
+
+<h2 id="label-E3-83-86-E3-82-B9-E3-83-88">テスト<span><a href="#label-E3-83-86-E3-82-B9-E3-83-88">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>sample/ 以下にいくつか Racc の文法ファイルのサンプルが用意
+してあります。動くのも動かないのもありますが、少なくとも
+calc-ja.y は動くのでこれを処理してみましょう。Racc をインス
+トールしたあと
+
+    $ racc -ocalc.rb calc-ja.y
+
+として下さい。処理は一瞬から数秒で終わるので、
+
+    $ ruby calc.rb
+
+を実行してください。ちゃんと動いてますか？
+
+Racc の文法など詳しいことは doc.ja/ ディレクトリ以下の HTML を
+見てください。</pre>
+
+<h2 id="label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9">ライセンス<span><a href="#label-E3-83-A9-E3-82-A4-E3-82-BB-E3-83-B3-E3-82-B9">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre class="ruby"><span class="ruby-identifier">このパッケージに付属するファイルの著作権は青木峰郎が保持します。</span>
+<span class="ruby-identifier">ライセンスは</span> <span class="ruby-constant">Ruby</span> <span class="ruby-identifier">ライセンスです。ただしユーザが書いた規則</span>
+<span class="ruby-identifier">ファイルや、Racc</span> <span class="ruby-identifier">がそこから生成した</span> <span class="ruby-constant">Ruby</span> <span class="ruby-identifier">スクリプトはその対象</span>
+<span class="ruby-identifier">外です。好きなライセンスで配布してください。</span>
+</pre>
+
+<h2 id="label-E3-83-90-E3-82-B0-E3-81-AA-E3-81-A9">バグなど<span><a href="#label-E3-83-90-E3-82-B0-E3-81-AA-E3-81-A9">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre class="ruby"><span class="ruby-constant">Racc</span> <span class="ruby-identifier">を使っていてバグらしき現象に遭遇したら、下記のアドレスまで</span>
+<span class="ruby-identifier">メールをください。作者にはバグを修正する義務はありませんがその</span>
+<span class="ruby-identifier">意思はあります。また、そのときはできるだけバグを再現できる文法</span>
+<span class="ruby-identifier">ファイルを付けてください。</span>
+
+                                       <span class="ruby-identifier">青木峰郎</span>(<span class="ruby-identifier">あおきみねろう</span>)
+                                            <span class="ruby-identifier">aamine</span><span class="ruby-ivar">@loveruby</span>.<span class="ruby-identifier">net</span>
+                                          <span class="ruby-identifier">http</span><span class="ruby-value">:/</span><span class="ruby-operator">/</span><span class="ruby-identifier">i</span>.<span class="ruby-identifier">loveruby</span>.<span class="ruby-identifier">net</span>
+</pre>
+
+</main>
+
+</div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>.</p><p><a href="https://jamesbritt.bandcamp.com/">Maximum R+D</a>.  </p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

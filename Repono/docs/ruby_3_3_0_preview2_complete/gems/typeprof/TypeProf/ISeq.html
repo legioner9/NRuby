@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class TypeProf::ISeq - typeprof: Ruby Standard Library Documentation</title>
+
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<script src="../js/jquery-3.2.0.min.js"></script>
+
+<script src="../js/vue.min.js"></script>
+<script src="../js/js.cookie.min.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="../css/rdoc.css" rel="stylesheet">
+<link href="../css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+  var darkModeCsseHref = "../css/rdoc-dm.css"
+  var defaultModeCssHref = "../css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" role="document" class="class">
+  <!-- this is class.html -->
+
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+
+    <nav id='vapp' role="navigation">
+    <div id="project-navigation">
+      <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2><a href="../index.html" rel="home">Home</a></h2>
+
+  <div id="table-of-contents-navigation"  >
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+      <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+    </div>
+
+
+    
+
+    <button id='toggleThing' @click="toggleNav()" >Show/hide navigation</button>
+    <div :class="isOpen ? 'block' : 'hidden' " id='toggleMe'>
+      <div id="class-metadata">
+        
+        
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+        
+        
+        
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-build_ast_node_id_table">::build_ast_node_id_table</a>
+    <li ><a href="#method-c-code_range_from_node">::code_range_from_node</a>
+    <li ><a href="#method-c-compile">::compile</a>
+    <li ><a href="#method-c-compile_core">::compile_core</a>
+    <li ><a href="#method-c-compile_str">::compile_str</a>
+    <li ><a href="#method-c-find_node_by_id">::find_node_by_id</a>
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    <li ><a href="#method-i-add_body_start_marker">#add_body_start_marker</a>
+    <li ><a href="#method-i-add_called_iseq">#add_called_iseq</a>
+    <li ><a href="#method-i-add_def_loc">#add_def_loc</a>
+    <li ><a href="#method-i-add_exception_cont_marker">#add_exception_cont_marker</a>
+    <li ><a href="#method-i-check_send_branch">#check_send_branch</a>
+    <li ><a href="#method-i-collect_local_variable_info">#collect_local_variable_info</a>
+    <li ><a href="#method-i-convert_insns">#convert_insns</a>
+    <li ><a href="#method-i-create_label_table">#create_label_table</a>
+    <li ><a href="#method-i-detailed_source_location">#detailed_source_location</a>
+    <li ><a href="#method-i-extract_method_name_token_range">#extract_method_name_token_range</a>
+    <li ><a href="#method-i-pretty_print">#pretty_print</a>
+    <li ><a href="#method-i-rename_insn_types">#rename_insn_types</a>
+    <li ><a href="#method-i-setup_insns">#setup_insns</a>
+    <li ><a href="#method-i-should_collect_defs">#should_collect_defs</a>
+    <li ><a href="#method-i-source_location">#source_location</a>
+    <li ><a href="#method-i-unify_instructions">#unify_instructions</a>
+  </ul>
+</div>
+
+      </div>
+     </div>
+    </nav>
+
+
+    <div id='extraz'><div class='adzbox-index'  >
+      
+     </div>         
+    </div>
+
+    <main role="main" aria-labelledby="class-TypeProf::ISeq">
+    <h1 id="class-TypeProf::ISeq" class="class">
+      class TypeProf::ISeq
+    </h1>
+
+    <section class="description">
+    
+    </section>
+
+      <section id="5Buntitled-5D" class="documentation-section">
+
+
+      <section class="constants-list">
+      <header>
+      <h3>Constants</h3>
+      </header>
+      <dl>
+          <dt id="CASE_WHEN_CHECKMATCH">CASE_WHEN_CHECKMATCH
+          <dd><p><a href="https://github.com/ruby/ruby/pull/4468">github.com/ruby/ruby/pull/4468</a></p>
+          <dt id="FileInfo">FileInfo
+          <dd>
+          <dt id="ISEQ_FRESH_ID">ISEQ_FRESH_ID
+          <dd>
+          <dt id="Insn">Insn
+          <dd>
+          <dt id="RICH_AST">RICH_AST
+          <dd><p>Check if Ruby 3.1 or later</p>
+          <dt id="VM_ENV_DATA_SIZE">VM_ENV_DATA_SIZE
+          <dd><p><a href="https://github.com/ruby/ruby/blob/v3_0_2/vm_core.h#L1206">github.com/ruby/ruby/blob/v3_0_2/vm_core.h#L1206</a></p>
+        </dl>
+        </section>
+
+        <section class="attribute-method-details" class="method-section">
+        <header>
+        <h3>Attributes</h3>
+        </header>
+
+          <div id="attribute-i-absolute_path" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">absolute_path</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-callers" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">callers</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-catch_table" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">catch_table</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-fargs_format" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">fargs_format</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-id" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">id</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-insns" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">insns</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-iseq_code_range" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">iseq_code_range</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-locals" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">locals</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-name" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">name</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-path" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">path</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-start_lineno" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">start_lineno</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+          <div id="attribute-i-type" class="method-detail">
+            <div class="method-heading attribute-method-heading">
+              <span class="method-name">type</span><span
+                class="attribute-access-type">[R]</span>
+            </div>
+
+            <div class="method-description">
+              
+              </div>
+            </div>
+            </section>
+
+
+                <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Class Methods</h3>
+                </header>
+
+                  <div id="method-c-code_range_from_node" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">code_range_from_node</span><span
+                                class="method-args">(node)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="code_range_from_node-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">code_range_from_node</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-constant">CodeRange</span>.<span class="ruby-identifier">new</span>(
+    <span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">first_lineno</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">first_column</span>),
+    <span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">last_lineno</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">last_column</span>),
+  )
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-compile" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">compile</span><span
+                                class="method-args">(file)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="compile-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">compile</span>(<span class="ruby-identifier">file</span>)
+  <span class="ruby-identifier">compile_core</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">file</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-compile_str" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">compile_str</span><span
+                                class="method-args">(str, path = nil)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="compile_str-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">compile_str</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">path</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">compile_core</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-find_node_by_id" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">find_node_by_id</span><span
+                                class="method-args">(node, id)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="find_node_by_id-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">find_node_by_id</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">node</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">AbstractSyntaxTree</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">node</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">node</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">node_id</span>
+
+  <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">AbstractSyntaxTree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>)
+      <span class="ruby-identifier">ret</span> = <span class="ruby-identifier">find_node_by_id</span>(<span class="ruby-identifier">child</span>, <span class="ruby-identifier">id</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">ret</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ret</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-new" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">new</span><span
+                                class="method-args">(iseq, file_info)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">file_info</span>)
+  <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">created_iseqs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>
+
+  <span class="ruby-ivar">@id</span> = (<span class="ruby-constant">ISEQ_FRESH_ID</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>)
+
+  <span class="ruby-identifier">_magic</span>, <span class="ruby-identifier">_major_version</span>, <span class="ruby-identifier">_minor_version</span>, <span class="ruby-identifier">_format_type</span>, <span class="ruby-identifier">misc</span>,
+    <span class="ruby-ivar">@name</span>, <span class="ruby-ivar">@path</span>, <span class="ruby-ivar">@absolute_path</span>, <span class="ruby-ivar">@start_lineno</span>, <span class="ruby-ivar">@type</span>,
+    <span class="ruby-ivar">@locals</span>, <span class="ruby-ivar">@fargs_format</span>, <span class="ruby-identifier">catch_table</span>, <span class="ruby-identifier">insns</span> = <span class="ruby-operator">*</span><span class="ruby-identifier">iseq</span>
+
+  <span class="ruby-identifier">fl</span>, <span class="ruby-identifier">fc</span>, <span class="ruby-identifier">ll</span>, <span class="ruby-identifier">lc</span> = <span class="ruby-identifier">misc</span>[<span class="ruby-value">:code_location</span>]
+  <span class="ruby-ivar">@iseq_code_range</span> = <span class="ruby-constant">CodeRange</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">fl</span>, <span class="ruby-identifier">fc</span>), <span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">ll</span>, <span class="ruby-identifier">lc</span>))
+
+  <span class="ruby-identifier">convert_insns</span>(<span class="ruby-identifier">insns</span>, <span class="ruby-identifier">misc</span>[<span class="ruby-value">:node_ids</span>] <span class="ruby-operator">||</span> [], <span class="ruby-identifier">file_info</span>)
+
+  <span class="ruby-identifier">add_body_start_marker</span>(<span class="ruby-identifier">insns</span>)
+
+  <span class="ruby-identifier">add_exception_cont_marker</span>(<span class="ruby-identifier">insns</span>, <span class="ruby-identifier">catch_table</span>)
+
+  <span class="ruby-identifier">labels</span> = <span class="ruby-identifier">create_label_table</span>(<span class="ruby-identifier">insns</span>)
+
+  <span class="ruby-ivar">@insns</span> = <span class="ruby-identifier">setup_insns</span>(<span class="ruby-identifier">insns</span>, <span class="ruby-identifier">labels</span>, <span class="ruby-identifier">file_info</span>)
+
+  <span class="ruby-ivar">@fargs_format</span>[<span class="ruby-value">:opt</span>] = <span class="ruby-ivar">@fargs_format</span>[<span class="ruby-value">:opt</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-identifier">labels</span>[<span class="ruby-identifier">l</span>] } <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fargs_format</span>[<span class="ruby-value">:opt</span>]
+
+  <span class="ruby-ivar">@catch_table</span> = []
+  <span class="ruby-identifier">catch_table</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">type</span>, <span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>, <span class="ruby-identifier">cont</span>, <span class="ruby-identifier">stack_depth</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">iseq</span> = <span class="ruby-identifier">iseq</span> <span class="ruby-operator">?</span> <span class="ruby-constant">ISeq</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">file_info</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">target</span> = <span class="ruby-identifier">labels</span>[<span class="ruby-identifier">cont</span>]
+    <span class="ruby-identifier">entry</span> = [<span class="ruby-identifier">type</span>, <span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">target</span>, <span class="ruby-identifier">stack_depth</span>]
+    <span class="ruby-identifier">labels</span>[<span class="ruby-identifier">first</span>].<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">labels</span>[<span class="ruby-identifier">last</span>]) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-ivar">@catch_table</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">||=</span> []
+      <span class="ruby-ivar">@catch_table</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">entry</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">def_node_id</span> = <span class="ruby-identifier">misc</span>[<span class="ruby-value">:def_node_id</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">def_node_id</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">node_id2node</span>[<span class="ruby-identifier">def_node_id</span>] <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:method</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:block</span>)
+    <span class="ruby-identifier">def_node</span> = <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">node_id2node</span>[<span class="ruby-identifier">def_node_id</span>]
+    <span class="ruby-identifier">method_name_token_range</span> = <span class="ruby-identifier">extract_method_name_token_range</span>(<span class="ruby-identifier">def_node</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">method_name_token_range</span>
+      <span class="ruby-ivar">@callers</span> = <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">MutableSet</span>.<span class="ruby-identifier">new</span>
+      <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">caller_table</span>[<span class="ruby-identifier">method_name_token_range</span>] = <span class="ruby-ivar">@callers</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">rename_insn_types</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="private-class-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Private Class Methods</h3>
+                </header>
+
+                  <div id="method-c-build_ast_node_id_table" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">build_ast_node_id_table</span><span
+                                class="method-args">(node, tbl = {})</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="build_ast_node_id_table-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 65</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">build_ast_node_id_table</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">tbl</span> = {})
+  <span class="ruby-identifier">tbl</span>[<span class="ruby-identifier">node</span>.<span class="ruby-identifier">node_id</span>] = <span class="ruby-identifier">node</span>
+  <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">build_ast_node_id_table</span>(<span class="ruby-identifier">child</span>, <span class="ruby-identifier">tbl</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">AbstractSyntaxTree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">tbl</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-c-compile_core" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">compile_core</span><span
+                                class="method-args">(str, path)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="compile_core-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 28</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">compile_core</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">opt</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>.<span class="ruby-identifier">compile_option</span>
+  <span class="ruby-identifier">opt</span>[<span class="ruby-value">:inline_const_cache</span>] = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">opt</span>[<span class="ruby-value">:peephole_optimization</span>] = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">opt</span>[<span class="ruby-value">:specialized_instruction</span>] = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">opt</span>[<span class="ruby-value">:operands_unification</span>] = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">opt</span>[<span class="ruby-value">:coverage_enabled</span>] = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-identifier">parse_opts</span> = {}
+  <span class="ruby-identifier">parse_opts</span>[<span class="ruby-value">:keep_script_lines</span>] = <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-constant">RICH_AST</span>
+
+  <span class="ruby-keyword">unless</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Currently, TypeProf can work on a Ruby implementation that supports RubyVM::InstructionSequence, such as CRuby.&quot;</span>
+    <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">str</span>
+    <span class="ruby-identifier">node</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">AbstractSyntaxTree</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">str</span>, <span class="ruby-operator">**</span><span class="ruby-identifier">parse_opts</span>)
+    <span class="ruby-identifier">iseq</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>.<span class="ruby-identifier">compile</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">path</span>, <span class="ruby-operator">**</span><span class="ruby-identifier">opt</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">node</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">AbstractSyntaxTree</span>.<span class="ruby-identifier">parse_file</span>(<span class="ruby-identifier">path</span>, <span class="ruby-operator">**</span><span class="ruby-identifier">parse_opts</span>)
+    <span class="ruby-identifier">iseq</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>.<span class="ruby-identifier">compile_file</span>(<span class="ruby-identifier">path</span>, <span class="ruby-operator">**</span><span class="ruby-identifier">opt</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">node_id2node</span> = {}
+  <span class="ruby-identifier">build_ast_node_id_table</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">node_id2node</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">RICH_AST</span>
+
+  <span class="ruby-identifier">file_info</span> = <span class="ruby-constant">FileInfo</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">node_id2node</span>, <span class="ruby-constant">CodeRangeTable</span>.<span class="ruby-identifier">new</span>, <span class="ruby-constant">CodeRangeTable</span>.<span class="ruby-identifier">new</span>, [])
+  <span class="ruby-identifier">iseq_rb</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">to_a</span>, <span class="ruby-identifier">file_info</span>)
+  <span class="ruby-identifier">iseq_rb</span>.<span class="ruby-identifier">collect_local_variable_info</span>(<span class="ruby-identifier">file_info</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">RICH_AST</span>
+  <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">created_iseqs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">iseq</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">unify_instructions</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">iseq_rb</span>, <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">definition_table</span>, <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">caller_table</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+                <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+                <header>
+                <h3>Public Instance Methods</h3>
+                </header>
+
+                  <div id="method-i-3C-3D-3E" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">&lt;=&gt;</span><span
+                                class="method-args">(other)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 245</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-ivar">@id</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_body_start_marker" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_body_start_marker</span><span
+                                class="method-args">(insns)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Insert a dummy instruction “_iseq_body_start”</p>
+
+                              <div class="method-source-code" id="add_body_start_marker-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 288</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_body_start_marker</span>(<span class="ruby-identifier">insns</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:method</span>, <span class="ruby-value">:block</span>
+    <span class="ruby-comment"># skip initialization code of optional arguments</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@fargs_format</span>[<span class="ruby-value">:opt</span>]
+      <span class="ruby-identifier">label</span> = <span class="ruby-ivar">@fargs_format</span>[<span class="ruby-value">:opt</span>].<span class="ruby-identifier">last</span>
+      <span class="ruby-identifier">i</span> = <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">label</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">i</span> = <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">find_index</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">insn</span><span class="ruby-operator">|</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Insn</span>) }
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># skip initialization code of keyword arguments</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">insns</span>[<span class="ruby-identifier">i</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:checkkeyword</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">insn</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:branchif</span>
+      <span class="ruby-identifier">label</span> = <span class="ruby-identifier">insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">operands</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-identifier">i</span> = <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">label</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-identifier">i</span>, <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:_iseq_body_start</span>, [], <span class="ruby-ivar">@start_lineno</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_called_iseq" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_called_iseq</span><span
+                                class="method-args">(pc, callee_iseq)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_called_iseq-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 195</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_called_iseq</span>(<span class="ruby-identifier">pc</span>, <span class="ruby-identifier">callee_iseq</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">callee_iseq</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">pc</span>].<span class="ruby-identifier">definitions</span>
+    <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">pc</span>].<span class="ruby-identifier">definitions</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">callee_iseq</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">callee_iseq</span>.<span class="ruby-identifier">iseq_code_range</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">callee_iseq</span>.<span class="ruby-identifier">callers</span>
+    <span class="ruby-identifier">callee_iseq</span>.<span class="ruby-identifier">callers</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@path</span>, <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">pc</span>].<span class="ruby-identifier">code_range</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_def_loc" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_def_loc</span><span
+                                class="method-args">(pc, detailed_loc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="add_def_loc-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_def_loc</span>(<span class="ruby-identifier">pc</span>, <span class="ruby-identifier">detailed_loc</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">detailed_loc</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">pc</span>].<span class="ruby-identifier">definitions</span>
+    <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">pc</span>].<span class="ruby-identifier">definitions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">detailed_loc</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-add_exception_cont_marker" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">add_exception_cont_marker</span><span
+                                class="method-args">(insns, catch_table)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Insert “nop” instruction to continuation point of exception handlers</p>
+
+                              <div class="method-source-code" id="add_exception_cont_marker-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 311</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">add_exception_cont_marker</span>(<span class="ruby-identifier">insns</span>, <span class="ruby-identifier">catch_table</span>)
+  <span class="ruby-comment"># rescue/ensure clauses need to have a dedicated return addresses</span>
+  <span class="ruby-comment"># because they requires to be virtually called.</span>
+  <span class="ruby-comment"># So, this preprocess adds &quot;nop&quot; to make a new insn for their return addresses</span>
+  <span class="ruby-identifier">exception_cont_labels</span> = {}
+  <span class="ruby-identifier">catch_table</span>.<span class="ruby-identifier">map!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">type</span>, <span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>, <span class="ruby-identifier">cont</span>, <span class="ruby-identifier">stack_depth</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:rescue</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:ensure</span>
+      <span class="ruby-identifier">exception_cont_labels</span>[<span class="ruby-identifier">cont</span>] = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">cont</span> = <span class="ruby-value">:&quot;#{ cont }_exception_cont&quot;</span>
+    <span class="ruby-keyword">end</span>
+    [<span class="ruby-identifier">type</span>, <span class="ruby-identifier">iseq</span>, <span class="ruby-identifier">first</span>, <span class="ruby-identifier">last</span>, <span class="ruby-identifier">cont</span>, <span class="ruby-identifier">stack_depth</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">size</span>
+    <span class="ruby-identifier">e</span> = <span class="ruby-identifier">insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">exception_cont_labels</span>[<span class="ruby-identifier">e</span>]
+      <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-identifier">i</span>, <span class="ruby-value">:&quot;#{ e }_exception_cont&quot;</span>, <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, []))
+      <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-check_send_branch" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">check_send_branch</span><span
+                                class="method-args">(sp, j)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="check_send_branch-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 720</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">check_send_branch</span>(<span class="ruby-identifier">sp</span>, <span class="ruby-identifier">j</span>)
+  <span class="ruby-identifier">insn</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span>]
+  <span class="ruby-identifier">operands</span> = <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>
+
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:putspecialobject</span>, <span class="ruby-value">:putnil</span>, <span class="ruby-value">:putobject</span>, <span class="ruby-value">:duparray</span>, <span class="ruby-value">:putstring</span>,
+       <span class="ruby-value">:putself</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:newarray</span>, <span class="ruby-value">:newarraykwsplat</span>, <span class="ruby-value">:newhash</span>, <span class="ruby-value">:concatstrings</span>
+    <span class="ruby-identifier">len</span>, = <span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">sp</span> =<span class="ruby-operator">-</span> <span class="ruby-identifier">len</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:newhashfromarray</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&quot;newhashfromarray&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:newrange</span>, <span class="ruby-value">:tostring</span>, <span class="ruby-value">:objtostring</span>, <span class="ruby-value">:anytostring</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:freezestring</span>
+    <span class="ruby-comment"># XXX: should leverage this information?</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:toregexp</span>
+    <span class="ruby-identifier">_regexp_opt</span>, <span class="ruby-identifier">len</span> = <span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">len</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:intern</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:definemethod</span>, <span class="ruby-value">:definesmethod</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:defineclass</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">2</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:send</span>, <span class="ruby-value">:invokesuper</span>
+    <span class="ruby-identifier">opt</span>, = <span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">_flags</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">:flag</span>]
+    <span class="ruby-identifier">_mid</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">:mid</span>]
+    <span class="ruby-identifier">kw_arg</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">:kw_arg</span>]
+    <span class="ruby-identifier">argc</span> = <span class="ruby-identifier">opt</span>[<span class="ruby-value">:orig_argc</span>]
+    <span class="ruby-identifier">argc</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-comment"># receiver</span>
+    <span class="ruby-identifier">argc</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">kw_arg</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">kw_arg</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">argc</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-value">:match</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:send</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:branch</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:arg_getlocal_send_branch</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-comment"># not implemented</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:invokeblock</span>
+    <span class="ruby-identifier">opt</span>, = <span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">opt</span>[<span class="ruby-value">:orig_argc</span>]
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:invokebuiltin</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:leave</span>, <span class="ruby-value">:throw</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:once</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-comment"># not implemented</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:branch</span>, <span class="ruby-value">:jump</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-comment"># not implemented</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:setinstancevariable</span>, <span class="ruby-value">:setclassvariable</span>, <span class="ruby-value">:setglobal</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:setlocal</span>, <span class="ruby-value">:setblockparam</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-comment"># conservative</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:getinstancevariable</span>, <span class="ruby-value">:getclassvariable</span>, <span class="ruby-value">:getglobal</span>,
+       <span class="ruby-value">:getlocal</span>, <span class="ruby-value">:getblockparam</span>, <span class="ruby-value">:getblockparamproxy</span>, <span class="ruby-value">:getlocal_checkmatch_branch</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:getconstant</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:setconstant</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">2</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:getspecial</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:setspecial</span>
+    <span class="ruby-comment"># flip-flop</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-string">&quot;setspecial&quot;</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:dup</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:duphash</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:dupn</span>
+    <span class="ruby-identifier">n</span>, = <span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:pop</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:swap</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:reverse</span>
+    <span class="ruby-identifier">n</span>, = <span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">n</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:defined</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:checkmatch</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:checkkeyword</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:adjuststack</span>
+    <span class="ruby-identifier">n</span>, = <span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">n</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:nop</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:setn</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment"># not implemented</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:topn</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:splatarray</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:expandarray</span>
+    <span class="ruby-identifier">num</span>, <span class="ruby-identifier">flag</span> = <span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">splat</span> = <span class="ruby-identifier">flag</span> <span class="ruby-operator">&amp;</span> <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">splat</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:concatarray</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:checktype</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown insn: #{ insn }&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">sp</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-collect_local_variable_info" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">collect_local_variable_info</span><span
+                                class="method-args">(file_info, absolute_level = 0, parent_variable_tables = {})</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Collect local variable use and definition info recursively</p>
+
+                              <div class="method-source-code" id="collect_local_variable_info-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 394</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">collect_local_variable_info</span>(<span class="ruby-identifier">file_info</span>, <span class="ruby-identifier">absolute_level</span> = <span class="ruby-value">0</span>, <span class="ruby-identifier">parent_variable_tables</span> = {})
+  <span class="ruby-comment"># e.g.</span>
+  <span class="ruby-comment"># variable_tables[abs_level][idx] = [[path, code_range]]</span>
+  <span class="ruby-identifier">current_variables</span> = []
+  <span class="ruby-identifier">variable_tables</span> = <span class="ruby-identifier">parent_variable_tables</span>.<span class="ruby-identifier">merge</span>({
+    <span class="ruby-identifier">absolute_level</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">current_variables</span>
+  })
+
+  <span class="ruby-identifier">dummy_def_range</span> = <span class="ruby-constant">CodeRange</span>.<span class="ruby-identifier">new</span>(
+    <span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@start_lineno</span>, <span class="ruby-value">0</span>),
+    <span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@start_lineno</span>, <span class="ruby-value">1</span>),
+  )
+  <span class="ruby-comment"># Fill tail elements with parameters</span>
+  (<span class="ruby-ivar">@fargs_format</span>[<span class="ruby-value">:lead_num</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">offset</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">current_variables</span>[<span class="ruby-constant">VM_ENV_DATA_SIZE</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@locals</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">offset</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">MutableSet</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-identifier">current_variables</span>[<span class="ruby-constant">VM_ENV_DATA_SIZE</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@locals</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">offset</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>] <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-ivar">@path</span>, <span class="ruby-identifier">dummy_def_range</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">insn</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:getlocal</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:setlocal</span>
+
+    <span class="ruby-identifier">idx</span> = <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-comment"># note: level is relative value to the current level</span>
+    <span class="ruby-identifier">level</span> = <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>]
+    <span class="ruby-identifier">target_abs_level</span> = <span class="ruby-identifier">absolute_level</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">level</span>
+    <span class="ruby-identifier">variable_tables</span>[<span class="ruby-identifier">target_abs_level</span>] <span class="ruby-operator">||=</span> {}
+    <span class="ruby-identifier">variable_tables</span>[<span class="ruby-identifier">target_abs_level</span>][<span class="ruby-identifier">idx</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">MutableSet</span>.<span class="ruby-identifier">new</span>
+
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:setlocal</span>
+      <span class="ruby-identifier">variable_tables</span>[<span class="ruby-identifier">target_abs_level</span>][<span class="ruby-identifier">idx</span>] <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">path</span>, <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">code_range</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:getlocal</span>
+      <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">definition_table</span>[<span class="ruby-identifier">insn</span>.<span class="ruby-identifier">code_range</span>] = <span class="ruby-identifier">variable_tables</span>[<span class="ruby-identifier">target_abs_level</span>][<span class="ruby-identifier">idx</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">insn</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">operand</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">ISeq</span>)
+      <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">collect_local_variable_info</span>(
+        <span class="ruby-identifier">file_info</span>, <span class="ruby-identifier">absolute_level</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>,
+        <span class="ruby-identifier">variable_tables</span>
+      )
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-convert_insns" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">convert_insns</span><span
+                                class="method-args">(insns, node_ids, file_info)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Remove lineno entry and convert instructions to <a href="ISeq/Insn.html"><code>Insn</code></a> instances</p>
+
+                              <div class="method-source-code" id="convert_insns-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 250</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">convert_insns</span>(<span class="ruby-identifier">insns</span>, <span class="ruby-identifier">node_ids</span>, <span class="ruby-identifier">file_info</span>)
+  <span class="ruby-identifier">ninsns</span> = []
+  <span class="ruby-identifier">lineno</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Integer</span> <span class="ruby-comment"># lineno</span>
+      <span class="ruby-identifier">lineno</span> = <span class="ruby-identifier">e</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Symbol</span> <span class="ruby-comment"># label or trace</span>
+      <span class="ruby-identifier">ninsns</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+      <span class="ruby-identifier">insn</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">operands</span> = <span class="ruby-identifier">e</span>
+      <span class="ruby-identifier">node_id</span> = <span class="ruby-identifier">node_ids</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-identifier">node</span> = <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">node_id2node</span>[<span class="ruby-identifier">node_id</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>
+        <span class="ruby-identifier">code_range</span> = <span class="ruby-constant">ISeq</span>.<span class="ruby-identifier">code_range_from_node</span>(<span class="ruby-identifier">node</span>)
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">insn</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:send</span>, <span class="ruby-value">:invokesuper</span>
+          <span class="ruby-identifier">opt</span>, <span class="ruby-identifier">blk_iseq</span> = <span class="ruby-identifier">operands</span>
+          <span class="ruby-identifier">opt</span>[<span class="ruby-value">:node_id</span>] = <span class="ruby-identifier">node_id</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">blk_iseq</span>
+            <span class="ruby-identifier">misc</span> = <span class="ruby-identifier">blk_iseq</span>[<span class="ruby-value">4</span>] <span class="ruby-comment"># iseq&#39;s &quot;misc&quot; field</span>
+            <span class="ruby-identifier">misc</span>[<span class="ruby-value">:def_node_id</span>] = <span class="ruby-identifier">node_id</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:definemethod</span>, <span class="ruby-value">:definesmethod</span>
+          <span class="ruby-identifier">iseq</span> = <span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>]
+          <span class="ruby-identifier">misc</span> = <span class="ruby-identifier">iseq</span>[<span class="ruby-value">4</span>] <span class="ruby-comment"># iseq&#39;s &quot;misc&quot; field</span>
+          <span class="ruby-identifier">misc</span>[<span class="ruby-value">:def_node_id</span>] = <span class="ruby-identifier">node_id</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">ninsns</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">insn</span>, <span class="ruby-identifier">operands</span>, <span class="ruby-identifier">lineno</span>, <span class="ruby-identifier">code_range</span>, <span class="ruby-keyword">nil</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown iseq entry: #{ e }&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">ninsns</span>)
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-create_label_table" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">create_label_table</span><span
+                                class="method-args">(insns)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="create_label_table-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 335</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_label_table</span>(<span class="ruby-identifier">insns</span>)
+  <span class="ruby-identifier">pc</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">labels</span> = {}
+  <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+      <span class="ruby-identifier">labels</span>[<span class="ruby-identifier">e</span>] = <span class="ruby-identifier">pc</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">pc</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">labels</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-detailed_source_location" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">detailed_source_location</span><span
+                                class="method-args">(pc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="detailed_source_location-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 186</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">detailed_source_location</span>(<span class="ruby-identifier">pc</span>)
+  <span class="ruby-identifier">code_range</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">pc</span>].<span class="ruby-identifier">code_range</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">code_range</span>
+    [<span class="ruby-ivar">@path</span>, <span class="ruby-identifier">code_range</span>]
+  <span class="ruby-keyword">else</span>
+    [<span class="ruby-ivar">@path</span>]
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-extract_method_name_token_range" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">extract_method_name_token_range</span><span
+                                class="method-args">(node)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="extract_method_name_token_range-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 153</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">extract_method_name_token_range</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-ivar">@type</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:method</span>
+    <span class="ruby-identifier">regex</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:DEFS</span>
+       <span class="ruby-regexp">/^def\s+(?:\w+)\s*\.\s*(\w+)/</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-regexp">/^def\s+(\w+)/</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">source</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">regex</span>
+    <span class="ruby-identifier">zero_loc</span> = <span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">0</span>)
+    <span class="ruby-identifier">name_start</span> = <span class="ruby-identifier">$~</span>.<span class="ruby-identifier">begin</span>(<span class="ruby-value">1</span>)
+    <span class="ruby-identifier">name_length</span> = <span class="ruby-identifier">$~</span>.<span class="ruby-identifier">end</span>(<span class="ruby-value">1</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">name_start</span>
+    <span class="ruby-identifier">name_head_loc</span> = <span class="ruby-identifier">zero_loc</span>.<span class="ruby-identifier">advance_cursor</span>(<span class="ruby-identifier">name_start</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">source</span>)
+    <span class="ruby-identifier">name_tail_loc</span> = <span class="ruby-identifier">name_head_loc</span>.<span class="ruby-identifier">advance_cursor</span>(<span class="ruby-identifier">name_length</span>, <span class="ruby-identifier">node</span>.<span class="ruby-identifier">source</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">CodeRange</span>.<span class="ruby-identifier">new</span>(
+      <span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(
+        <span class="ruby-identifier">node</span>.<span class="ruby-identifier">first_lineno</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">name_head_loc</span>.<span class="ruby-identifier">lineno</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>),
+        <span class="ruby-identifier">name_head_loc</span>.<span class="ruby-identifier">lineno</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">first_column</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">name_head_loc</span>.<span class="ruby-identifier">column</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">name_head_loc</span>.<span class="ruby-identifier">column</span>
+      ),
+      <span class="ruby-constant">CodeLocation</span>.<span class="ruby-identifier">new</span>(
+        <span class="ruby-identifier">node</span>.<span class="ruby-identifier">first_lineno</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">name_tail_loc</span>.<span class="ruby-identifier">lineno</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>),
+        <span class="ruby-identifier">name_tail_loc</span>.<span class="ruby-identifier">lineno</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">first_column</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">name_tail_loc</span>.<span class="ruby-identifier">column</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">name_tail_loc</span>.<span class="ruby-identifier">column</span>
+      ),
+    )
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:block</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">ISeq</span>.<span class="ruby-identifier">code_range_from_node</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-pretty_print" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">pretty_print</span><span
+                                class="method-args">(q)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="pretty_print-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">pretty_print</span>(<span class="ruby-identifier">q</span>)
+  <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-string">&quot;ISeq[&quot;</span>
+  <span class="ruby-identifier">q</span>.<span class="ruby-identifier">group</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">q</span>.<span class="ruby-identifier">nest</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span> <span class="ruby-string">&quot;&quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-node">&quot;@type=          #{ @type }&quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span> <span class="ruby-string">&quot;, &quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-node">&quot;@name=          #{ @name }&quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span> <span class="ruby-string">&quot;, &quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-node">&quot;@path=          #{ @path }&quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span> <span class="ruby-string">&quot;, &quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-node">&quot;@absolute_path= #{ @absolute_path }&quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span> <span class="ruby-string">&quot;, &quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-node">&quot;@start_lineno=  #{ @start_lineno }&quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span> <span class="ruby-string">&quot;, &quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-node">&quot;@fargs_format=  #{ @fargs_format.inspect }&quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span> <span class="ruby-string">&quot;, &quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-string">&quot;@insns=&quot;</span>
+      <span class="ruby-identifier">q</span>.<span class="ruby-identifier">group</span>(<span class="ruby-value">2</span>) <span class="ruby-keyword">do</span>
+        <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">insn</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">operands</span>), <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span>
+          <span class="ruby-identifier">q</span>.<span class="ruby-identifier">group</span>(<span class="ruby-value">2</span>, <span class="ruby-node">&quot;#{ i }: #{ insn.to_s }&quot;</span>, <span class="ruby-string">&quot;&quot;</span>) <span class="ruby-keyword">do</span>
+            <span class="ruby-identifier">q</span>.<span class="ruby-identifier">pp</span> <span class="ruby-identifier">operands</span>
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-string">&quot;]&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-rename_insn_types" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">rename_insn_types</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="rename_insn_types-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 441</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rename_insn_types</span>
+  <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">insn</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:branchif</span>
+      <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span>, <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span> = <span class="ruby-value">:branch</span>, [<span class="ruby-value">:if</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:branchunless</span>
+      <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span>, <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span> = <span class="ruby-value">:branch</span>, [<span class="ruby-value">:unless</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:branchnil</span>
+      <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span>, <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span> = <span class="ruby-value">:branch</span>, [<span class="ruby-value">:nil</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:getblockparam</span>, <span class="ruby-value">:getblockparamproxy</span>
+      <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> = <span class="ruby-value">:getlocal</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:getglobal</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span> <span class="ruby-operator">==</span> [<span class="ruby-value">:$typeprof</span>]
+        <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> = <span class="ruby-value">:putobject</span>
+        <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span> = [<span class="ruby-keyword">true</span>]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-setup_insns" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">setup_insns</span><span
+                                class="method-args">(insns, labels, file_info)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="setup_insns-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 348</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setup_insns</span>(<span class="ruby-identifier">insns</span>, <span class="ruby-identifier">labels</span>, <span class="ruby-identifier">file_info</span>)
+  <span class="ruby-identifier">ninsns</span> = []
+  <span class="ruby-identifier">insns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">e</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Symbol</span> <span class="ruby-comment"># label or trace</span>
+      <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">Insn</span>
+      <span class="ruby-identifier">operands</span> = (<span class="ruby-constant">INSN_TABLE</span>[<span class="ruby-identifier">e</span>.<span class="ruby-identifier">insn</span>] <span class="ruby-operator">||</span> []).<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">operands</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">type</span>, <span class="ruby-identifier">operand</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">type</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;ISEQ&quot;</span>
+          <span class="ruby-identifier">operand</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">ISeq</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">operand</span>, <span class="ruby-identifier">file_info</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;lindex_t&quot;</span>, <span class="ruby-string">&quot;rb_num_t&quot;</span>, <span class="ruby-string">&quot;VALUE&quot;</span>, <span class="ruby-string">&quot;ID&quot;</span>, <span class="ruby-string">&quot;GENTRY&quot;</span>, <span class="ruby-string">&quot;CALL_DATA&quot;</span>
+          <span class="ruby-identifier">operand</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;OFFSET&quot;</span>
+          <span class="ruby-identifier">labels</span>[<span class="ruby-identifier">operand</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">raise</span>(<span class="ruby-node">&quot;unknown label: #{ operand }&quot;</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;IVC&quot;</span>, <span class="ruby-string">&quot;ISE&quot;</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">operand</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)
+          <span class="ruby-value">:_cache_operand</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown operand type: #{ type }&quot;</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">code_range</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">should_collect_defs</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">insn</span>)
+        <span class="ruby-identifier">definition</span> = <span class="ruby-constant">Utils</span><span class="ruby-operator">::</span><span class="ruby-constant">MutableSet</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-identifier">file_info</span>.<span class="ruby-identifier">definition_table</span>[<span class="ruby-identifier">e</span>.<span class="ruby-identifier">code_range</span>] = <span class="ruby-identifier">definition</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">ninsns</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">insn</span>, <span class="ruby-identifier">operands</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">lineno</span>, <span class="ruby-identifier">e</span>.<span class="ruby-identifier">code_range</span>, <span class="ruby-identifier">definition</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown iseq entry: #{ e }&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">ninsns</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-should_collect_defs" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">should_collect_defs</span><span
+                                class="method-args">(insn_kind)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="should_collect_defs-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 384</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">should_collect_defs</span>(<span class="ruby-identifier">insn_kind</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">insn_kind</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:send</span>, <span class="ruby-value">:getinstancevariable</span>, <span class="ruby-value">:getconstant</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-source_location" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">source_location</span><span
+                                class="method-args">(pc)</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              
+
+                              <div class="method-source-code" id="source_location-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">source_location</span>(<span class="ruby-identifier">pc</span>)
+  <span class="ruby-node">&quot;#{ @path }:#{ @insns[pc].lineno }&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                  <div id="method-i-unify_instructions" class="method-detail ">
+                            <div class="method-heading">
+                              <span class="method-name">unify_instructions</span><span
+                                class="method-args">()</span>
+                              <span class="method-click-advice">click to toggle source</span>
+                            </div>
+
+                            <div class="method-description">
+                              <p>Unify some instructions for flow-sensitive analysis</p>
+
+                              <div class="method-source-code" id="unify_instructions-source">
+            <pre><span class="ruby-comment"># File typeprof-0.21.8/lib/typeprof/iseq.rb, line 462</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">unify_instructions</span>
+  <span class="ruby-comment"># This method rewrites instructions to enable flow-sensitive analysis.</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Consider `if x; ...; else; ... end`.</span>
+  <span class="ruby-comment"># When the variable `x` is of type &quot;Integer | nil&quot;,</span>
+  <span class="ruby-comment"># we want to make sure that `x` is &quot;Integer&quot; in then clause.</span>
+  <span class="ruby-comment"># So, we need to split the environment to two ones:</span>
+  <span class="ruby-comment"># one is that `x` is of type &quot;Integer&quot;, and the other is that</span>
+  <span class="ruby-comment"># `x` is type &quot;nil&quot;.</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># However, `if x` is compiled to &quot;getlocal; branch&quot;.</span>
+  <span class="ruby-comment"># TypeProf evaluates them as follows:</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># * &quot;getlocal&quot; pushes the value of `x` to the stack, amd</span>
+  <span class="ruby-comment"># * &quot;branch&quot; checks the value on the top of the stack</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># TypeProf does not keep where the value comes from, so</span>
+  <span class="ruby-comment"># it is difficult to split the environment when evaluating &quot;branch&quot;.</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># This method rewrites &quot;getlocal; branch&quot; to &quot;nop; getlocal_branch&quot;.</span>
+  <span class="ruby-comment"># The two instructions are unified to &quot;getlocal_branch&quot; instruction,</span>
+  <span class="ruby-comment"># so TypeProf can split the environment.</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># This is a very fragile appoach because it highly depends on the compiler of Ruby.</span>
+
+  <span class="ruby-comment"># gather branch targets</span>
+  <span class="ruby-comment"># TODO: catch_table should be also considered</span>
+  <span class="ruby-identifier">branch_targets</span> = {}
+  <span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">insn</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:branch</span>
+      <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>]] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:jump</span>
+      <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">0</span>]] = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># flow-sensitive analysis for `case var; when A; when B; when C; end`</span>
+  <span class="ruby-comment"># find a pattern: getlocal, (dup, putobject(true), getconstant(class name), checkmatch, branch)* for ..Ruby 3.0</span>
+  <span class="ruby-comment"># find a pattern: getlocal, (putobject(true), getconstant(class name), top(1), send(===), branch)* for Ruby 3.1..</span>
+  <span class="ruby-identifier">case_branch_list</span> = []
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">CASE_WHEN_CHECKMATCH</span>
+    (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">insn</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:getlocal</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">getlocal_operands</span> = <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">nops</span> = [<span class="ruby-identifier">i</span>]
+      <span class="ruby-identifier">new_insns</span> = []
+      <span class="ruby-identifier">j</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span>].<span class="ruby-identifier">insn</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:dup</span>
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:putnil</span>, [])
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:putobject</span>, [<span class="ruby-keyword">true</span>])
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">3</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:getconstant</span>) <span class="ruby-comment"># TODO: support A::B::C</span>
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">4</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:checkmatch</span>, [<span class="ruby-value">2</span>])
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:branch</span>)
+          <span class="ruby-identifier">target_pc</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>].<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>]
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">target_pc</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:pop</span>, [])
+          <span class="ruby-identifier">nops</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">4</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">target_pc</span>
+          <span class="ruby-identifier">branch_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>][<span class="ruby-value">1</span>]
+          <span class="ruby-identifier">new_insns</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>, <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:getlocal_checkmatch_branch</span>, [<span class="ruby-identifier">getlocal_operands</span>, <span class="ruby-identifier">branch_operands</span>])]
+          <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">6</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-value">:pop</span>
+          <span class="ruby-identifier">nops</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">j</span>
+          <span class="ruby-identifier">case_branch_list</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">nops</span>, <span class="ruby-identifier">new_insns</span>]
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">insn</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:getlocal</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">getlocal_operands</span> = <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">nops</span> = []
+      <span class="ruby-identifier">new_insns</span> = []
+      <span class="ruby-identifier">j</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">insn</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span>]
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">check?</span>(<span class="ruby-value">:putnil</span>, [])
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:putobject</span>, [<span class="ruby-keyword">true</span>])
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:getconstant</span>) <span class="ruby-comment"># TODO: support A::B::C</span>
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">3</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:topn</span>, [<span class="ruby-value">1</span>])
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">4</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:send</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">4</span>].<span class="ruby-identifier">operands</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">slice</span>(<span class="ruby-value">:mid</span>, <span class="ruby-value">:flag</span>, <span class="ruby-value">:orig_argc</span>) <span class="ruby-operator">==</span> {<span class="ruby-value">:mid</span><span class="ruby-operator">=&gt;</span><span class="ruby-value">:===</span>, <span class="ruby-value">:flag</span><span class="ruby-operator">=&gt;</span><span class="ruby-value">20</span>, <span class="ruby-value">:orig_argc</span><span class="ruby-operator">=&gt;</span><span class="ruby-value">1</span>}
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:branch</span>)
+          <span class="ruby-identifier">target_pc</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>].<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>]
+          <span class="ruby-keyword">break</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">target_pc</span>].<span class="ruby-identifier">check?</span>(<span class="ruby-value">:pop</span>, [])
+          <span class="ruby-identifier">nops</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">4</span>) <span class="ruby-comment">#&lt;&lt; target_pc</span>
+          <span class="ruby-identifier">send_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">4</span>][<span class="ruby-value">1</span>]
+          <span class="ruby-identifier">branch_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>][<span class="ruby-value">1</span>]
+          <span class="ruby-identifier">new_insns</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>, <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:arg_getlocal_send_branch</span>, [<span class="ruby-identifier">getlocal_operands</span>, <span class="ruby-identifier">send_operands</span>, <span class="ruby-identifier">branch_operands</span>])]
+          <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">6</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">check?</span>(<span class="ruby-value">:pop</span>, [])
+          <span class="ruby-comment">#nops &lt;&lt; j</span>
+          <span class="ruby-identifier">case_branch_list</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">nops</span>, <span class="ruby-identifier">new_insns</span>]
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">case_branch_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">nops</span>, <span class="ruby-identifier">new_insns</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">nops</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, []) }
+    <span class="ruby-identifier">new_insns</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">insn</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">insn</span> }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># find a pattern: getlocal(recv), ..., send (is_a?, respond_to?), branch</span>
+  <span class="ruby-identifier">recv_getlocal_send_branch_list</span> = []
+  (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">insn</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:getlocal</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">j</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+      <span class="ruby-identifier">sp</span> = <span class="ruby-value">1</span>
+      <span class="ruby-keyword">while</span> <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span>]
+        <span class="ruby-identifier">sp</span> = <span class="ruby-identifier">check_send_branch</span>(<span class="ruby-identifier">sp</span>, <span class="ruby-identifier">j</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">==</span> <span class="ruby-value">:match</span>
+          <span class="ruby-identifier">recv_getlocal_send_branch_list</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>]
+          <span class="ruby-keyword">break</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">sp</span>
+        <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">recv_getlocal_send_branch_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">..</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span>] }
+    <span class="ruby-identifier">getlocal_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">send_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span>].<span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">branch_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">operands</span>
+    <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+    <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:recv_getlocal_send_branch</span>, [<span class="ruby-identifier">getlocal_operands</span>, <span class="ruby-identifier">send_operands</span>, <span class="ruby-identifier">branch_operands</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># find a pattern: getlocal, send (===), branch</span>
+  <span class="ruby-identifier">arg_getlocal_send_branch_list</span> = []
+  (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">insn1</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:getlocal</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">insn2</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">insn2</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:send</span>
+    <span class="ruby-identifier">send_operands</span> = <span class="ruby-identifier">insn2</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">send_operands</span>[<span class="ruby-value">:flag</span>] <span class="ruby-operator">==</span> <span class="ruby-value">16</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">send_operands</span>[<span class="ruby-value">:orig_argc</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">insn3</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>]
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">insn3</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:branch</span>
+    <span class="ruby-identifier">arg_getlocal_send_branch_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">i</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">arg_getlocal_send_branch_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">i</span> <span class="ruby-operator">..</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span>] }
+    <span class="ruby-identifier">getlocal_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">send_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">branch_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>].<span class="ruby-identifier">operands</span>
+    <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+    <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:arg_getlocal_send_branch</span>, [<span class="ruby-identifier">getlocal_operands</span>, <span class="ruby-identifier">send_operands</span>, <span class="ruby-identifier">branch_operands</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># find a pattern: send (block_given?), branch</span>
+  <span class="ruby-identifier">send_branch_list</span> = []
+  (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">insn</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:send</span>
+      <span class="ruby-identifier">insn</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:branch</span>
+        <span class="ruby-identifier">send_branch_list</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">i</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">send_branch_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">send_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">operands</span>
+    <span class="ruby-identifier">branch_operands</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">operands</span>
+    <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+    <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:send_branch</span>, [<span class="ruby-identifier">send_operands</span>, <span class="ruby-identifier">branch_operands</span>])
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># find a pattern: getlocal, dup, branch</span>
+  (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>]
+    <span class="ruby-identifier">insn0</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">insn1</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">insn2</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:getlocal</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:dup</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn2</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:branch</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">getlocal_operands</span> = <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">dup_operands</span>      = <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">branch_operands</span>   = <span class="ruby-identifier">insn2</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>    ] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:getlocal_dup_branch</span>, [<span class="ruby-identifier">getlocal_operands</span>, <span class="ruby-identifier">dup_operands</span>, <span class="ruby-identifier">branch_operands</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># find a pattern: dup, setlocal, branch</span>
+  (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>]
+    <span class="ruby-identifier">insn0</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">insn1</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">insn2</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:dup</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:setlocal</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn2</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:branch</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">dup_operands</span>      = <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">setlocal_operands</span> = <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">branch_operands</span>   = <span class="ruby-identifier">insn2</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>    ] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">2</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:dup_setlocal_branch</span>, [<span class="ruby-identifier">dup_operands</span>, <span class="ruby-identifier">setlocal_operands</span>, <span class="ruby-identifier">branch_operands</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># find a pattern: dup, branch</span>
+  (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">insn0</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">insn1</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:dup</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:branch</span>
+      <span class="ruby-identifier">dup_operands</span>    = <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">branch_operands</span> = <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>    ] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:dup_branch</span>, [<span class="ruby-identifier">dup_operands</span>, <span class="ruby-identifier">branch_operands</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># find a pattern: getlocal, branch</span>
+  (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">insn0</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">insn1</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:getlocal</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">operands</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:branch</span>
+      <span class="ruby-identifier">getlocal_operands</span> = <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">branch_operands</span>   = <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>    ] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:getlocal_branch</span>, [<span class="ruby-identifier">getlocal_operands</span>, <span class="ruby-identifier">branch_operands</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># find a pattern: putobject, branch</span>
+  (<span class="ruby-ivar">@insns</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">branch_targets</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-identifier">insn0</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>]
+    <span class="ruby-identifier">insn1</span> = <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:putobject</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">insn</span> <span class="ruby-operator">==</span> <span class="ruby-value">:branch</span>
+      <span class="ruby-identifier">putobject_operands</span> = <span class="ruby-identifier">insn0</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">branch_operands</span> = <span class="ruby-identifier">insn1</span>.<span class="ruby-identifier">operands</span>
+      <span class="ruby-identifier">obj</span> = <span class="ruby-identifier">putobject_operands</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-identifier">branch_type</span> = <span class="ruby-identifier">branch_operands</span>[<span class="ruby-value">0</span>]
+      <span class="ruby-identifier">branch_target</span> = <span class="ruby-identifier">branch_operands</span>[<span class="ruby-value">1</span>]
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">branch_type</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-value">:if</span>     <span class="ruby-keyword">then</span> <span class="ruby-identifier">jump</span> = <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">obj</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-value">:unless</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">jump</span> = <span class="ruby-operator">!</span><span class="ruby-identifier">obj</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-value">:nil</span>    <span class="ruby-keyword">then</span> <span class="ruby-identifier">jump</span> = <span class="ruby-identifier">obj</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span>    ] = <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+      <span class="ruby-ivar">@insns</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-identifier">jump</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:jump</span>, [<span class="ruby-identifier">branch_target</span>]) <span class="ruby-operator">:</span> <span class="ruby-constant">Insn</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:nop</span>, [])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+                              </div>
+                            </div>
+
+
+                          </div>
+
+                          </section>
+
+              </section>
+              </main>
+
+
+
+            </div>  <!--  class='wrapper hdiv' -->
+
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is a service of <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>, purveyors of fine <a href='https://jamesbritt.bandcamp.com/'>dance noise</a></p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+

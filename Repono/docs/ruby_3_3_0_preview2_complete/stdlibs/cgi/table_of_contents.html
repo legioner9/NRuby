@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Table of Contents - cgi: Ruby Standard Library Documentation</title>
+
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<script src="./js/jquery-3.2.0.min.js"></script>
+
+<script src="./js/vue.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link id='rdoccss' href="./css/rdoc.css" rel="stylesheet">
+<link href="./css/carbon17.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+  var darkModeCsseHref = "./css/rdoc-dm.css"
+  var defaultModeCssHref = "./css/rdoc.css"
+  // var cssDarkmode = Cookies.get('darkmode');
+  
+  if( Cookies.get("darkmode") == "true") {
+	$('#rdoccss').attr("href", darkModeCsseHref);
+}
+
+//  https://cssdeck.com/blog/simple-jquery-stylesheet-switcher/
+
+document.write('<style type="text/css">body{display:none}</style>');
+
+</script>
+
+
+</head>
+<body id="top" class="table-of-contents">
+  <!-- table_of_contents.html -->
+  <div id='actionbar' >
+    <div class='wrapper mdiv'>
+      <ul class='grids g0'></ul>
+    </div> 
+    <!-- VERSION HEADER for 3.3.0.preview2 NOT FOUND -->
+  </div> <!-- end action bar -->
+
+  <div class='wrapper hdiv'>
+
+    
+
+    <div id='extraz'><div class='adzbox-index'  >
+        
+      </div>         
+    </div>
+
+    <main role="main">
+    <h1 class="class">Table of Contents - cgi: Ruby Standard Library Documentation</h1>
+
+
+          <h2 id="classes">Classes and Modules</h2>
+          <ul>
+              <li class="class">
+                <a href="CGI.html">CGI</a>
+
+                <ul>
+                    <li><a href="CGI.html#label-Overview">Overview</a>
+                    <li><a href="CGI.html#label-Introduction">Introduction</a>
+                    <li><a href="CGI.html#label-Queries">Queries</a>
+                    <li><a href="CGI.html#label-Environmental+Variables">Environmental Variables</a>
+                    <li><a href="CGI.html#label-Parameters">Parameters</a>
+                    <li><a href="CGI.html#label-Cookies">Cookies</a>
+                    <li><a href="CGI.html#label-Multipart+requests">Multipart requests</a>
+                    <li><a href="CGI.html#label-Responses">Responses</a>
+                    <li><a href="CGI.html#label-Writing+output">Writing output</a>
+                    <li><a href="CGI.html#label-Generating+HTML">Generating HTML</a>
+                    <li><a href="CGI.html#label-Utility+HTML+escape+and+other+methods+like+a+function.">Utility HTML escape and other methods like a function.</a>
+                    <li><a href="CGI.html#label-Examples+of+use">Examples of use</a>
+                    <li><a href="CGI.html#label-Get+form+values">Get form values</a>
+                    <li><a href="CGI.html#label-Get+form+values+as+hash">Get form values as hash</a>
+                    <li><a href="CGI.html#label-Save+form+values+to+file">Save form values to file</a>
+                    <li><a href="CGI.html#label-Restore+form+values+from+file">Restore form values from file</a>
+                    <li><a href="CGI.html#label-Get+multipart+form+values">Get multipart form values</a>
+                    <li><a href="CGI.html#label-Get+cookie+values">Get cookie values</a>
+                    <li><a href="CGI.html#label-Get+cookie+objects">Get cookie objects</a>
+                    <li><a href="CGI.html#label-Print+http+header+and+html+string+to+-24DEFAULT_OUTPUT+-28-24-3E-29">Print http header and html string to $DEFAULT_OUTPUT ($&gt;)</a>
+                    <li><a href="CGI.html#label-Some+utility+methods">Some utility methods</a>
+                    <li><a href="CGI.html#label-Some+utility+methods+like+a+function">Some utility methods like a function</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="CGI/Cookie.html">CGI::Cookie</a>
+
+                <ul>
+                    <li><a href="CGI/Cookie.html#label-Examples+of+use">Examples of use</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="CGI/HTML3.html">CGI::HTML3</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/HTML4.html">CGI::HTML4</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/HTML4Fr.html">CGI::HTML4Fr</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/HTML4Tr.html">CGI::HTML4Tr</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/HTML5.html">CGI::HTML5</a>
+                  </li>
+              <li class="module">
+                <a href="CGI/HtmlExtension.html">CGI::HtmlExtension</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/InvalidEncoding.html">CGI::InvalidEncoding</a>
+                  </li>
+              <li class="module">
+                <a href="CGI/QueryExtension.html">CGI::QueryExtension</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/Session.html">CGI::Session</a>
+
+                <ul>
+                    <li><a href="CGI/Session.html#label-Overview">Overview</a>
+                    <li><a href="CGI/Session.html#label-Lifecycle">Lifecycle</a>
+                    <li><a href="CGI/Session.html#label-Setting+and+retrieving+session+data.">Setting and retrieving session data.</a>
+                    <li><a href="CGI/Session.html#label-Storing+session+state">Storing session state</a>
+                    <li><a href="CGI/Session.html#label-Maintaining+the+session+id.">Maintaining the session id.</a>
+                    <li><a href="CGI/Session.html#label-Examples+of+use">Examples of use</a>
+                    <li><a href="CGI/Session.html#label-Setting+the+user-27s+name">Setting the user’s name</a>
+                    <li><a href="CGI/Session.html#label-Creating+a+new+session+safely">Creating a new session safely</a>
+                    </ul>
+                  </li>
+              <li class="class">
+                <a href="CGI/Session/FileStore.html">CGI::Session::FileStore</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/Session/MemoryStore.html">CGI::Session::MemoryStore</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/Session/NullStore.html">CGI::Session::NullStore</a>
+                  </li>
+              <li class="class">
+                <a href="CGI/Session/PStore.html">CGI::Session::PStore</a>
+                  </li>
+              <li class="module">
+                <a href="CGI/Util.html">CGI::Util</a>
+                  </li>
+                </ul>
+
+                <h2 id="methods">Methods</h2>
+                <ul>
+
+                    <li class="method">
+                      <a href="CGI.html#method-c-accept_charset">::accept_charset</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-c-accept_charset-3D">::accept_charset=</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI/Session.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">CGI::Session</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/FileStore.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">CGI::Session::FileStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/MemoryStore.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">CGI::Session::MemoryStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/NullStore.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">CGI::Session::NullStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/PStore.html#method-c-new">::new</a>
+                      &mdash;
+                      <span class="container">CGI::Session::PStore</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-c-parse">::parse</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-c-parse">::parse</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI/Session.html#method-i-5B-5D">#[]</a>
+                      &mdash;
+                      <span class="container">CGI::Session</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-5B-5D">#[]</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Session.html#method-i-5B-5D-3D">#[]=</a>
+                      &mdash;
+                      <span class="container">CGI::Session</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-i-_no_crlf_check">#_no_crlf_check</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-a">#a</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-base">#base</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-blockquote">#blockquote</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-caption">#caption</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-checkbox">#checkbox</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-checkbox_group">#checkbox_group</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Session.html#method-i-close">#close</a>
+                      &mdash;
+                      <span class="container">CGI::Session</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/FileStore.html#method-i-close">#close</a>
+                      &mdash;
+                      <span class="container">CGI::Session::FileStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/MemoryStore.html#method-i-close">#close</a>
+                      &mdash;
+                      <span class="container">CGI::Session::MemoryStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/NullStore.html#method-i-close">#close</a>
+                      &mdash;
+                      <span class="container">CGI::Session::NullStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/PStore.html#method-i-close">#close</a>
+                      &mdash;
+                      <span class="container">CGI::Session::PStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session.html#method-i-create_new_id">#create_new_id</a>
+                      &mdash;
+                      <span class="container">CGI::Session</span>
+
+                    <li class="method">
+                      <a href="CGI/Session.html#method-i-delete">#delete</a>
+                      &mdash;
+                      <span class="container">CGI::Session</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/FileStore.html#method-i-delete">#delete</a>
+                      &mdash;
+                      <span class="container">CGI::Session::FileStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/MemoryStore.html#method-i-delete">#delete</a>
+                      &mdash;
+                      <span class="container">CGI::Session::MemoryStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/NullStore.html#method-i-delete">#delete</a>
+                      &mdash;
+                      <span class="container">CGI::Session::NullStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/PStore.html#method-i-delete">#delete</a>
+                      &mdash;
+                      <span class="container">CGI::Session::PStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-domain-3D">#domain=</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-i-env_table">#env_table</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-escape">#escape</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-escapeElement">#escapeElement</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-escapeHTML">#escapeHTML</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-escapeURIComponent">#escapeURIComponent</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-escape_element">#escape_element</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-escape_html">#escape_html</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-file_field">#file_field</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-form">#form</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-h">#h</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-has_key-3F">#has_key?</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-i-header">#header</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-hidden">#hidden</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-html">#html</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-i-http_header">#http_header</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-httponly-3D">#httponly=</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-image_button">#image_button</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-img">#img</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-include-3F">#include?</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-initialize_query">#initialize_query</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-inspect">#inspect</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-key-3F">#key?</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-keys">#keys</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-multipart-3F">#multipart?</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-multipart_form">#multipart_form</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-name-3D">#name=</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-i-out">#out</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-params-3D">#params=</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-password_field">#password_field</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-path-3D">#path=</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-popup_menu">#popup_menu</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-pretty">#pretty</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-i-print">#print</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-radio_button">#radio_button</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-radio_group">#radio_group</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-raw_cookie">#raw_cookie</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-raw_cookie2">#raw_cookie2</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-read_from_cmdline">#read_from_cmdline</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/QueryExtension.html#method-i-read_multipart">#read_multipart</a>
+                      &mdash;
+                      <span class="container">CGI::QueryExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-reset">#reset</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/FileStore.html#method-i-restore">#restore</a>
+                      &mdash;
+                      <span class="container">CGI::Session::FileStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/MemoryStore.html#method-i-restore">#restore</a>
+                      &mdash;
+                      <span class="container">CGI::Session::MemoryStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/NullStore.html#method-i-restore">#restore</a>
+                      &mdash;
+                      <span class="container">CGI::Session::NullStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/PStore.html#method-i-restore">#restore</a>
+                      &mdash;
+                      <span class="container">CGI::Session::PStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-rfc1123_date">#rfc1123_date</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-scrolling_list">#scrolling_list</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-secure-3D">#secure=</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-i-stdinput">#stdinput</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI.html#method-i-stdoutput">#stdoutput</a>
+                      &mdash;
+                      <span class="container">CGI</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-submit">#submit</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-text_field">#text_field</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/HtmlExtension.html#method-i-textarea">#textarea</a>
+                      &mdash;
+                      <span class="container">CGI::HtmlExtension</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-to_s">#to_s</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-unescape">#unescape</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-unescapeElement">#unescapeElement</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-unescapeHTML">#unescapeHTML</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-unescapeURIComponent">#unescapeURIComponent</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-unescape_element">#unescape_element</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Util.html#method-i-unescape_html">#unescape_html</a>
+                      &mdash;
+                      <span class="container">CGI::Util</span>
+
+                    <li class="method">
+                      <a href="CGI/Session.html#method-i-update">#update</a>
+                      &mdash;
+                      <span class="container">CGI::Session</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/FileStore.html#method-i-update">#update</a>
+                      &mdash;
+                      <span class="container">CGI::Session::FileStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/MemoryStore.html#method-i-update">#update</a>
+                      &mdash;
+                      <span class="container">CGI::Session::MemoryStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/NullStore.html#method-i-update">#update</a>
+                      &mdash;
+                      <span class="container">CGI::Session::NullStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Session/PStore.html#method-i-update">#update</a>
+                      &mdash;
+                      <span class="container">CGI::Session::PStore</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-value">#value</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+
+                    <li class="method">
+                      <a href="CGI/Cookie.html#method-i-value-3D">#value=</a>
+                      &mdash;
+                      <span class="container">CGI::Cookie</span>
+                    </ul>
+                    </main>
+                  </div> 
+
+<footer id="validator-badges" role="contentinfo">
+<p><a href="https://validator.w3.org/check/referer">Validate</a></p>
+<p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.</p>
+<p>Based on <a href="https://github.com/ged/darkfish/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.</p>
+
+  
+    <p><p><a href="https://ruby-doc.org">Ruby-doc.org</a> is provided by <a href="https://jamesbritt.com">James Britt</a> and <a href="https://neurogami.com">Neurogami</a>. </p><p><a href="https://jamesbritt.bandcamp.com/">Hack your world.  Feed your head.  Live curious</a>.</p>
+</p>
+  
+  </footer>
+
+<script type="text/javascript">
+
+
+  let ads  = $("#carbonads-container").children().detach();
+
+
+  function swapMode() {
+    var cookieName = 'darkmode';
+    var cssDarkmode = Cookies.get(cookieName);
+    console.log("***** swapMode! " + cssDarkmode + " *****");
+
+
+    if (cssDarkmode == "true") {
+      console.log("We have dark mode, set the css to light ...");
+      $('#rdoccss').attr("href", defaultModeCssHref);
+      $('#cssSelect').text("Dark mode");
+      cssDarkmode = "false";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    } else {
+      console.log("We not have dark mode, set the css to dark ...");
+      $('#rdoccss').attr("href", darkModeCsseHref);
+      $('#cssSelect').text("Light mode");
+      cssDarkmode = "true";
+      console.log("swapMode! Now set cookie to " + cssDarkmode);
+      Cookies.set(cookieName, cssDarkmode);
+
+    }
+
+    console.log("  --------------- ");
+  }
+
+
+const vueCssApp = new Vue({
+el: '#menubar',
+data: {
+isDark: false
+},
+methods: {
+toggleClass: function(event){
+this.isDark = !this.isDark;
+}
+}
+})
+
+const vueApp = new Vue({
+el: '#vapp',
+data: { 
+isOpen: true
+},
+
+mounted() {
+this.handleResize();
+this.manage_mob_classes();
+window.addEventListener('resize', this.handleResize)
+//this.isOpen !=  (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+destroyed() {
+window.removeEventListener('resize', this.handleResize)
+},
+created() {
+//manage_mob_classes();
+},
+
+methods : {
+isMobile() {
+  return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+},
+
+  handleResize() {
+    if (!this.isMobile()) {
+      this.isOpen = window.innerWidth > 800;
+    }
+  },
+
+  manage_mob_classes() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $("nav").addClass("mob_nav");
+      $("main").addClass("mob_main");
+      $("#extraz").addClass("mob_extraz");
+      $("#carbonads-container").addClass("mob_carbonads-container");
+      this.isOpen  = false;
+    } else {
+      $("nav").removeClass("mob_nav") 
+        $("main").removeClass("mob_main");
+      $("#extraz").removeClass("mob_extraz");
+      $("#carbonads-container").removeClass("mob_carbonads-container");
+      this.isOpen  = true;
+    }
+  },
+
+  toggleNav() {
+    this.isOpen =! this.isOpen ;
+    // alert("Toggle nav!");
+    console.log("toggleNav() click: " + this.isOpen );
+  }
+}
+})
+
+$("#carbonads-container").append(ads);
+
+
+$(function() {
+
+    var darkmode = Cookies.get("darkmode");
+    console.log("Document ready: " + darkmode);
+
+    if ( darkmode  == "true" ) {
+      $('#cssSelect').text("Light mode");
+    } else {
+      $('#cssSelect').text("Dark mode");
+     }
+
+    $('body').css('display','block');
+    });
+
+</script>
+
+    
+  </body> 
+</html>
+
