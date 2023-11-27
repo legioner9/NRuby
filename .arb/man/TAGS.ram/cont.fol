@@ -1,3 +1,9 @@
 @lsp - ruby-lsp
 @l_doc - language docs
 @f_arg - file exec args
+@module - module
+@class - class
+@meth - mathod
+@array - array
+@range - range
+@stream - stream

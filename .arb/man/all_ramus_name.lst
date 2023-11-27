@@ -1,6 +1,10 @@
+bsearch
 chruby
 i_o
+IO
+Kernel
 OptionParser
+String
+Symbol
 TAGS
-tmp
 vsc_lsp

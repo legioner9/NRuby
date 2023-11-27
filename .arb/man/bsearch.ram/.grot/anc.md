@@ -1,0 +1,1 @@
+# file:///home/st/REPOBARE/_repo/NRuby/Repono/docs/ruby_3_3_0_preview2_complete/bsearch_rdoc.html
