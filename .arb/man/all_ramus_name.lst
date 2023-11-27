@@ -1,8 +1,12 @@
+Array
+BasicObject
 bsearch
 chruby
+Complex
 i_o
 IO
 Kernel
+Object
 OptionParser
 String
 Symbol

@@ -1,11 +1,13 @@
 @array
 @class
 @coll
+@complex
 @f_arg
 @l_doc
 @meth
 @module
 @pcg_mng
 @range
+@stream
 @tags
 @vsc
