@@ -3,11 +3,15 @@
 @coll
 @complex
 @f_arg
+@float
+@hash
+@integer
 @l_doc
 @meth
 @module
 @pcg_mng
 @range
+@rational
 @stream
 @tags
 @vsc

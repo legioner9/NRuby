@@ -8,3 +8,7 @@
 @range - range
 @stream - stream
 @complex - complex
+@float - float
+@hash - hash
+@integer - integer
+@rational - rational
