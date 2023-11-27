@@ -1,4 +1,6 @@
 chruby
 i_o
+OptionParser
 TAGS
+tmp
 vsc_lsp
