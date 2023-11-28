@@ -13,6 +13,7 @@ Kernel
 Object
 OptionParser
 Rational
+rvm
 String
 Symbol
 TAGS

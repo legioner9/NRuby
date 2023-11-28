@@ -1,0 +1,26 @@
+rvm gemset create                       создать новый gemset
+rvm gemset export new.gems            	экспорт списка gem'ов в файл new.gems
+rvm gemset import new.gems	            импорт в текущий gemset списка gem'ов из файла new.gems
+rvm gemset delete        	            удалить gemset
+rvm gemset empty        	            очистить gemset
+rvm gemset delete example --force    	полностью удалить gemset example
+rvmreset	                            перезагрузка RVM
+rvm uninstall	                        удалить версию Ruby, оставить исходники
+rvm implode	                            полностью удалить RVM!
+rvm list known                        	получить список всех версий ruby доступных для установки
+rvm list                            	отобразить список установленных версий ruby
+rvm gemset list                        	просмотреть список gemset'ов в выбранной версии ruby
+rvm install 1.9.3                    	установить ruby версии 1.9.3
+rvm remove 1.9.3                        удалить ruby версии 1.9.3
+rvm use 1.9.3                        	переключиться на ruby версии 1.9.3
+rvm use 1.9.3@jekyll --default        	использовать версию ruby 1.9.3 c gemset jekyll по умолчанию
+rvm use system                        	использовать системную версию ruby
+
+
+Но зачастую быстрее один раз внести необходимые настройки. Для этого следует создать два файла в каталоге с проектом: .ruby-gemset и .ruby-version, куда и поместить информацию об используемом в проекте gemset'е и версии ruby соответственно.
+
+$ cat ~/workspace/jekyll/.ruby-gemset
+jekyll
+
+$ cat ~/workspace/jekyll/.ruby-version
+ruby-1.9.3-p448
