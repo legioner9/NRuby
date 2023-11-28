@@ -2,8 +2,11 @@
 @class
 @coll
 @complex
+@cource
+@evrone
 @f_arg
 @float
+@habr
 @hash
 @integer
 @l_doc
@@ -14,4 +17,5 @@
 @rational
 @stream
 @tags
+@talk
 @vsc
