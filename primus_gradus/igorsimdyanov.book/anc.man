@@ -1,0 +1,2 @@
+## Исходные коды к книге также размещены на GitHub-аккаунте по адресу:
+    https://github.com/igorsimdyanov/ruby

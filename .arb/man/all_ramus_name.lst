@@ -13,6 +13,7 @@ Kernel
 Object
 OptionParser
 Rational
+rbenv
 rvm
 String
 Symbol

@@ -1,1 +1,1 @@
-ruby man : arb_path file:///home/st/REPOBARE/_repo/NRuby/.arb/man
+ruby.man ::::: file:///home/st/REPOBARE/_repo/NRuby/.arb/man
