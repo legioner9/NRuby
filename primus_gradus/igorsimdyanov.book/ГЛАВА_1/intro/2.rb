@@ -1,4 +1,5 @@
 require 'pp'
+require 'pry'
 
 class Hi
   def greet

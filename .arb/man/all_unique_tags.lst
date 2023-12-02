@@ -1,6 +1,7 @@
 @array
 @class
 @complex
+@context
 @cource
 @evrone
 @f_arg
@@ -19,4 +20,5 @@
 @stream
 @tags
 @talk
+@templating
 @vsc

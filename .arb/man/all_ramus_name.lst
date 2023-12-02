@@ -1,9 +1,11 @@
 Array
 BasicObject
+Binding
 bsearch
 chruby
 Complex
 cource_evron_habr
+ERB
 Float
 Hash
 Integer
